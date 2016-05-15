@@ -1,0 +1,66 @@
+
+/* Class = "UINavigationItem"; title = "Wetter"; ObjectID = "5Be-NO-k4d"; */
+"5Be-NO-k4d.title" = "Wetter";
+
+/* Class = "UINavigationItem"; title = "Ticker"; ObjectID = "8E2-dV-uh9"; */
+"8E2-dV-uh9.title" = "News";
+
+/* Class = "UINavigationItem"; title = "Events"; ObjectID = "FrE-Mc-Sgr"; */
+"FrE-Mc-Sgr.title" = "Events";
+
+/* Class = "UISegmentedControl"; Hqe-UG-cc1.segmentTitles[0] = "Notdienst"; ObjectID = "Hqe-UG-cc1"; */
+"Hqe-UG-cc1.segmentTitles[0]" = "Notdienst";
+
+/* Class = "UISegmentedControl"; Hqe-UG-cc1.segmentTitles[1] = "Apotheken"; ObjectID = "Hqe-UG-cc1"; */
+"Hqe-UG-cc1.segmentTitles[1]" = "Apotheken";
+
+/* Class = "UILabel"; text = "Würtzburg, Di 27.12 | 10.53 Uhr"; ObjectID = "IW0-7d-tfq"; */
+"IW0-7d-tfq.text" = "Würtzburg, Di 27.12 | 10.53 Uhr";
+
+/* Class = "UINavigationItem"; title = "Angebote"; ObjectID = "LY3-ek-4cE"; */
+"LY3-ek-4cE.title" = "Angebote";
+
+/* Class = "UILabel"; text = "MEIN STADTWERK"; ObjectID = "PzS-yL-lEH"; */
+"PzS-yL-lEH.text" = "MEIN STADTWERK";
+
+/* Class = "UIViewController"; title = "Ticker"; ObjectID = "Tx0-hj-IAd"; */
+"Tx0-hj-IAd.title" = "News";
+
+/* Class = "UIViewController"; title = "Events"; ObjectID = "XSL-8z-JD4"; */
+"XSL-8z-JD4.title" = "Events";
+
+/* Class = "UIButton"; disabledTitle = "Einstellungen"; ObjectID = "bPl-dt-E6c"; */
+"bPl-dt-E6c.disabledTitle" = "Einstellungen";
+
+/* Class = "UIButton"; normalTitle = "Einstellungen"; ObjectID = "bPl-dt-E6c"; */
+"bPl-dt-E6c.normalTitle" = "Einstellungen";
+
+/* Class = "UIButton"; selectedTitle = "Einstellungen"; ObjectID = "bPl-dt-E6c"; */
+"bPl-dt-E6c.selectedTitle" = "Einstellungen";
+
+/* Class = "UIButton"; disabledTitle = "Favoriten"; ObjectID = "cuA-cX-Vdb"; */
+"cuA-cX-Vdb.disabledTitle" = "Favoriten";
+
+/* Class = "UIButton"; normalTitle = "Favoriten"; ObjectID = "cuA-cX-Vdb"; */
+"cuA-cX-Vdb.normalTitle" = "Favoriten";
+
+/* Class = "UIButton"; selectedTitle = "Favoriten"; ObjectID = "cuA-cX-Vdb"; */
+"cuA-cX-Vdb.selectedTitle" = "Favoriten";
+
+/* Class = "UIViewController"; title = "Angebote"; ObjectID = "i84-La-ATf"; */
+"i84-La-ATf.title" = "Angebote";
+
+/* Class = "UIViewController"; title = "Vereinsnews"; ObjectID = "xiQ-Lb-PYS"; */
+"xiQ-Lb-PYS.title" = "Vereinsnews";
+
+/* Class = "UINavigationItem"; title = "Main"; ObjectID = "yJK-eL-y88"; */
+"yJK-eL-y88.title" = "Main";
+
+/* Class = "UIButton"; disabledTitle = "Suche"; ObjectID = "zX6-kV-PgZ"; */
+"zX6-kV-PgZ.disabledTitle" = "Suche";
+
+/* Class = "UIButton"; normalTitle = "Suche"; ObjectID = "zX6-kV-PgZ"; */
+"zX6-kV-PgZ.normalTitle" = "Suche";
+
+/* Class = "UIButton"; selectedTitle = "Suche"; ObjectID = "zX6-kV-PgZ"; */
+"zX6-kV-PgZ.selectedTitle" = "Suche";

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="KievitOffc.ttf">
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="STFahrplanTimetableJourneyStopCellTVC">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="29"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5f-R4-JRk">
+                        <rect key="frame" x="24" y="0.0" width="402" height="29"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="10:51" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dCX-CN-8R9">
+                                <rect key="frame" x="8" y="8" width="41" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Oo0-I2-Z9b"/>
+                                    <constraint firstAttribute="width" constant="50" id="da6-dV-1Pe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Oo0-I2-Z9b"/>
+                                        <exclude reference="da6-dV-1Pe"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="·" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75Z-nP-CGm">
+                                <rect key="frame" x="51" y="8" width="11" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="FOf-nm-KCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bhf Altona" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vu8-Op-8DF">
+                                <rect key="frame" x="64" y="2" width="336" height="25"/>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vu8-Op-8DF" firstAttribute="top" secondItem="R5f-R4-JRk" secondAttribute="top" constant="2" id="2Zl-PR-2EO"/>
+                            <constraint firstAttribute="bottom" secondItem="75Z-nP-CGm" secondAttribute="bottom" constant="8" id="82o-iQ-qTO"/>
+                            <constraint firstItem="dCX-CN-8R9" firstAttribute="leading" secondItem="R5f-R4-JRk" secondAttribute="leading" constant="8" id="CEh-yi-1hz"/>
+                            <constraint firstItem="75Z-nP-CGm" firstAttribute="top" secondItem="R5f-R4-JRk" secondAttribute="top" constant="8" id="HlS-vI-wEq"/>
+                            <constraint firstItem="dCX-CN-8R9" firstAttribute="top" secondItem="R5f-R4-JRk" secondAttribute="top" constant="8" id="NfF-AB-gqi"/>
+                            <constraint firstAttribute="trailing" secondItem="Vu8-Op-8DF" secondAttribute="trailing" constant="2" id="NoX-fK-IzQ"/>
+                            <constraint firstItem="Vu8-Op-8DF" firstAttribute="leading" secondItem="75Z-nP-CGm" secondAttribute="trailing" constant="2" id="T7d-c1-lAG"/>
+                            <constraint firstItem="75Z-nP-CGm" firstAttribute="leading" secondItem="dCX-CN-8R9" secondAttribute="trailing" constant="2" id="VWS-it-q4v"/>
+                            <constraint firstAttribute="bottom" secondItem="dCX-CN-8R9" secondAttribute="bottom" constant="8" id="pDU-vc-XuZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Vu8-Op-8DF" secondAttribute="bottom" constant="2" id="pza-kh-1cs"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="R5f-R4-JRk" secondAttribute="bottom" id="DBZ-oh-rg3"/>
+                    <constraint firstAttribute="trailing" secondItem="R5f-R4-JRk" secondAttribute="trailing" constant="24" id="LgG-4L-491"/>
+                    <constraint firstItem="R5f-R4-JRk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Oie-BP-aqG"/>
+                    <constraint firstItem="R5f-R4-JRk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="n8u-Eb-TvN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.0" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="timeLabel" destination="dCX-CN-8R9" id="Tig-f2-VHS"/>
+                <outlet property="titleLabel" destination="Vu8-Op-8DF" id="NoS-H0-6Xs"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

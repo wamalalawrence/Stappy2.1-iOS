@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchAndFavoritesTableViewCell" id="KGk-i7-Jjw" customClass="SearchAndFavoritesTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Selections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0u-OD-CbF" userLabel="MenuItemLabel">
+                        <rect key="frame" x="20" y="8" width="280" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7j-qs-Kbg" userLabel="Separator">
+                        <rect key="frame" x="5" y="42" width="310" height="1"/>
+                        <color key="backgroundColor" red="1" green="0.99802854340000002" blue="0.98060981030000005" alpha="0.48429188829999997" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Edj-5N-og4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="t0u-OD-CbF" secondAttribute="bottom" constant="8" id="3n8-Ga-x8I"/>
+                    <constraint firstAttribute="bottom" secondItem="a7j-qs-Kbg" secondAttribute="bottom" id="3n9-fz-33b"/>
+                    <constraint firstItem="a7j-qs-Kbg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="IDq-8E-ffJ"/>
+                    <constraint firstItem="t0u-OD-CbF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Mlf-Ze-Rt6"/>
+                    <constraint firstAttribute="trailing" secondItem="t0u-OD-CbF" secondAttribute="trailing" constant="20" id="jeV-C8-vaT"/>
+                    <constraint firstAttribute="trailing" secondItem="a7j-qs-Kbg" secondAttribute="trailing" constant="5" id="yD5-eF-Gl1"/>
+                    <constraint firstItem="t0u-OD-CbF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zwZ-dA-Rb9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="titleLabel" destination="t0u-OD-CbF" id="hut-gt-aEC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

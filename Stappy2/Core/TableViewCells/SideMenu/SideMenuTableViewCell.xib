@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OfficinaSansITCPro-Book.otf">
+            <string>OfficinaSansITCPro-Book</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SideMenuTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="SideMenuTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-8N-NEH" userLabel="ImageBackgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="49"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1484375" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="77U-ID-6qT"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fqO-vW-gfQ">
+                        <rect key="frame" x="12" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="cAN-6K-E2X"/>
+                            <constraint firstAttribute="height" constant="30" id="jje-zd-ea2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label side menu" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-fO-ctZ" userLabel="MenuItemLabel">
+                        <rect key="frame" x="60" y="12" width="260" height="25"/>
+                        <fontDescription key="fontDescription" name="OfficinaSansITCPro-Book" family="Officina Sans ITC Pro" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-5v-Kau" userLabel="SelectionStateIndicator">
+                        <rect key="frame" x="0.0" y="0.0" width="5" height="49"/>
+                        <color key="backgroundColor" red="0.52549019610000003" green="0.73725490199999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="KcA-Gc-0n5"/>
+                        </constraints>
+                    </view>
+                    <view opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qij-7m-JKw" userLabel="Separator">
+                        <rect key="frame" x="50" y="48" width="270" height="1"/>
+                        <color key="backgroundColor" red="1" green="0.99802854343447167" blue="0.98060981031989802" alpha="0.48429188829787234" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="kSv-fb-T2E"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="VZ4-5v-Kau" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0We-6c-NUi"/>
+                    <constraint firstAttribute="bottom" secondItem="zlE-fO-ctZ" secondAttribute="bottom" constant="12" id="2LK-4e-VSE"/>
+                    <constraint firstItem="zlE-fO-ctZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="A9U-QR-CoP"/>
+                    <constraint firstItem="fqO-vW-gfQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CBB-KC-wUE"/>
+                    <constraint firstItem="fqO-vW-gfQ" firstAttribute="leading" secondItem="VZ4-5v-Kau" secondAttribute="trailing" constant="7" id="JQj-Di-JFY"/>
+                    <constraint firstAttribute="bottom" secondItem="QaJ-8N-NEH" secondAttribute="bottom" id="REL-VE-z6H"/>
+                    <constraint firstItem="qij-7m-JKw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="eCe-T2-eeS"/>
+                    <constraint firstItem="VZ4-5v-Kau" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eWD-QW-NWe"/>
+                    <constraint firstItem="QaJ-8N-NEH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hIY-yd-sVo"/>
+                    <constraint firstItem="QaJ-8N-NEH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hrB-u6-AMQ"/>
+                    <constraint firstAttribute="bottom" secondItem="qij-7m-JKw" secondAttribute="bottom" id="hu6-D0-E6n"/>
+                    <constraint firstItem="zlE-fO-ctZ" firstAttribute="leading" secondItem="VZ4-5v-Kau" secondAttribute="trailing" constant="55" id="jH9-qd-tYb"/>
+                    <constraint firstItem="fqO-vW-gfQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="mBr-Lk-DjM"/>
+                    <constraint firstAttribute="trailing" secondItem="qij-7m-JKw" secondAttribute="trailing" id="rKK-6z-hhI"/>
+                    <constraint firstAttribute="bottom" secondItem="VZ4-5v-Kau" secondAttribute="bottom" id="tCx-na-J0l"/>
+                    <constraint firstAttribute="trailing" secondItem="zlE-fO-ctZ" secondAttribute="trailing" id="ymV-F9-MOh"/>
+                    <constraint firstItem="fqO-vW-gfQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ypx-f3-dCD"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="ypx-f3-dCD"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="iconBackground" destination="QaJ-8N-NEH" id="9Q6-Yl-7pP"/>
+                <outlet property="leftOffset" destination="mBr-Lk-DjM" id="Hoh-PX-HzU"/>
+                <outlet property="menuItemImageView" destination="fqO-vW-gfQ" id="LUm-IB-vaS"/>
+                <outlet property="menuItemLabel" destination="zlE-fO-ctZ" id="CQ9-sM-gzJ"/>
+                <outlet property="selectionIndicator" destination="VZ4-5v-Kau" id="Jfs-hk-GOe"/>
+                <outlet property="separator" destination="qij-7m-JKw" id="LZO-bX-sfh"/>
+                <outlet property="separatorLeadingConstraint" destination="eCe-T2-eeS" id="eWx-eG-Sd6"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

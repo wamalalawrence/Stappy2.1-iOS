@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="STNewsBaseExpandedTableViewCell" rowHeight="100" id="99H-SR-G0B" customClass="STNewsBaseExpandedTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="99H-SR-G0B" id="VZ2-rf-j4C">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-BO-B5I">
+                        <rect key="frame" x="20" y="0.0" width="280" height="98"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncF-nx-3YV">
+                                <rect key="frame" x="8" y="12" width="84" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="Ew4-In-nII"/>
+                                    <constraint firstAttribute="height" constant="57" id="Tv7-Ca-3yC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="11:53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1e-hB-yUj">
+                                <rect key="frame" x="104" y="12" width="168" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.85499526520000002" green="0.032436369329999999" blue="0.1375941903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verfassungsschutz: Nügida ist &quot;Die Rechte&quot; in Franken" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMU-qK-Eow">
+                                <rect key="frame" x="104" y="35" width="168" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dMU-qK-Eow" secondAttribute="bottom" constant="12" id="2bK-sj-Yxj"/>
+                            <constraint firstItem="ncF-nx-3YV" firstAttribute="top" secondItem="aRr-BO-B5I" secondAttribute="top" constant="12" id="GhX-9e-MAJ"/>
+                            <constraint firstItem="Z1e-hB-yUj" firstAttribute="top" secondItem="ncF-nx-3YV" secondAttribute="top" id="GlV-GW-gsQ"/>
+                            <constraint firstItem="dMU-qK-Eow" firstAttribute="top" secondItem="Z1e-hB-yUj" secondAttribute="bottom" constant="8" id="KCr-uo-JZJ"/>
+                            <constraint firstItem="ncF-nx-3YV" firstAttribute="leading" secondItem="aRr-BO-B5I" secondAttribute="leading" constant="8" id="SSD-Wm-vZw"/>
+                            <constraint firstItem="Z1e-hB-yUj" firstAttribute="leading" secondItem="ncF-nx-3YV" secondAttribute="trailing" constant="12" id="jlQ-WP-APV"/>
+                            <constraint firstAttribute="trailing" secondItem="Z1e-hB-yUj" secondAttribute="trailing" constant="8" id="mCe-85-z4U"/>
+                            <constraint firstItem="dMU-qK-Eow" firstAttribute="leading" secondItem="ncF-nx-3YV" secondAttribute="trailing" constant="12" id="mSY-bq-D1n"/>
+                            <constraint firstAttribute="trailing" secondItem="dMU-qK-Eow" secondAttribute="trailing" constant="8" id="yYf-Rr-8iY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="aRr-BO-B5I" firstAttribute="top" secondItem="VZ2-rf-j4C" secondAttribute="top" id="3b0-Le-7B8"/>
+                    <constraint firstItem="aRr-BO-B5I" firstAttribute="leading" secondItem="VZ2-rf-j4C" secondAttribute="leading" constant="20" id="G0E-3K-Wuc"/>
+                    <constraint firstAttribute="trailing" secondItem="aRr-BO-B5I" secondAttribute="trailing" constant="20" id="R1H-GZ-H0x"/>
+                    <constraint firstAttribute="bottom" secondItem="aRr-BO-B5I" secondAttribute="bottom" constant="1" id="d0V-ea-UOe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="dataImgeView" destination="ncF-nx-3YV" id="bui-x8-pxT"/>
+                <outlet property="descriptionLabel" destination="dMU-qK-Eow" id="wqm-wv-dTX"/>
+                <outlet property="timeLabel" destination="Z1e-hB-yUj" id="w7i-7T-L55"/>
+            </connections>
+            <point key="canvasLocation" x="251.5" y="190"/>
+        </tableViewCell>
+    </objects>
+</document>

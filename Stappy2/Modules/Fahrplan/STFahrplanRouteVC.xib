@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="KievitOffc.ttf">
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+        </mutableArray>
+        <mutableArray key="KievitSlabOffc.ttf">
+            <string>KievitSlabOffc</string>
+            <string>KievitSlabOffc</string>
+            <string>KievitSlabOffc</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STFahrplanRouteVC">
+            <connections>
+                <outlet property="dateLabel" destination="CqN-Ja-Kcs" id="gIW-bd-mxV"/>
+                <outlet property="datetimeChooserView" destination="VBc-V0-56Z" id="y7a-5w-VY2"/>
+                <outlet property="departureAndArrivalDateTimeChooserContainerHeightConstraint" destination="m8p-Xv-2kQ" id="fuK-kU-5C5"/>
+                <outlet property="departureArrivalLabel" destination="LWu-4E-X1v" id="6h8-7O-DW3"/>
+                <outlet property="destinationAddress" destination="mcy-nK-GGl" id="YjY-Sj-N9V"/>
+                <outlet property="originAddress" destination="z3N-uQ-nRq" id="lJB-jQ-M9P"/>
+                <outlet property="tableView" destination="SMj-TI-e9w" id="rmO-nh-97k"/>
+                <outlet property="timeLabel" destination="D88-ie-kTJ" id="J1o-Xl-YHD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blurred" translatesAutoresizingMaskIntoConstraints="NO" id="IYq-hB-OSG">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iS-bV-hEN" userLabel="start and target address chooser">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHw-wJ-DhI" userLabel="small date time container">
+                            <rect key="frame" x="0.0" y="0.0" width="77" height="100"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D88-ie-kTJ">
+                                    <rect key="frame" x="0.0" y="14" width="77" height="21"/>
+                                    <color key="tintColor" red="0.1058823529" green="0.30196078430000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="req-1S-7gU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="23"/>
+                                    <color key="textColor" red="0.058823529409999999" green="0.43921568630000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="highlightedColor" red="0.1058823529" green="0.30196078430000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Di. 22.09." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqN-Ja-Kcs">
+                                    <rect key="frame" x="0.0" y="43" width="77" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="bMH-lV-QBK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="12"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abfahrt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-4E-X1v" userLabel="abfahrt label">
+                                    <rect key="frame" x="0.0" y="59" width="77" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="Kx4-iu-37a"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="12"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.0" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="D88-ie-kTJ" firstAttribute="leading" secondItem="SHw-wJ-DhI" secondAttribute="leading" id="0wh-RC-LLl"/>
+                                <constraint firstItem="CqN-Ja-Kcs" firstAttribute="leading" secondItem="SHw-wJ-DhI" secondAttribute="leading" id="1Mq-Ev-Gb4"/>
+                                <constraint firstItem="LWu-4E-X1v" firstAttribute="top" secondItem="CqN-Ja-Kcs" secondAttribute="bottom" constant="-5" id="E22-ta-kM0"/>
+                                <constraint firstItem="CqN-Ja-Kcs" firstAttribute="leading" secondItem="LWu-4E-X1v" secondAttribute="trailing" constant="-124" id="Gfa-le-oDH"/>
+                                <constraint firstAttribute="trailing" secondItem="D88-ie-kTJ" secondAttribute="trailing" id="H4e-NA-Dct"/>
+                                <constraint firstAttribute="bottom" secondItem="CqN-Ja-Kcs" secondAttribute="bottom" constant="10" id="ICj-DP-FFb"/>
+                                <constraint firstAttribute="width" secondItem="SHw-wJ-DhI" secondAttribute="height" multiplier="9:16" constant="20.75" id="QTd-Hx-2QO"/>
+                                <constraint firstItem="D88-ie-kTJ" firstAttribute="top" secondItem="LWu-4E-X1v" secondAttribute="bottom" id="Ql7-rL-rt8"/>
+                                <constraint firstAttribute="trailing" secondItem="CqN-Ja-Kcs" secondAttribute="trailing" id="Zpx-T3-Isg"/>
+                                <constraint firstItem="CqN-Ja-Kcs" firstAttribute="top" secondItem="D88-ie-kTJ" secondAttribute="bottom" constant="8" id="siR-Gx-Jus"/>
+                                <constraint firstItem="LWu-4E-X1v" firstAttribute="leading" secondItem="SHw-wJ-DhI" secondAttribute="leading" id="uoa-FU-TnN"/>
+                                <constraint firstAttribute="bottom" secondItem="LWu-4E-X1v" secondAttribute="bottom" constant="20" id="x5e-Na-UrH"/>
+                                <constraint firstAttribute="trailing" secondItem="LWu-4E-X1v" secondAttribute="trailing" id="y5h-cM-S9B"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Ql7-rL-rt8"/>
+                                    <exclude reference="Gfa-le-oDH"/>
+                                    <exclude reference="ICj-DP-FFb"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="z3N-uQ-nRq">
+                            <rect key="frame" x="111" y="8" width="481" height="42"/>
+                            <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_arrow_start_to_finish" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-5X-vPF">
+                            <rect key="frame" x="76" y="27" width="20" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="kAp-ay-WFh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wo möchest du hin?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="mcy-nK-GGl">
+                            <rect key="frame" x="111" y="42" width="481" height="50"/>
+                            <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49105603448275864" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="z3N-uQ-nRq" secondAttribute="trailing" constant="8" id="59Q-yv-6zz"/>
+                        <constraint firstItem="oZN-5X-vPF" firstAttribute="top" secondItem="2iS-bV-hEN" secondAttribute="top" constant="27" id="8tv-ry-gx5"/>
+                        <constraint firstItem="z3N-uQ-nRq" firstAttribute="leading" secondItem="2iS-bV-hEN" secondAttribute="leading" constant="111" id="AeA-63-Kkw"/>
+                        <constraint firstItem="oZN-5X-vPF" firstAttribute="leading" secondItem="2iS-bV-hEN" secondAttribute="leading" constant="76" id="C9M-Nk-Nev"/>
+                        <constraint firstAttribute="bottom" secondItem="mcy-nK-GGl" secondAttribute="bottom" constant="8" id="DqN-JH-o7U"/>
+                        <constraint firstAttribute="height" constant="108" id="F7P-zE-Eqa"/>
+                        <constraint firstItem="mcy-nK-GGl" firstAttribute="leading" secondItem="SHw-wJ-DhI" secondAttribute="trailing" constant="34" id="IJW-LU-cDb"/>
+                        <constraint firstItem="mcy-nK-GGl" firstAttribute="height" secondItem="2iS-bV-hEN" secondAttribute="height" multiplier="0.5" id="Miq-Cu-EjA"/>
+                        <constraint firstAttribute="bottom" secondItem="SHw-wJ-DhI" secondAttribute="bottom" id="bre-Xd-DOu"/>
+                        <constraint firstItem="z3N-uQ-nRq" firstAttribute="top" secondItem="2iS-bV-hEN" secondAttribute="top" constant="8" id="dP1-bi-iVh"/>
+                        <constraint firstAttribute="trailing" secondItem="mcy-nK-GGl" secondAttribute="trailing" constant="8" id="jav-kI-HKc"/>
+                        <constraint firstItem="z3N-uQ-nRq" firstAttribute="height" secondItem="2iS-bV-hEN" secondAttribute="height" multiplier="0.5" constant="-8" id="p17-U9-CmD"/>
+                        <constraint firstItem="SHw-wJ-DhI" firstAttribute="leading" secondItem="2iS-bV-hEN" secondAttribute="leading" id="pTX-CR-A7w"/>
+                        <constraint firstItem="SHw-wJ-DhI" firstAttribute="top" secondItem="2iS-bV-hEN" secondAttribute="top" id="prR-ag-mv3"/>
+                        <constraint firstAttribute="bottom" secondItem="oZN-5X-vPF" secondAttribute="bottom" constant="28" id="vGb-MK-RRH"/>
+                        <constraint firstAttribute="height" constant="100" id="y4f-RE-2km"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="F7P-zE-Eqa"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-V0-56Z" userLabel="time chooser" customClass="STFahrplanDatetimeChooserView">
+                    <rect key="frame" x="8" y="108" width="584" height="372"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="372" id="m8p-Xv-2kQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SMj-TI-e9w">
+                    <rect key="frame" x="0.0" y="480" width="600" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="WLD-Ej-aCM"/>
+                        <outlet property="delegate" destination="-1" id="vtU-vs-2Ua"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SMj-TI-e9w" secondAttribute="bottom" id="4Mp-XQ-EPR"/>
+                <constraint firstItem="VBc-V0-56Z" firstAttribute="top" secondItem="IYq-hB-OSG" secondAttribute="bottom" id="4gs-G5-1uB"/>
+                <constraint firstAttribute="bottom" secondItem="IYq-hB-OSG" secondAttribute="bottom" id="AAK-6h-eXi"/>
+                <constraint firstItem="IYq-hB-OSG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ght-DF-JIq"/>
+                <constraint firstItem="IYq-hB-OSG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Luc-sM-Knz"/>
+                <constraint firstAttribute="trailing" secondItem="IYq-hB-OSG" secondAttribute="trailing" id="Mui-g8-dtN"/>
+                <constraint firstItem="SMj-TI-e9w" firstAttribute="top" secondItem="VBc-V0-56Z" secondAttribute="bottom" id="Q1T-JC-iVQ"/>
+                <constraint firstAttribute="trailing" secondItem="2iS-bV-hEN" secondAttribute="trailing" id="T2O-m7-hbJ"/>
+                <constraint firstItem="2iS-bV-hEN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UVp-x9-p5M"/>
+                <constraint firstItem="VBc-V0-56Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Xau-ti-o5l"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VBc-V0-56Z" secondAttribute="bottom" constant="8" id="YV7-hv-14H"/>
+                <constraint firstAttribute="trailing" secondItem="SMj-TI-e9w" secondAttribute="trailing" id="aSo-dX-AuM"/>
+                <constraint firstItem="VBc-V0-56Z" firstAttribute="top" secondItem="2iS-bV-hEN" secondAttribute="bottom" constant="8" id="fAP-HO-ceN"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VBc-V0-56Z" secondAttribute="bottom" constant="8" id="hSW-8M-Wzt"/>
+                <constraint firstAttribute="trailing" secondItem="VBc-V0-56Z" secondAttribute="trailing" constant="8" id="pVb-SB-Y2W"/>
+                <constraint firstItem="2iS-bV-hEN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rbw-cE-8D0"/>
+                <constraint firstItem="SMj-TI-e9w" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s6l-VE-p7x"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4gs-G5-1uB"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="645" y="494"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background_blurred" width="320" height="566"/>
+        <image name="icon_content_oepnv_arrow_start_to_finish" width="11" height="48"/>
+    </resources>
+</document>

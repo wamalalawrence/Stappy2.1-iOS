@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="321" id="KGk-i7-Jjw" customClass="STFahrplanMapCellTVC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="321"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFR-Mi-sPO">
+                        <rect key="frame" x="8" y="8" width="304" height="304"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VGL-e2-ibi">
+                                <rect key="frame" x="0.0" y="8" width="304" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VGL-e2-ibi" secondAttribute="height" multiplier="20:19" id="xru-EF-czQ"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VGL-e2-ibi" secondAttribute="bottom" priority="250" id="P8E-hF-px1"/>
+                            <constraint firstItem="VGL-e2-ibi" firstAttribute="centerY" secondItem="DFR-Mi-sPO" secondAttribute="centerY" id="WYS-Av-3Y9"/>
+                            <constraint firstItem="VGL-e2-ibi" firstAttribute="leading" secondItem="DFR-Mi-sPO" secondAttribute="leading" id="aDW-PC-0HL"/>
+                            <constraint firstItem="VGL-e2-ibi" firstAttribute="top" secondItem="DFR-Mi-sPO" secondAttribute="top" priority="250" id="lxe-Va-d5R"/>
+                            <constraint firstAttribute="trailing" secondItem="VGL-e2-ibi" secondAttribute="trailing" id="mIh-y3-1sX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DFR-Mi-sPO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="2gJ-pc-oT2"/>
+                    <constraint firstItem="DFR-Mi-sPO" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="6CK-tY-35k"/>
+                    <constraint firstItem="DFR-Mi-sPO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="EjF-gn-iKu"/>
+                    <constraint firstItem="DFR-Mi-sPO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hZA-mA-MRh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="imageCenterYConstraint" destination="WYS-Av-3Y9" id="CYT-YE-efq"/>
+            </connections>
+            <point key="canvasLocation" x="663" y="654.5"/>
+        </tableViewCell>
+    </objects>
+</document>

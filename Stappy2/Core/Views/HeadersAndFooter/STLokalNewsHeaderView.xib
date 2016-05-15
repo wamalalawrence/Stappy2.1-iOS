@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xFo-jy-qU5" customClass="STLokalNewsHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOI-Xd-nAK">
+                    <rect key="frame" x="0.0" y="0.0" width="383" height="49"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-2u-ikP" userLabel="Date label">
+                            <rect key="frame" x="8" y="6" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-AC-L1w" userLabel="Weekday label">
+                            <rect key="frame" x="8" y="43" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hZx-hn-riE">
+                            <rect key="frame" x="16" y="26" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="g7v-H9-lSF"/>
+                                <constraint firstAttribute="height" constant="18" id="vK4-vT-sjT"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcW-YE-jK3">
+                            <rect key="frame" x="42" y="44" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esu-Kt-bAg">
+                            <rect key="frame" x="313" y="9" width="70" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="Kzo-zA-TYO"/>
+                            </constraints>
+                            <state key="normal" image="map_article"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="zcW-YE-jK3" secondAttribute="bottom" constant="5" id="3qh-b6-AX2"/>
+                        <constraint firstAttribute="bottom" secondItem="hZx-hn-riE" secondAttribute="bottom" constant="5" id="4NL-Xp-tTG"/>
+                        <constraint firstItem="zcW-YE-jK3" firstAttribute="leading" secondItem="hZx-hn-riE" secondAttribute="trailing" constant="8" id="4R2-eR-oeb"/>
+                        <constraint firstAttribute="trailing" secondItem="esu-Kt-bAg" secondAttribute="trailing" id="DBp-e4-gZJ"/>
+                        <constraint firstItem="Lyi-2u-ikP" firstAttribute="top" secondItem="YOI-Xd-nAK" secondAttribute="top" constant="6" id="IRS-qk-Hgr"/>
+                        <constraint firstAttribute="bottom" secondItem="esu-Kt-bAg" secondAttribute="bottom" constant="5" id="TIa-yq-xlK"/>
+                        <constraint firstItem="Lyi-2u-ikP" firstAttribute="leading" secondItem="YOI-Xd-nAK" secondAttribute="leading" constant="8" id="VPS-DR-5EQ"/>
+                        <constraint firstItem="yH7-AC-L1w" firstAttribute="top" secondItem="Lyi-2u-ikP" secondAttribute="bottom" id="X3d-qA-wme"/>
+                        <constraint firstItem="yH7-AC-L1w" firstAttribute="leading" secondItem="Lyi-2u-ikP" secondAttribute="leading" id="Ycr-lJ-drr"/>
+                        <constraint firstAttribute="bottom" secondItem="yH7-AC-L1w" secondAttribute="bottom" constant="6" id="lGh-3G-h6y"/>
+                        <constraint firstItem="esu-Kt-bAg" firstAttribute="top" secondItem="YOI-Xd-nAK" secondAttribute="top" constant="9" id="pJH-FQ-CZJ"/>
+                        <constraint firstItem="hZx-hn-riE" firstAttribute="leading" secondItem="yH7-AC-L1w" secondAttribute="trailing" constant="8" id="sqt-bX-7wc"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="X3d-qA-wme"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YOI-Xd-nAK" secondAttribute="trailing" id="6f2-RD-gt2"/>
+                <constraint firstAttribute="bottom" secondItem="YOI-Xd-nAK" secondAttribute="bottom" id="ij1-ec-yer"/>
+                <constraint firstItem="YOI-Xd-nAK" firstAttribute="top" secondItem="xFo-jy-qU5" secondAttribute="top" id="k3Y-Rc-fwn"/>
+                <constraint firstItem="YOI-Xd-nAK" firstAttribute="leading" secondItem="xFo-jy-qU5" secondAttribute="leading" id="rl0-h4-UAf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundContent" destination="YOI-Xd-nAK" id="VKN-ZE-Bdq"/>
+                <outlet property="dateLabel" destination="Lyi-2u-ikP" id="q97-aF-MMm"/>
+                <outlet property="mapButton" destination="esu-Kt-bAg" id="ekG-rk-HQ6"/>
+                <outlet property="weatherIcon" destination="hZx-hn-riE" id="pSA-QS-des"/>
+                <outlet property="weatherLabel" destination="zcW-YE-jK3" id="qK1-yl-Q6F"/>
+                <outlet property="weekdayLabel" destination="yH7-AC-L1w" id="pE9-Io-49D"/>
+            </connections>
+            <point key="canvasLocation" x="573.5" y="207.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="map_article" width="48" height="48"/>
+    </resources>
+</document>

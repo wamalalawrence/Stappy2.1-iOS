@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GarbageCalendarSettingsViewController">
+            <connections>
+                <outlet property="beforeZipAndStreetLabel" destination="cas-dV-04g" id="r08-32-jSS"/>
+                <outlet property="garbageTypesTableView" destination="NnA-HT-urU" id="dne-Xp-EWd"/>
+                <outlet property="garbageTypesTableViewHeightConstraint" destination="b1n-kE-lU1" id="20Y-UR-IRP"/>
+                <outlet property="notificationLabel" destination="vJc-Pr-MIf" id="deb-MI-mIU"/>
+                <outlet property="showCalendarButton" destination="hDH-bf-3Mj" id="Dgq-d8-WFc"/>
+                <outlet property="streetTextField" destination="7qW-yf-nkZ" id="158-Jj-Y21"/>
+                <outlet property="view" destination="iN0-l3-epB" id="bdr-wO-hJR"/>
+                <outlet property="zipTextField" destination="WhG-J0-Fxf" id="W4o-qL-iON"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="546"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlZ-T5-GYq">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="546"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5th-GS-wO5" userLabel="Gesture recognizerView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="546"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="W7U-my-Lch" appends="YES" id="QUR-iN-egS"/>
+                            </connections>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte Standort wählen, um den persönlichen Kalender anzuzeigen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cas-dV-04g">
+                            <rect key="frame" x="8" y="8" width="377" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wann soll die Errinerung erfolgen?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJc-Pr-MIf">
+                            <rect key="frame" x="8" y="160" width="377" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-HT-urU">
+                            <rect key="frame" x="8" y="231" width="377" height="277"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="277" id="b1n-kE-lU1"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDH-bf-3Mj">
+                            <rect key="frame" x="8" y="518" width="377" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ADp-Ue-DGH"/>
+                            </constraints>
+                            <state key="normal" title="Kalendar anzeigen">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showCalendar:" destination="-1" eventType="touchUpInside" id="Pq0-dg-9NF"/>
+                            </connections>
+                        </button>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WvZ-ka-lal" userLabel="TextFieldsHolder">
+                            <rect key="frame" x="8" y="59" width="377" height="81"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy1-0o-UaR" userLabel="SeparatorView">
+                                    <rect key="frame" x="0.0" y="40" width="377" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="KHe-ps-p5n"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="cy1-0o-UaR" firstAttribute="leading" secondItem="WvZ-ka-lal" secondAttribute="leading" id="1L6-Vz-7v7"/>
+                                <constraint firstAttribute="height" constant="81" id="1dW-7z-Ati"/>
+                                <constraint firstItem="cy1-0o-UaR" firstAttribute="top" secondItem="WvZ-ka-lal" secondAttribute="top" constant="40" id="3kd-Qt-pbc"/>
+                                <constraint firstAttribute="trailing" secondItem="cy1-0o-UaR" secondAttribute="trailing" id="EN6-1i-lNg"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="POSTLEITZAHL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WhG-J0-Fxf" customClass="MLPAutoCompleteTextField">
+                            <rect key="frame" x="18" y="59" width="357" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="5db-3E-5Wz"/>
+                            </constraints>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="STRASSE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7qW-yf-nkZ" customClass="MLPAutoCompleteTextField">
+                            <rect key="frame" x="18" y="100" width="357" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="8dF-6c-EbI"/>
+                            </constraints>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NnA-HT-urU" secondAttribute="trailing" constant="8" id="2RC-5O-CHD"/>
+                        <constraint firstItem="WvZ-ka-lal" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" constant="8" id="3vV-O2-Xcb"/>
+                        <constraint firstAttribute="trailing" secondItem="cas-dV-04g" secondAttribute="trailing" constant="8" id="4Sh-Dg-T7B"/>
+                        <constraint firstAttribute="trailing" secondItem="7qW-yf-nkZ" secondAttribute="trailing" constant="18" id="4x4-gj-5gb"/>
+                        <constraint firstItem="NnA-HT-urU" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" constant="8" id="7Zn-MZ-h0P"/>
+                        <constraint firstAttribute="bottom" secondItem="5th-GS-wO5" secondAttribute="bottom" id="F1V-fJ-FRG"/>
+                        <constraint firstAttribute="trailing" secondItem="5th-GS-wO5" secondAttribute="trailing" id="FAV-2y-1QO"/>
+                        <constraint firstAttribute="bottom" secondItem="hDH-bf-3Mj" secondAttribute="bottom" priority="1" constant="10" id="GXw-DL-qbO"/>
+                        <constraint firstAttribute="trailing" secondItem="WvZ-ka-lal" secondAttribute="trailing" constant="8" id="RqT-fM-wJe"/>
+                        <constraint firstItem="WhG-J0-Fxf" firstAttribute="top" secondItem="cas-dV-04g" secondAttribute="bottom" constant="10" id="Ywv-uR-SUd"/>
+                        <constraint firstItem="vJc-Pr-MIf" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" constant="8" id="ZKs-ei-V8f"/>
+                        <constraint firstItem="5th-GS-wO5" firstAttribute="top" secondItem="YlZ-T5-GYq" secondAttribute="top" id="ZXL-1c-xec"/>
+                        <constraint firstItem="hDH-bf-3Mj" firstAttribute="top" secondItem="NnA-HT-urU" secondAttribute="bottom" constant="10" id="aTi-JR-9jD"/>
+                        <constraint firstItem="hDH-bf-3Mj" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" constant="8" id="ayK-sy-xAa"/>
+                        <constraint firstItem="5th-GS-wO5" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" id="be8-ee-7pE"/>
+                        <constraint firstAttribute="trailing" secondItem="vJc-Pr-MIf" secondAttribute="trailing" constant="8" id="ck4-8J-0J3"/>
+                        <constraint firstItem="7qW-yf-nkZ" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" constant="18" id="d7p-tj-ZRd"/>
+                        <constraint firstItem="cas-dV-04g" firstAttribute="top" secondItem="YlZ-T5-GYq" secondAttribute="top" constant="8" id="eR4-fi-Q4R"/>
+                        <constraint firstItem="WhG-J0-Fxf" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" constant="18" id="etJ-QT-vWi"/>
+                        <constraint firstAttribute="trailing" secondItem="hDH-bf-3Mj" secondAttribute="trailing" constant="8" id="ex2-Pp-CDk"/>
+                        <constraint firstItem="7qW-yf-nkZ" firstAttribute="top" secondItem="WhG-J0-Fxf" secondAttribute="bottom" constant="1" id="jg6-Es-93f"/>
+                        <constraint firstItem="vJc-Pr-MIf" firstAttribute="top" secondItem="WvZ-ka-lal" secondAttribute="bottom" constant="20" id="lIV-Py-olw"/>
+                        <constraint firstAttribute="trailing" secondItem="WhG-J0-Fxf" secondAttribute="trailing" constant="18" id="uQD-kb-H9c"/>
+                        <constraint firstItem="NnA-HT-urU" firstAttribute="top" secondItem="vJc-Pr-MIf" secondAttribute="bottom" constant="50" id="yaR-EO-mde"/>
+                        <constraint firstItem="WvZ-ka-lal" firstAttribute="top" secondItem="cas-dV-04g" secondAttribute="bottom" constant="10" id="yji-lA-hiH"/>
+                        <constraint firstItem="cas-dV-04g" firstAttribute="leading" secondItem="YlZ-T5-GYq" secondAttribute="leading" constant="8" id="ykH-lH-mhi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YlZ-T5-GYq" secondAttribute="trailing" id="9jm-dy-NB6"/>
+                <constraint firstItem="YlZ-T5-GYq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ieC-uF-rLP"/>
+                <constraint firstItem="YlZ-T5-GYq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pRT-nx-bib"/>
+                <constraint firstAttribute="bottom" secondItem="YlZ-T5-GYq" secondAttribute="bottom" id="tsj-CH-es5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-147.5" y="103"/>
+        </view>
+        <tapGestureRecognizer cancelsTouchesInView="NO" id="W7U-my-Lch">
+            <connections>
+                <action selector="tapGestureRecognized:" destination="-1" id="B9Z-Ie-nG1"/>
+                <outlet property="delegate" destination="-1" id="cj2-ma-ANr"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

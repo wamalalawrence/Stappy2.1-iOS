@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="STRightMenuHeaderView" rowHeight="54" id="J1z-4K-FYM" customClass="STRightMenuHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1z-4K-FYM" id="u8w-gq-t1c">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ucW-dA-iQr">
+                        <rect key="frame" x="20" y="10" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="POF-gC-TAN"/>
+                            <constraint firstAttribute="width" constant="30" id="lqj-hF-QGb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label side menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpt-Fj-TUw" userLabel="MenuItemLabel">
+                        <rect key="frame" x="65" y="14" width="219" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="....................................................................................." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-M6-Hdw">
+                        <rect key="frame" x="10" y="36" width="300" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.27000960759999998" green="0.71805950129999996" blue="0.16493729409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IOs-2E-r06">
+                        <rect key="frame" x="292" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="YZ6-hm-iPk"/>
+                            <constraint firstAttribute="width" constant="20" id="fAJ-07-f6e"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Cpt-Fj-TUw" firstAttribute="top" secondItem="u8w-gq-t1c" secondAttribute="top" constant="14" id="09d-hg-utw"/>
+                    <constraint firstAttribute="trailing" secondItem="IOs-2E-r06" secondAttribute="trailing" constant="8" id="2zK-At-oY2"/>
+                    <constraint firstItem="IOs-2E-r06" firstAttribute="leading" secondItem="Cpt-Fj-TUw" secondAttribute="trailing" constant="8" id="BXF-bR-8Xo"/>
+                    <constraint firstAttribute="trailing" secondItem="f9W-M6-Hdw" secondAttribute="trailing" constant="10" id="C9c-zE-huJ"/>
+                    <constraint firstItem="IOs-2E-r06" firstAttribute="top" secondItem="u8w-gq-t1c" secondAttribute="top" constant="15" id="I9v-vL-QIe"/>
+                    <constraint firstItem="Cpt-Fj-TUw" firstAttribute="leading" secondItem="ucW-dA-iQr" secondAttribute="trailing" constant="15" id="Iya-zy-5q2"/>
+                    <constraint firstAttribute="bottom" secondItem="f9W-M6-Hdw" secondAttribute="bottom" constant="-4" id="J5Q-lW-BhZ"/>
+                    <constraint firstItem="ucW-dA-iQr" firstAttribute="top" secondItem="u8w-gq-t1c" secondAttribute="top" constant="10" id="VZt-Rb-Akh"/>
+                    <constraint firstItem="f9W-M6-Hdw" firstAttribute="leading" secondItem="u8w-gq-t1c" secondAttribute="leading" constant="10" id="okt-e2-h4e"/>
+                    <constraint firstItem="ucW-dA-iQr" firstAttribute="leading" secondItem="u8w-gq-t1c" secondAttribute="leading" constant="20" id="wvd-Ma-n7L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dropArrow" destination="IOs-2E-r06" id="wSf-cn-gsC"/>
+                <outlet property="headerLabel" destination="Cpt-Fj-TUw" id="qam-QX-GsU"/>
+                <outlet property="rightMenuImage" destination="ucW-dA-iQr" id="NIe-Zu-ibQ"/>
+                <outlet property="separatorLabel" destination="f9W-M6-Hdw" id="7YA-HF-eT8"/>
+            </connections>
+            <point key="canvasLocation" x="462" y="392"/>
+        </tableViewCell>
+    </objects>
+</document>

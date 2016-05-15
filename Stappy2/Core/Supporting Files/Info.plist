@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,16 +22,32 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Finde Orte in Deiner Nähe</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Resources/Fonts/OfficinaSansITCPro-Bold.otf</string>
+		<string>Resources/Fonts/OfficinaSansITCPro-Book.otf</string>
+		<string>Resources/Fonts/KievitOffc.tff</string>
+		<string>Resources/Fonts/KievitOffc-Light.tff</string>
+		<string>Resources/Fonts/KievitScOffc-Light.tff</string>
+		<string>Resources/Fonts/KievitScOffc.tff</string>
+		<string>Resources/Fonts/KievitSlabOffc.tff</string>
+		<string>Resources/Fonts/KievitSlabScOffc.tff</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

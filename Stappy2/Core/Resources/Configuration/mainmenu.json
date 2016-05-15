@@ -1,0 +1,262 @@
+{
+  "__comment": "Default configuration file",
+  "backend": {
+    "baseUrl": "https://data4.stappy.de"
+  },
+  "menu_left": [
+    {
+      "caption": "Startseite",
+      "icon_name": "events_icon",
+      "type": "start",
+      "type_api": "start",
+      "url": "/start",
+    },
+    {
+      "caption": "Lokalnews",
+      "icon_name": "lokalnews_icon",
+      "type": "news_overview",
+      "type_api": "news",
+      "url": "",
+    },
+    {
+    "caption": "Bus & Bahn",
+    "icon_name": "fahrplan_icon",
+    "type": "oepnv_overview",
+    "type_api": "sinfo_kat",
+    "url": "/xinfo/fahrplan",
+    "api": {
+    "bahnauskunftBaseUrl": "http://1-dot-bahn-api-backend.appspot.com/rest",
+    "busRealTimeDepartureTimeUrl": "https://www.svg-busreisen.de/_inc/rest.php",
+    "authorizationHttpHeaderForRealTimeBussesDepartureTime": {
+    "SVG-REST-KEY": "41vTj8ZvSIY1gpCys5gQWPahDWmb57yi"
+    }
+    }
+    },
+    {
+    "caption": "Events",
+    "icon_name": "events_icon",
+    "type": "events_overview",
+    "type_api": "event",
+    "url": "/events",
+    },
+    {
+      "caption": "Wetter",
+      "icon_name": "wetter_icon",
+      "type": "wetter_overview",
+      "type_api": "",
+    },
+    {
+      "caption": "Vereinsnews",
+      "icon_name": "vereinsnews_icon",
+      "type": "vereinsnews_overview",
+      "type_api": "sports",
+      "url": "/vereinsnews",
+    },
+    {
+      "caption": "Notdienste",
+      "icon_name": "apotheken_icon",
+      "type": "apotheken_overview",
+      "type_api": "apotheken_notdienst",
+      "url": "/apotheken",
+      "backend": {
+        "apoUrl": "https://apo.stappy.de/Data/apo_open"
+      },
+      "defaultLocation": {
+        "latitude": 51.935149,
+        "longitude": 8.879018
+      }
+    }
+  ],
+    "menu_settings": [
+                      {
+                      "caption": "Regionenfilter",
+                      "icon_name": "icon_content_aricle_map",
+                      "sub_items": [
+                                    {
+                                    "caption": "Blumenhagen",
+                                    "sub_items": [
+                                                  {
+                                                  "caption": "Nord"
+                                                  },
+                                                  {
+                                                  "caption": "West"
+                                                  },
+                                                  {
+                                                  "caption": "Ost"
+                                                  },
+                                                  {
+                                                  "caption": "Süd"
+                                                  }
+                                                  ]
+                                    },
+                                    {
+                                    "caption": "Downtown",
+                                    "sub_items": [
+                                                  {
+                                                  "caption": "City"
+                                                  },
+                                                  {
+                                                  "caption": "Shopping"
+                                                  },
+                                                  {
+                                                  "caption": "Hauptbahnhof"
+                                                  }
+                                                  ]
+                                    },
+                                    {
+                                    "caption": "Frostenwalde"
+                                    },
+                                    {
+                                    "caption": "Herrenhof"
+                                    },
+                                    {
+                                    "caption": "Hohenfelde"
+                                    },
+                                    {
+                                    "caption": "Kummerow"
+                                    },
+                                    {
+                                    "caption": "Kunow"
+                                    },
+                                    {
+                                    "caption": "Stendell"
+                                    },
+                                    {
+                                    "caption": "Vierraden"
+                                    }
+                                    ],
+                      },
+                      {
+                      "caption": "Lokalnews",
+                      "icon_name": "lokalnews_icon",
+                      "sub_items": [
+                                    {
+                                    "caption": "Schwedter Anzeiger",
+                                    "sub_items": [
+                                                  {
+                                                  "caption": "Lokal"
+                                                  },
+                                                  {
+                                                  "caption": "Überregional"
+                                                  }
+                                                  ]
+                                    },
+                                    {
+                                    "caption": "Schwedter Abendzeitung"
+                                    },
+                                    {
+                                    "caption": "Guten Morgen Schwedt"
+                                    }
+                                    ],
+                      },
+                      {
+                      "caption": "News",
+                      "icon_name": "ticker_icon",
+                      "sub_items": [
+                                    {
+                                    "caption": "Bild"
+                                    },
+                                    {
+                                    "caption": "Stern"
+                                    },
+                                    {
+                                    "caption": "Spiegel",
+                                    "sub_items": [
+                                                  {
+                                                  "caption": "Magazin"
+                                                  },
+                                                  {
+                                                  "caption": "For kids"
+                                                  }
+                                                  ]
+                                    }
+                                    ],
+                      },
+                      {
+                      "caption": "Events",
+                      "icon_name": "events_icon",
+                      "sub_items": [
+                                    {
+                                    "caption": "Partys"
+                                    },
+                                    {
+                                    "caption": "Konzerte",
+                                    "sub_items": [
+                                                  {
+                                                  "caption": "Rock"
+                                                  },
+                                                  {
+                                                  "caption": "Schlager"
+                                                  },
+                                                  {
+                                                  "caption": "Hip Hop"
+                                                  },
+                                                  {
+                                                  "caption": "Country"
+                                                  }
+                                                  ]
+                                    },
+                                    {
+                                    "caption": "Versammlungen"
+                                    },
+                                    {
+                                    "caption": "Wahlen"
+                                    }
+                                    ],
+                      },
+                      {
+                      "caption": "Vereinsnews",
+                      "icon_name": "vereinsnews_icon",
+                      "sub_items": [
+                                    {
+                                    "caption": "FC Schwedt"
+                                    },
+                                    {
+                                    "caption": "Kegel Schwedt"
+                                    },
+                                    {
+                                    "caption": "Fit in Schwedt"
+                                    }
+                                    ],
+                      }
+                      ],
+    "menu_right": [
+                   {
+                   "title": "Kontakt",
+                   "id": 84834,
+                   "target_area": "main",
+                   "url": "/data/de.endios.stappy.schwedt/sinfo?id=84834",
+                   "icon_name": "right_menu_kontact",
+                   "children": [],
+                   "type": "sinfo_feed",
+                   },
+                   {
+                   "title": "Neues",
+                   "id": 85943,
+                   "target_area": "main",
+                   "url": "/data/de.endios.stappy.schwedt/sinfo?id=85943",
+                   "icon_name": "right_menu_neues",
+                   "children": [],
+                   "type": "sinfo_feed",
+                   },
+                   {
+                   "title": "Über uns",
+                   "id": 85945,
+                   "target_area": "main",
+                   "url": "/data/de.endios.stappy.schwedt/sinfo?id=85945",
+                   "icon_name": "right_menu_uns",
+                   "children": [],
+                   "type": "sinfo_kat",
+                   },
+                   {
+                   "title": "Energiespartipps",
+                   "id": 84836,
+                   "target_area": "left2",
+                   "url": "/data/de.endios.stappy.schwedt/sinfo?id=84836",
+                   "icon_name": "right_menu_sparen",
+                   "children": [],
+                   "type": "sinfo_feed",
+                   }
+                   ]
+
+}

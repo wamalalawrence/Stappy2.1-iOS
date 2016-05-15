@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="KievitOffc.ttf">
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+        </mutableArray>
+        <mutableArray key="KievitSlabOffc.ttf">
+            <string>KievitSlabOffc</string>
+            <string>KievitSlabOffc</string>
+            <string>KievitSlabOffc</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="KGk-i7-Jjw" customClass="STConnectionCellTVC">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqk-KQ-pIO">
+                        <rect key="frame" x="8" y="8" width="364" height="123"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eaD-iH-hxE">
+                                <rect key="frame" x="231" y="37" width="133" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="HYN-sv-0s7"/>
+                                    <constraint firstAttribute="width" constant="133" id="Ukm-sc-rWg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10d 12h 38m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gGy-5j-1ow">
+                                <rect key="frame" x="136" y="51" width="92" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="Tva-JN-biX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="an Bachstrasse 153" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-bt-9X8">
+                                <rect key="frame" x="238" y="92" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HMQ-KZ-pZM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in 6 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="osH-XZ-852">
+                                <rect key="frame" x="8" y="5" width="60" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="FnV-lg-zGJ"/>
+                                    <constraint firstAttribute="height" constant="20" id="cGA-Zm-nhN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="14"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.43921568630000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ab Überseequartier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IA-J5-e3m">
+                                <rect key="frame" x="8" y="92" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="oun-Uj-T0v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2x Umsteigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f7M-Nw-DGl">
+                                <rect key="frame" x="76" y="5" width="106" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gaT-k1-g7Y"/>
+                                    <constraint firstAttribute="width" constant="106" id="qWg-HX-uMn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcj-4L-j9O">
+                                <rect key="frame" x="8" y="31" width="348" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="1aZ-Fq-mPs"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_aerrow_finish" translatesAutoresizingMaskIntoConstraints="NO" id="Roa-GX-E7o">
+                                <rect key="frame" x="157" y="82" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CgP-qu-zIJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="cAs-aK-sbN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:39" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ngw-EZ-X4Z">
+                                <rect key="frame" x="0.0" y="37" width="136" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="cpc-sZ-ysi"/>
+                                    <constraint firstAttribute="height" constant="49" id="nfW-uS-yB9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cpc-sZ-ysi"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_fussweg" translatesAutoresizingMaskIntoConstraints="NO" id="8Rx-fF-K03">
+                                <rect key="frame" x="348" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="540-nn-abb"/>
+                                    <constraint firstAttribute="width" constant="16" id="ijf-bN-9Oy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_bahn" translatesAutoresizingMaskIntoConstraints="NO" id="gpa-tT-4Pm">
+                                <rect key="frame" x="332" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="Qfe-DG-W7A"/>
+                                    <constraint firstAttribute="height" constant="16" id="sBE-DB-ZGc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_bus" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-bN-PTc">
+                                <rect key="frame" x="316" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="nBj-Q4-V5Y"/>
+                                    <constraint firstAttribute="height" constant="16" id="z7U-o3-I5g"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_auto" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-It-SDB">
+                                <rect key="frame" x="300" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="6Jh-wZ-1wt"/>
+                                    <constraint firstAttribute="height" constant="16" id="KYn-be-JIY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_fahrrad" translatesAutoresizingMaskIntoConstraints="NO" id="arB-OM-F79">
+                                <rect key="frame" x="284" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="RaM-rl-IWJ"/>
+                                    <constraint firstAttribute="width" constant="16" id="ciB-RA-jcq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bqS-bN-PTc" firstAttribute="leading" secondItem="6UY-It-SDB" secondAttribute="trailing" id="0DZ-Mw-1Hn"/>
+                            <constraint firstItem="1tz-bt-9X8" firstAttribute="centerX" secondItem="eaD-iH-hxE" secondAttribute="centerX" id="0zk-cD-MNk"/>
+                            <constraint firstItem="Roa-GX-E7o" firstAttribute="centerX" secondItem="zqk-KQ-pIO" secondAttribute="centerX" id="2mZ-nr-80N"/>
+                            <constraint firstItem="bqS-bN-PTc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="arB-OM-F79" secondAttribute="trailing" id="2wx-c9-Wem"/>
+                            <constraint firstAttribute="trailing" secondItem="6UY-It-SDB" secondAttribute="trailing" priority="750" id="464-N0-h9G"/>
+                            <constraint firstItem="gpa-tT-4Pm" firstAttribute="leading" secondItem="bqS-bN-PTc" secondAttribute="trailing" id="4V7-cF-qTX"/>
+                            <constraint firstItem="4IA-J5-e3m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zqk-KQ-pIO" secondAttribute="leading" constant="2" id="50F-HN-SUy"/>
+                            <constraint firstItem="gpa-tT-4Pm" firstAttribute="top" secondItem="zqk-KQ-pIO" secondAttribute="top" id="5Gr-rm-seM"/>
+                            <constraint firstItem="bqS-bN-PTc" firstAttribute="centerY" secondItem="f7M-Nw-DGl" secondAttribute="centerY" id="5tv-Sk-K9w"/>
+                            <constraint firstItem="osH-XZ-852" firstAttribute="top" secondItem="zqk-KQ-pIO" secondAttribute="top" constant="5" id="6cw-Cu-yxt"/>
+                            <constraint firstAttribute="bottom" secondItem="Roa-GX-E7o" secondAttribute="bottom" constant="1" id="7iv-rW-GmM"/>
+                            <constraint firstItem="8Rx-fF-K03" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="arB-OM-F79" secondAttribute="trailing" id="API-RY-gWu"/>
+                            <constraint firstItem="eaD-iH-hxE" firstAttribute="centerY" secondItem="zqk-KQ-pIO" secondAttribute="centerY" id="ByY-hg-cE9"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gpa-tT-4Pm" secondAttribute="trailing" id="En4-zc-G5v"/>
+                            <constraint firstItem="6UY-It-SDB" firstAttribute="leading" secondItem="arB-OM-F79" secondAttribute="trailing" id="FDj-LD-kcz"/>
+                            <constraint firstItem="4IA-J5-e3m" firstAttribute="width" secondItem="zqk-KQ-pIO" secondAttribute="width" multiplier="0.4" id="Fya-cF-O5J"/>
+                            <constraint firstAttribute="trailing" secondItem="bqS-bN-PTc" secondAttribute="trailing" priority="750" id="Id7-WQ-wUo"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bqS-bN-PTc" secondAttribute="trailing" id="JbU-yD-Bi6"/>
+                            <constraint firstItem="1tz-bt-9X8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Roa-GX-E7o" secondAttribute="trailing" constant="2" id="L5g-KS-gcN"/>
+                            <constraint firstAttribute="trailing" secondItem="eaD-iH-hxE" secondAttribute="trailing" id="NKK-WD-My0"/>
+                            <constraint firstItem="4IA-J5-e3m" firstAttribute="centerY" secondItem="Roa-GX-E7o" secondAttribute="centerY" id="Ogg-T7-73o"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="arB-OM-F79" secondAttribute="trailing" id="Qe4-58-sSN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1tz-bt-9X8" secondAttribute="trailing" constant="2" id="SJE-5U-T8x"/>
+                            <constraint firstItem="gGy-5j-1ow" firstAttribute="leading" secondItem="Ngw-EZ-X4Z" secondAttribute="trailing" id="Sa1-yu-hff"/>
+                            <constraint firstItem="gpa-tT-4Pm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="arB-OM-F79" secondAttribute="trailing" id="TM4-cC-9bQ"/>
+                            <constraint firstItem="Dcj-4L-j9O" firstAttribute="top" secondItem="f7M-Nw-DGl" secondAttribute="bottom" constant="5" id="TUi-qz-oYQ"/>
+                            <constraint firstItem="Roa-GX-E7o" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4IA-J5-e3m" secondAttribute="trailing" constant="2" id="UVm-1k-ZLv"/>
+                            <constraint firstAttribute="trailing" secondItem="1tz-bt-9X8" secondAttribute="trailing" constant="8" id="Va9-R5-ptF"/>
+                            <constraint firstItem="8Rx-fF-K03" firstAttribute="centerY" secondItem="f7M-Nw-DGl" secondAttribute="centerY" id="Wdz-jT-t7d"/>
+                            <constraint firstItem="1tz-bt-9X8" firstAttribute="width" secondItem="zqk-KQ-pIO" secondAttribute="width" multiplier="0.4" id="X7U-D7-KhU"/>
+                            <constraint firstItem="gGy-5j-1ow" firstAttribute="centerY" secondItem="zqk-KQ-pIO" secondAttribute="centerY" id="YgC-ps-bII"/>
+                            <constraint firstItem="8Rx-fF-K03" firstAttribute="leading" secondItem="gpa-tT-4Pm" secondAttribute="trailing" id="Zjs-c2-zaY"/>
+                            <constraint firstItem="arB-OM-F79" firstAttribute="centerY" secondItem="f7M-Nw-DGl" secondAttribute="centerY" id="azl-pn-zxe"/>
+                            <constraint firstItem="f7M-Nw-DGl" firstAttribute="top" secondItem="zqk-KQ-pIO" secondAttribute="top" constant="5" id="b22-1s-NrQ"/>
+                            <constraint firstAttribute="trailing" secondItem="8Rx-fF-K03" secondAttribute="trailing" id="bDu-eo-OkE"/>
+                            <constraint firstItem="4IA-J5-e3m" firstAttribute="leading" secondItem="zqk-KQ-pIO" secondAttribute="leading" constant="8" id="ciw-qk-1Ay"/>
+                            <constraint firstItem="4IA-J5-e3m" firstAttribute="centerX" secondItem="Ngw-EZ-X4Z" secondAttribute="centerX" id="d0i-lk-AfG"/>
+                            <constraint firstItem="8Rx-fF-K03" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bqS-bN-PTc" secondAttribute="trailing" id="e6C-IB-Seh"/>
+                            <constraint firstAttribute="trailing" secondItem="gpa-tT-4Pm" secondAttribute="trailing" priority="250" id="fTk-3G-Aob"/>
+                            <constraint firstItem="gpa-tT-4Pm" firstAttribute="centerY" secondItem="f7M-Nw-DGl" secondAttribute="centerY" id="hXr-rh-9Wf"/>
+                            <constraint firstItem="1tz-bt-9X8" firstAttribute="centerY" secondItem="Roa-GX-E7o" secondAttribute="centerY" id="hZs-C4-zvH"/>
+                            <constraint firstItem="f7M-Nw-DGl" firstAttribute="leading" secondItem="osH-XZ-852" secondAttribute="trailing" constant="8" id="iiq-xP-iqC"/>
+                            <constraint firstItem="6UY-It-SDB" firstAttribute="centerY" secondItem="f7M-Nw-DGl" secondAttribute="centerY" id="kXE-27-TJX"/>
+                            <constraint firstItem="osH-XZ-852" firstAttribute="leading" secondItem="zqk-KQ-pIO" secondAttribute="leading" constant="8" id="lXt-sZ-7fw"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6UY-It-SDB" secondAttribute="trailing" id="ncm-Zw-2pg"/>
+                            <constraint firstAttribute="trailing" secondItem="arB-OM-F79" secondAttribute="trailing" priority="750" id="nm2-my-koh"/>
+                            <constraint firstItem="gGy-5j-1ow" firstAttribute="centerX" secondItem="zqk-KQ-pIO" secondAttribute="centerX" id="nnM-8P-6wW"/>
+                            <constraint firstItem="4IA-J5-e3m" firstAttribute="centerY" secondItem="Roa-GX-E7o" secondAttribute="centerY" id="oua-pH-agL"/>
+                            <constraint firstItem="Ngw-EZ-X4Z" firstAttribute="centerY" secondItem="zqk-KQ-pIO" secondAttribute="centerY" id="rMZ-oR-CHN"/>
+                            <constraint firstItem="bqS-bN-PTc" firstAttribute="top" secondItem="zqk-KQ-pIO" secondAttribute="top" id="sBx-Zq-aih"/>
+                            <constraint firstItem="1tz-bt-9X8" firstAttribute="centerX" secondItem="eaD-iH-hxE" secondAttribute="centerX" id="sQS-tD-nbG"/>
+                            <constraint firstItem="Ngw-EZ-X4Z" firstAttribute="leading" secondItem="zqk-KQ-pIO" secondAttribute="leading" id="wGi-9X-4N8"/>
+                            <constraint firstItem="8Rx-fF-K03" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6UY-It-SDB" secondAttribute="trailing" id="wzy-nc-hto"/>
+                            <constraint firstItem="gpa-tT-4Pm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6UY-It-SDB" secondAttribute="trailing" id="xMl-vh-s32"/>
+                            <constraint firstItem="4IA-J5-e3m" firstAttribute="centerX" secondItem="Ngw-EZ-X4Z" secondAttribute="centerX" id="xYX-1D-nV0"/>
+                            <constraint firstItem="6UY-It-SDB" firstAttribute="top" secondItem="zqk-KQ-pIO" secondAttribute="top" constant="1" id="y0z-Qr-SG4"/>
+                            <constraint firstItem="arB-OM-F79" firstAttribute="top" secondItem="zqk-KQ-pIO" secondAttribute="top" id="yDK-LY-dVv"/>
+                            <constraint firstItem="8Rx-fF-K03" firstAttribute="top" secondItem="zqk-KQ-pIO" secondAttribute="top" id="yuI-HU-jfF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Fya-cF-O5J"/>
+                                <exclude reference="ciw-qk-1Ay"/>
+                                <exclude reference="d0i-lk-AfG"/>
+                                <exclude reference="oua-pH-agL"/>
+                                <exclude reference="Va9-R5-ptF"/>
+                                <exclude reference="X7U-D7-KhU"/>
+                                <exclude reference="sQS-tD-nbG"/>
+                                <exclude reference="yDK-LY-dVv"/>
+                                <exclude reference="y0z-Qr-SG4"/>
+                                <exclude reference="sBx-Zq-aih"/>
+                                <exclude reference="5Gr-rm-seM"/>
+                                <exclude reference="yuI-HU-jfF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zqk-KQ-pIO" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="5BJ-hS-Wbp"/>
+                    <constraint firstItem="zqk-KQ-pIO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5Pd-iT-zD0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Dcj-4L-j9O" secondAttribute="trailing" constant="8" id="C3k-sF-CDf"/>
+                    <constraint firstItem="zqk-KQ-pIO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Lc0-mN-Gj3"/>
+                    <constraint firstItem="zqk-KQ-pIO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="MdS-K7-gmd"/>
+                    <constraint firstItem="Dcj-4L-j9O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="lYV-r1-k8G"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.0" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="bicycleImageView" destination="arB-OM-F79" id="AGy-ld-NdR"/>
+                <outlet property="busImageView" destination="bqS-bN-PTc" id="S7i-Yr-BKw"/>
+                <outlet property="carImageView" destination="6UY-It-SDB" id="k4j-d9-8xS"/>
+                <outlet property="changeNumberLabel" destination="f7M-Nw-DGl" id="mdj-0E-zXa"/>
+                <outlet property="departureTimeLabel" destination="osH-XZ-852" id="Elq-os-Q4C"/>
+                <outlet property="durationTimeLabel" destination="gGy-5j-1ow" id="GAT-2Y-fTd"/>
+                <outlet property="pedestrianImageView" destination="8Rx-fF-K03" id="oi4-kK-zv5"/>
+                <outlet property="startStationNameLabel" destination="4IA-J5-e3m" id="wkm-20-fmD"/>
+                <outlet property="startTimeLabel" destination="Ngw-EZ-X4Z" id="4ka-Yl-gMd"/>
+                <outlet property="targetStationNameLabel" destination="1tz-bt-9X8" id="pGB-cz-dXp"/>
+                <outlet property="targetTimeLabel" destination="eaD-iH-hxE" id="WB7-9H-Xye"/>
+                <outlet property="trainImageView" destination="gpa-tT-4Pm" id="4AW-Pm-ydE"/>
+            </connections>
+            <point key="canvasLocation" x="241" y="582"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_content_oepnv_aerrow_finish" width="250" height="250"/>
+        <image name="icon_content_oepnv_auto" width="25" height="25"/>
+        <image name="icon_content_oepnv_bahn" width="25" height="25"/>
+        <image name="icon_content_oepnv_bus" width="25" height="25"/>
+        <image name="icon_content_oepnv_fahrrad" width="48" height="48"/>
+        <image name="icon_content_oepnv_fussweg" width="25" height="25"/>
+    </resources>
+</document>

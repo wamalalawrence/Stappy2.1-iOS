@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RouteToCalendarButtonCellTVC">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="632-a8-QUn">
+                        <rect key="frame" x="29" y="8" width="308" height="27"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action_options_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="aO1-86-eK8">
+                                <rect key="frame" x="8" y="0.0" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="eb4-pe-sYh"/>
+                                    <constraint firstAttribute="height" constant="27" id="j1I-9h-jyY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route in den Kalender eintragen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-sw-oMd">
+                                <rect key="frame" x="43" y="3" width="245" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aO1-86-eK8" firstAttribute="top" secondItem="632-a8-QUn" secondAttribute="top" id="9rX-VR-fzV"/>
+                            <constraint firstItem="rb1-sw-oMd" firstAttribute="leading" secondItem="aO1-86-eK8" secondAttribute="trailing" constant="8" id="B6X-LQ-wF9"/>
+                            <constraint firstItem="aO1-86-eK8" firstAttribute="leading" secondItem="632-a8-QUn" secondAttribute="leading" constant="8" id="FLQ-kr-Zh9"/>
+                            <constraint firstAttribute="bottom" secondItem="aO1-86-eK8" secondAttribute="bottom" id="UHh-0f-kRX"/>
+                            <constraint firstItem="rb1-sw-oMd" firstAttribute="top" secondItem="632-a8-QUn" secondAttribute="top" constant="3" id="Z63-25-Md1"/>
+                            <constraint firstAttribute="trailing" secondItem="rb1-sw-oMd" secondAttribute="trailing" constant="20" id="jAa-u3-cQ4"/>
+                            <constraint firstAttribute="bottom" secondItem="rb1-sw-oMd" secondAttribute="bottom" constant="3" id="tco-co-oi0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="632-a8-QUn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="NKz-4D-mGR"/>
+                    <constraint firstItem="632-a8-QUn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="vKZ-cw-3Oo"/>
+                    <constraint firstItem="632-a8-QUn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="yxz-1G-f8F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="374" y="516"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="action_options_calendar" width="48" height="48"/>
+    </resources>
+</document>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="KievitOffc.ttf">
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STFahrplanDatetimeChooserView">
+            <connections>
+                <outlet property="arrivalButton" destination="Ct1-eD-6rx" id="NVa-lx-hup"/>
+                <outlet property="datePicker" destination="eTK-fL-zVe" id="YOu-qK-uCG"/>
+                <outlet property="departureButton" destination="qhZ-72-LzO" id="QBj-LL-G9Q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="584" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9V-XQ-cnW" userLabel="time chooser">
+                    <rect key="frame" x="0.0" y="0.0" width="584" height="400"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="icon_content_oepnv_time_5" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-8Z-uzM">
+                            <rect key="frame" x="121" y="70" width="50" height="50"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" image="icon_content_oepnv_time_15" translatesAutoresizingMaskIntoConstraints="NO" id="RtE-yl-raE">
+                            <rect key="frame" x="267" y="70" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="RtE-yl-raE" secondAttribute="height" multiplier="1:1" id="8nx-CP-cdz"/>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="LxV-3q-ecg"/>
+                                <constraint firstAttribute="height" priority="250" constant="50" id="sfS-en-84Y"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="v7B-Rw-C90"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="icon_content_oepnv_time_30" translatesAutoresizingMaskIntoConstraints="NO" id="gL2-Sn-Gi9">
+                            <rect key="frame" x="413" y="70" width="50" height="50"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="+ 5 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-2Y-LQo">
+                            <rect key="frame" x="96" y="128" width="100" height="21"/>
+                            <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="+ 15 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2z-1r-BZ4">
+                            <rect key="frame" x="242" y="128" width="100" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="6nL-Hu-sfX"/>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="7uw-Fk-OPD"/>
+                                <constraint firstAttribute="height" priority="250" constant="21" id="pKJ-VT-Apy"/>
+                                <constraint firstAttribute="width" constant="100" id="wUO-4L-Iz0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="+ 30 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTG-qm-ait">
+                            <rect key="frame" x="388" y="128" width="100" height="21"/>
+                            <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="eTK-fL-zVe">
+                            <rect key="frame" x="0.0" y="157" width="584" height="175"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" priority="900" constant="216" id="056-tz-ve3"/>
+                                <constraint firstAttribute="height" priority="250" constant="216" id="gEI-GN-XDU"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="900" constant="50" id="lgM-2D-CSz"/>
+                            </constraints>
+                            <date key="date" timeIntervalSinceReferenceDate="475401459.98915899">
+                                <!--2016-01-25 07:57:39 +0000-->
+                            </date>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="datePickerValueChanged:" destination="-1" eventType="valueChanged" id="5u2-c8-Yzf"/>
+                            </connections>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f70-D4-CaV">
+                            <rect key="frame" x="29" y="348" width="234" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43" id="7Ls-9V-9bv"/>
+                                <constraint firstAttribute="height" priority="750" constant="43" id="7kT-iX-gEx"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="WaB-Bx-C2h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="20"/>
+                            <state key="normal" title="Abbrechen">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="actionAbort:" destination="-1" eventType="touchUpInside" id="6u4-GO-y11"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhZ-72-LzO">
+                            <rect key="frame" x="0.0" y="0.0" width="292" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="750" constant="40" id="bGb-lB-QKc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                            <state key="normal" title="ABFAHRT">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="actionSetToDeparture:" destination="-1" eventType="touchUpInside" id="n6s-1F-Pl8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ct1-eD-6rx">
+                            <rect key="frame" x="292" y="0.0" width="292" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                            <state key="normal" title="ANKUNFT">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="actionSetToArrival:" destination="-1" eventType="touchUpInside" id="ghy-aL-e5T"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZ7-fx-Vzt">
+                            <rect key="frame" x="321" y="348" width="234" height="37"/>
+                            <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="20"/>
+                            <state key="normal" title="Übernehmen">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="actionSave:" destination="-1" eventType="touchUpInside" id="vXb-9U-Iwm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRC-dE-pxP" userLabel="button +5">
+                            <rect key="frame" x="121" y="70" width="50" height="50"/>
+                            <connections>
+                                <action selector="actionAdd5Min:" destination="-1" eventType="touchUpInside" id="diI-fw-sIN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOn-iy-Egs" userLabel="button +15">
+                            <rect key="frame" x="267" y="70" width="50" height="50"/>
+                            <connections>
+                                <action selector="actionAdd15Min:" destination="-1" eventType="touchUpInside" id="Spe-SX-GxM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4e-m7-h4S" userLabel="button +30">
+                            <rect key="frame" x="413" y="70" width="50" height="50"/>
+                            <connections>
+                                <action selector="actionAdd30Min:" destination="-1" eventType="touchUpInside" id="vgD-QH-w91"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="vZ7-fx-Vzt" secondAttribute="bottom" constant="15" id="04I-IE-Kgw"/>
+                        <constraint firstItem="vZ7-fx-Vzt" firstAttribute="top" secondItem="eTK-fL-zVe" secondAttribute="bottom" priority="750" constant="25" id="1Of-sb-YhS"/>
+                        <constraint firstAttribute="trailing" secondItem="vZ7-fx-Vzt" secondAttribute="trailing" constant="15" id="2vI-8B-L1K"/>
+                        <constraint firstItem="RtE-yl-raE" firstAttribute="top" secondItem="qhZ-72-LzO" secondAttribute="bottom" constant="30" id="3Jd-TM-Q0g"/>
+                        <constraint firstItem="vZ7-fx-Vzt" firstAttribute="width" secondItem="Z9V-XQ-cnW" secondAttribute="width" multiplier="0.4" id="4sU-af-N0h"/>
+                        <constraint firstItem="vZ7-fx-Vzt" firstAttribute="centerX" secondItem="Ct1-eD-6rx" secondAttribute="centerX" id="5Py-Ov-bo2"/>
+                        <constraint firstItem="6cY-2Y-LQo" firstAttribute="width" secondItem="P2z-1r-BZ4" secondAttribute="width" id="6Vh-1f-4RN"/>
+                        <constraint firstItem="f70-D4-CaV" firstAttribute="top" secondItem="eTK-fL-zVe" secondAttribute="bottom" priority="750" constant="16" id="6eE-Re-2Qb"/>
+                        <constraint firstItem="vZ7-fx-Vzt" firstAttribute="height" secondItem="f70-D4-CaV" secondAttribute="height" id="6rV-jp-AaA"/>
+                        <constraint firstItem="fTG-qm-ait" firstAttribute="centerY" secondItem="P2z-1r-BZ4" secondAttribute="centerY" id="7GL-Ji-2Uy"/>
+                        <constraint firstAttribute="trailing" secondItem="eTK-fL-zVe" secondAttribute="trailing" id="7gD-7P-Klk"/>
+                        <constraint firstItem="EOn-iy-Egs" firstAttribute="centerX" secondItem="RtE-yl-raE" secondAttribute="centerX" id="8Ua-GT-qkP"/>
+                        <constraint firstItem="6cY-2Y-LQo" firstAttribute="centerY" secondItem="P2z-1r-BZ4" secondAttribute="centerY" id="8zA-8M-JbD"/>
+                        <constraint firstItem="cRC-dE-pxP" firstAttribute="height" secondItem="XYl-8Z-uzM" secondAttribute="height" id="B43-Lj-gyB"/>
+                        <constraint firstItem="f70-D4-CaV" firstAttribute="centerX" secondItem="qhZ-72-LzO" secondAttribute="centerX" id="Bbf-Va-k7v"/>
+                        <constraint firstItem="qhZ-72-LzO" firstAttribute="top" secondItem="Z9V-XQ-cnW" secondAttribute="top" id="C3g-54-RUl"/>
+                        <constraint firstItem="gL2-Sn-Gi9" firstAttribute="height" secondItem="RtE-yl-raE" secondAttribute="height" id="CIU-Dc-ewi"/>
+                        <constraint firstItem="Ct1-eD-6rx" firstAttribute="width" secondItem="Z9V-XQ-cnW" secondAttribute="width" multiplier="0.5" id="CZy-8f-NIj"/>
+                        <constraint firstItem="fTG-qm-ait" firstAttribute="width" secondItem="P2z-1r-BZ4" secondAttribute="width" id="Ebg-Y5-QbG"/>
+                        <constraint firstItem="qhZ-72-LzO" firstAttribute="width" secondItem="Z9V-XQ-cnW" secondAttribute="width" multiplier="0.5" id="Enl-MV-3Yn"/>
+                        <constraint firstItem="cRC-dE-pxP" firstAttribute="centerY" secondItem="XYl-8Z-uzM" secondAttribute="centerY" id="Fte-YY-orh"/>
+                        <constraint firstItem="XYl-8Z-uzM" firstAttribute="centerY" secondItem="RtE-yl-raE" secondAttribute="centerY" id="HhI-CE-L6W"/>
+                        <constraint firstItem="P2z-1r-BZ4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RtE-yl-raE" secondAttribute="bottom" id="J8Q-03-hvL"/>
+                        <constraint firstItem="f70-D4-CaV" firstAttribute="leading" secondItem="Z9V-XQ-cnW" secondAttribute="leading" constant="15" id="LWI-no-PkN"/>
+                        <constraint firstItem="gL2-Sn-Gi9" firstAttribute="centerX" secondItem="Ct1-eD-6rx" secondAttribute="centerX" id="M9C-rZ-EAH"/>
+                        <constraint firstItem="P2z-1r-BZ4" firstAttribute="top" relation="lessThanOrEqual" secondItem="RtE-yl-raE" secondAttribute="bottom" constant="8" id="NKe-8K-VIH"/>
+                        <constraint firstItem="gL2-Sn-Gi9" firstAttribute="width" secondItem="RtE-yl-raE" secondAttribute="width" id="Om1-Xg-Yjp"/>
+                        <constraint firstItem="6cY-2Y-LQo" firstAttribute="height" secondItem="P2z-1r-BZ4" secondAttribute="height" id="QzN-bs-2VF"/>
+                        <constraint firstItem="k4e-m7-h4S" firstAttribute="width" secondItem="gL2-Sn-Gi9" secondAttribute="width" id="RJy-Nn-xJt"/>
+                        <constraint firstAttribute="bottom" secondItem="f70-D4-CaV" secondAttribute="bottom" constant="15" id="SJp-d1-7FP"/>
+                        <constraint firstItem="EOn-iy-Egs" firstAttribute="centerY" secondItem="RtE-yl-raE" secondAttribute="centerY" id="UZQ-hg-JAc"/>
+                        <constraint firstItem="fTG-qm-ait" firstAttribute="centerX" secondItem="gL2-Sn-Gi9" secondAttribute="centerX" id="VLO-Wv-gIN"/>
+                        <constraint firstItem="cRC-dE-pxP" firstAttribute="centerX" secondItem="XYl-8Z-uzM" secondAttribute="centerX" id="YLF-PL-geK"/>
+                        <constraint firstItem="k4e-m7-h4S" firstAttribute="centerX" secondItem="gL2-Sn-Gi9" secondAttribute="centerX" id="YY0-uK-46k"/>
+                        <constraint firstItem="k4e-m7-h4S" firstAttribute="height" secondItem="gL2-Sn-Gi9" secondAttribute="height" id="Ypd-IJ-l8k"/>
+                        <constraint firstItem="k4e-m7-h4S" firstAttribute="centerY" secondItem="gL2-Sn-Gi9" secondAttribute="centerY" id="aKC-Yk-e0j"/>
+                        <constraint firstItem="qhZ-72-LzO" firstAttribute="leading" secondItem="Z9V-XQ-cnW" secondAttribute="leading" id="aue-PS-fd8"/>
+                        <constraint firstItem="XYl-8Z-uzM" firstAttribute="width" secondItem="RtE-yl-raE" secondAttribute="width" id="cpW-xZ-yLw"/>
+                        <constraint firstItem="fTG-qm-ait" firstAttribute="height" secondItem="P2z-1r-BZ4" secondAttribute="height" id="e2h-E8-llp"/>
+                        <constraint firstItem="XYl-8Z-uzM" firstAttribute="height" secondItem="RtE-yl-raE" secondAttribute="height" id="fgF-Pw-LA7"/>
+                        <constraint firstItem="eTK-fL-zVe" firstAttribute="top" secondItem="P2z-1r-BZ4" secondAttribute="bottom" constant="8" id="gXG-Yf-XYi"/>
+                        <constraint firstItem="Ct1-eD-6rx" firstAttribute="top" secondItem="Z9V-XQ-cnW" secondAttribute="top" id="gYz-5b-yKA"/>
+                        <constraint firstItem="gL2-Sn-Gi9" firstAttribute="centerY" secondItem="RtE-yl-raE" secondAttribute="centerY" id="hNC-Oq-5S8"/>
+                        <constraint firstAttribute="trailing" secondItem="Ct1-eD-6rx" secondAttribute="trailing" id="iuR-QB-v7O"/>
+                        <constraint firstItem="EOn-iy-Egs" firstAttribute="height" secondItem="RtE-yl-raE" secondAttribute="height" id="kgp-Cj-syo"/>
+                        <constraint firstItem="XYl-8Z-uzM" firstAttribute="centerX" secondItem="qhZ-72-LzO" secondAttribute="centerX" id="lBN-Y0-pJV"/>
+                        <constraint firstAttribute="height" constant="400" id="lRx-6f-TlS"/>
+                        <constraint firstItem="6cY-2Y-LQo" firstAttribute="centerX" secondItem="XYl-8Z-uzM" secondAttribute="centerX" id="oeg-Va-sLs"/>
+                        <constraint firstItem="eTK-fL-zVe" firstAttribute="leading" secondItem="Z9V-XQ-cnW" secondAttribute="leading" id="s6a-UD-BLM"/>
+                        <constraint firstItem="RtE-yl-raE" firstAttribute="centerX" secondItem="Z9V-XQ-cnW" secondAttribute="centerX" id="sYs-Pc-Zml"/>
+                        <constraint firstItem="EOn-iy-Egs" firstAttribute="width" secondItem="RtE-yl-raE" secondAttribute="width" id="t0X-xM-dOS"/>
+                        <constraint firstItem="Ct1-eD-6rx" firstAttribute="height" secondItem="qhZ-72-LzO" secondAttribute="height" id="uY8-fc-0Dh"/>
+                        <constraint firstItem="f70-D4-CaV" firstAttribute="width" secondItem="Z9V-XQ-cnW" secondAttribute="width" multiplier="0.4" id="v5r-t2-RKF"/>
+                        <constraint firstItem="P2z-1r-BZ4" firstAttribute="centerX" secondItem="Z9V-XQ-cnW" secondAttribute="centerX" id="ve7-sT-iWS"/>
+                        <constraint firstItem="P2z-1r-BZ4" firstAttribute="top" secondItem="RtE-yl-raE" secondAttribute="bottom" priority="750" constant="8" id="x0j-Y3-CNS"/>
+                        <constraint firstItem="cRC-dE-pxP" firstAttribute="width" secondItem="XYl-8Z-uzM" secondAttribute="width" id="xEl-TV-T24"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="lRx-6f-TlS"/>
+                            <exclude reference="LWI-no-PkN"/>
+                            <exclude reference="2vI-8B-L1K"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Z9V-XQ-cnW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CFp-FF-KBU"/>
+                <constraint firstAttribute="bottom" secondItem="Z9V-XQ-cnW" secondAttribute="bottom" id="kxy-4l-E73"/>
+                <constraint firstAttribute="trailing" secondItem="Z9V-XQ-cnW" secondAttribute="trailing" id="lT9-7n-F1e"/>
+                <constraint firstItem="Z9V-XQ-cnW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nQb-9f-Lvv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="layer.backgroundColor">
+                    <color key="value" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="613" y="387"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_content_oepnv_time_15" width="250" height="250"/>
+        <image name="icon_content_oepnv_time_30" width="250" height="250"/>
+        <image name="icon_content_oepnv_time_5" width="250" height="250"/>
+    </resources>
+</document>

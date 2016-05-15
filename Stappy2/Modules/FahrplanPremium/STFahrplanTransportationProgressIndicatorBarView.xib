@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="132"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-wg-OFk">
+                    <rect key="frame" x="8" y="8" width="584" height="116"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_fussweg" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-YO-mc6">
+                            <rect key="frame" x="504" y="8" width="21" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="9c3-VC-cD7"/>
+                                <constraint firstAttribute="width" constant="21" id="FeZ-mR-E0H"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jV-nJ-1PT">
+                            <rect key="frame" x="533" y="8" width="43" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-kA-kVs" userLabel="vertical seperator">
+                            <rect key="frame" x="0.0" y="37" width="584" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="0.10242456896551724" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="5cO-TX-ccn"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_bahn" translatesAutoresizingMaskIntoConstraints="NO" id="jKN-w4-9ao">
+                            <rect key="frame" x="8" y="87" width="21" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="21" id="KMx-LA-P6X"/>
+                                <constraint firstAttribute="height" constant="21" id="uKo-D2-Br9"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:36" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shu-jl-Bua">
+                            <rect key="frame" x="38" y="87" width="41" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="·" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPY-BZ-Cov">
+                            <rect key="frame" x="87" y="87" width="5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Abfahrt Überseequartier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWz-g9-gGL">
+                            <rect key="frame" x="100" y="87" width="476" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WP-Hy-zLW">
+                            <rect key="frame" x="8" y="46" width="568" height="33"/>
+                            <color key="backgroundColor" white="1" alpha="0.1988415948275862" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="smH-Qc-Qz5"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="smH-Qc-Qz5"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="U4 Richtung Billstedt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcc-io-qlr">
+                            <rect key="frame" x="8" y="8" width="488" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="uWz-g9-gGL" firstAttribute="leading" secondItem="YPY-BZ-Cov" secondAttribute="trailing" constant="8" id="0QD-mm-aLV"/>
+                        <constraint firstItem="Jt9-YO-mc6" firstAttribute="centerY" secondItem="5jV-nJ-1PT" secondAttribute="centerY" id="2Gk-vR-vJ4"/>
+                        <constraint firstItem="YPY-BZ-Cov" firstAttribute="leading" secondItem="shu-jl-Bua" secondAttribute="trailing" constant="8" id="6Qa-8W-MgK"/>
+                        <constraint firstAttribute="trailing" secondItem="AmE-kA-kVs" secondAttribute="trailing" id="BHR-Dp-T7F"/>
+                        <constraint firstItem="jKN-w4-9ao" firstAttribute="leading" secondItem="Wza-wg-OFk" secondAttribute="leading" constant="8" id="N6m-2s-IgA"/>
+                        <constraint firstAttribute="bottom" secondItem="uWz-g9-gGL" secondAttribute="bottom" constant="8" id="Ne6-Be-BHM"/>
+                        <constraint firstItem="1WP-Hy-zLW" firstAttribute="leading" secondItem="Wza-wg-OFk" secondAttribute="leading" constant="8" id="OHC-cS-nr1"/>
+                        <constraint firstAttribute="trailing" secondItem="1WP-Hy-zLW" secondAttribute="trailing" constant="8" id="OJr-SS-xIP"/>
+                        <constraint firstItem="Tcc-io-qlr" firstAttribute="top" secondItem="Wza-wg-OFk" secondAttribute="top" constant="8" id="P37-S5-Urn"/>
+                        <constraint firstAttribute="bottom" secondItem="shu-jl-Bua" secondAttribute="bottom" constant="8" id="Qej-En-NqT"/>
+                        <constraint firstItem="AmE-kA-kVs" firstAttribute="top" secondItem="Tcc-io-qlr" secondAttribute="bottom" constant="8" id="Sa2-cL-qg7"/>
+                        <constraint firstItem="jKN-w4-9ao" firstAttribute="top" secondItem="1WP-Hy-zLW" secondAttribute="bottom" constant="8" id="U9h-qK-9Op"/>
+                        <constraint firstItem="Jt9-YO-mc6" firstAttribute="leading" secondItem="Tcc-io-qlr" secondAttribute="trailing" constant="8" id="UWa-Hc-YMa"/>
+                        <constraint firstItem="Tcc-io-qlr" firstAttribute="leading" secondItem="Wza-wg-OFk" secondAttribute="leading" constant="8" id="V2X-20-hBr"/>
+                        <constraint firstItem="5jV-nJ-1PT" firstAttribute="leading" secondItem="Jt9-YO-mc6" secondAttribute="trailing" constant="8" id="ZUN-Om-Pkz"/>
+                        <constraint firstAttribute="trailing" secondItem="5jV-nJ-1PT" secondAttribute="trailing" constant="8" id="cBN-OC-kQD"/>
+                        <constraint firstAttribute="bottom" secondItem="jKN-w4-9ao" secondAttribute="bottom" constant="8" id="cuK-oU-H7c"/>
+                        <constraint firstItem="AmE-kA-kVs" firstAttribute="leading" secondItem="Wza-wg-OFk" secondAttribute="leading" id="fEy-3j-S8h"/>
+                        <constraint firstAttribute="bottom" secondItem="YPY-BZ-Cov" secondAttribute="bottom" constant="8" id="hRf-Sh-dXI"/>
+                        <constraint firstItem="shu-jl-Bua" firstAttribute="leading" secondItem="jKN-w4-9ao" secondAttribute="trailing" constant="9" id="prZ-l6-pZv"/>
+                        <constraint firstItem="1WP-Hy-zLW" firstAttribute="top" secondItem="AmE-kA-kVs" secondAttribute="bottom" constant="8" id="rhg-59-Va0"/>
+                        <constraint firstItem="5jV-nJ-1PT" firstAttribute="top" secondItem="Wza-wg-OFk" secondAttribute="top" constant="8" id="smc-PL-TZ6"/>
+                        <constraint firstAttribute="trailing" secondItem="uWz-g9-gGL" secondAttribute="trailing" constant="8" id="vnI-ZN-2fo"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="0.0" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Wza-wg-OFk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="Nl2-kR-61T"/>
+                <constraint firstItem="Wza-wg-OFk" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="hi8-72-biP"/>
+                <constraint firstItem="Wza-wg-OFk" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="p5Y-b2-4re"/>
+                <constraint firstItem="Wza-wg-OFk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="t9A-M6-Lwg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="761" y="282"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_content_oepnv_bahn" width="25" height="25"/>
+        <image name="icon_content_oepnv_fussweg" width="25" height="25"/>
+    </resources>
+</document>

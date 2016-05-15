@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionInsideNewsExpandedCell" id="b75-Eq-jXl" customClass="STNewsTableCellCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yD-jK-Bwt">
+                        <rect key="frame" x="15" y="0.0" width="290" height="100"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yE2-OO-doi">
+                                <rect key="frame" x="8" y="15" width="95" height="70"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14:16 Uhr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLn-yA-0aS">
+                                <rect key="frame" x="117" y="15" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LED - Fluter vor Neumunsterkirche ent.." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-xW-Z7V">
+                                <rect key="frame" x="117" y="44" width="175" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69947167266187049" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3yD-jK-Bwt" secondAttribute="bottom" id="0Na-oa-5Gr"/>
+                <constraint firstItem="3yD-jK-Bwt" firstAttribute="leading" secondItem="b75-Eq-jXl" secondAttribute="leading" constant="15" id="JcT-34-GtH"/>
+                <constraint firstAttribute="trailing" secondItem="3yD-jK-Bwt" secondAttribute="trailing" constant="15" id="Rlb-w0-JL0"/>
+                <constraint firstItem="3yD-jK-Bwt" firstAttribute="top" secondItem="b75-Eq-jXl" secondAttribute="top" id="rOC-bP-hKx"/>
+            </constraints>
+            <connections>
+                <outlet property="dataImgeView" destination="yE2-OO-doi" id="iSM-6s-USz"/>
+                <outlet property="descriptionLabel" destination="aZe-xW-Z7V" id="YTQ-Yw-zAf"/>
+                <outlet property="timeLabel" destination="ZLn-yA-0aS" id="Dw3-jn-RuP"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="282"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -2,8 +2,8 @@
 //  Stappy2Tests.m
 //  Stappy2Tests
 //
-//  Created by Thorsten Binnewies on 15.05.16.
-//  Copyright © 2016 endios GmbH. All rights reserved.
+//  Created by Cynthia Codrea on 22/02/2016.
+//  Copyright © 2016 endios GMBH. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

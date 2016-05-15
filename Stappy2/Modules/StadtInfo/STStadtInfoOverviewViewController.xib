@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OfficinaSansITCPro-Book.otf">
+            <string>OfficinaSansITCPro-Book</string>
+            <string>OfficinaSansITCPro-Book</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STStadtInfoOverviewViewController">
+            <connections>
+                <outlet property="geoffneteButton" destination="U59-gP-Zov" id="GrZ-ec-s5R"/>
+                <outlet property="headerMapButton" destination="aya-nO-Use" id="nFp-I1-H28"/>
+                <outlet property="leftHeaderButton" destination="Qhn-MD-6OP" id="ext-XS-3B4"/>
+                <outlet property="overviewTable" destination="2ud-Z9-GFi" id="tiA-7r-mVO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blurred" translatesAutoresizingMaskIntoConstraints="NO" id="PfU-BI-Ubg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4W-QF-88E">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ly7-SU-5hn">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dt8-sf-oUZ">
+                                    <rect key="frame" x="-3" y="32" width="22" height="16"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aya-nO-Use" userLabel="MapButton">
+                                    <rect key="frame" x="552" y="10" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="46e-mh-Pre"/>
+                                        <constraint firstAttribute="width" constant="40" id="JHf-RD-iIu"/>
+                                    </constraints>
+                                    <state key="normal" image="map_article"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="46e-mh-Pre"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="mapButtonPressed:" destination="-1" eventType="touchUpInside" id="PgB-J2-ETg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U59-gP-Zov" userLabel="geoButton">
+                                    <rect key="frame" x="142" y="10" width="130" height="40"/>
+                                    <fontDescription key="fontDescription" name="OfficinaSansITCPro-Book" family="Officina Sans ITC Pro" pointSize="15"/>
+                                    <inset key="contentEdgeInsets" minX="3" minY="0.0" maxX="3" maxY="0.0"/>
+                                    <state key="normal" title="Geöffnete anzeigen">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="geoffneteButtonPressed:" destination="-1" eventType="touchUpInside" id="AmD-Zf-Nl3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhn-MD-6OP" userLabel="venZButton">
+                                    <rect key="frame" x="8" y="10" width="130" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Db8-2k-bRy"/>
+                                        <constraint firstAttribute="width" constant="130" id="gmk-sC-d4h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="OfficinaSansITCPro-Book" family="Officina Sans ITC Pro" pointSize="15"/>
+                                    <inset key="contentEdgeInsets" minX="3" minY="0.0" maxX="3" maxY="0.0"/>
+                                    <state key="normal" title="Von Z bis A auflisten">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="2"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="venAbiZButtonPressed:" destination="-1" eventType="touchUpInside" id="saM-mu-F6e"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="U59-gP-Zov" firstAttribute="height" secondItem="Qhn-MD-6OP" secondAttribute="height" id="0uh-bl-DGp"/>
+                                <constraint firstItem="U59-gP-Zov" firstAttribute="leading" secondItem="Qhn-MD-6OP" secondAttribute="trailing" constant="4" id="3sg-a5-6OR"/>
+                                <constraint firstItem="U59-gP-Zov" firstAttribute="centerY" secondItem="Ly7-SU-5hn" secondAttribute="centerY" id="7M9-3p-W3b"/>
+                                <constraint firstItem="Qhn-MD-6OP" firstAttribute="centerY" secondItem="Ly7-SU-5hn" secondAttribute="centerY" id="8Od-19-L0r"/>
+                                <constraint firstItem="Qhn-MD-6OP" firstAttribute="leading" secondItem="Ly7-SU-5hn" secondAttribute="leading" constant="8" id="HTB-U0-d55"/>
+                                <constraint firstAttribute="trailing" secondItem="aya-nO-Use" secondAttribute="trailing" constant="8" id="Xjc-k6-diG"/>
+                                <constraint firstItem="aya-nO-Use" firstAttribute="centerY" secondItem="Ly7-SU-5hn" secondAttribute="centerY" id="jna-ub-OOU"/>
+                                <constraint firstItem="Qhn-MD-6OP" firstAttribute="centerY" secondItem="Ly7-SU-5hn" secondAttribute="centerY" id="thL-uy-mWr"/>
+                                <constraint firstItem="U59-gP-Zov" firstAttribute="width" secondItem="Qhn-MD-6OP" secondAttribute="width" id="uBn-xv-lSF"/>
+                                <constraint firstItem="aya-nO-Use" firstAttribute="height" secondItem="Qhn-MD-6OP" secondAttribute="height" id="vpC-Ou-SKP"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ly7-SU-5hn" firstAttribute="leading" secondItem="x4W-QF-88E" secondAttribute="leading" id="Rrn-Pt-aSt"/>
+                        <constraint firstAttribute="height" constant="60" id="ctI-U4-M4n"/>
+                        <constraint firstAttribute="bottom" secondItem="Ly7-SU-5hn" secondAttribute="bottom" id="fOW-Jw-CYd"/>
+                        <constraint firstItem="Ly7-SU-5hn" firstAttribute="top" secondItem="x4W-QF-88E" secondAttribute="top" id="n03-zj-kMB"/>
+                        <constraint firstAttribute="trailing" secondItem="Ly7-SU-5hn" secondAttribute="trailing" id="qrJ-ox-K1A"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ud-Z9-GFi">
+                    <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" red="0.89845795159999997" green="0.77281053840000002" blue="0.056608506689999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="oUm-1Y-v2n"/>
+                        <outlet property="delegate" destination="-1" id="gul-sx-hL8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PfU-BI-Ubg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6xN-RH-1tB"/>
+                <constraint firstAttribute="trailing" secondItem="PfU-BI-Ubg" secondAttribute="trailing" id="Agk-Q2-Rnf"/>
+                <constraint firstAttribute="trailing" secondItem="x4W-QF-88E" secondAttribute="trailing" id="LJh-Lk-a4a"/>
+                <constraint firstItem="x4W-QF-88E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MIL-d3-Ioh"/>
+                <constraint firstItem="x4W-QF-88E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NaT-2b-h6u"/>
+                <constraint firstAttribute="trailing" secondItem="2ud-Z9-GFi" secondAttribute="trailing" id="aC3-iv-p8b"/>
+                <constraint firstItem="PfU-BI-Ubg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="edE-ns-qHD"/>
+                <constraint firstAttribute="bottom" secondItem="2ud-Z9-GFi" secondAttribute="bottom" id="hLU-kW-QJV"/>
+                <constraint firstItem="2ud-Z9-GFi" firstAttribute="top" secondItem="x4W-QF-88E" secondAttribute="bottom" id="nMU-fH-wEm"/>
+                <constraint firstItem="2ud-Z9-GFi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nfG-lz-HFq"/>
+                <constraint firstAttribute="bottom" secondItem="PfU-BI-Ubg" secondAttribute="bottom" id="pRj-Uu-8Xu"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="background_blurred" width="320" height="566"/>
+        <image name="map_article" width="48" height="48"/>
+    </resources>
+</document>

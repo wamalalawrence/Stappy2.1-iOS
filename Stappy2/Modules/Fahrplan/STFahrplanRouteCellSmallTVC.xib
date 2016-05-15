@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="KievitOffc.ttf">
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+            <string>KievitOffc</string>
+        </mutableArray>
+        <mutableArray key="KievitSlabOffc.ttf">
+            <string>KievitSlabOffc</string>
+            <string>KievitSlabOffc</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="291" id="KGk-i7-Jjw" customClass="STFahrplanRouteCellTVC">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVp-Ve-0LD">
+                        <rect key="frame" x="8" y="8" width="364" height="125"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Gl.4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-Pv-gr1">
+                                <rect key="frame" x="326" y="95" width="30" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="N7H-BB-dZg"/>
+                                    <constraint firstAttribute="height" constant="22" id="gZX-HW-ZBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="N7H-BB-dZg"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Gl.4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PeQ-H7-e71">
+                                <rect key="frame" x="326" y="8" width="30" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="EKW-m7-d8C"/>
+                                    <constraint firstAttribute="width" constant="40" id="wbr-pz-KE4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wbr-pz-KE4"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:46" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJy-ow-EPI">
+                                <rect key="frame" x="8" y="8" width="52" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="FPl-sa-jJz"/>
+                                    <constraint firstAttribute="height" constant="25" id="yI9-Et-6Gw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="19"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.43921568630000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Überseequartier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oL-jM-Gea">
+                                <rect key="frame" x="73" y="8" width="245" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="5i8-v7-NoY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berliner Tor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GY-tp-UJ0">
+                                <rect key="frame" x="74" y="92" width="244" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="huT-aM-Cv5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U4 Richtung Billstedt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwo-UP-S1t">
+                                <rect key="frame" x="46" y="53" width="310" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="mUM-mJ-p1q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="·" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgy-lo-PAC">
+                                <rect key="frame" x="60" y="10" width="5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="LS6-MU-kXz"/>
+                                    <constraint firstAttribute="height" constant="21" id="icI-kK-6iv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="·" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBw-A9-FLe">
+                                <rect key="frame" x="60" y="94" width="9" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="9" id="QXK-MU-7Xb"/>
+                                    <constraint firstAttribute="height" constant="21" id="ia0-pj-Vau"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:53" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eR3-GD-dBR">
+                                <rect key="frame" x="8" y="92" width="52" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="QcL-ca-Vjq"/>
+                                    <constraint firstAttribute="height" constant="25" id="RMr-3Q-5fK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="19"/>
+                                <color key="textColor" red="0.058823529409999999" green="0.43921568630000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_fussweg" translatesAutoresizingMaskIntoConstraints="NO" id="vyf-gW-seG">
+                                <rect key="frame" x="8" y="53" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="IYz-1e-Vpt"/>
+                                    <constraint firstAttribute="height" constant="20" id="wc6-JW-UhZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PeQ-H7-e71" firstAttribute="top" secondItem="uVp-Ve-0LD" secondAttribute="top" constant="8" id="07V-Jf-wqx"/>
+                            <constraint firstItem="0oL-jM-Gea" firstAttribute="top" secondItem="uVp-Ve-0LD" secondAttribute="top" constant="8" id="0xR-8P-FsJ"/>
+                            <constraint firstAttribute="trailing" secondItem="fwo-UP-S1t" secondAttribute="trailing" constant="8" id="1Oi-Yr-qci"/>
+                            <constraint firstItem="vyf-gW-seG" firstAttribute="leading" secondItem="uVp-Ve-0LD" secondAttribute="leading" constant="8" id="3lP-Fu-yc9"/>
+                            <constraint firstItem="lgy-lo-PAC" firstAttribute="centerY" secondItem="UJy-ow-EPI" secondAttribute="centerY" id="9fQ-Hk-GZC"/>
+                            <constraint firstAttribute="trailing" secondItem="PeQ-H7-e71" secondAttribute="trailing" constant="8" id="9y3-N5-BIS"/>
+                            <constraint firstItem="PeQ-H7-e71" firstAttribute="leading" secondItem="0oL-jM-Gea" secondAttribute="trailing" constant="8" id="BAH-UA-KlI"/>
+                            <constraint firstItem="0oL-jM-Gea" firstAttribute="leading" secondItem="lgy-lo-PAC" secondAttribute="trailing" constant="8" id="BTc-BA-Q0a"/>
+                            <constraint firstItem="fwo-UP-S1t" firstAttribute="leading" secondItem="uVp-Ve-0LD" secondAttribute="leading" constant="46" id="CPB-f9-0no"/>
+                            <constraint firstItem="ReL-Pv-gr1" firstAttribute="leading" secondItem="3GY-tp-UJ0" secondAttribute="trailing" constant="8" id="MjQ-kV-0Hy"/>
+                            <constraint firstItem="UJy-ow-EPI" firstAttribute="leading" secondItem="uVp-Ve-0LD" secondAttribute="leading" priority="250" id="Ocv-KM-qdM"/>
+                            <constraint firstItem="DBw-A9-FLe" firstAttribute="leading" secondItem="eR3-GD-dBR" secondAttribute="trailing" id="RkR-Bw-JY8"/>
+                            <constraint firstItem="lgy-lo-PAC" firstAttribute="leading" secondItem="UJy-ow-EPI" secondAttribute="trailing" id="Zur-bm-YD9"/>
+                            <constraint firstItem="UJy-ow-EPI" firstAttribute="leading" secondItem="uVp-Ve-0LD" secondAttribute="leading" constant="8" id="b0c-xn-Nm4"/>
+                            <constraint firstAttribute="bottom" secondItem="eR3-GD-dBR" secondAttribute="bottom" constant="8" id="cfN-4L-b1i"/>
+                            <constraint firstItem="DBw-A9-FLe" firstAttribute="centerY" secondItem="eR3-GD-dBR" secondAttribute="centerY" id="cx1-JI-MSF"/>
+                            <constraint firstAttribute="bottom" secondItem="ReL-Pv-gr1" secondAttribute="bottom" constant="8" id="eug-kH-qo1"/>
+                            <constraint firstItem="UJy-ow-EPI" firstAttribute="top" secondItem="uVp-Ve-0LD" secondAttribute="top" constant="8" id="hTR-T1-wBV"/>
+                            <constraint firstItem="vyf-gW-seG" firstAttribute="centerY" secondItem="uVp-Ve-0LD" secondAttribute="centerY" id="he7-Kz-sdD"/>
+                            <constraint firstItem="fwo-UP-S1t" firstAttribute="centerY" secondItem="uVp-Ve-0LD" secondAttribute="centerY" id="pXA-cY-wqe"/>
+                            <constraint firstAttribute="trailing" secondItem="ReL-Pv-gr1" secondAttribute="trailing" constant="8" id="rWk-UE-SMA"/>
+                            <constraint firstAttribute="bottom" secondItem="3GY-tp-UJ0" secondAttribute="bottom" constant="8" id="uaz-oH-nUz"/>
+                            <constraint firstItem="3GY-tp-UJ0" firstAttribute="leading" secondItem="DBw-A9-FLe" secondAttribute="trailing" constant="5" id="xpF-W3-k11"/>
+                            <constraint firstItem="eR3-GD-dBR" firstAttribute="leading" secondItem="uVp-Ve-0LD" secondAttribute="leading" constant="8" id="yua-jQ-WGo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uVp-Ve-0LD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="98I-Ft-BiP"/>
+                    <constraint firstItem="uVp-Ve-0LD" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="kZR-6m-ePN"/>
+                    <constraint firstItem="uVp-Ve-0LD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qVv-CV-9hr"/>
+                    <constraint firstAttribute="bottom" secondItem="uVp-Ve-0LD" secondAttribute="bottom" id="w57-IY-589"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.0" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="directionNameLabel" destination="fwo-UP-S1t" id="lDF-0V-KQS"/>
+                <outlet property="startStationNameLabel" destination="0oL-jM-Gea" id="9oA-kZ-LEK"/>
+                <outlet property="startStationPlatform" destination="PeQ-H7-e71" id="3gm-Nf-GKY"/>
+                <outlet property="startTimeLabel" destination="UJy-ow-EPI" id="BRk-gl-tJf"/>
+                <outlet property="targetStationNameLabel" destination="3GY-tp-UJ0" id="Fld-f9-dma"/>
+                <outlet property="targetStationPlatformLabel" destination="ReL-Pv-gr1" id="LQo-fg-Jou"/>
+                <outlet property="targetTimeLabel" destination="eR3-GD-dBR" id="hSe-9B-EOq"/>
+                <outlet property="transportTypeImageView" destination="vyf-gW-seG" id="F5e-hU-hMI"/>
+            </connections>
+            <point key="canvasLocation" x="666" y="365"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_content_oepnv_fussweg" width="25" height="25"/>
+    </resources>
+</document>

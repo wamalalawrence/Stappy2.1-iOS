@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExpandedBottomTableViewCell" rowHeight="132" id="KGk-i7-Jjw" customClass="ExpandedBottomTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-4H-TEw">
+                        <rect key="frame" x="20" y="0.0" width="280" height="111"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6p-e6-lLC">
+                                <rect key="frame" x="8" y="10" width="264" height="93"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Übersicht schliessen ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Übersicht schliessen "/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="uberButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xRd-1I-e2W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="W6p-e6-lLC" secondAttribute="trailing" constant="8" id="Hn8-UX-eba"/>
+                            <constraint firstItem="W6p-e6-lLC" firstAttribute="top" secondItem="6Od-4H-TEw" secondAttribute="top" constant="10" id="XZi-rg-dND"/>
+                            <constraint firstItem="W6p-e6-lLC" firstAttribute="leading" secondItem="6Od-4H-TEw" secondAttribute="leading" constant="8" id="mbl-Fg-6fO"/>
+                            <constraint firstAttribute="bottom" secondItem="W6p-e6-lLC" secondAttribute="bottom" constant="8" id="uBN-jE-4cS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="6Od-4H-TEw" secondAttribute="bottom" constant="20" id="IZx-Qd-aip"/>
+                    <constraint firstItem="6Od-4H-TEw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ztc-il-arZ"/>
+                    <constraint firstAttribute="trailing" secondItem="6Od-4H-TEw" secondAttribute="trailing" constant="20" id="ev5-M2-fGJ"/>
+                    <constraint firstItem="6Od-4H-TEw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fZS-mz-ScV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="bottomContentView" destination="6Od-4H-TEw" id="NDb-QA-I7t"/>
+                <outlet property="collapseButton" destination="W6p-e6-lLC" id="72T-Ns-uEy"/>
+            </connections>
+            <point key="canvasLocation" x="290" y="359"/>
+        </tableViewCell>
+    </objects>
+</document>
