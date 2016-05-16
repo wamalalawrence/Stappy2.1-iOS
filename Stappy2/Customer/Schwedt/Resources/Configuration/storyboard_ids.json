@@ -1,0 +1,164 @@
+{
+    "content":[
+        {
+            "key": "Startseite",
+            "storyboard_id": "",
+            "nibname":"",
+            "navigationbar":{
+                "barTintColor": "#ffffff",
+                "barTintColor_alpha": 0.0,
+                "tintColor": "#ffffff",
+                "tintColor_alpha": 1.0,
+                "translucent": true,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "News",
+            "storyboard_id": "news",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+            }
+        },
+        {
+            "key": "Lokalnews",
+            "storyboard_id": "lokalnews",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Wetter",
+            "storyboard_id": "STWeatherViewController",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Events",
+            "storyboard_id": "events",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Vereinsnews",
+            "storyboard_id": "vereine",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Angebote",
+            "storyboard_id": "angebote",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Stadtinfos",
+            "storyboard_id": "STStadtInfoOverviewViewController",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+            }
+        },
+            {
+               "key": "Bus & Bahn",
+               "storyboard_id": "",
+               "nibname":"STFahrplanSearchVC",
+               "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               },
+               "__comment_Default-Fahrplan_nibname":"STFahrplanSearchVC",
+               "__comment_Premium-Fahrplan_nibname":"STFahrplanPremiumSearchVC"
+            },
+        {
+            "key": "Mobility Premium",
+            "storyboard_id": "",
+            "nibname":"STFahrplanPremiumSearchVC",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            },
+            "__comment_Default-Fahrplan_nibname":"STFahrplanSearchVC",
+            "__comment_Premium-Fahrplan_nibname":"STFahrplanPremiumSearchVC"
+        },
+        {
+            "key": "Notdienste",
+            "storyboard_id": "STApothekenViewController",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#86bc25",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+            }
+        },
+        {
+            "key": "QR code",
+            "storyboard_id": "qrcodescanner",
+            "nibname":"",
+            "navigationbar":{
+                "barTintColor": "#86bc25",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+           }
+    ]
+}

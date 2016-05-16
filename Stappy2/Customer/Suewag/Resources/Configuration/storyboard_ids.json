@@ -1,0 +1,136 @@
+{
+    "content":[
+        {
+            "key": "Startseite",
+            "storyboard_id": "",
+            "nibname":"",
+            "navigationbar":{
+                "barTintColor": "#ffffff",
+                "barTintColor_alpha": 0.0,
+                "tintColor": "#ffffff",
+                "tintColor_alpha": 1.0,
+                "translucent": true,
+                "barStyle": 1
+            } 
+        },
+       {
+       "key": "Veranstaltungen",
+       "storyboard_id": "events",
+       "nibname":"",
+       "navigationbar":{
+       "barTintColor": "#88BA14",
+       "barTintColor_alpha": 0.0,
+       "tintColor": "#ffffff",
+       "tintColor_alpha": 1.0,
+       "translucent": false,
+       "barStyle": 1
+       }
+       },
+       {
+       "key": "Gutscheine",
+       "storyboard_id": "angebote",
+       "nibname":"",
+       "navigationbar":{
+       "barTintColor": "#88BA14",
+       "barTintColor_alpha": 0.0,
+       "tintColor": "#ffffff",
+       "tintColor_alpha": 1.0,
+       "translucent": false,
+       "barStyle": 1
+       }
+       },
+               
+               {
+               "key": "Störmelder",
+               "storyboard_id": "Reporter",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#88BA14",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               
+       {
+       "key": "Ortsinformationen",
+       "storyboard_id": "STStadtInfoOverviewViewController",
+       "nibname":"",
+       "navigationbar":{
+       "barTintColor": "#88BA14",
+       "barTintColor_alpha": 0.0,
+       "tintColor": "#ffffff",
+       "tintColor_alpha": 1.0,
+       "translucent": false,
+       "barStyle": 1
+       }
+       },
+       {
+       "key": "Regional-Ticker",
+               "storyboard_id": "lokalnews",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#88BA14",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+        },
+       {
+       "key": "National-Ticker",
+       "storyboard_id": "news",
+       "nibname":"",
+       "navigationbar":{
+       "barTintColor": "#88BA14",
+       "barTintColor_alpha": 0.0,
+       "tintColor": "#ffffff",
+       "tintColor_alpha": 1.0,
+       "translucent": false,
+       "barStyle": 1
+       }
+       },
+               {
+               "key": "Apothekennotdienst",
+               "storyboard_id": "STApothekenViewController",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#88BA14",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+            "key": "Wetter",
+            "storyboard_id": "STWeatherViewController",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#88BA14",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+           {
+           "key": "Zählerstand",
+           "storyboard_id": "zaehler",
+           "nibname":"",
+           "navigationbar":{
+           "barTintColor": "#88BA14",
+           "barTintColor_alpha": 0.0,
+           "tintColor": "#ffffff",
+           "tintColor_alpha": 1.0,
+           "translucent": false,
+           "barStyle": 1
+           }
+           }
+    ]
+}

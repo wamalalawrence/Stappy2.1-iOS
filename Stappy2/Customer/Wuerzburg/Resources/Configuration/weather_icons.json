@@ -1,0 +1,50 @@
+{
+    "__comment": "Weather icons configuration file",
+    "match_icons_condition":
+                  {
+                  "chanceflurries": "snow",
+                  "chancesleet":"snow",
+                  "chancesnow":"snow",
+                  "flurries":"snow",
+                  "sleet":"snow",
+                  "snow":"snow",
+                  "chancerain":"rain",
+                  "rain":"rain",
+                  "chancestorms":"storm",
+                  "tstorms":"storm",
+                  "unknown":"storm",
+                  "clear":"sunny",
+                  "sunny":"sunny",
+                  "cloudy":"cloudy",
+                  "mostlycloudy":"cloudy",
+                  "fog":"fog",
+                  "hazy":"fog",
+                  "mostlysunny":"partlySun",
+                  "partlysunny":"partlySun",
+                  "partlycloudy":"partlySun"
+                  },
+    "match_backgrounds_condition":
+    {
+        "chanceflurries": "bg_cloudy",
+        "chancesleet":"bg_cloudy",
+        "chancesnow":"bg_cloudy",
+        "flurries":"bg_cloudy",
+        "sleet":"bg_cloudy",
+        "snow":"bg_cloudy",
+        "chancerain":"bg_rainy",
+        "rain":"bg_rainy",
+        "chancestorms":"bg_rainy",
+        "tstorms":"bg_rainy",
+        "unknown":"bg_rainy",
+        "clear":"bg_sunny",
+        "sunny":"bg_sunny",
+        "cloudy":"bg_cloudy",
+        "mostlycloudy":"bg_cloudy",
+        "fog":"bg_cloudy",
+        "hazy":"bg_cloudy",
+        "mostlysunny":"bg_cloudy",
+        "partlysunny":"bg_cloudy",
+        "partlycloudy":"bg_cloudy"
+    }
+
+}

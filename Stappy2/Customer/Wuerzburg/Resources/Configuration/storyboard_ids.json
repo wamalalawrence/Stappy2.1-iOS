@@ -1,0 +1,229 @@
+{
+    "content":[
+        {
+            "key": "Startseite",
+            "storyboard_id": "",
+            "nibname":"",
+            "navigationbar":{
+                "barTintColor": "#ffffff",
+                "barTintColor_alpha": 0.0,
+                "tintColor": "#ffffff",
+                "tintColor_alpha": 1.0,
+                "translucent": true,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Nachrichten",
+            "storyboard_id": "news",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+            }
+        },
+           {
+        "key": "Lokalnews",
+        "storyboard_id": "lokalnews",
+        "nibname":"",
+        "navigationbar":{
+           "barTintColor": "#d50041",
+           "barTintColor_alpha": 0.0,
+           "tintColor": "#ffffff",
+           "tintColor_alpha": 1.0,
+            "translucent": false,
+            "barStyle": 1
+        } 
+        },
+        {
+            "key": "Wetter",
+            "storyboard_id": "STWeatherViewController",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Events",
+            "storyboard_id": "events",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Vereinsnews",
+            "storyboard_id": "vereine",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+            "key": "Angebote",
+            "storyboard_id": "angebote",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+       {
+       "key": "Mittags in Würzburg",
+       "storyboard_id": "mittagsangebote",
+       "nibname":"",
+       "navigationbar":{
+       "barTintColor": "#d50041",
+       "barTintColor_alpha": 0.0,
+       "tintColor": "#ffffff",
+       "tintColor_alpha": 1.0,
+       "translucent": false,
+       "barStyle": 1
+       }
+       },
+               {
+            "key": "Stadtinfos",
+            "storyboard_id": "STStadtInfoOverviewViewController",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+            }
+        },
+               {
+               "key": "Bäder",
+               "storyboard_id": "STBaederOverviewViewController",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Fahrplan",
+               "storyboard_id": "",
+               "nibname":"STFahrplanSearchVC",
+               "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               },
+               "__comment_Default-Fahrplan_nibname":"STFahrplanSearchVC",
+               "__comment_Premium-Fahrplan_nibname":"STFahrplanPremiumSearchVC"
+            },
+        {
+            "key": "Mobility Premium",
+            "storyboard_id": "",
+            "nibname":"STFahrplanPremiumSearchVC",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            },
+            "__comment_Default-Fahrplan_nibname":"STFahrplanSearchVC",
+            "__comment_Premium-Fahrplan_nibname":"STFahrplanPremiumSearchVC"
+        },
+        {
+            "key": "Apotheken",
+            "storyboard_id": "STApothekenViewController",
+            "nibname":"",
+            "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+            }
+        },
+       {
+       "key": "Parkhäuser",
+       "storyboard_id": "STParkhausViewController",
+       "nibname":"",
+       "navigationbar":{
+       "barTintColor": "#d50041",
+       "barTintColor_alpha": 0.0,
+       "tintColor": "#ffffff",
+       "tintColor_alpha": 1.0,
+       "translucent": false,
+       "barStyle": 1
+       }
+       },
+               {
+           "key": "Zählerstand",
+           "storyboard_id": "zaehler",
+           "nibname":"",
+           "navigationbar":{
+           "barTintColor": "#d50041",
+           "barTintColor_alpha": 0.0,
+           "tintColor": "#ffffff",
+           "tintColor_alpha": 1.0,
+           "translucent": false,
+           "barStyle": 1
+           }
+           },
+        {
+            "key": "QR-Scanner",
+            "storyboard_id": "qrcodescanner",
+            "nibname":"",
+            "navigationbar":{
+                "barTintColor": "#d50041",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+                "translucent": false,
+                "barStyle": 1
+            } 
+        },
+        {
+               "key": "Abfallkalender",
+               "storyboard_id": "",
+               "nibname":"GarbageCalendarSettingsViewController",
+               "navigationbar":{
+                    "barTintColor": "#d50041",
+                    "barTintColor_alpha": 1.0,
+                    "tintColor": "#ffffff",
+                    "tintColor_alpha": 1.0,
+                    "translucent": false,
+                    "barStyle": 1
+               }
+        }
+    ]
+}

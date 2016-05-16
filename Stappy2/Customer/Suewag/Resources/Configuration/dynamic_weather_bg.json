@@ -1,0 +1,14 @@
+{
+    "__comment": "Dynamic background images and weather stations configuration file",
+    "match_regions_images":
+                  {
+                  "chanceflurries": "snow",
+
+                  },
+    "match_regions_weather_stations":
+    {
+        "chanceflurries": "bg_cloudy",
+
+    }
+
+}
