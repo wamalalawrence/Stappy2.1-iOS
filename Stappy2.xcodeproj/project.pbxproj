@@ -121,75 +121,12 @@
 		EF746D3F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D1F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf */; };
 		EF746D401CE8A71C002CF5D2 /* GeneralAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF746D201CE8A71C002CF5D2 /* GeneralAssets.xcassets */; };
 		EF746D411CE8A71C002CF5D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF746D211CE8A71C002CF5D2 /* Images.xcassets */; };
-		EF746D9B1CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D461CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.m */; };
-		EF746D9C1CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D471CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.xib */; };
-		EF746D9D1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D4A1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.m */; };
-		EF746D9E1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D4B1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.xib */; };
-		EF746D9F1CE8A769002CF5D2 /* STNewsBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D4D1CE8A769002CF5D2 /* STNewsBaseTableViewCell.m */; };
-		EF746DA01CE8A769002CF5D2 /* STNewsBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D4E1CE8A769002CF5D2 /* STNewsBaseTableViewCell.xib */; };
-		EF746DA11CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D501CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.m */; };
-		EF746DA21CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D511CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.xib */; };
-		EF746DA31CE8A769002CF5D2 /* STRightMenuSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D531CE8A769002CF5D2 /* STRightMenuSubCell.m */; };
-		EF746DA41CE8A769002CF5D2 /* STRightMenuSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D541CE8A769002CF5D2 /* STRightMenuSubCell.xib */; };
-		EF746DA51CE8A769002CF5D2 /* STStartBaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D561CE8A769002CF5D2 /* STStartBaseCollectionCell.m */; };
-		EF746DA61CE8A769002CF5D2 /* ExpandedBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D591CE8A769002CF5D2 /* ExpandedBottomTableViewCell.m */; };
-		EF746DA71CE8A769002CF5D2 /* ExpandedBottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D5A1CE8A769002CF5D2 /* ExpandedBottomTableViewCell.xib */; };
-		EF746DA81CE8A769002CF5D2 /* ExpandedTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D5C1CE8A769002CF5D2 /* ExpandedTopTableViewCell.m */; };
-		EF746DA91CE8A769002CF5D2 /* ExpandedTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D5D1CE8A769002CF5D2 /* ExpandedTopTableViewCell.xib */; };
-		EF746DAA1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D5F1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.m */; };
-		EF746DAB1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D601CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.xib */; };
-		EF746DAC1CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D621CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.m */; };
-		EF746DAD1CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D631CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.xib */; };
-		EF746DAE1CE8A769002CF5D2 /* STNewsTableCellCollecionExpandedFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D641CE8A769002CF5D2 /* STNewsTableCellCollecionExpandedFooter.xib */; };
-		EF746DAF1CE8A769002CF5D2 /* STNewsTableCellCollectionExpanded.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D651CE8A769002CF5D2 /* STNewsTableCellCollectionExpanded.xib */; };
-		EF746DB01CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D671CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.m */; };
-		EF746DB11CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D681CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.xib */; };
-		EF746DB21CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D6A1CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.m */; };
-		EF746DB31CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D6B1CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.xib */; };
-		EF746DB41CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D6E1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.m */; };
-		EF746DB51CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D6F1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.xib */; };
-		EF746DB61CE8A769002CF5D2 /* SearchTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D711CE8A769002CF5D2 /* SearchTopTableViewCell.m */; };
-		EF746DB71CE8A769002CF5D2 /* SearchTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D721CE8A769002CF5D2 /* SearchTopTableViewCell.xib */; };
-		EF746DB81CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D741CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.m */; };
-		EF746DB91CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D751CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.xib */; };
-		EF746DBA1CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D771CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.m */; };
-		EF746DBB1CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D781CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.xib */; };
-		EF746DBC1CE8A769002CF5D2 /* SideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D7A1CE8A769002CF5D2 /* SideMenuTableViewCell.m */; };
-		EF746DBD1CE8A769002CF5D2 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D7B1CE8A769002CF5D2 /* SideMenuTableViewCell.xib */; };
-		EF746DBE1CE8A769002CF5D2 /* STWeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D7E1CE8A769002CF5D2 /* STWeatherTableViewCell.m */; };
-		EF746DBF1CE8A769002CF5D2 /* STWeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D7F1CE8A769002CF5D2 /* STWeatherTableViewCell.xib */; };
-		EF746DC01CE8A769002CF5D2 /* STStadtInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D821CE8A769002CF5D2 /* STStadtInfoTableViewCell.m */; };
-		EF746DC11CE8A769002CF5D2 /* STStadtInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D831CE8A769002CF5D2 /* STStadtInfoTableViewCell.xib */; };
-		EF746DC21CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D861CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.m */; };
-		EF746DC31CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D871CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.xib */; };
-		EF746DC41CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D891CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.m */; };
-		EF746DC51CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D8A1CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.xib */; };
-		EF746DC61CE8A769002CF5D2 /* STStartScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D8C1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.m */; };
-		EF746DC71CE8A769002CF5D2 /* STStartScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D8D1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.xib */; };
-		EF746DC81CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D8F1CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.m */; };
-		EF746DC91CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D901CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.xib */; };
-		EF746DCA1CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D921CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.m */; };
-		EF746DCB1CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D931CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.xib */; };
-		EF746DCC1CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D951CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.m */; };
-		EF746DCD1CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D961CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.xib */; };
-		EF746DCE1CE8A769002CF5D2 /* STWerbungTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746D991CE8A769002CF5D2 /* STWerbungTableViewCell.m */; };
-		EF746DCF1CE8A769002CF5D2 /* STWerbungTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746D9A1CE8A769002CF5D2 /* STWerbungTableViewCell.xib */; };
 		EF746E071CE8A779002CF5D2 /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD21CE8A779002CF5D2 /* Defines.m */; };
 		EF746E081CE8A779002CF5D2 /* Filters-UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD41CE8A779002CF5D2 /* Filters-UnitTests.swift */; };
 		EF746E0A1CE8A779002CF5D2 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD61CE8A779002CF5D2 /* Filters.swift */; };
 		EF746E0C1CE8A779002CF5D2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EF746E0D1CE8A779002CF5D2 /* STAppSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DDC1CE8A779002CF5D2 /* STAppSettingsManager.m */; };
 		EF746E0E1CE8A779002CF5D2 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DDE1CE8A779002CF5D2 /* Utils.m */; };
-		EF746E0F1CE8A779002CF5D2 /* STAngeboteHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DE21CE8A779002CF5D2 /* STAngeboteHeaderView.m */; };
-		EF746E101CE8A779002CF5D2 /* STAngeboteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DE31CE8A779002CF5D2 /* STAngeboteHeaderView.xib */; };
-		EF746E111CE8A779002CF5D2 /* STLokalNewsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DE51CE8A779002CF5D2 /* STLokalNewsHeaderView.m */; };
-		EF746E121CE8A779002CF5D2 /* STLokalNewsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DE61CE8A779002CF5D2 /* STLokalNewsHeaderView.xib */; };
-		EF746E131CE8A779002CF5D2 /* STRightMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DE81CE8A779002CF5D2 /* STRightMenuHeaderView.m */; };
-		EF746E141CE8A779002CF5D2 /* STRightMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DE91CE8A779002CF5D2 /* STRightMenuHeaderView.xib */; };
-		EF746E151CE8A779002CF5D2 /* STStadtInfoHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DEB1CE8A779002CF5D2 /* STStadtInfoHeader.m */; };
-		EF746E161CE8A779002CF5D2 /* STStadtInfoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DEC1CE8A779002CF5D2 /* STStadtInfoHeader.xib */; };
-		EF746E171CE8A779002CF5D2 /* STWeatherHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DEE1CE8A779002CF5D2 /* STWeatherHeader.m */; };
-		EF746E181CE8A779002CF5D2 /* STWeatherHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DEF1CE8A779002CF5D2 /* STWeatherHeader.xib */; };
 		EF746E191CE8A779002CF5D2 /* Indicators.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DF21CE8A779002CF5D2 /* Indicators.m */; };
 		EF746E1A1CE8A779002CF5D2 /* Indicators.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DF31CE8A779002CF5D2 /* Indicators.xib */; };
 		EF746E1B1CE8A779002CF5D2 /* OpeningHoursHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DF51CE8A779002CF5D2 /* OpeningHoursHeaderView.swift */; };
@@ -201,10 +138,6 @@
 		EF746E211CE8A779002CF5D2 /* OpeningHoursViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DFB1CE8A779002CF5D2 /* OpeningHoursViewAdapter.swift */; };
 		EF746E221CE8A779002CF5D2 /* OpeningHoursViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DFC1CE8A779002CF5D2 /* OpeningHoursViewCell.swift */; };
 		EF746E231CE8A779002CF5D2 /* OpeningHoursViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DFD1CE8A779002CF5D2 /* OpeningHoursViewCell.xib */; };
-		EF746E241CE8A779002CF5D2 /* RandomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E001CE8A779002CF5D2 /* RandomImageView.m */; };
-		EF746E251CE8A779002CF5D2 /* StappyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E021CE8A779002CF5D2 /* StappyTextField.m */; };
-		EF746E261CE8A779002CF5D2 /* STStartScreenCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E051CE8A779002CF5D2 /* STStartScreenCollectionView.m */; };
-		EF746E271CE8A779002CF5D2 /* STStartScreenCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746E061CE8A779002CF5D2 /* STStartScreenCollectionView.xib */; };
 		EF746E531CE8A79F002CF5D2 /* Coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF746E291CE8A79F002CF5D2 /* Coupons.storyboard */; };
 		EF746E541CE8A79F002CF5D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF746E2B1CE8A79F002CF5D2 /* LaunchScreen.storyboard */; };
 		EF746E551CE8A79F002CF5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF746E2D1CE8A79F002CF5D2 /* Main.storyboard */; };
@@ -217,7 +150,6 @@
 		EF746E5C1CE8A79F002CF5D2 /* STWebViewDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746E3A1CE8A79F002CF5D2 /* STWebViewDetailViewController.xib */; };
 		EF746E5D1CE8A79F002CF5D2 /* OverlayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746E3C1CE8A79F002CF5D2 /* OverlayManager.swift */; };
 		EF746E5E1CE8A79F002CF5D2 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746E3D1CE8A79F002CF5D2 /* OverlayViewController.swift */; };
-		EF746E5F1CE8A79F002CF5D2 /* RightBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E3F1CE8A79F002CF5D2 /* RightBarViewController.m */; };
 		EF746E601CE8A79F002CF5D2 /* SidebarViewController+Favorite.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E421CE8A79F002CF5D2 /* SidebarViewController+Favorite.m */; };
 		EF746E611CE8A79F002CF5D2 /* SidebarViewController+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E441CE8A79F002CF5D2 /* SidebarViewController+Search.m */; };
 		EF746E621CE8A79F002CF5D2 /* SidebarViewController+Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E461CE8A79F002CF5D2 /* SidebarViewController+Settings.m */; };
@@ -225,8 +157,6 @@
 		EF746E641CE8A79F002CF5D2 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E4A1CE8A79F002CF5D2 /* STMainViewController.m */; };
 		EF746E651CE8A79F002CF5D2 /* STViewControllerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E4C1CE8A79F002CF5D2 /* STViewControllerItem.m */; };
 		EF746E661CE8A79F002CF5D2 /* STViewControllerNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E4E1CE8A79F002CF5D2 /* STViewControllerNavigationBarStyle.m */; };
-		EF746E671CE8A79F002CF5D2 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E501CE8A79F002CF5D2 /* STViewController.m */; };
-		EF746E681CE8A79F002CF5D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E521CE8A79F002CF5D2 /* ViewController.m */; };
 		EF746E711CE8A9A7002CF5D2 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6B1CE8A9A7002CF5D2 /* BTGlassScrollView.m */; };
 		EF746E721CE8A9A7002CF5D2 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EF746E731CE8A9A7002CF5D2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E701CE8A9A7002CF5D2 /* SWRevealViewController.m */; };
@@ -434,6 +364,75 @@
 		EF7470A71CE8A9F7002CF5D2 /* SaehlerstandEingebenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FD21CE8A9F7002CF5D2 /* SaehlerstandEingebenViewController.m */; };
 		EF7470A81CE8A9F7002CF5D2 /* SaehlerstandEingebenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746FD31CE8A9F7002CF5D2 /* SaehlerstandEingebenViewController.xib */; };
 		EF7470A91CE8A9F7002CF5D2 /* ZaehlerstandMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FD51CE8A9F7002CF5D2 /* ZaehlerstandMainViewController.m */; };
+		EFCB3EF81CE99751009A59F9 /* STAngeboteHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3EF61CE99751009A59F9 /* STAngeboteHeaderView.m */; };
+		EFCB3EF91CE99751009A59F9 /* STAngeboteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3EF71CE99751009A59F9 /* STAngeboteHeaderView.xib */; };
+		EFCB3EFE1CE99781009A59F9 /* STLokalNewsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3EFC1CE99781009A59F9 /* STLokalNewsHeaderView.m */; };
+		EFCB3EFF1CE99781009A59F9 /* STLokalNewsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3EFD1CE99781009A59F9 /* STLokalNewsHeaderView.xib */; };
+		EFCB3F041CE9981D009A59F9 /* STStadtInfoHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F021CE9981D009A59F9 /* STStadtInfoHeader.m */; };
+		EFCB3F051CE9981D009A59F9 /* STStadtInfoHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F031CE9981D009A59F9 /* STStadtInfoHeader.xib */; };
+		EFCB3F0A1CE9984C009A59F9 /* STWeatherHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F081CE9984C009A59F9 /* STWeatherHeader.m */; };
+		EFCB3F0B1CE9984C009A59F9 /* STWeatherHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F091CE9984C009A59F9 /* STWeatherHeader.xib */; };
+		EFCB3F151CE998CC009A59F9 /* RandomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F141CE998CC009A59F9 /* RandomImageView.m */; };
+		EFCB3F1F1CE9992C009A59F9 /* StappyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F1E1CE9992C009A59F9 /* StappyTextField.m */; };
+		EFCB3F241CE999A1009A59F9 /* STStadtInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F221CE999A1009A59F9 /* STStadtInfoTableViewCell.m */; };
+		EFCB3F251CE999A1009A59F9 /* STStadtInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F231CE999A1009A59F9 /* STStadtInfoTableViewCell.xib */; };
+		EFCB3F391CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F281CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.m */; };
+		EFCB3F3A1CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F291CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.xib */; };
+		EFCB3F3B1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F2B1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.m */; };
+		EFCB3F3C1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F2C1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.xib */; };
+		EFCB3F3D1CE999EB009A59F9 /* STStartScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F2E1CE999EB009A59F9 /* STStartScreenCollectionViewCell.m */; };
+		EFCB3F3E1CE999EB009A59F9 /* STStartScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F2F1CE999EB009A59F9 /* STStartScreenCollectionViewCell.xib */; };
+		EFCB3F3F1CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F311CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.m */; };
+		EFCB3F401CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F321CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.xib */; };
+		EFCB3F411CE999EB009A59F9 /* STStartScrollCustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F341CE999EB009A59F9 /* STStartScrollCustomCollectionCell.m */; };
+		EFCB3F421CE999EB009A59F9 /* STStartScrollCustomCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F351CE999EB009A59F9 /* STStartScrollCustomCollectionCell.xib */; };
+		EFCB3F431CE999EB009A59F9 /* STStartTableCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F371CE999EB009A59F9 /* STStartTableCellCollectionViewCell.m */; };
+		EFCB3F441CE999EB009A59F9 /* STStartTableCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F381CE999EB009A59F9 /* STStartTableCellCollectionViewCell.xib */; };
+		EFCB3F491CE99A48009A59F9 /* STStartScreenCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F471CE99A48009A59F9 /* STStartScreenCollectionView.m */; };
+		EFCB3F4A1CE99A48009A59F9 /* STStartScreenCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F481CE99A48009A59F9 /* STStartScreenCollectionView.xib */; };
+		EFCB3F5B1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F4D1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.m */; };
+		EFCB3F5C1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F4E1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.xib */; };
+		EFCB3F5D1CE99AC1009A59F9 /* SearchTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F501CE99AC1009A59F9 /* SearchTopTableViewCell.m */; };
+		EFCB3F5E1CE99AC1009A59F9 /* SearchTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F511CE99AC1009A59F9 /* SearchTopTableViewCell.xib */; };
+		EFCB3F5F1CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F531CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.m */; };
+		EFCB3F601CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F541CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.xib */; };
+		EFCB3F611CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F561CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.m */; };
+		EFCB3F621CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F571CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.xib */; };
+		EFCB3F631CE99AC1009A59F9 /* SideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F591CE99AC1009A59F9 /* SideMenuTableViewCell.m */; };
+		EFCB3F641CE99AC1009A59F9 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F5A1CE99AC1009A59F9 /* SideMenuTableViewCell.xib */; };
+		EFCB3F691CE99AF5009A59F9 /* STWeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F671CE99AF5009A59F9 /* STWeatherTableViewCell.m */; };
+		EFCB3F6A1CE99AF5009A59F9 /* STWeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F681CE99AF5009A59F9 /* STWeatherTableViewCell.xib */; };
+		EFCB3F6E1CE99B45009A59F9 /* RightBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F6D1CE99B45009A59F9 /* RightBarViewController.m */; };
+		EFCB3F721CE99B65009A59F9 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F711CE99B65009A59F9 /* STViewController.m */; };
+		EFCB3F821CE99CC4009A59F9 /* ExpandedBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F751CE99CC4009A59F9 /* ExpandedBottomTableViewCell.m */; };
+		EFCB3F831CE99CC4009A59F9 /* ExpandedBottomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F761CE99CC4009A59F9 /* ExpandedBottomTableViewCell.xib */; };
+		EFCB3F841CE99CC4009A59F9 /* ExpandedTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F781CE99CC4009A59F9 /* ExpandedTopTableViewCell.m */; };
+		EFCB3F851CE99CC4009A59F9 /* ExpandedTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F791CE99CC4009A59F9 /* ExpandedTopTableViewCell.xib */; };
+		EFCB3F861CE99CC4009A59F9 /* STNewsTableCellCollecionExpandedFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F7A1CE99CC4009A59F9 /* STNewsTableCellCollecionExpandedFooter.xib */; };
+		EFCB3F871CE99CC4009A59F9 /* STNewsTableCellCollectionExpanded.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F7B1CE99CC4009A59F9 /* STNewsTableCellCollectionExpanded.xib */; };
+		EFCB3F881CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F7D1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.m */; };
+		EFCB3F891CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F7E1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.xib */; };
+		EFCB3F8A1CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F801CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.m */; };
+		EFCB3F8B1CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F811CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.xib */; };
+		EFCB3F901CE99D40009A59F9 /* ImagePreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F8E1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.m */; };
+		EFCB3F911CE99D40009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F8F1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.xib */; };
+		EFCB3F951CE99D83009A59F9 /* PDFPreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F931CE99D83009A59F9 /* PDFPreviewCollectionViewCell.m */; };
+		EFCB3F961CE99D83009A59F9 /* PDFPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F941CE99D83009A59F9 /* PDFPreviewCollectionViewCell.xib */; };
+		EFCB3F9D1CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F981CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.m */; };
+		EFCB3F9E1CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F991CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.xib */; };
+		EFCB3F9F1CE99DDF009A59F9 /* STNewsBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3F9B1CE99DDF009A59F9 /* STNewsBaseTableViewCell.m */; };
+		EFCB3FA01CE99DDF009A59F9 /* STNewsBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F9C1CE99DDF009A59F9 /* STNewsBaseTableViewCell.xib */; };
+		EFCB3FA41CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3FA21CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.m */; };
+		EFCB3FA51CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3FA31CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.xib */; };
+		EFCB3FAA1CE99E63009A59F9 /* STRightMenuSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3FA81CE99E63009A59F9 /* STRightMenuSubCell.m */; };
+		EFCB3FAB1CE99E63009A59F9 /* STRightMenuSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3FA91CE99E63009A59F9 /* STRightMenuSubCell.xib */; };
+		EFCB3FAE1CE99ECB009A59F9 /* STStartBaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3FAD1CE99ECB009A59F9 /* STStartBaseCollectionCell.m */; };
+		EFCB3FB31CE99F3E009A59F9 /* STRightMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3FB11CE99F3E009A59F9 /* STRightMenuHeaderView.m */; };
+		EFCB3FB41CE99F3E009A59F9 /* STRightMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3FB21CE99F3E009A59F9 /* STRightMenuHeaderView.xib */; };
+		EFCB3FB81CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3FB61CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.m */; };
+		EFCB3FB91CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3FB71CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.xib */; };
+		EFCB3FBD1CE9A040009A59F9 /* STWerbungTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCB3FBB1CE9A040009A59F9 /* STWerbungTableViewCell.m */; };
+		EFCB3FBE1CE9A040009A59F9 /* STWerbungTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3FBC1CE9A040009A59F9 /* STWerbungTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -652,85 +651,6 @@
 		EF746D201CE8A71C002CF5D2 /* GeneralAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GeneralAssets.xcassets; sourceTree = "<group>"; };
 		EF746D211CE8A71C002CF5D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EF746D421CE8A74E002CF5D2 /* Stappy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stappy-Prefix.pch"; sourceTree = "<group>"; };
-		EF746D451CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionOptionsCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D461CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionOptionsCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D471CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionOptionsCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D491CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsBaseExpandedTableViewCell.h; sourceTree = "<group>"; };
-		EF746D4A1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsBaseExpandedTableViewCell.m; sourceTree = "<group>"; };
-		EF746D4B1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsBaseExpandedTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D4C1CE8A769002CF5D2 /* STNewsBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsBaseTableViewCell.h; sourceTree = "<group>"; };
-		EF746D4D1CE8A769002CF5D2 /* STNewsBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsBaseTableViewCell.m; sourceTree = "<group>"; };
-		EF746D4E1CE8A769002CF5D2 /* STNewsBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsBaseTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D4F1CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsTableCellCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D501CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsTableCellCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D511CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCellCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D521CE8A769002CF5D2 /* STRightMenuSubCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRightMenuSubCell.h; sourceTree = "<group>"; };
-		EF746D531CE8A769002CF5D2 /* STRightMenuSubCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRightMenuSubCell.m; sourceTree = "<group>"; };
-		EF746D541CE8A769002CF5D2 /* STRightMenuSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRightMenuSubCell.xib; sourceTree = "<group>"; };
-		EF746D551CE8A769002CF5D2 /* STStartBaseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartBaseCollectionCell.h; sourceTree = "<group>"; };
-		EF746D561CE8A769002CF5D2 /* STStartBaseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartBaseCollectionCell.m; sourceTree = "<group>"; };
-		EF746D581CE8A769002CF5D2 /* ExpandedBottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedBottomTableViewCell.h; sourceTree = "<group>"; };
-		EF746D591CE8A769002CF5D2 /* ExpandedBottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedBottomTableViewCell.m; sourceTree = "<group>"; };
-		EF746D5A1CE8A769002CF5D2 /* ExpandedBottomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandedBottomTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D5B1CE8A769002CF5D2 /* ExpandedTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedTopTableViewCell.h; sourceTree = "<group>"; };
-		EF746D5C1CE8A769002CF5D2 /* ExpandedTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedTopTableViewCell.m; sourceTree = "<group>"; };
-		EF746D5D1CE8A769002CF5D2 /* ExpandedTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandedTopTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D5E1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePreviewCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D5F1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePreviewCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D601CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePreviewCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D611CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFPreviewCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D621CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFPreviewCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D631CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D641CE8A769002CF5D2 /* STNewsTableCellCollecionExpandedFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCellCollecionExpandedFooter.xib; sourceTree = "<group>"; };
-		EF746D651CE8A769002CF5D2 /* STNewsTableCellCollectionExpanded.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCellCollectionExpanded.xib; sourceTree = "<group>"; };
-		EF746D661CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsTableCollectionExpandedFooter.h; sourceTree = "<group>"; };
-		EF746D671CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsTableCollectionExpandedFooter.m; sourceTree = "<group>"; };
-		EF746D681CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCollectionExpandedFooter.xib; sourceTree = "<group>"; };
-		EF746D691CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsTableCollectionExpandedHeader.h; sourceTree = "<group>"; };
-		EF746D6A1CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsTableCollectionExpandedHeader.m; sourceTree = "<group>"; };
-		EF746D6B1CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCollectionExpandedHeader.xib; sourceTree = "<group>"; };
-		EF746D6D1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAndFavoritesTableViewCell.h; sourceTree = "<group>"; };
-		EF746D6E1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAndFavoritesTableViewCell.m; sourceTree = "<group>"; };
-		EF746D6F1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchAndFavoritesTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D701CE8A769002CF5D2 /* SearchTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTopTableViewCell.h; sourceTree = "<group>"; };
-		EF746D711CE8A769002CF5D2 /* SearchTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTopTableViewCell.m; sourceTree = "<group>"; };
-		EF746D721CE8A769002CF5D2 /* SearchTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTopTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D731CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSelectionsTableViewCell.h; sourceTree = "<group>"; };
-		EF746D741CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSelectionsTableViewCell.m; sourceTree = "<group>"; };
-		EF746D751CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSelectionsTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D761CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSelectionsTopTableViewCell.h; sourceTree = "<group>"; };
-		EF746D771CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSelectionsTopTableViewCell.m; sourceTree = "<group>"; };
-		EF746D781CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSelectionsTopTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D791CE8A769002CF5D2 /* SideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuTableViewCell.h; sourceTree = "<group>"; };
-		EF746D7A1CE8A769002CF5D2 /* SideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuTableViewCell.m; sourceTree = "<group>"; };
-		EF746D7B1CE8A769002CF5D2 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D7D1CE8A769002CF5D2 /* STWeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWeatherTableViewCell.h; sourceTree = "<group>"; };
-		EF746D7E1CE8A769002CF5D2 /* STWeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWeatherTableViewCell.m; sourceTree = "<group>"; };
-		EF746D7F1CE8A769002CF5D2 /* STWeatherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWeatherTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D811CE8A769002CF5D2 /* STStadtInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStadtInfoTableViewCell.h; sourceTree = "<group>"; };
-		EF746D821CE8A769002CF5D2 /* STStadtInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStadtInfoTableViewCell.m; sourceTree = "<group>"; };
-		EF746D831CE8A769002CF5D2 /* STStadtInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStadtInfoTableViewCell.xib; sourceTree = "<group>"; };
-		EF746D851CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartBottomCustomCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D861CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartBottomCustomCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D871CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartBottomCustomCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D881CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenBottomCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D891CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenBottomCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D8A1CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenBottomCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D8B1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D8C1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D8D1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D8E1CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenScrollCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D8F1CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenScrollCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D901CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenScrollCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D911CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScrollCustomCollectionCell.h; sourceTree = "<group>"; };
-		EF746D921CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScrollCustomCollectionCell.m; sourceTree = "<group>"; };
-		EF746D931CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScrollCustomCollectionCell.xib; sourceTree = "<group>"; };
-		EF746D941CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartTableCellCollectionViewCell.h; sourceTree = "<group>"; };
-		EF746D951CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartTableCellCollectionViewCell.m; sourceTree = "<group>"; };
-		EF746D961CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartTableCellCollectionViewCell.xib; sourceTree = "<group>"; };
-		EF746D981CE8A769002CF5D2 /* STWerbungTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWerbungTableViewCell.h; sourceTree = "<group>"; };
-		EF746D991CE8A769002CF5D2 /* STWerbungTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWerbungTableViewCell.m; sourceTree = "<group>"; };
-		EF746D9A1CE8A769002CF5D2 /* STWerbungTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWerbungTableViewCell.xib; sourceTree = "<group>"; };
 		EF746DD11CE8A779002CF5D2 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		EF746DD21CE8A779002CF5D2 /* Defines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defines.m; sourceTree = "<group>"; };
 		EF746DD41CE8A779002CF5D2 /* Filters-UnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Filters-UnitTests.swift"; sourceTree = "<group>"; };
@@ -741,21 +661,6 @@
 		EF746DDC1CE8A779002CF5D2 /* STAppSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAppSettingsManager.m; sourceTree = "<group>"; };
 		EF746DDD1CE8A779002CF5D2 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		EF746DDE1CE8A779002CF5D2 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		EF746DE11CE8A779002CF5D2 /* STAngeboteHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAngeboteHeaderView.h; sourceTree = "<group>"; };
-		EF746DE21CE8A779002CF5D2 /* STAngeboteHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAngeboteHeaderView.m; sourceTree = "<group>"; };
-		EF746DE31CE8A779002CF5D2 /* STAngeboteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STAngeboteHeaderView.xib; sourceTree = "<group>"; };
-		EF746DE41CE8A779002CF5D2 /* STLokalNewsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLokalNewsHeaderView.h; sourceTree = "<group>"; };
-		EF746DE51CE8A779002CF5D2 /* STLokalNewsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLokalNewsHeaderView.m; sourceTree = "<group>"; };
-		EF746DE61CE8A779002CF5D2 /* STLokalNewsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STLokalNewsHeaderView.xib; sourceTree = "<group>"; };
-		EF746DE71CE8A779002CF5D2 /* STRightMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRightMenuHeaderView.h; sourceTree = "<group>"; };
-		EF746DE81CE8A779002CF5D2 /* STRightMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRightMenuHeaderView.m; sourceTree = "<group>"; };
-		EF746DE91CE8A779002CF5D2 /* STRightMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRightMenuHeaderView.xib; sourceTree = "<group>"; };
-		EF746DEA1CE8A779002CF5D2 /* STStadtInfoHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStadtInfoHeader.h; sourceTree = "<group>"; };
-		EF746DEB1CE8A779002CF5D2 /* STStadtInfoHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStadtInfoHeader.m; sourceTree = "<group>"; };
-		EF746DEC1CE8A779002CF5D2 /* STStadtInfoHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStadtInfoHeader.xib; sourceTree = "<group>"; };
-		EF746DED1CE8A779002CF5D2 /* STWeatherHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWeatherHeader.h; sourceTree = "<group>"; };
-		EF746DEE1CE8A779002CF5D2 /* STWeatherHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWeatherHeader.m; sourceTree = "<group>"; };
-		EF746DEF1CE8A779002CF5D2 /* STWeatherHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWeatherHeader.xib; sourceTree = "<group>"; };
 		EF746DF11CE8A779002CF5D2 /* Indicators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Indicators.h; sourceTree = "<group>"; };
 		EF746DF21CE8A779002CF5D2 /* Indicators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Indicators.m; sourceTree = "<group>"; };
 		EF746DF31CE8A779002CF5D2 /* Indicators.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Indicators.xib; sourceTree = "<group>"; };
@@ -768,13 +673,6 @@
 		EF746DFB1CE8A779002CF5D2 /* OpeningHoursViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningHoursViewAdapter.swift; sourceTree = "<group>"; };
 		EF746DFC1CE8A779002CF5D2 /* OpeningHoursViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningHoursViewCell.swift; sourceTree = "<group>"; };
 		EF746DFD1CE8A779002CF5D2 /* OpeningHoursViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpeningHoursViewCell.xib; sourceTree = "<group>"; };
-		EF746DFF1CE8A779002CF5D2 /* RandomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomImageView.h; sourceTree = "<group>"; };
-		EF746E001CE8A779002CF5D2 /* RandomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomImageView.m; sourceTree = "<group>"; };
-		EF746E011CE8A779002CF5D2 /* StappyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StappyTextField.h; sourceTree = "<group>"; };
-		EF746E021CE8A779002CF5D2 /* StappyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StappyTextField.m; sourceTree = "<group>"; };
-		EF746E041CE8A779002CF5D2 /* STStartScreenCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenCollectionView.h; sourceTree = "<group>"; };
-		EF746E051CE8A779002CF5D2 /* STStartScreenCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenCollectionView.m; sourceTree = "<group>"; };
-		EF746E061CE8A779002CF5D2 /* STStartScreenCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenCollectionView.xib; sourceTree = "<group>"; };
 		EF746E2A1CE8A79F002CF5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Coupons.storyboard; sourceTree = "<group>"; };
 		EF746E2C1CE8A79F002CF5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF746E2E1CE8A79F002CF5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -790,8 +688,6 @@
 		EF746E3A1CE8A79F002CF5D2 /* STWebViewDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWebViewDetailViewController.xib; sourceTree = "<group>"; };
 		EF746E3C1CE8A79F002CF5D2 /* OverlayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayManager.swift; sourceTree = "<group>"; };
 		EF746E3D1CE8A79F002CF5D2 /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
-		EF746E3E1CE8A79F002CF5D2 /* RightBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightBarViewController.h; sourceTree = "<group>"; };
-		EF746E3F1CE8A79F002CF5D2 /* RightBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightBarViewController.m; sourceTree = "<group>"; };
 		EF746E411CE8A79F002CF5D2 /* SidebarViewController+Favorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SidebarViewController+Favorite.h"; sourceTree = "<group>"; };
 		EF746E421CE8A79F002CF5D2 /* SidebarViewController+Favorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SidebarViewController+Favorite.m"; sourceTree = "<group>"; };
 		EF746E431CE8A79F002CF5D2 /* SidebarViewController+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SidebarViewController+Search.h"; sourceTree = "<group>"; };
@@ -806,10 +702,6 @@
 		EF746E4C1CE8A79F002CF5D2 /* STViewControllerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewControllerItem.m; sourceTree = "<group>"; };
 		EF746E4D1CE8A79F002CF5D2 /* STViewControllerNavigationBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewControllerNavigationBarStyle.h; sourceTree = "<group>"; };
 		EF746E4E1CE8A79F002CF5D2 /* STViewControllerNavigationBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewControllerNavigationBarStyle.m; sourceTree = "<group>"; };
-		EF746E4F1CE8A79F002CF5D2 /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
-		EF746E501CE8A79F002CF5D2 /* STViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
-		EF746E511CE8A79F002CF5D2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF746E521CE8A79F002CF5D2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EF746E6A1CE8A9A7002CF5D2 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
 		EF746E6B1CE8A9A7002CF5D2 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
 		EF746E6C1CE8A9A7002CF5D2 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -1127,6 +1019,111 @@
 		EF746FD31CE8A9F7002CF5D2 /* SaehlerstandEingebenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaehlerstandEingebenViewController.xib; sourceTree = "<group>"; };
 		EF746FD41CE8A9F7002CF5D2 /* ZaehlerstandMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZaehlerstandMainViewController.h; sourceTree = "<group>"; };
 		EF746FD51CE8A9F7002CF5D2 /* ZaehlerstandMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZaehlerstandMainViewController.m; sourceTree = "<group>"; };
+		EFCB3EF51CE99751009A59F9 /* STAngeboteHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAngeboteHeaderView.h; sourceTree = "<group>"; };
+		EFCB3EF61CE99751009A59F9 /* STAngeboteHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAngeboteHeaderView.m; sourceTree = "<group>"; };
+		EFCB3EF71CE99751009A59F9 /* STAngeboteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STAngeboteHeaderView.xib; sourceTree = "<group>"; };
+		EFCB3EFB1CE99781009A59F9 /* STLokalNewsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLokalNewsHeaderView.h; sourceTree = "<group>"; };
+		EFCB3EFC1CE99781009A59F9 /* STLokalNewsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLokalNewsHeaderView.m; sourceTree = "<group>"; };
+		EFCB3EFD1CE99781009A59F9 /* STLokalNewsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STLokalNewsHeaderView.xib; sourceTree = "<group>"; };
+		EFCB3F011CE9981D009A59F9 /* STStadtInfoHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStadtInfoHeader.h; sourceTree = "<group>"; };
+		EFCB3F021CE9981D009A59F9 /* STStadtInfoHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStadtInfoHeader.m; sourceTree = "<group>"; };
+		EFCB3F031CE9981D009A59F9 /* STStadtInfoHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStadtInfoHeader.xib; sourceTree = "<group>"; };
+		EFCB3F071CE9984C009A59F9 /* STWeatherHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWeatherHeader.h; sourceTree = "<group>"; };
+		EFCB3F081CE9984C009A59F9 /* STWeatherHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWeatherHeader.m; sourceTree = "<group>"; };
+		EFCB3F091CE9984C009A59F9 /* STWeatherHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWeatherHeader.xib; sourceTree = "<group>"; };
+		EFCB3F131CE998CC009A59F9 /* RandomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomImageView.h; sourceTree = "<group>"; };
+		EFCB3F141CE998CC009A59F9 /* RandomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomImageView.m; sourceTree = "<group>"; };
+		EFCB3F1D1CE9992C009A59F9 /* StappyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StappyTextField.h; sourceTree = "<group>"; };
+		EFCB3F1E1CE9992C009A59F9 /* StappyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StappyTextField.m; sourceTree = "<group>"; };
+		EFCB3F211CE999A1009A59F9 /* STStadtInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStadtInfoTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F221CE999A1009A59F9 /* STStadtInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStadtInfoTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F231CE999A1009A59F9 /* STStadtInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStadtInfoTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F271CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartBottomCustomCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3F281CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartBottomCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3F291CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartBottomCustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F2A1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenBottomCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3F2B1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenBottomCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3F2C1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenBottomCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F2D1CE999EB009A59F9 /* STStartScreenCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3F2E1CE999EB009A59F9 /* STStartScreenCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3F2F1CE999EB009A59F9 /* STStartScreenCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F301CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenScrollCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3F311CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenScrollCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3F321CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenScrollCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F331CE999EB009A59F9 /* STStartScrollCustomCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScrollCustomCollectionCell.h; sourceTree = "<group>"; };
+		EFCB3F341CE999EB009A59F9 /* STStartScrollCustomCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScrollCustomCollectionCell.m; sourceTree = "<group>"; };
+		EFCB3F351CE999EB009A59F9 /* STStartScrollCustomCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScrollCustomCollectionCell.xib; sourceTree = "<group>"; };
+		EFCB3F361CE999EB009A59F9 /* STStartTableCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartTableCellCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3F371CE999EB009A59F9 /* STStartTableCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartTableCellCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3F381CE999EB009A59F9 /* STStartTableCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartTableCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F461CE99A48009A59F9 /* STStartScreenCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartScreenCollectionView.h; sourceTree = "<group>"; };
+		EFCB3F471CE99A48009A59F9 /* STStartScreenCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartScreenCollectionView.m; sourceTree = "<group>"; };
+		EFCB3F481CE99A48009A59F9 /* STStartScreenCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STStartScreenCollectionView.xib; sourceTree = "<group>"; };
+		EFCB3F4C1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAndFavoritesTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F4D1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAndFavoritesTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F4E1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchAndFavoritesTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F4F1CE99AC1009A59F9 /* SearchTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTopTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F501CE99AC1009A59F9 /* SearchTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTopTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F511CE99AC1009A59F9 /* SearchTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTopTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F521CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSelectionsTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F531CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSelectionsTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F541CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSelectionsTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F551CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsSelectionsTopTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F561CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsSelectionsTopTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F571CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsSelectionsTopTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F581CE99AC1009A59F9 /* SideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F591CE99AC1009A59F9 /* SideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F5A1CE99AC1009A59F9 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F661CE99AF5009A59F9 /* STWeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWeatherTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F671CE99AF5009A59F9 /* STWeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWeatherTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F681CE99AF5009A59F9 /* STWeatherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWeatherTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F6C1CE99B45009A59F9 /* RightBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightBarViewController.h; sourceTree = "<group>"; };
+		EFCB3F6D1CE99B45009A59F9 /* RightBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightBarViewController.m; sourceTree = "<group>"; };
+		EFCB3F701CE99B65009A59F9 /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		EFCB3F711CE99B65009A59F9 /* STViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
+		EFCB3F741CE99CC4009A59F9 /* ExpandedBottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedBottomTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F751CE99CC4009A59F9 /* ExpandedBottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedBottomTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F761CE99CC4009A59F9 /* ExpandedBottomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandedBottomTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F771CE99CC4009A59F9 /* ExpandedTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedTopTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F781CE99CC4009A59F9 /* ExpandedTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedTopTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F791CE99CC4009A59F9 /* ExpandedTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandedTopTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F7A1CE99CC4009A59F9 /* STNewsTableCellCollecionExpandedFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCellCollecionExpandedFooter.xib; sourceTree = "<group>"; };
+		EFCB3F7B1CE99CC4009A59F9 /* STNewsTableCellCollectionExpanded.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCellCollectionExpanded.xib; sourceTree = "<group>"; };
+		EFCB3F7C1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsTableCollectionExpandedFooter.h; sourceTree = "<group>"; };
+		EFCB3F7D1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsTableCollectionExpandedFooter.m; sourceTree = "<group>"; };
+		EFCB3F7E1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCollectionExpandedFooter.xib; sourceTree = "<group>"; };
+		EFCB3F7F1CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsTableCollectionExpandedHeader.h; sourceTree = "<group>"; };
+		EFCB3F801CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsTableCollectionExpandedHeader.m; sourceTree = "<group>"; };
+		EFCB3F811CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCollectionExpandedHeader.xib; sourceTree = "<group>"; };
+		EFCB3F8D1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePreviewCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3F8E1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePreviewCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3F8F1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePreviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F921CE99D83009A59F9 /* PDFPreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFPreviewCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3F931CE99D83009A59F9 /* PDFPreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFPreviewCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3F941CE99D83009A59F9 /* PDFPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F971CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsBaseExpandedTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F981CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsBaseExpandedTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F991CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsBaseExpandedTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3F9A1CE99DDF009A59F9 /* STNewsBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsBaseTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3F9B1CE99DDF009A59F9 /* STNewsBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsBaseTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3F9C1CE99DDF009A59F9 /* STNewsBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsBaseTableViewCell.xib; sourceTree = "<group>"; };
+		EFCB3FA11CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNewsTableCellCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3FA21CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNewsTableCellCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3FA31CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STNewsTableCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3FA71CE99E63009A59F9 /* STRightMenuSubCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRightMenuSubCell.h; sourceTree = "<group>"; };
+		EFCB3FA81CE99E63009A59F9 /* STRightMenuSubCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRightMenuSubCell.m; sourceTree = "<group>"; };
+		EFCB3FA91CE99E63009A59F9 /* STRightMenuSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRightMenuSubCell.xib; sourceTree = "<group>"; };
+		EFCB3FAC1CE99ECB009A59F9 /* STStartBaseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStartBaseCollectionCell.h; sourceTree = "<group>"; };
+		EFCB3FAD1CE99ECB009A59F9 /* STStartBaseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStartBaseCollectionCell.m; sourceTree = "<group>"; };
+		EFCB3FB01CE99F3E009A59F9 /* STRightMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRightMenuHeaderView.h; sourceTree = "<group>"; };
+		EFCB3FB11CE99F3E009A59F9 /* STRightMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRightMenuHeaderView.m; sourceTree = "<group>"; };
+		EFCB3FB21CE99F3E009A59F9 /* STRightMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STRightMenuHeaderView.xib; sourceTree = "<group>"; };
+		EFCB3FB51CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionOptionsCollectionViewCell.h; sourceTree = "<group>"; };
+		EFCB3FB61CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionOptionsCollectionViewCell.m; sourceTree = "<group>"; };
+		EFCB3FB71CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionOptionsCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFCB3FBA1CE9A040009A59F9 /* STWerbungTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWerbungTableViewCell.h; sourceTree = "<group>"; };
+		EFCB3FBB1CE9A040009A59F9 /* STWerbungTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWerbungTableViewCell.m; sourceTree = "<group>"; };
+		EFCB3FBC1CE9A040009A59F9 /* STWerbungTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STWerbungTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1230,7 +1227,6 @@
 			children = (
 				EF746DD01CE8A779002CF5D2 /* Utils */,
 				EF746DDF1CE8A779002CF5D2 /* Views */,
-				EF746D431CE8A769002CF5D2 /* TableViewCells */,
 				EF746BFC1CE8A63C002CF5D2 /* BridgingHeader */,
 				EF746BD81CE8728F002CF5D2 /* Categories */,
 				EF746BD91CE8728F002CF5D2 /* Model */,
@@ -1333,16 +1329,12 @@
 		EF746BE41CE8728F002CF5D2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3F6F1CE99B65009A59F9 /* STViewController */,
+				EFCB3F6B1CE99B45009A59F9 /* RightBarViewController */,
 				EF746E281CE8A79F002CF5D2 /* Base.lproj */,
 				EF746E311CE8A79F002CF5D2 /* DetailViewControllers */,
 				EF746E3B1CE8A79F002CF5D2 /* OverlayViewController */,
-				EF746E3E1CE8A79F002CF5D2 /* RightBarViewController.h */,
-				EF746E3F1CE8A79F002CF5D2 /* RightBarViewController.m */,
 				EF746E401CE8A79F002CF5D2 /* SideMenu */,
-				EF746E4F1CE8A79F002CF5D2 /* STViewController.h */,
-				EF746E501CE8A79F002CF5D2 /* STViewController.m */,
-				EF746E511CE8A79F002CF5D2 /* ViewController.h */,
-				EF746E521CE8A79F002CF5D2 /* ViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1827,156 +1819,6 @@
 			path = RWE;
 			sourceTree = "<group>";
 		};
-		EF746D431CE8A769002CF5D2 /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D441CE8A769002CF5D2 /* ActionOptions */,
-				EF746D481CE8A769002CF5D2 /* Base */,
-				EF746D571CE8A769002CF5D2 /* NewsCollectionExpanded */,
-				EF746D6C1CE8A769002CF5D2 /* SideMenu */,
-				EF746D801CE8A769002CF5D2 /* StadtInfos */,
-				EF746D841CE8A769002CF5D2 /* StartScreen */,
-				EF746D971CE8A769002CF5D2 /* Werbung */,
-			);
-			path = TableViewCells;
-			sourceTree = "<group>";
-		};
-		EF746D441CE8A769002CF5D2 /* ActionOptions */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D451CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.h */,
-				EF746D461CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.m */,
-				EF746D471CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.xib */,
-			);
-			path = ActionOptions;
-			sourceTree = "<group>";
-		};
-		EF746D481CE8A769002CF5D2 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D491CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.h */,
-				EF746D4A1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.m */,
-				EF746D4B1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.xib */,
-				EF746D4C1CE8A769002CF5D2 /* STNewsBaseTableViewCell.h */,
-				EF746D4D1CE8A769002CF5D2 /* STNewsBaseTableViewCell.m */,
-				EF746D4E1CE8A769002CF5D2 /* STNewsBaseTableViewCell.xib */,
-				EF746D4F1CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.h */,
-				EF746D501CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.m */,
-				EF746D511CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.xib */,
-				EF746D521CE8A769002CF5D2 /* STRightMenuSubCell.h */,
-				EF746D531CE8A769002CF5D2 /* STRightMenuSubCell.m */,
-				EF746D541CE8A769002CF5D2 /* STRightMenuSubCell.xib */,
-				EF746D551CE8A769002CF5D2 /* STStartBaseCollectionCell.h */,
-				EF746D561CE8A769002CF5D2 /* STStartBaseCollectionCell.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		EF746D571CE8A769002CF5D2 /* NewsCollectionExpanded */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D581CE8A769002CF5D2 /* ExpandedBottomTableViewCell.h */,
-				EF746D591CE8A769002CF5D2 /* ExpandedBottomTableViewCell.m */,
-				EF746D5A1CE8A769002CF5D2 /* ExpandedBottomTableViewCell.xib */,
-				EF746D5B1CE8A769002CF5D2 /* ExpandedTopTableViewCell.h */,
-				EF746D5C1CE8A769002CF5D2 /* ExpandedTopTableViewCell.m */,
-				EF746D5D1CE8A769002CF5D2 /* ExpandedTopTableViewCell.xib */,
-				EF746D5E1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.h */,
-				EF746D5F1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.m */,
-				EF746D601CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.xib */,
-				EF746D611CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.h */,
-				EF746D621CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.m */,
-				EF746D631CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.xib */,
-				EF746D641CE8A769002CF5D2 /* STNewsTableCellCollecionExpandedFooter.xib */,
-				EF746D651CE8A769002CF5D2 /* STNewsTableCellCollectionExpanded.xib */,
-				EF746D661CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.h */,
-				EF746D671CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.m */,
-				EF746D681CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.xib */,
-				EF746D691CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.h */,
-				EF746D6A1CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.m */,
-				EF746D6B1CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.xib */,
-			);
-			path = NewsCollectionExpanded;
-			sourceTree = "<group>";
-		};
-		EF746D6C1CE8A769002CF5D2 /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D6D1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.h */,
-				EF746D6E1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.m */,
-				EF746D6F1CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.xib */,
-				EF746D701CE8A769002CF5D2 /* SearchTopTableViewCell.h */,
-				EF746D711CE8A769002CF5D2 /* SearchTopTableViewCell.m */,
-				EF746D721CE8A769002CF5D2 /* SearchTopTableViewCell.xib */,
-				EF746D731CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.h */,
-				EF746D741CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.m */,
-				EF746D751CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.xib */,
-				EF746D761CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.h */,
-				EF746D771CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.m */,
-				EF746D781CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.xib */,
-				EF746D791CE8A769002CF5D2 /* SideMenuTableViewCell.h */,
-				EF746D7A1CE8A769002CF5D2 /* SideMenuTableViewCell.m */,
-				EF746D7B1CE8A769002CF5D2 /* SideMenuTableViewCell.xib */,
-				EF746D7C1CE8A769002CF5D2 /* WeatherScreen */,
-			);
-			path = SideMenu;
-			sourceTree = "<group>";
-		};
-		EF746D7C1CE8A769002CF5D2 /* WeatherScreen */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D7D1CE8A769002CF5D2 /* STWeatherTableViewCell.h */,
-				EF746D7E1CE8A769002CF5D2 /* STWeatherTableViewCell.m */,
-				EF746D7F1CE8A769002CF5D2 /* STWeatherTableViewCell.xib */,
-			);
-			path = WeatherScreen;
-			sourceTree = "<group>";
-		};
-		EF746D801CE8A769002CF5D2 /* StadtInfos */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D811CE8A769002CF5D2 /* STStadtInfoTableViewCell.h */,
-				EF746D821CE8A769002CF5D2 /* STStadtInfoTableViewCell.m */,
-				EF746D831CE8A769002CF5D2 /* STStadtInfoTableViewCell.xib */,
-			);
-			path = StadtInfos;
-			sourceTree = "<group>";
-		};
-		EF746D841CE8A769002CF5D2 /* StartScreen */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D851CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.h */,
-				EF746D861CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.m */,
-				EF746D871CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.xib */,
-				EF746D881CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.h */,
-				EF746D891CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.m */,
-				EF746D8A1CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.xib */,
-				EF746D8B1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.h */,
-				EF746D8C1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.m */,
-				EF746D8D1CE8A769002CF5D2 /* STStartScreenCollectionViewCell.xib */,
-				EF746D8E1CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.h */,
-				EF746D8F1CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.m */,
-				EF746D901CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.xib */,
-				EF746D911CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.h */,
-				EF746D921CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.m */,
-				EF746D931CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.xib */,
-				EF746D941CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.h */,
-				EF746D951CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.m */,
-				EF746D961CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.xib */,
-			);
-			path = StartScreen;
-			sourceTree = "<group>";
-		};
-		EF746D971CE8A769002CF5D2 /* Werbung */ = {
-			isa = PBXGroup;
-			children = (
-				EF746D981CE8A769002CF5D2 /* STWerbungTableViewCell.h */,
-				EF746D991CE8A769002CF5D2 /* STWerbungTableViewCell.m */,
-				EF746D9A1CE8A769002CF5D2 /* STWerbungTableViewCell.xib */,
-			);
-			path = Werbung;
-			sourceTree = "<group>";
-		};
 		EF746DD01CE8A779002CF5D2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -2013,37 +1855,12 @@
 		EF746DDF1CE8A779002CF5D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EF746DE01CE8A779002CF5D2 /* HeadersAndFooter */,
 				EF746DF01CE8A779002CF5D2 /* Indicators */,
 				EF746DF41CE8A779002CF5D2 /* OpeningHours */,
-				EF746DFE1CE8A779002CF5D2 /* RandomBackground */,
-				EF746E011CE8A779002CF5D2 /* StappyTextField.h */,
-				EF746E021CE8A779002CF5D2 /* StappyTextField.m */,
-				EF746E031CE8A779002CF5D2 /* StartScreen */,
+				EFCB3F121CE998CC009A59F9 /* RandomImageView */,
+				EFCB3F1C1CE9992C009A59F9 /* StabbyTextField */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		EF746DE01CE8A779002CF5D2 /* HeadersAndFooter */ = {
-			isa = PBXGroup;
-			children = (
-				EF746DE11CE8A779002CF5D2 /* STAngeboteHeaderView.h */,
-				EF746DE21CE8A779002CF5D2 /* STAngeboteHeaderView.m */,
-				EF746DE31CE8A779002CF5D2 /* STAngeboteHeaderView.xib */,
-				EF746DE41CE8A779002CF5D2 /* STLokalNewsHeaderView.h */,
-				EF746DE51CE8A779002CF5D2 /* STLokalNewsHeaderView.m */,
-				EF746DE61CE8A779002CF5D2 /* STLokalNewsHeaderView.xib */,
-				EF746DE71CE8A779002CF5D2 /* STRightMenuHeaderView.h */,
-				EF746DE81CE8A779002CF5D2 /* STRightMenuHeaderView.m */,
-				EF746DE91CE8A779002CF5D2 /* STRightMenuHeaderView.xib */,
-				EF746DEA1CE8A779002CF5D2 /* STStadtInfoHeader.h */,
-				EF746DEB1CE8A779002CF5D2 /* STStadtInfoHeader.m */,
-				EF746DEC1CE8A779002CF5D2 /* STStadtInfoHeader.xib */,
-				EF746DED1CE8A779002CF5D2 /* STWeatherHeader.h */,
-				EF746DEE1CE8A779002CF5D2 /* STWeatherHeader.m */,
-				EF746DEF1CE8A779002CF5D2 /* STWeatherHeader.xib */,
-			);
-			path = HeadersAndFooter;
 			sourceTree = "<group>";
 		};
 		EF746DF01CE8A779002CF5D2 /* Indicators */ = {
@@ -2072,25 +1889,6 @@
 			path = OpeningHours;
 			sourceTree = "<group>";
 		};
-		EF746DFE1CE8A779002CF5D2 /* RandomBackground */ = {
-			isa = PBXGroup;
-			children = (
-				EF746DFF1CE8A779002CF5D2 /* RandomImageView.h */,
-				EF746E001CE8A779002CF5D2 /* RandomImageView.m */,
-			);
-			path = RandomBackground;
-			sourceTree = "<group>";
-		};
-		EF746E031CE8A779002CF5D2 /* StartScreen */ = {
-			isa = PBXGroup;
-			children = (
-				EF746E041CE8A779002CF5D2 /* STStartScreenCollectionView.h */,
-				EF746E051CE8A779002CF5D2 /* STStartScreenCollectionView.m */,
-				EF746E061CE8A779002CF5D2 /* STStartScreenCollectionView.xib */,
-			);
-			path = StartScreen;
-			sourceTree = "<group>";
-		};
 		EF746E281CE8A79F002CF5D2 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -2105,6 +1903,7 @@
 		EF746E311CE8A79F002CF5D2 /* DetailViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3F8C1CE99D40009A59F9 /* TableViewCells */,
 				EF746E321CE8A79F002CF5D2 /* STDetailImageGalleryViewController.h */,
 				EF746E331CE8A79F002CF5D2 /* STDetailImageGalleryViewController.m */,
 				EF746E341CE8A79F002CF5D2 /* STDetailImageGalleryViewController.xib */,
@@ -2130,6 +1929,7 @@
 		EF746E401CE8A79F002CF5D2 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3F4B1CE99AC1009A59F9 /* TableViewCells */,
 				EF746E411CE8A79F002CF5D2 /* SidebarViewController+Favorite.h */,
 				EF746E421CE8A79F002CF5D2 /* SidebarViewController+Favorite.m */,
 				EF746E431CE8A79F002CF5D2 /* SidebarViewController+Search.h */,
@@ -2171,6 +1971,7 @@
 		EF746E741CE8A9F6002CF5D2 /* Angebote */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3EF41CE99751009A59F9 /* Views */,
 				EF746E751CE8A9F6002CF5D2 /* STAngeboteViewController.h */,
 				EF746E761CE8A9F6002CF5D2 /* STAngeboteViewController.m */,
 				EF746E771CE8A9F6002CF5D2 /* STMittagsAngeboteViewController.h */,
@@ -2426,6 +2227,8 @@
 		EF746F361CE8A9F7002CF5D2 /* LokalNews */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3F731CE99CC4009A59F9 /* TableViewCells */,
+				EFCB3EFA1CE99781009A59F9 /* Views */,
 				EF746F371CE8A9F7002CF5D2 /* STLokalNewsViewController.h */,
 				EF746F381CE8A9F7002CF5D2 /* STLokalNewsViewController.m */,
 			);
@@ -2444,6 +2247,8 @@
 		EF746F3C1CE8A9F7002CF5D2 /* StadtInfo */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3F201CE999A1009A59F9 /* TableViewCells */,
+				EFCB3F001CE9981D009A59F9 /* Views */,
 				EF746F3D1CE8A9F7002CF5D2 /* STStadtInfoOverviewViewController.h */,
 				EF746F3E1CE8A9F7002CF5D2 /* STStadtInfoOverviewViewController.m */,
 				EF746F3F1CE8A9F7002CF5D2 /* STStadtInfoOverviewViewController.xib */,
@@ -2454,6 +2259,8 @@
 		EF746F401CE8A9F7002CF5D2 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3F451CE99A48009A59F9 /* Views */,
+				EFCB3F261CE999EB009A59F9 /* TableViewCells */,
 				EF746F411CE8A9F7002CF5D2 /* StartViewController.h */,
 				EF746F421CE8A9F7002CF5D2 /* StartViewController.m */,
 				EF746F431CE8A9F7002CF5D2 /* StartViewController.xib */,
@@ -2653,6 +2460,8 @@
 		EF746FCA1CE8A9F7002CF5D2 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB3F651CE99AF5009A59F9 /* TableViewCells */,
+				EFCB3F061CE9984C009A59F9 /* Views */,
 				EF746FCB1CE8A9F7002CF5D2 /* STWeatherTopViewController.h */,
 				EF746FCC1CE8A9F7002CF5D2 /* STWeatherTopViewController.m */,
 				EF746FCD1CE8A9F7002CF5D2 /* STWeatherTopViewController.xib */,
@@ -2672,6 +2481,232 @@
 				EF746FD51CE8A9F7002CF5D2 /* ZaehlerstandMainViewController.m */,
 			);
 			path = Zahlerstand;
+			sourceTree = "<group>";
+		};
+		EFCB3EF41CE99751009A59F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3EF51CE99751009A59F9 /* STAngeboteHeaderView.h */,
+				EFCB3EF61CE99751009A59F9 /* STAngeboteHeaderView.m */,
+				EFCB3EF71CE99751009A59F9 /* STAngeboteHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFCB3EFA1CE99781009A59F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3EFB1CE99781009A59F9 /* STLokalNewsHeaderView.h */,
+				EFCB3EFC1CE99781009A59F9 /* STLokalNewsHeaderView.m */,
+				EFCB3EFD1CE99781009A59F9 /* STLokalNewsHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFCB3F001CE9981D009A59F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F011CE9981D009A59F9 /* STStadtInfoHeader.h */,
+				EFCB3F021CE9981D009A59F9 /* STStadtInfoHeader.m */,
+				EFCB3F031CE9981D009A59F9 /* STStadtInfoHeader.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFCB3F061CE9984C009A59F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F071CE9984C009A59F9 /* STWeatherHeader.h */,
+				EFCB3F081CE9984C009A59F9 /* STWeatherHeader.m */,
+				EFCB3F091CE9984C009A59F9 /* STWeatherHeader.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFCB3F121CE998CC009A59F9 /* RandomImageView */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F131CE998CC009A59F9 /* RandomImageView.h */,
+				EFCB3F141CE998CC009A59F9 /* RandomImageView.m */,
+			);
+			path = RandomImageView;
+			sourceTree = "<group>";
+		};
+		EFCB3F1C1CE9992C009A59F9 /* StabbyTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F1D1CE9992C009A59F9 /* StappyTextField.h */,
+				EFCB3F1E1CE9992C009A59F9 /* StappyTextField.m */,
+			);
+			path = StabbyTextField;
+			sourceTree = "<group>";
+		};
+		EFCB3F201CE999A1009A59F9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F211CE999A1009A59F9 /* STStadtInfoTableViewCell.h */,
+				EFCB3F221CE999A1009A59F9 /* STStadtInfoTableViewCell.m */,
+				EFCB3F231CE999A1009A59F9 /* STStadtInfoTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EFCB3F261CE999EB009A59F9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3FAC1CE99ECB009A59F9 /* STStartBaseCollectionCell.h */,
+				EFCB3FAD1CE99ECB009A59F9 /* STStartBaseCollectionCell.m */,
+				EFCB3F271CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.h */,
+				EFCB3F281CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.m */,
+				EFCB3F291CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.xib */,
+				EFCB3F2A1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.h */,
+				EFCB3F2B1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.m */,
+				EFCB3F2C1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.xib */,
+				EFCB3F2D1CE999EB009A59F9 /* STStartScreenCollectionViewCell.h */,
+				EFCB3F2E1CE999EB009A59F9 /* STStartScreenCollectionViewCell.m */,
+				EFCB3F2F1CE999EB009A59F9 /* STStartScreenCollectionViewCell.xib */,
+				EFCB3F301CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.h */,
+				EFCB3F311CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.m */,
+				EFCB3F321CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.xib */,
+				EFCB3F331CE999EB009A59F9 /* STStartScrollCustomCollectionCell.h */,
+				EFCB3F341CE999EB009A59F9 /* STStartScrollCustomCollectionCell.m */,
+				EFCB3F351CE999EB009A59F9 /* STStartScrollCustomCollectionCell.xib */,
+				EFCB3F361CE999EB009A59F9 /* STStartTableCellCollectionViewCell.h */,
+				EFCB3F371CE999EB009A59F9 /* STStartTableCellCollectionViewCell.m */,
+				EFCB3F381CE999EB009A59F9 /* STStartTableCellCollectionViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EFCB3F451CE99A48009A59F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F461CE99A48009A59F9 /* STStartScreenCollectionView.h */,
+				EFCB3F471CE99A48009A59F9 /* STStartScreenCollectionView.m */,
+				EFCB3F481CE99A48009A59F9 /* STStartScreenCollectionView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFCB3F4B1CE99AC1009A59F9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F4C1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.h */,
+				EFCB3F4D1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.m */,
+				EFCB3F4E1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.xib */,
+				EFCB3F4F1CE99AC1009A59F9 /* SearchTopTableViewCell.h */,
+				EFCB3F501CE99AC1009A59F9 /* SearchTopTableViewCell.m */,
+				EFCB3F511CE99AC1009A59F9 /* SearchTopTableViewCell.xib */,
+				EFCB3F521CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.h */,
+				EFCB3F531CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.m */,
+				EFCB3F541CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.xib */,
+				EFCB3F551CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.h */,
+				EFCB3F561CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.m */,
+				EFCB3F571CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.xib */,
+				EFCB3F581CE99AC1009A59F9 /* SideMenuTableViewCell.h */,
+				EFCB3F591CE99AC1009A59F9 /* SideMenuTableViewCell.m */,
+				EFCB3F5A1CE99AC1009A59F9 /* SideMenuTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EFCB3F651CE99AF5009A59F9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F661CE99AF5009A59F9 /* STWeatherTableViewCell.h */,
+				EFCB3F671CE99AF5009A59F9 /* STWeatherTableViewCell.m */,
+				EFCB3F681CE99AF5009A59F9 /* STWeatherTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EFCB3F6B1CE99B45009A59F9 /* RightBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3FAF1CE99F3E009A59F9 /* Views */,
+				EFCB3FA61CE99E63009A59F9 /* TableViewCells */,
+				EFCB3F6C1CE99B45009A59F9 /* RightBarViewController.h */,
+				EFCB3F6D1CE99B45009A59F9 /* RightBarViewController.m */,
+			);
+			path = RightBarViewController;
+			sourceTree = "<group>";
+		};
+		EFCB3F6F1CE99B65009A59F9 /* STViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3F701CE99B65009A59F9 /* STViewController.h */,
+				EFCB3F711CE99B65009A59F9 /* STViewController.m */,
+			);
+			path = STViewController;
+			sourceTree = "<group>";
+		};
+		EFCB3F731CE99CC4009A59F9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3FBA1CE9A040009A59F9 /* STWerbungTableViewCell.h */,
+				EFCB3FBB1CE9A040009A59F9 /* STWerbungTableViewCell.m */,
+				EFCB3FBC1CE9A040009A59F9 /* STWerbungTableViewCell.xib */,
+				EFCB3FA11CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.h */,
+				EFCB3FA21CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.m */,
+				EFCB3FA31CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.xib */,
+				EFCB3F971CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.h */,
+				EFCB3F981CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.m */,
+				EFCB3F991CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.xib */,
+				EFCB3F9A1CE99DDF009A59F9 /* STNewsBaseTableViewCell.h */,
+				EFCB3F9B1CE99DDF009A59F9 /* STNewsBaseTableViewCell.m */,
+				EFCB3F9C1CE99DDF009A59F9 /* STNewsBaseTableViewCell.xib */,
+				EFCB3F741CE99CC4009A59F9 /* ExpandedBottomTableViewCell.h */,
+				EFCB3F751CE99CC4009A59F9 /* ExpandedBottomTableViewCell.m */,
+				EFCB3F761CE99CC4009A59F9 /* ExpandedBottomTableViewCell.xib */,
+				EFCB3F771CE99CC4009A59F9 /* ExpandedTopTableViewCell.h */,
+				EFCB3F781CE99CC4009A59F9 /* ExpandedTopTableViewCell.m */,
+				EFCB3F791CE99CC4009A59F9 /* ExpandedTopTableViewCell.xib */,
+				EFCB3F7A1CE99CC4009A59F9 /* STNewsTableCellCollecionExpandedFooter.xib */,
+				EFCB3F7B1CE99CC4009A59F9 /* STNewsTableCellCollectionExpanded.xib */,
+				EFCB3F7C1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.h */,
+				EFCB3F7D1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.m */,
+				EFCB3F7E1CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.xib */,
+				EFCB3F7F1CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.h */,
+				EFCB3F801CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.m */,
+				EFCB3F811CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EFCB3F8C1CE99D40009A59F9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3FB51CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.h */,
+				EFCB3FB61CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.m */,
+				EFCB3FB71CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.xib */,
+				EFCB3F921CE99D83009A59F9 /* PDFPreviewCollectionViewCell.h */,
+				EFCB3F931CE99D83009A59F9 /* PDFPreviewCollectionViewCell.m */,
+				EFCB3F941CE99D83009A59F9 /* PDFPreviewCollectionViewCell.xib */,
+				EFCB3F8D1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.h */,
+				EFCB3F8E1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.m */,
+				EFCB3F8F1CE99D40009A59F9 /* ImagePreviewCollectionViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EFCB3FA61CE99E63009A59F9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3FA71CE99E63009A59F9 /* STRightMenuSubCell.h */,
+				EFCB3FA81CE99E63009A59F9 /* STRightMenuSubCell.m */,
+				EFCB3FA91CE99E63009A59F9 /* STRightMenuSubCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EFCB3FAF1CE99F3E009A59F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB3FB01CE99F3E009A59F9 /* STRightMenuHeaderView.h */,
+				EFCB3FB11CE99F3E009A59F9 /* STRightMenuHeaderView.m */,
+				EFCB3FB21CE99F3E009A59F9 /* STRightMenuHeaderView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2785,30 +2820,24 @@
 				EF746FF01CE8A9F7002CF5D2 /* STFahrplanDebugVC.xib in Resources */,
 				EF7470241CE8A9F7002CF5D2 /* STFahrplanMapCellTVC.xib in Resources */,
 				EF7470731CE8A9F7002CF5D2 /* icon_tick_active@2x.png in Resources */,
+				EFCB3F4A1CE99A48009A59F9 /* STStartScreenCollectionView.xib in Resources */,
 				EF746D301CE8A71C002CF5D2 /* KievitScOffc.ttf in Resources */,
-				EF746DC91CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
-				EF746DC51CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.xib in Resources */,
 				EF7470401CE8A9F7002CF5D2 /* GarbageCalendarSettingsViewController.xib in Resources */,
-				EF746DBD1CE8A769002CF5D2 /* SideMenuTableViewCell.xib in Resources */,
+				EFCB3F051CE9981D009A59F9 /* STStadtInfoHeader.xib in Resources */,
 				EF74703C1CE8A9F7002CF5D2 /* STFahrplanTransportationTypePickerView.xib in Resources */,
 				EF74706B1CE8A9F7002CF5D2 /* icon_content_overlay_close@3x.png in Resources */,
-				EF746E271CE8A779002CF5D2 /* STStartScreenCollectionView.xib in Resources */,
 				EF7470281CE8A9F7002CF5D2 /* STFahrplanPremiumRouteVC.xib in Resources */,
-				EF746DA41CE8A769002CF5D2 /* STRightMenuSubCell.xib in Resources */,
-				EF746DAB1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.xib in Resources */,
 				EF7470261CE8A9F7002CF5D2 /* STFahrplanPremiumConnectionsVC.xib in Resources */,
 				EF746D2F1CE8A71C002CF5D2 /* KievitScOffc-Light.ttf in Resources */,
 				EF746D271CE8A71C002CF5D2 /* Main.strings in Resources */,
-				EF746E141CE8A779002CF5D2 /* STRightMenuHeaderView.xib in Resources */,
 				EF7470711CE8A9F7002CF5D2 /* icon_tick@3x.png in Resources */,
 				EF7470641CE8A9F7002CF5D2 /* icon_content_oepnv_arrow_search@2x.png in Resources */,
-				EF746DAD1CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.xib in Resources */,
+				EFCB3F861CE99CC4009A59F9 /* STNewsTableCellCollecionExpandedFooter.xib in Resources */,
 				EF7470871CE8A9F7002CF5D2 /* STRegionPickerViewController.xib in Resources */,
 				EF746D351CE8A71C002CF5D2 /* OfficinaSansITCPro-Black.otf in Resources */,
+				EFCB3F441CE999EB009A59F9 /* STStartTableCellCollectionViewCell.xib in Resources */,
 				EF746D3E1CE8A71C002CF5D2 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EF74704C1CE8A9F7002CF5D2 /* STStadtInfoOverviewViewController.xib in Resources */,
-				EF746DCD1CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.xib in Resources */,
-				EF746DA01CE8A769002CF5D2 /* STNewsBaseTableViewCell.xib in Resources */,
 				EF746D231CE8A71C002CF5D2 /* storyboard_ids.json in Resources */,
 				EF7470581CE8A9F7002CF5D2 /* icon_content_article_pin@2x.png in Resources */,
 				EF746FEC1CE8A9F7002CF5D2 /* STFahrplanConnectionsVC.xib in Resources */,
@@ -2816,9 +2845,9 @@
 				EF74700F1CE8A9F7002CF5D2 /* STFahrplanFavouriteOneLocationCellTVC.xib in Resources */,
 				EF746FF61CE8A9F7002CF5D2 /* STFahrplanLocationNameFinderOverlayVC.xib in Resources */,
 				EF746FD91CE8A9F7002CF5D2 /* STAnnotationsMapViewController.xib in Resources */,
-				EF746DCF1CE8A769002CF5D2 /* STWerbungTableViewCell.xib in Resources */,
 				EF7470741CE8A9F7002CF5D2 /* icon_tick_active@3x.png in Resources */,
 				EF7470671CE8A9F7002CF5D2 /* icon_content_orten_germany@2x.png in Resources */,
+				EFCB3F5C1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.xib in Resources */,
 				EF7470A51CE8A9F7002CF5D2 /* STWeatherTopViewController.xib in Resources */,
 				EF74706D1CE8A9F7002CF5D2 /* icon_menu_left_suche@2x.png in Resources */,
 				EF7470481CE8A9F7002CF5D2 /* GarbageTypesTableViewCell.xib in Resources */,
@@ -2832,7 +2861,11 @@
 				EF746D3F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EF7470701CE8A9F7002CF5D2 /* icon_tick@2x.png in Resources */,
 				EF7470541CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib in Resources */,
+				EFCB3F891CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.xib in Resources */,
+				EFCB3F251CE999A1009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
 				EF746D2B1CE8A71C002CF5D2 /* Bitter-Regular.ttf in Resources */,
+				EFCB3F641CE99AC1009A59F9 /* SideMenuTableViewCell.xib in Resources */,
+				EFCB3F5E1CE99AC1009A59F9 /* SearchTopTableViewCell.xib in Resources */,
 				EF7470051CE8A9F7002CF5D2 /* RouteToCalendarButtonCellTVC.xib in Resources */,
 				EF746FE41CE8A9F7002CF5D2 /* STAdressSearchResultCellTVC.xib in Resources */,
 				EF746D221CE8A71C002CF5D2 /* mainmenu.json in Resources */,
@@ -2845,71 +2878,74 @@
 				EF7470771CE8A9F7002CF5D2 /* icon_tick_more@3x.png in Resources */,
 				EF74703A1CE8A9F7002CF5D2 /* STFahrplanTransportationTypePickerCellTVC.xib in Resources */,
 				EF746BF71CE8728F002CF5D2 /* Info.plist in Resources */,
-				EF746E121CE8A779002CF5D2 /* STLokalNewsHeaderView.xib in Resources */,
-				EF746DCB1CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.xib in Resources */,
 				EF746D381CE8A71C002CF5D2 /* OfficinaSansITCPro-BoldIt.otf in Resources */,
 				EF74706C1CE8A9F7002CF5D2 /* icon_menu_left_suche.png in Resources */,
 				EF746FFF1CE8A9F7002CF5D2 /* STFahrplanTimetableJourneyStopCellTVC.xib in Resources */,
 				EF746FF91CE8A9F7002CF5D2 /* STFahrplanRouteCellTVC.xib in Resources */,
-				EF746DC31CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.xib in Resources */,
-				EF746DAE1CE8A769002CF5D2 /* STNewsTableCellCollecionExpandedFooter.xib in Resources */,
+				EFCB3F6A1CE99AF5009A59F9 /* STWeatherTableViewCell.xib in Resources */,
+				EFCB3FA51CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.xib in Resources */,
+				EFCB3F961CE99D83009A59F9 /* PDFPreviewCollectionViewCell.xib in Resources */,
+				EFCB3F3A1CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.xib in Resources */,
+				EFCB3FAB1CE99E63009A59F9 /* STRightMenuSubCell.xib in Resources */,
 				EF74702A1CE8A9F7002CF5D2 /* STFahrplanPremiumSearchVC.xib in Resources */,
 				EF74705D1CE8A9F7002CF5D2 /* icon_content_badge_map_germany_cutted.png in Resources */,
 				EF7470301CE8A9F7002CF5D2 /* STFahrplanSubCellWithCheckmarkTVC.xib in Resources */,
-				EF746DA21CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.xib in Resources */,
+				EFCB3F401CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
 				EF7470721CE8A9F7002CF5D2 /* icon_tick_active.png in Resources */,
+				EFCB3F601CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
 				EF7470631CE8A9F7002CF5D2 /* icon_content_oepnv_arrow_search.png in Resources */,
 				EF746E541CE8A79F002CF5D2 /* LaunchScreen.storyboard in Resources */,
-				EF746E101CE8A779002CF5D2 /* STAngeboteHeaderView.xib in Resources */,
-				EF746DAF1CE8A769002CF5D2 /* STNewsTableCellCollectionExpanded.xib in Resources */,
 				EF746D341CE8A71C002CF5D2 /* MerriweatherSans-Regular.ttf in Resources */,
 				EF746D361CE8A71C002CF5D2 /* OfficinaSansITCPro-BlackIt.otf in Resources */,
 				EF746E1C1CE8A779002CF5D2 /* OpeningHoursHeaderView.xib in Resources */,
 				EF746FF21CE8A9F7002CF5D2 /* STFahrplanDepartureArrivalDisplayView.xib in Resources */,
 				EF746D3B1CE8A71C002CF5D2 /* OFL.txt in Resources */,
 				EF7470151CE8A9F7002CF5D2 /* STFahrplanFavouritePickerView.xib in Resources */,
-				EF746DB71CE8A769002CF5D2 /* SearchTopTableViewCell.xib in Resources */,
+				EFCB3F9E1CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.xib in Resources */,
 				EF746FDE1CE8A9F7002CF5D2 /* STBaederOverviewViewController.xib in Resources */,
 				EF74705F1CE8A9F7002CF5D2 /* icon_content_badge_map_germany_cutted@3x.png in Resources */,
+				EFCB3FB91CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.xib in Resources */,
 				EF746D2A1CE8A71C002CF5D2 /* Bitter-Italic.ttf in Resources */,
 				EF74707C1CE8A9F7002CF5D2 /* map@2x.png in Resources */,
-				EF746DB91CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.xib in Resources */,
 				EF746D2D1CE8A71C002CF5D2 /* KievitOffc-Light.ttf in Resources */,
 				EF7470361CE8A9F7002CF5D2 /* STFahrplanTransportationProgressIndicatorBarCellTVC.xib in Resources */,
 				EF746FEE1CE8A9F7002CF5D2 /* STFahrplanDatetimeChooserView.xib in Resources */,
+				EFCB3F421CE999EB009A59F9 /* STStartScrollCustomCollectionCell.xib in Resources */,
 				EF746E1A1CE8A779002CF5D2 /* Indicators.xib in Resources */,
+				EFCB3F621CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.xib in Resources */,
 				EF7470131CE8A9F7002CF5D2 /* STFahrplanFavouritePickerCellTVC.xib in Resources */,
 				EF7470781CE8A9F7002CF5D2 /* image_content_bg_national_blur.jpg in Resources */,
 				EF74706A1CE8A9F7002CF5D2 /* icon_content_overlay_close@2x.png in Resources */,
 				EF74702C1CE8A9F7002CF5D2 /* STFahrplanPremiumSettingsVC.xib in Resources */,
-				EF746DB51CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.xib in Resources */,
 				EF746FDC1CE8A9F7002CF5D2 /* STAquaFunViewController.xib in Resources */,
 				EF746E5A1CE8A79F002CF5D2 /* STNewsAndEventsDetailViewController.xib in Resources */,
 				EF7470461CE8A9F7002CF5D2 /* GarbageDateTableViewCell.xib in Resources */,
 				EF746D281CE8A71C002CF5D2 /* FlatAssets.xcassets in Resources */,
 				EF7470031CE8A9F7002CF5D2 /* STFahrplanTimetableVC.xib in Resources */,
-				EF746DB31CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.xib in Resources */,
 				EF74700B1CE8A9F7002CF5D2 /* STFahrplanDatetimeChooserSmallView.xib in Resources */,
 				EF746FE61CE8A9F7002CF5D2 /* STConnectionCellTVC.xib in Resources */,
 				EF7470811CE8A9F7002CF5D2 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EF746FEA1CE8A9F7002CF5D2 /* STDebugHelperCellTVC.xib in Resources */,
 				EF746D3A1CE8A71C002CF5D2 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
 				EF74700D1CE8A9F7002CF5D2 /* STFahrplanEnteredLocationDisplayCellTVC.xib in Resources */,
-				EF746DC11CE8A769002CF5D2 /* STStadtInfoTableViewCell.xib in Resources */,
 				EF74705C1CE8A9F7002CF5D2 /* icon_content_badge_map_germany@3x.png in Resources */,
+				EFCB3F911CE99D40009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
 				EF7470321CE8A9F7002CF5D2 /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
 				EF7470601CE8A9F7002CF5D2 /* icon_content_clear_text.png in Resources */,
 				EF7470421CE8A9F7002CF5D2 /* GarbageCalendarViewController.xib in Resources */,
+				EFCB3F831CE99CC4009A59F9 /* ExpandedBottomTableViewCell.xib in Resources */,
 				EF7470341CE8A9F7002CF5D2 /* STFahrplanTimeDisplayWithFavouriteButtonViewTVC.xib in Resources */,
-				EF746E161CE8A779002CF5D2 /* STStadtInfoHeader.xib in Resources */,
+				EFCB3F3C1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.xib in Resources */,
 				EF74705B1CE8A9F7002CF5D2 /* icon_content_badge_map_germany@2x.png in Resources */,
+				EFCB3F871CE99CC4009A59F9 /* STNewsTableCellCollectionExpanded.xib in Resources */,
 				EF746E581CE8A79F002CF5D2 /* STDetailImageGalleryViewController.xib in Resources */,
-				EF746DBB1CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.xib in Resources */,
 				EF7470661CE8A9F7002CF5D2 /* icon_content_orten_germany.png in Resources */,
 				EF74707A1CE8A9F7002CF5D2 /* image_content_bg_national_blur@3x.jpg in Resources */,
 				EF746BF61CE8728F002CF5D2 /* Assets.xcassets in Resources */,
 				EF746FFD1CE8A9F7002CF5D2 /* STFahrplanSearchVC.xib in Resources */,
 				EF746E201CE8A779002CF5D2 /* OpeningHoursView.xib in Resources */,
+				EFCB3F0B1CE9984C009A59F9 /* STWeatherHeader.xib in Resources */,
+				EFCB3FB41CE99F3E009A59F9 /* STRightMenuHeaderView.xib in Resources */,
 				EF746D3C1CE8A71C002CF5D2 /* PT_Sans-Web-Regular.ttf in Resources */,
 				EF746FF71CE8A9F7002CF5D2 /* STFahrplanRouteCellSmallTVC.xib in Resources */,
 				EF74707F1CE8A9F7002CF5D2 /* map_small.png in Resources */,
@@ -2917,25 +2953,27 @@
 				EF746D241CE8A71C002CF5D2 /* weather_icons.json in Resources */,
 				EF746D371CE8A71C002CF5D2 /* OfficinaSansITCPro-Bold.otf in Resources */,
 				EF7470751CE8A9F7002CF5D2 /* icon_tick_more.png in Resources */,
+				EFCB3EF91CE99751009A59F9 /* STAngeboteHeaderView.xib in Resources */,
 				EF746E5C1CE8A79F002CF5D2 /* STWebViewDetailViewController.xib in Resources */,
 				EF746D311CE8A71C002CF5D2 /* KievitSlabOffc.ttf in Resources */,
+				EFCB3F3E1CE999EB009A59F9 /* STStartScreenCollectionViewCell.xib in Resources */,
 				EF746E231CE8A779002CF5D2 /* OpeningHoursViewCell.xib in Resources */,
 				EF746CF51CE8A6D8002CF5D2 /* laserscanner.png in Resources */,
 				EF7470621CE8A9F7002CF5D2 /* icon_content_clear_text@3x.png in Resources */,
+				EFCB3FA01CE99DDF009A59F9 /* STNewsBaseTableViewCell.xib in Resources */,
 				EF7470761CE8A9F7002CF5D2 /* icon_tick_more@2x.png in Resources */,
 				EF746D321CE8A71C002CF5D2 /* KievitSlabScOffc.ttf in Resources */,
 				EF746D331CE8A71C002CF5D2 /* Merriweather-BoldItalic.ttf in Resources */,
 				EF7470591CE8A9F7002CF5D2 /* icon_content_article_pin@3x.png in Resources */,
+				EFCB3F851CE99CC4009A59F9 /* ExpandedTopTableViewCell.xib in Resources */,
 				EF7470011CE8A9F7002CF5D2 /* STFahrplanTimetableSectionCellTVC.xib in Resources */,
-				EF746DC71CE8A769002CF5D2 /* STStartScreenCollectionViewCell.xib in Resources */,
 				EF746D251CE8A71C002CF5D2 /* LaunchScreen.strings in Resources */,
 				EF74705E1CE8A9F7002CF5D2 /* icon_content_badge_map_germany_cutted@2x.png in Resources */,
 				EF7470651CE8A9F7002CF5D2 /* icon_content_oepnv_arrow_search@3x.png in Resources */,
-				EF746E181CE8A779002CF5D2 /* STWeatherHeader.xib in Resources */,
 				EF7470791CE8A9F7002CF5D2 /* image_content_bg_national_blur@2x.jpg in Resources */,
 				EF74707B1CE8A9F7002CF5D2 /* map.png in Resources */,
-				EF746DA91CE8A769002CF5D2 /* ExpandedTopTableViewCell.xib in Resources */,
-				EF746DA71CE8A769002CF5D2 /* ExpandedBottomTableViewCell.xib in Resources */,
+				EFCB3F8B1CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.xib in Resources */,
+				EFCB3EFF1CE99781009A59F9 /* STLokalNewsHeaderView.xib in Resources */,
 				EF7470851CE8A9F7002CF5D2 /* STRegionPickerSearchViewController.xib in Resources */,
 				EF74706E1CE8A9F7002CF5D2 /* icon_menu_left_suche@3x.png in Resources */,
 				EF7470381CE8A9F7002CF5D2 /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
@@ -2947,15 +2985,12 @@
 				EF7470681CE8A9F7002CF5D2 /* icon_content_orten_germany@3x.png in Resources */,
 				EF7470A81CE8A9F7002CF5D2 /* SaehlerstandEingebenViewController.xib in Resources */,
 				EF7470441CE8A9F7002CF5D2 /* GarbageDateHeaderView.xib in Resources */,
-				EF746D9E1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.xib in Resources */,
+				EFCB3FBE1CE9A040009A59F9 /* STWerbungTableViewCell.xib in Resources */,
 				EF746E561CE8A79F002CF5D2 /* Main.storyboard.orig in Resources */,
 				EF746D391CE8A71C002CF5D2 /* OfficinaSansITCPro-Book.otf in Resources */,
 				EF746D261CE8A71C002CF5D2 /* Main.storyboard.orig in Resources */,
 				EF7470571CE8A9F7002CF5D2 /* icon_content_article_pin.png in Resources */,
-				EF746DB11CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.xib in Resources */,
-				EF746DBF1CE8A769002CF5D2 /* STWeatherTableViewCell.xib in Resources */,
 				EF746D3D1CE8A71C002CF5D2 /* RWEHeadline-LightCondens.ttf in Resources */,
-				EF746D9C1CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3032,29 +3067,25 @@
 				EF7470141CE8A9F7002CF5D2 /* STFahrplanFavouritePickerView.m in Sources */,
 				EF7470391CE8A9F7002CF5D2 /* STFahrplanTransportationTypePickerCellTVC.m in Sources */,
 				EF746E631CE8A79F002CF5D2 /* SidebarViewController.m in Sources */,
-				EF746DCC1CE8A769002CF5D2 /* STStartTableCellCollectionViewCell.m in Sources */,
 				EF74708D1CE8A9F7002CF5D2 /* STMatchedSubstring.m in Sources */,
 				EF74709F1CE8A9F7002CF5D2 /* STTankStationAnnotation.m in Sources */,
 				EF746FF81CE8A9F7002CF5D2 /* STFahrplanRouteCellTVC.m in Sources */,
-				EF746E251CE8A779002CF5D2 /* StappyTextField.m in Sources */,
 				EF746FE31CE8A9F7002CF5D2 /* STAdressSearchResultCellTVC.m in Sources */,
 				EF746CCB1CE8A6A3002CF5D2 /* STReport.m in Sources */,
 				EF746E641CE8A79F002CF5D2 /* STMainViewController.m in Sources */,
 				EF746CC11CE8A6A3002CF5D2 /* STApiConfigObject.m in Sources */,
-				EF746DA61CE8A769002CF5D2 /* ExpandedBottomTableViewCell.m in Sources */,
 				EF746CAC1CE8A6A3002CF5D2 /* STAngeboteModel.m in Sources */,
-				EF746DAC1CE8A769002CF5D2 /* PDFPreviewCollectionViewCell.m in Sources */,
 				EF746CD61CE8A6A3002CF5D2 /* STMainModel.m in Sources */,
 				EF7470981CE8A9F7002CF5D2 /* STReporterRecapViewController.m in Sources */,
 				EF746BF41CE8728F002CF5D2 /* AppDelegate.m in Sources */,
 				EF74703E1CE8A9F7002CF5D2 /* GarbageCalendarService.swift in Sources */,
-				EF746DA11CE8A769002CF5D2 /* STNewsTableCellCollectionViewCell.m in Sources */,
 				EF7470081CE8A9F7002CF5D2 /* STFahrplanDatetimeChooserSmallCellTVC.m in Sources */,
 				EF746CD11CE8A6A3002CF5D2 /* STWeatherHourlyModel.m in Sources */,
 				EF746C241CE8A65B002CF5D2 /* UIColor+Hexadecimal.m in Sources */,
 				EF74702D1CE8A9F7002CF5D2 /* STFahrplanSettingsCellWithCheckmarkTVC.m in Sources */,
+				EFCB3F901CE99D40009A59F9 /* ImagePreviewCollectionViewCell.m in Sources */,
+				EFCB3F6E1CE99B45009A59F9 /* RightBarViewController.m in Sources */,
 				EF746FD61CE8A9F7002CF5D2 /* STAngeboteViewController.m in Sources */,
-				EF746E681CE8A79F002CF5D2 /* ViewController.m in Sources */,
 				EF74704B1CE8A9F7002CF5D2 /* STStadtInfoOverviewViewController.m in Sources */,
 				EF746FD71CE8A9F7002CF5D2 /* STMittagsAngeboteViewController.m in Sources */,
 				EF746CC01CE8A6A3002CF5D2 /* STItemDetailsModel.m in Sources */,
@@ -3067,12 +3098,13 @@
 				EF746FDA1CE8A9F7002CF5D2 /* STApothekenViewController.m in Sources */,
 				EF746CBD1CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */,
 				EF7470911CE8A9F7002CF5D2 /* STPrediction.m in Sources */,
-				EF746DB41CE8A769002CF5D2 /* SearchAndFavoritesTableViewCell.m in Sources */,
 				EF746CCE1CE8A6A3002CF5D2 /* STRightMenuItemsModel.m in Sources */,
+				EFCB3F491CE99A48009A59F9 /* STStartScreenCollectionView.m in Sources */,
 				EF746CC81CE8A6A3002CF5D2 /* STGeneralParkhausModel.m in Sources */,
 				EF746FD81CE8A9F7002CF5D2 /* STAnnotationsMapViewController.m in Sources */,
 				EF746E0E1CE8A779002CF5D2 /* Utils.m in Sources */,
 				EF746FF31CE8A9F7002CF5D2 /* STFahrplanHafasApiResponseMapper.m in Sources */,
+				EFCB3F8A1CE99CC4009A59F9 /* STNewsTableCollectionExpandedHeader.m in Sources */,
 				EF7470121CE8A9F7002CF5D2 /* STFahrplanFavouritePickerCellTVC.m in Sources */,
 				EF746CDE1CE8A6A3002CF5D2 /* STTickerModel.m in Sources */,
 				EF746CF01CE8A6BC002CF5D2 /* AFXMLDictionaryRequestSerializer.m in Sources */,
@@ -3085,68 +3117,64 @@
 				EF746CBE1CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyHafas.m in Sources */,
 				EF746FE91CE8A9F7002CF5D2 /* STDebugHelperCellTVC.m in Sources */,
 				EF74701E1CE8A9F7002CF5D2 /* STFahrplanHafasOpenApiVbbProxyApiResponseMapper.m in Sources */,
+				EFCB3F611CE99AC1009A59F9 /* SettingsSelectionsTopTableViewCell.m in Sources */,
 				EF746CBA1CE8A6A3002CF5D2 /* STFahrplanSubTripModel.m in Sources */,
 				EF746CC21CE8A6A3002CF5D2 /* STLeftMenuSettingsModel.m in Sources */,
 				EF7470491CE8A9F7002CF5D2 /* STLokalNewsViewController.m in Sources */,
 				EF746FF41CE8A9F7002CF5D2 /* STFahrplanJourneyPlannerService.m in Sources */,
-				EF746D9D1CE8A769002CF5D2 /* STNewsBaseExpandedTableViewCell.m in Sources */,
-				EF746DC21CE8A769002CF5D2 /* STStartBottomCustomCollectionViewCell.m in Sources */,
+				EFCB3F241CE999A1009A59F9 /* STStadtInfoTableViewCell.m in Sources */,
 				EF7470411CE8A9F7002CF5D2 /* GarbageCalendarViewController.m in Sources */,
 				EF746CAD1CE8A6A3002CF5D2 /* STDrugstoresModel.m in Sources */,
+				EFCB3F431CE999EB009A59F9 /* STStartTableCellCollectionViewCell.m in Sources */,
 				EF7470181CE8A9F7002CF5D2 /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EF7470471CE8A9F7002CF5D2 /* GarbageTypesTableViewCell.m in Sources */,
+				EFCB3F691CE99AF5009A59F9 /* STWeatherTableViewCell.m in Sources */,
 				EF74709C1CE8A9F7002CF5D2 /* STReportTypeTableViewCell.m in Sources */,
-				EF746E131CE8A779002CF5D2 /* STRightMenuHeaderView.m in Sources */,
 				EF746CC41CE8A6A3002CF5D2 /* STLeftSideSubSettingsModel.m in Sources */,
-				EF746D9F1CE8A769002CF5D2 /* STNewsBaseTableViewCell.m in Sources */,
 				EF7470101CE8A9F7002CF5D2 /* STFahrplanFavouriteOriginWithDestinationCellTVC.m in Sources */,
 				EF74700A1CE8A9F7002CF5D2 /* STFahrplanDatetimeChooserSmallView.m in Sources */,
 				EF746FEF1CE8A9F7002CF5D2 /* STFahrplanDebugVC.m in Sources */,
 				EF7470001CE8A9F7002CF5D2 /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EF746FEB1CE8A9F7002CF5D2 /* STFahrplanConnectionsVC.m in Sources */,
 				EF7470041CE8A9F7002CF5D2 /* RouteToCalendarButtonCellTVC.m in Sources */,
-				EF746DCE1CE8A769002CF5D2 /* STWerbungTableViewCell.m in Sources */,
-				EF746D9B1CE8A769002CF5D2 /* ActionOptionsCollectionViewCell.m in Sources */,
 				EF74703F1CE8A9F7002CF5D2 /* GarbageCalendarSettingsViewController.m in Sources */,
 				EF746E0A1CE8A779002CF5D2 /* Filters.swift in Sources */,
 				EF746BF81CE8728F002CF5D2 /* main.m in Sources */,
 				EF746CF21CE8A6BC002CF5D2 /* STRequestsHandler.m in Sources */,
 				EF746CD41CE8A6A3002CF5D2 /* STDetailGenericModel.m in Sources */,
-				EF746DBA1CE8A769002CF5D2 /* SettingsSelectionsTopTableViewCell.m in Sources */,
 				EF7470271CE8A9F7002CF5D2 /* STFahrplanPremiumRouteVC.m in Sources */,
 				EF746C1F1CE8A65B002CF5D2 /* NSDictionary+Default.m in Sources */,
 				EF746CB51CE8A6A3002CF5D2 /* STFahrplanJourneyDirection.m in Sources */,
 				EF746E5B1CE8A79F002CF5D2 /* STWebViewDetailViewController.m in Sources */,
-				EF746DB61CE8A769002CF5D2 /* SearchTopTableViewCell.m in Sources */,
 				EF7470221CE8A9F7002CF5D2 /* STFahrplanLocationBuilder.m in Sources */,
 				EF74700E1CE8A9F7002CF5D2 /* STFahrplanFavouriteOneLocationCellTVC.m in Sources */,
 				EF746CB41CE8A6A3002CF5D2 /* STFahrplanJourneyDetail.m in Sources */,
 				EF7470A11CE8A9F7002CF5D2 /* STTankStationsViewController.m in Sources */,
 				EF746CC51CE8A6A3002CF5D2 /* STNewsModel.m in Sources */,
 				EF74701C1CE8A9F7002CF5D2 /* STFahrplanHafasOpenApiDbRestApiResponseMapper.m in Sources */,
-				EF746DA51CE8A769002CF5D2 /* STStartBaseCollectionCell.m in Sources */,
 				EF74702F1CE8A9F7002CF5D2 /* STFahrplanSubCellWithCheckmarkTVC.m in Sources */,
 				EF7470351CE8A9F7002CF5D2 /* STFahrplanTransportationProgressIndicatorBarCellTVC.m in Sources */,
 				EF746E711CE8A9A7002CF5D2 /* BTGlassScrollView.m in Sources */,
 				EF7470251CE8A9F7002CF5D2 /* STFahrplanPremiumConnectionsVC.m in Sources */,
 				EF746CD21CE8A6A3002CF5D2 /* STWeatherModel.m in Sources */,
 				EF746C211CE8A65B002CF5D2 /* NSObject+AssociatedObject.m in Sources */,
+				EFCB3FBD1CE9A040009A59F9 /* STWerbungTableViewCell.m in Sources */,
 				EF746CCF1CE8A6A3002CF5D2 /* STStartModel.m in Sources */,
-				EF746DC41CE8A769002CF5D2 /* STStartScreenBottomCollectionViewCell.m in Sources */,
 				EF746E611CE8A79F002CF5D2 /* SidebarViewController+Search.m in Sources */,
 				EF74704A1CE8A9F7002CF5D2 /* STQRCodeScannerViewController.m in Sources */,
-				EF746DB81CE8A769002CF5D2 /* SettingsSelectionsTableViewCell.m in Sources */,
+				EFCB3F3B1CE999EB009A59F9 /* STStartScreenBottomCollectionViewCell.m in Sources */,
 				EF746FFE1CE8A9F7002CF5D2 /* STFahrplanTimetableJourneyStopCellTVC.m in Sources */,
 				EF7470951CE8A9F7002CF5D2 /* STReportCompleteViewController.m in Sources */,
-				EF746E111CE8A779002CF5D2 /* STLokalNewsHeaderView.m in Sources */,
 				EF74708B1CE8A9F7002CF5D2 /* STGoogleLocation.m in Sources */,
+				EFCB3F951CE99D83009A59F9 /* PDFPreviewCollectionViewCell.m in Sources */,
+				EFCB3F1F1CE9992C009A59F9 /* StappyTextField.m in Sources */,
+				EFCB3F5D1CE99AC1009A59F9 /* SearchTopTableViewCell.m in Sources */,
 				EF746CCA1CE8A6A3002CF5D2 /* STTrierParkingAvailability.m in Sources */,
 				EF746E5D1CE8A79F002CF5D2 /* OverlayManager.swift in Sources */,
-				EF746E0F1CE8A779002CF5D2 /* STAngeboteHeaderView.m in Sources */,
 				EF746FDD1CE8A9F7002CF5D2 /* STBaederOverviewViewController.m in Sources */,
-				EF746DBE1CE8A769002CF5D2 /* STWeatherTableViewCell.m in Sources */,
-				EF746DB01CE8A769002CF5D2 /* STNewsTableCollectionExpandedFooter.m in Sources */,
+				EFCB3EFE1CE99781009A59F9 /* STLokalNewsHeaderView.m in Sources */,
 				EF746FE51CE8A9F7002CF5D2 /* STConnectionCellTVC.m in Sources */,
+				EFCB3FB81CE99FE7009A59F9 /* ActionOptionsCollectionViewCell.m in Sources */,
 				EF746CB61CE8A6A3002CF5D2 /* STFahrplanJourneyName.m in Sources */,
 				EF746CB21CE8A6A3002CF5D2 /* STFahrplanDeparture.m in Sources */,
 				EF746CC31CE8A6A3002CF5D2 /* STLeftObjRequestedModel.m in Sources */,
@@ -3154,52 +3182,57 @@
 				EF746CEF1CE8A6BC002CF5D2 /* STHTTPSessionManager.m in Sources */,
 				EF746C251CE8A65B002CF5D2 /* UIColor+STColor.m in Sources */,
 				EF746FE21CE8A9F7002CF5D2 /* STFahrplanNearbyStopAnnotation.m in Sources */,
-				EF746DA31CE8A769002CF5D2 /* STRightMenuSubCell.m in Sources */,
+				EFCB3F9F1CE99DDF009A59F9 /* STNewsBaseTableViewCell.m in Sources */,
 				EF746FE81CE8A9F7002CF5D2 /* STDebugHelper.m in Sources */,
-				EF746E261CE8A779002CF5D2 /* STStartScreenCollectionView.m in Sources */,
+				EFCB3EF81CE99751009A59F9 /* STAngeboteHeaderView.m in Sources */,
 				EF746CDD1CE8A6A3002CF5D2 /* STTankStationModel.m in Sources */,
+				EFCB3F631CE99AC1009A59F9 /* SideMenuTableViewCell.m in Sources */,
 				EF7470A91CE8A9F7002CF5D2 /* ZaehlerstandMainViewController.m in Sources */,
 				EF7470371CE8A9F7002CF5D2 /* STFahrplanTransportationProgressIndicatorBarView.m in Sources */,
 				EF74701A1CE8A9F7002CF5D2 /* STFahrplanHafasMixedApiResponseMapper.m in Sources */,
 				EF746CDB1CE8A6A3002CF5D2 /* STWerbungModel.m in Sources */,
+				EFCB3F5F1CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.m in Sources */,
 				EF746C201CE8A65B002CF5D2 /* NSError+NoConnection.m in Sources */,
 				EF74708A1CE8A9F7002CF5D2 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EF746C281CE8A65B002CF5D2 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EF746E1B1CE8A779002CF5D2 /* OpeningHoursHeaderView.swift in Sources */,
 				EF746E571CE8A79F002CF5D2 /* STDetailImageGalleryViewController.m in Sources */,
 				EF746E601CE8A79F002CF5D2 /* SidebarViewController+Favorite.m in Sources */,
+				EFCB3F0A1CE9984C009A59F9 /* STWeatherHeader.m in Sources */,
 				EF746E191CE8A779002CF5D2 /* Indicators.m in Sources */,
-				EF746E151CE8A779002CF5D2 /* STStadtInfoHeader.m in Sources */,
 				EF746C261CE8A65B002CF5D2 /* UIImage+tintImage.m in Sources */,
 				EF746CF11CE8A6BC002CF5D2 /* AFXMLDictionaryResponseSerializer.m in Sources */,
-				EF746DCA1CE8A769002CF5D2 /* STStartScrollCustomCollectionCell.m in Sources */,
 				EF7470A31CE8A9F7002CF5D2 /* STVereinsnewsViewController.m in Sources */,
 				EF7470971CE8A9F7002CF5D2 /* STReporterLocationViewController.m in Sources */,
 				EF746FDF1CE8A9F7002CF5D2 /* CouponsCodeViewController.m in Sources */,
 				EF746FFC1CE8A9F7002CF5D2 /* STFahrplanSearchVC.m in Sources */,
 				EF746E221CE8A779002CF5D2 /* OpeningHoursViewCell.swift in Sources */,
 				EF74701D1CE8A9F7002CF5D2 /* STFahrplanHafasOpenApiDbRestApiUrlBuilder.m in Sources */,
-				EF746DA81CE8A769002CF5D2 /* ExpandedTopTableViewCell.m in Sources */,
 				EF746BF51CE8728F002CF5D2 /* Stappy2.xcdatamodeld in Sources */,
+				EFCB3F721CE99B65009A59F9 /* STViewController.m in Sources */,
 				EF74700C1CE8A9F7002CF5D2 /* STFahrplanEnteredLocationDisplayCellTVC.m in Sources */,
 				EF746E731CE8A9A7002CF5D2 /* SWRevealViewController.m in Sources */,
 				EF746CB31CE8A6A3002CF5D2 /* STFahrplanDepartureBoard.m in Sources */,
+				EFCB3FA41CE99E0F009A59F9 /* STNewsTableCellCollectionViewCell.m in Sources */,
 				EF746CAF1CE8A6A3002CF5D2 /* STEventsModel.m in Sources */,
 				EF7470021CE8A9F7002CF5D2 /* STFahrplanTimetableVC.m in Sources */,
 				EF7470551CE8A9F7002CF5D2 /* BadgeStyle.m in Sources */,
 				EF746E621CE8A79F002CF5D2 /* SidebarViewController+Settings.m in Sources */,
 				EF74703B1CE8A9F7002CF5D2 /* STFahrplanTransportationTypePickerView.m in Sources */,
+				EFCB3F391CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.m in Sources */,
 				EF7470431CE8A9F7002CF5D2 /* GarbageDateHeaderView.m in Sources */,
+				EFCB3F841CE99CC4009A59F9 /* ExpandedTopTableViewCell.m in Sources */,
 				EF746CB81CE8A6A3002CF5D2 /* STFahrplanLocation.m in Sources */,
 				EF746E5E1CE8A79F002CF5D2 /* OverlayViewController.swift in Sources */,
 				EF7470A41CE8A9F7002CF5D2 /* STWeatherTopViewController.m in Sources */,
 				EF746CB01CE8A6A3002CF5D2 /* STExpandedTableBottomObject.m in Sources */,
+				EFCB3F411CE999EB009A59F9 /* STStartScrollCustomCollectionCell.m in Sources */,
 				EF7470A21CE8A9F7002CF5D2 /* STTickerViewController.m in Sources */,
 				EF746C291CE8A65B002CF5D2 /* UIScrollView+Utils.m in Sources */,
 				EF746FDB1CE8A9F7002CF5D2 /* STAquaFunViewController.m in Sources */,
 				EF746E651CE8A79F002CF5D2 /* STViewControllerItem.m in Sources */,
 				EF7470161CE8A9F7002CF5D2 /* STFahrplanGoogleHafasMixedApiResponseMapper.m in Sources */,
-				EF746DBC1CE8A769002CF5D2 /* SideMenuTableViewCell.m in Sources */,
+				EFCB3FAE1CE99ECB009A59F9 /* STStartBaseCollectionCell.m in Sources */,
 				EF7470941CE8A9F7002CF5D2 /* STReportAddressSearchViewController.m in Sources */,
 				EF746CCD1CE8A6A3002CF5D2 /* STReportType.m in Sources */,
 				EF7470961CE8A9F7002CF5D2 /* STReporterInfoViewController.m in Sources */,
@@ -3212,17 +3245,19 @@
 				EF746CD71CE8A6A3002CF5D2 /* STStadtInfoOverviewModel.m in Sources */,
 				EF746CD91CE8A6A3002CF5D2 /* STTableMainKeyObject.m in Sources */,
 				EF74702B1CE8A9F7002CF5D2 /* STFahrplanPremiumSettingsVC.m in Sources */,
+				EFCB3F3F1CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.m in Sources */,
+				EFCB3F9D1CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.m in Sources */,
 				EF74704D1CE8A9F7002CF5D2 /* StartViewController.m in Sources */,
+				EFCB3F3D1CE999EB009A59F9 /* STStartScreenCollectionViewCell.m in Sources */,
 				EF7470521CE8A9F7002CF5D2 /* STParkhausViewController.m in Sources */,
+				EFCB3F881CE99CC4009A59F9 /* STNewsTableCollectionExpandedFooter.m in Sources */,
 				EF746CAE1CE8A6A3002CF5D2 /* STEmergenciesModel.m in Sources */,
 				EF7470451CE8A9F7002CF5D2 /* GarbageDateTableViewCell.m in Sources */,
-				EF746E171CE8A779002CF5D2 /* STWeatherHeader.m in Sources */,
 				EF7470511CE8A9F7002CF5D2 /* STParkhausAnnotationView.m in Sources */,
 				EF746E211CE8A779002CF5D2 /* OpeningHoursViewAdapter.swift in Sources */,
-				EF746E241CE8A779002CF5D2 /* RandomImageView.m in Sources */,
-				EF746E671CE8A79F002CF5D2 /* STViewController.m in Sources */,
 				EF7470191CE8A9F7002CF5D2 /* STFahrplanGoogleMapsDirectionsApiUrlBuilder.m in Sources */,
 				EF746C231CE8A65B002CF5D2 /* NSURL+STURLAdition.m in Sources */,
+				EFCB3FAA1CE99E63009A59F9 /* STRightMenuSubCell.m in Sources */,
 				EF746CDF1CE8A6A3002CF5D2 /* STVereinsnewsModel.m in Sources */,
 				EF746FED1CE8A9F7002CF5D2 /* STFahrplanDatetimeChooserView.m in Sources */,
 				EF7470561CE8A9F7002CF5D2 /* CustomBadge.m in Sources */,
@@ -3233,28 +3268,30 @@
 				EF7470171CE8A9F7002CF5D2 /* STFahrplanGoogleHafasMixedApiUrlBuilder.m in Sources */,
 				EF746FF11CE8A9F7002CF5D2 /* STFahrplanDepartureArrivalDisplayView.m in Sources */,
 				EF7470531CE8A9F7002CF5D2 /* STParkingDetailsViewController.m in Sources */,
-				EF746DC01CE8A769002CF5D2 /* STStadtInfoTableViewCell.m in Sources */,
 				EF74704F1CE8A9F7002CF5D2 /* STGeneralParkhausViewController.m in Sources */,
 				EF746C221CE8A65B002CF5D2 /* NSString+Utils.m in Sources */,
 				EF7470311CE8A9F7002CF5D2 /* STFahrplanTimeDisplayWithFavouriteButtonView.m in Sources */,
 				EF7470A71CE8A9F7002CF5D2 /* SaehlerstandEingebenViewController.m in Sources */,
 				EF746E0D1CE8A779002CF5D2 /* STAppSettingsManager.m in Sources */,
+				EFCB3F821CE99CC4009A59F9 /* ExpandedBottomTableViewCell.m in Sources */,
 				EF7470821CE8A9F7002CF5D2 /* STRegionPickerSearchTableViewCell.m in Sources */,
 				EF746CF31CE8A6BC002CF5D2 /* XMLDictionary.m in Sources */,
 				EF746CB11CE8A6A3002CF5D2 /* STExpandedTableTopObject.m in Sources */,
 				EF746FE71CE8A9F7002CF5D2 /* STDebugEntry.m in Sources */,
+				EFCB3F5B1CE99AC1009A59F9 /* SearchAndFavoritesTableViewCell.m in Sources */,
+				EFCB3FB31CE99F3E009A59F9 /* STRightMenuHeaderView.m in Sources */,
 				EF74709A1CE8A9F7002CF5D2 /* STPaddingTextField.m in Sources */,
 				EF746C1E1CE8A65B002CF5D2 /* NSDate+Utils.m in Sources */,
+				EFCB3F041CE9981D009A59F9 /* STStadtInfoHeader.m in Sources */,
 				EF7470331CE8A9F7002CF5D2 /* STFahrplanTimeDisplayWithFavouriteButtonViewTVC.m in Sources */,
 				EF7470931CE8A9F7002CF5D2 /* STTerm.m in Sources */,
-				EF746DB21CE8A769002CF5D2 /* STNewsTableCollectionExpandedHeader.m in Sources */,
 				EF7470211CE8A9F7002CF5D2 /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EF7470201CE8A9F7002CF5D2 /* STFahrplanHafasRestProxyApiResponseMapper.m in Sources */,
-				EF746DC61CE8A769002CF5D2 /* STStartScreenCollectionViewCell.m in Sources */,
 				EF746CC61CE8A6A3002CF5D2 /* OpeningClosingTimeModel.m in Sources */,
 				EF746E081CE8A779002CF5D2 /* Filters-UnitTests.swift in Sources */,
 				EF746CBF1CE8A6A3002CF5D2 /* STFahrplanTripModel.m in Sources */,
 				EF7470991CE8A9F7002CF5D2 /* STOutlineButton.m in Sources */,
+				EFCB3F151CE998CC009A59F9 /* RandomImageView.m in Sources */,
 				EF7470A61CE8A9F7002CF5D2 /* STWeatherViewController.m in Sources */,
 				EF746E591CE8A79F002CF5D2 /* STNewsAndEventsDetailViewController.m in Sources */,
 				EF746CAA1CE8A6A3002CF5D2 /* STDataManager.m in Sources */,
@@ -3267,15 +3304,12 @@
 				EF746CD51CE8A6A3002CF5D2 /* STGenericDetailModel.m in Sources */,
 				EF746CCC1CE8A6A3002CF5D2 /* STReportCategory.m in Sources */,
 				EF746C1D1CE8A65B002CF5D2 /* CALayer+Additions.m in Sources */,
-				EF746DAA1CE8A769002CF5D2 /* ImagePreviewCollectionViewCell.m in Sources */,
 				EF7470231CE8A9F7002CF5D2 /* STFahrplanMapCellTVC.m in Sources */,
 				EF746CD81CE8A6A3002CF5D2 /* STStadtinfoOverwiewImages.m in Sources */,
-				EF746DC81CE8A769002CF5D2 /* STStartScreenScrollCollectionViewCell.m in Sources */,
 				EF746E1D1CE8A779002CF5D2 /* OpeningHoursMultipleViews.swift in Sources */,
 				EF746FE11CE8A9F7002CF5D2 /* MKMapView+ZoomLevel.m in Sources */,
 				EF746CDA1CE8A6A3002CF5D2 /* STTableSecondaryKeyObject.m in Sources */,
 				EF746E661CE8A79F002CF5D2 /* STViewControllerNavigationBarStyle.m in Sources */,
-				EF746E5F1CE8A79F002CF5D2 /* RightBarViewController.m in Sources */,
 				EF746E071CE8A779002CF5D2 /* Defines.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
