@@ -913,7 +913,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n9z-wy-NtC">
-                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -926,7 +926,7 @@
                         <constraints>
                             <constraint firstItem="BVd-CY-Hxs" firstAttribute="leading" secondItem="B00-5N-mOq" secondAttribute="leading" id="BJv-2J-8IV"/>
                             <constraint firstItem="BVd-CY-Hxs" firstAttribute="top" secondItem="B00-5N-mOq" secondAttribute="top" id="Lk9-hK-1gM"/>
-                            <constraint firstItem="n9z-wy-NtC" firstAttribute="top" secondItem="MM1-fL-0bU" secondAttribute="bottom" constant="-8" id="SQP-O8-Ogk"/>
+                            <constraint firstItem="n9z-wy-NtC" firstAttribute="top" secondItem="MM1-fL-0bU" secondAttribute="bottom" id="SQP-O8-Ogk"/>
                             <constraint firstAttribute="trailing" secondItem="n9z-wy-NtC" secondAttribute="trailing" id="WMT-nT-Kxl"/>
                             <constraint firstAttribute="trailing" secondItem="BVd-CY-Hxs" secondAttribute="trailing" id="dpW-oF-JnR"/>
                             <constraint firstItem="wXU-Hz-22z" firstAttribute="top" secondItem="n9z-wy-NtC" secondAttribute="bottom" id="iNy-Jo-vJ6"/>

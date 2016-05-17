@@ -123,7 +123,6 @@
 		EF746E071CE8A779002CF5D2 /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD21CE8A779002CF5D2 /* Defines.m */; };
 		EF746E081CE8A779002CF5D2 /* Filters-UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD41CE8A779002CF5D2 /* Filters-UnitTests.swift */; };
 		EF746E0A1CE8A779002CF5D2 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD61CE8A779002CF5D2 /* Filters.swift */; };
-		EF746E0C1CE8A779002CF5D2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EF746E0D1CE8A779002CF5D2 /* STAppSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DDC1CE8A779002CF5D2 /* STAppSettingsManager.m */; };
 		EF746E0E1CE8A779002CF5D2 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DDE1CE8A779002CF5D2 /* Utils.m */; };
 		EF746E191CE8A779002CF5D2 /* Indicators.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DF21CE8A779002CF5D2 /* Indicators.m */; };
@@ -340,7 +339,6 @@
 		EFCB3FDD1CE9A4F1009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB3FDE1CE9A4F1009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB3FDF1CE9A4F1009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB3FE11CE9A4F1009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB3FE21CE9A4F1009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB3FE31CE9A4F1009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB3FE41CE9A4F1009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -649,7 +647,6 @@
 		EFCB41BC1CE9ABF7009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB41BD1CE9ABF7009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB41BE1CE9ABF7009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB41C01CE9ABF7009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB41C11CE9ABF7009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB41C21CE9ABF7009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB41C31CE9ABF7009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -953,7 +950,6 @@
 		EFCB43821CE9B0C7009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB43831CE9B0C7009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB43841CE9B0C7009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB43861CE9B0C7009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB43871CE9B0C7009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB43881CE9B0C7009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB43891CE9B0C7009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -1265,7 +1261,6 @@
 		EFCB45481CE9B74A009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB45491CE9B74A009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB454A1CE9B74A009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB454C1CE9B74A009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB454D1CE9B74A009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB454E1CE9B74A009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB454F1CE9B74A009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -1570,7 +1565,6 @@
 		EFCB470E1CE9B8BD009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB470F1CE9B8BD009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB47101CE9B8BD009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB47121CE9B8BD009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB47131CE9B8BD009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB47141CE9B8BD009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB47151CE9B8BD009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -1880,7 +1874,6 @@
 		EFCB48D21CE9B9A6009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB48D31CE9B9A6009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB48D41CE9B9A6009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB48D61CE9B9A6009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB48D71CE9B9A6009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB48D81CE9B9A6009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB48D91CE9B9A6009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -2191,7 +2184,6 @@
 		EFCB4A981CE9BAB1009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB4A991CE9BAB1009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB4A9A1CE9BAB1009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB4A9C1CE9BAB1009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB4A9D1CE9BAB1009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB4A9E1CE9BAB1009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB4A9F1CE9BAB1009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -2501,7 +2493,6 @@
 		EFCB4C5C1CE9BBF1009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB4C5D1CE9BBF1009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB4C5E1CE9BBF1009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB4C601CE9BBF1009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB4C611CE9BBF1009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB4C621CE9BBF1009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB4C631CE9BBF1009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -4039,8 +4030,6 @@
 		EF746DD21CE8A779002CF5D2 /* Defines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defines.m; sourceTree = "<group>"; };
 		EF746DD41CE8A779002CF5D2 /* Filters-UnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Filters-UnitTests.swift"; sourceTree = "<group>"; };
 		EF746DD61CE8A779002CF5D2 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
-		EF746DD81CE8A779002CF5D2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		EF746DD91CE8A779002CF5D2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		EF746DDB1CE8A779002CF5D2 /* STAppSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAppSettingsManager.h; sourceTree = "<group>"; };
 		EF746DDC1CE8A779002CF5D2 /* STAppSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAppSettingsManager.m; sourceTree = "<group>"; };
 		EF746DDD1CE8A779002CF5D2 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -4874,8 +4863,8 @@
 				EF746F361CE8A9F7002CF5D2 /* LokalNews */,
 				EF746F391CE8A9F7002CF5D2 /* QRCode */,
 				EF746F3C1CE8A9F7002CF5D2 /* StadtInfo */,
-				EF746F401CE8A9F7002CF5D2 /* StartScreen */,
 				EF746F441CE8A9F7002CF5D2 /* STGeneralParkhaus */,
+				EF746F401CE8A9F7002CF5D2 /* StartScreen */,
 				EF746F501CE8A9F7002CF5D2 /* STRegionPickerViewController */,
 				EF746F8C1CE8A9F7002CF5D2 /* STReporter */,
 				EF746FB91CE8A9F7002CF5D2 /* TankUndLadesaulen */,
@@ -5290,8 +5279,6 @@
 				EF746DD11CE8A779002CF5D2 /* Defines.h */,
 				EF746DD21CE8A779002CF5D2 /* Defines.m */,
 				EF746DD31CE8A779002CF5D2 /* Filters */,
-				EF746DD81CE8A779002CF5D2 /* Reachability.h */,
-				EF746DD91CE8A779002CF5D2 /* Reachability.m */,
 				EF746DDA1CE8A779002CF5D2 /* Settings */,
 				EF746DDD1CE8A779002CF5D2 /* Utils.h */,
 				EF746DDE1CE8A779002CF5D2 /* Utils.m */,
@@ -8968,7 +8955,6 @@
 				EF746E721CE8A9A7002CF5D2 /* UIImage+ImageEffects.m in Sources */,
 				EF746CD01CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m in Sources */,
 				EF746C2A1CE8A65B002CF5D2 /* UIViewController+Swizzling.m in Sources */,
-				EF746E0C1CE8A779002CF5D2 /* Reachability.m in Sources */,
 				EFEF6F7D1CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA51CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EF746FDA1CE8A9F7002CF5D2 /* STApothekenViewController.m in Sources */,
@@ -9239,7 +9225,6 @@
 				EFCB3FDD1CE9A4F1009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB3FDE1CE9A4F1009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB3FDF1CE9A4F1009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB3FE11CE9A4F1009A59F9 /* Reachability.m in Sources */,
 				EFEF6F7E1CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA61CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB3FE21CE9A4F1009A59F9 /* STApothekenViewController.m in Sources */,
@@ -9494,7 +9479,6 @@
 				EFCB41BC1CE9ABF7009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB41BD1CE9ABF7009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB41BE1CE9ABF7009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB41C01CE9ABF7009A59F9 /* Reachability.m in Sources */,
 				EFEF6F7F1CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA71CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB41C11CE9ABF7009A59F9 /* STApothekenViewController.m in Sources */,
@@ -9749,7 +9733,6 @@
 				EFCB43821CE9B0C7009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB43831CE9B0C7009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB43841CE9B0C7009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB43861CE9B0C7009A59F9 /* Reachability.m in Sources */,
 				EFEF6F801CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA81CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB43871CE9B0C7009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10004,7 +9987,6 @@
 				EFCB45481CE9B74A009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB45491CE9B74A009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB454A1CE9B74A009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB454C1CE9B74A009A59F9 /* Reachability.m in Sources */,
 				EFEF6F811CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA91CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB454D1CE9B74A009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10259,7 +10241,6 @@
 				EFCB470E1CE9B8BD009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB470F1CE9B8BD009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB47101CE9B8BD009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB47121CE9B8BD009A59F9 /* Reachability.m in Sources */,
 				EFEF6F821CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAA1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB47131CE9B8BD009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10514,7 +10495,6 @@
 				EFCB48D21CE9B9A6009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB48D31CE9B9A6009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB48D41CE9B9A6009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB48D61CE9B9A6009A59F9 /* Reachability.m in Sources */,
 				EFEF6F831CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAB1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB48D71CE9B9A6009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10769,7 +10749,6 @@
 				EFCB4A981CE9BAB1009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB4A991CE9BAB1009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB4A9A1CE9BAB1009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB4A9C1CE9BAB1009A59F9 /* Reachability.m in Sources */,
 				EFEF6F841CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAC1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB4A9D1CE9BAB1009A59F9 /* STApothekenViewController.m in Sources */,
@@ -11024,7 +11003,6 @@
 				EFCB4C5C1CE9BBF1009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB4C5D1CE9BBF1009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB4C5E1CE9BBF1009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB4C601CE9BBF1009A59F9 /* Reachability.m in Sources */,
 				EFEF6F851CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAD1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB4C611CE9BBF1009A59F9 /* STApothekenViewController.m in Sources */,

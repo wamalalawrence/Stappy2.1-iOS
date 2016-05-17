@@ -47,6 +47,8 @@
                                                   strongSelf.expandableTableDataArray = [NSMutableArray arrayWithArray:news];
                                                   strongSelf.expandableTableDataArray = [NSMutableArray arrayWithArray:news];
                                                   [strongSelf.lokalNewsTable reloadData];
+                                                  [self addInfititeScrolling];
+
                                               }];
 }
 
