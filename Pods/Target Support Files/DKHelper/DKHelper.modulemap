@@ -1,0 +1,6 @@
+framework module DKHelper {
+  umbrella header "DKHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

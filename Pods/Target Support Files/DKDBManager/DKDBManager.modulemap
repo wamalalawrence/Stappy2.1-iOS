@@ -1,0 +1,6 @@
+framework module DKDBManager {
+  umbrella header "DKDBManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
