@@ -13,9 +13,11 @@
 #import "SWRevealViewController.h"
 #import "STNewsAndEventsDetailViewController.h"
 #import "STParkHausTableViewCell.h"
-@interface STGenerralParkhausTableViewController ()
+@interface STGenerralParkhausTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *leftBarButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *rightBarButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (nonatomic,strong) NSArray*parkHauses;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @end
@@ -42,8 +44,7 @@
     }
     [self.locationManager startUpdatingLocation];
 
-    UINib *nib = [UINib nibWithNibName:@"STParkHausTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"parkHausCell"];
+    self.parkHauses = @[];
 
     
     [self fetchTankStationsFromServer];
@@ -76,65 +77,30 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.parkHauses.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    STParkHausTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"parkHausCell" forIndexPath:indexPath];
+    [cell setupWithParkHaus:self.parkHauses[indexPath.row] location:self.locationManager.location];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    [self presentParkHausDetailScreenWithModel:self.parkHauses[indexPath.row]];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(void)presentParkHausDetailScreenWithModel:(STGeneralParkhausModel*)parkHausModel {
+    
+    STNewsAndEventsDetailViewController *detailViewController = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andGeneralParkHausModel:parkHausModel];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

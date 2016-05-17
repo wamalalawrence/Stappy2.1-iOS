@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STGenerralParkhausTableViewController : UITableViewController
+@interface STGenerralParkhausTableViewController : UIViewController
 
 @end
