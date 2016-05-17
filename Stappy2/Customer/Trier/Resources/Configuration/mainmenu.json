@@ -749,6 +749,27 @@
                   "type": "parkhaeuser",
                   "type_api": "parkhaeuser",
                   "url": "/mittagsangebote-v2",
+                  "sub_items":[
+                               {
+                               "id":"ParkenMap",
+                               "caption": "Karte",
+                               "icon_name": "karte",
+                               "type": "karte",
+                               "type_api": "karte",
+                               "url": "",
+                               "sub_items":[]
+                               
+                               },
+                               {
+                               "id":"ParkenList",
+                               "caption": "Liste",
+                               "icon_name": "liste",
+                               "type": "list",
+                               "type_api": "liste",
+                               "url": "",
+                               "sub_items":[]
+                               }
+                               ]
                   },
                   {
                   "caption":"Meine Stadt",

@@ -335,6 +335,19 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
     self.pdfButton.hidden = YES;
     [self updateImagesAndPDF];
     [self setFonts];
+    
+    NSLog(@"CONTRSAS: %f",self.openingHoursMultipleViewsHeightConstraint.constant);
+    
+    float maxHeight = 0;
+    for (UIView *child in self.detailsScrollView.subviews) {
+        float childHeight = child.frame.origin.y + child.frame.size.height;
+        //if child spans more than current maxHeight then make it a new maxHeight
+        if (childHeight > maxHeight)
+            maxHeight = childHeight;
+    
+    }
+    
+
 }
 
 -(void)setImageAndBackgroundImage {

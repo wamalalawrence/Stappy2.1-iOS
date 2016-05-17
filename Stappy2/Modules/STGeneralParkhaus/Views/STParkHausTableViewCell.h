@@ -14,5 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *closingOpeningImageView;
+@property (weak, nonatomic) IBOutlet UILabel *freeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
+
 -(void)setupWithParkHaus:(STGeneralParkhausModel*)parkHaus location:(CLLocation*)location;
 @end
