@@ -6885,6 +6885,7 @@
 				TargetAttributes = {
 					EF746B9B1CE8702F002CF5D2 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = JVX6DNXT36;
 					};
 					EF746BB71CE8702F002CF5D2 = {
 						CreatedOnToolsVersion = 7.3;
@@ -11486,6 +11487,7 @@
 			baseConfigurationReference = 157E62A7A7B4D19D3435D5A5 /* Pods-Stappy2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Core/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11502,6 +11504,7 @@
 			baseConfigurationReference = 17615C8238C755D36205F892 /* Pods-Stappy2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Core/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
