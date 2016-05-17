@@ -1,0 +1,6 @@
+framework module MCDateExtensions {
+  umbrella header "MCDateExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}
