@@ -8,11 +8,11 @@
 
 #import "STGeneralParkhausViewController.h"
 #import <MapKit/MapKit.h>
-#import "SWRevealViewController.h"
 #import "STAppSettingsManager.h"
 #import "STRequestsHandler.h"
 #import "STGeneralParkhausModel.h"
 #import "NSObject+AssociatedObject.h"
+#import "SWRevealViewController.h"
 #import "STNewsAndEventsDetailViewController.h"
 #import "STParkhausAnnotation.h"
 #import "STRoundedButton.h"

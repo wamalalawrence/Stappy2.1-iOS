@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         _title = model.title;
+        _subtitle = [NSString stringWithFormat:@"Freie Plätze: %ld",(long)model.freePlaces];
         _coordinate = model.location;
         _parkHausModel = model;
     }
@@ -27,7 +28,7 @@
     annnotationView.canShowCallout = YES;
     annnotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     annnotationView.annotation = self;
-        return annnotationView;
+    return annnotationView;
 }
 
 @end

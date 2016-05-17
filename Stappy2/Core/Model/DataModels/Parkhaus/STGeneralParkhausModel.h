@@ -30,5 +30,8 @@
 @property(nonatomic, assign)BOOL isOpen;
 @property (nonatomic,assign) CLLocationCoordinate2D location;
 @property(nonatomic, assign)NSInteger availability;
+@property(nonatomic, assign)NSInteger capacity;
+@property(nonatomic, assign)NSInteger freePlaces;
+
 
 @end
