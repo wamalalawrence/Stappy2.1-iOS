@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -597,7 +597,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jWf-8I-mQU">
-                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -612,7 +612,7 @@
                             <constraint firstAttribute="bottom" secondItem="T7t-xt-xqv" secondAttribute="bottom" id="8Fv-jm-jvj"/>
                             <constraint firstItem="jWf-8I-mQU" firstAttribute="leading" secondItem="hgn-sr-pg8" secondAttribute="leading" id="JQT-oF-Nir"/>
                             <constraint firstItem="T7t-xt-xqv" firstAttribute="leading" secondItem="hgn-sr-pg8" secondAttribute="leading" id="M06-z5-7sY"/>
-                            <constraint firstItem="jWf-8I-mQU" firstAttribute="top" secondItem="MNA-Pj-DRa" secondAttribute="bottom" constant="-8" id="adl-O6-t6k"/>
+                            <constraint firstItem="jWf-8I-mQU" firstAttribute="top" secondItem="MNA-Pj-DRa" secondAttribute="bottom" id="adl-O6-t6k"/>
                             <constraint firstAttribute="trailing" secondItem="T7t-xt-xqv" secondAttribute="trailing" id="bGQ-14-N3d"/>
                             <constraint firstAttribute="trailing" secondItem="jWf-8I-mQU" secondAttribute="trailing" id="hp2-zI-ewn"/>
                             <constraint firstItem="nI3-UY-iZw" firstAttribute="top" secondItem="jWf-8I-mQU" secondAttribute="bottom" id="xvQ-NT-PpE"/>
@@ -650,7 +650,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="phO-DH-o3e">
-                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -668,7 +668,7 @@
                             <constraint firstItem="DmQ-1e-PvK" firstAttribute="leading" secondItem="c7o-DS-BsX" secondAttribute="leading" id="gAL-ej-fYo"/>
                             <constraint firstAttribute="bottom" secondItem="DmQ-1e-PvK" secondAttribute="bottom" id="npb-Xm-s9k"/>
                             <constraint firstAttribute="trailing" secondItem="phO-DH-o3e" secondAttribute="trailing" id="oy5-wb-DdB"/>
-                            <constraint firstItem="phO-DH-o3e" firstAttribute="top" secondItem="QCq-RG-PHc" secondAttribute="bottom" constant="-8" id="xkD-JK-SiQ"/>
+                            <constraint firstItem="phO-DH-o3e" firstAttribute="top" secondItem="QCq-RG-PHc" secondAttribute="bottom" id="xkD-JK-SiQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="FrE-Mc-Sgr">
@@ -771,7 +771,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z6s-Ze-AMD">
-                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="xiQ-Lb-PYS" id="VHN-TQ-BlO"/>
@@ -785,7 +785,7 @@
                             <constraint firstAttribute="trailing" secondItem="Z6s-Ze-AMD" secondAttribute="trailing" id="FNB-YP-Xhw"/>
                             <constraint firstItem="RPM-c2-HZz" firstAttribute="top" secondItem="egm-Q2-gnS" secondAttribute="bottom" id="FrM-27-OZp"/>
                             <constraint firstAttribute="trailing" secondItem="egm-Q2-gnS" secondAttribute="trailing" id="NzI-TY-aIR"/>
-                            <constraint firstItem="Z6s-Ze-AMD" firstAttribute="top" secondItem="nCe-m6-ndk" secondAttribute="bottom" constant="-8" id="Ulg-Cr-1rV"/>
+                            <constraint firstItem="Z6s-Ze-AMD" firstAttribute="top" secondItem="nCe-m6-ndk" secondAttribute="bottom" id="Ulg-Cr-1rV"/>
                             <constraint firstItem="egm-Q2-gnS" firstAttribute="leading" secondItem="yqM-Sy-tL4" secondAttribute="leading" id="gmF-EG-zkS"/>
                             <constraint firstItem="Z6s-Ze-AMD" firstAttribute="leading" secondItem="yqM-Sy-tL4" secondAttribute="leading" id="pBd-jb-nBb"/>
                             <constraint firstItem="RPM-c2-HZz" firstAttribute="top" secondItem="Z6s-Ze-AMD" secondAttribute="bottom" id="uGP-pu-dYs"/>
@@ -2526,7 +2526,7 @@
     </scenes>
     <resources>
         <image name="Reporter" width="48" height="48"/>
-        <image name="background_blurred" width="320" height="566"/>
+        <image name="background_blurred" width="320" height="480"/>
         <image name="einstellungen" width="80" height="80"/>
         <image name="einstellungen_inactive" width="80" height="80"/>
         <image name="favoriten" width="80" height="80"/>
@@ -2535,8 +2535,8 @@
         <image name="icon_content_oepnv_location" width="48" height="48"/>
         <image name="icon_content_stoerungsmelder_pin" width="80" height="80"/>
         <image name="icon_tick" width="80" height="80"/>
-        <image name="logo_menu_left" width="200" height="100"/>
-        <image name="logo_menu_right" width="160" height="80"/>
+        <image name="logo_menu_left" width="460" height="230"/>
+        <image name="logo_menu_right" width="460" height="230"/>
         <image name="menu" width="24" height="24"/>
         <image name="right_menu_open" width="24" height="24"/>
         <image name="suche" width="80" height="80"/>
