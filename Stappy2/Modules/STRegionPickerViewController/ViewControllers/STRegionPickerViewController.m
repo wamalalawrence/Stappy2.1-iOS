@@ -114,12 +114,15 @@
 }
 
 - (void)addRegionButtonsToMap {
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSArray *regions = [defaults objectForKey:@"filter_regionen"];
 
     CGFloat scale = self.selectionScrollView.zoomScale;
     self.allButtons = [[NSMutableArray alloc] init];
+    
     for (NSDictionary *regDict in self.allRegions) {
+        
         CGSize size = [[regDict objectForKey:kRegPickerJSONIdentifierShortcut] sizeWithAttributes:@{NSFontAttributeName:kRegPickerAnnotationFont}];
         CGRect buttonRect = CGRectMake(([[regDict objectForKey:kRegPickerJSONIdentifierXPos] floatValue] * scale) - (size.width/1.5),
                                        ([[regDict objectForKey:kRegPickerJSONIdentifierYPos] floatValue] * scale) - (size.height/2),
@@ -137,17 +140,21 @@
         aButton.contentMode = UIViewContentModeCenter;
         aButton.tag = [self.allRegions indexOfObject:regDict];
         
-        if ([regions indexOfObject:[regDict objectForKey:kRegPickerJSONIdentifierID]] != NSNotFound) {
-            aButton.selected = YES;
-            self.badgeCounter++;
-            self.navBarButton.selected = YES;
+        if (regions) {
+            if ([regions indexOfObject:[regDict objectForKey:kRegPickerJSONIdentifierID]] != NSNotFound) {
+                aButton.selected = YES;
+                self.badgeCounter++;
+                self.navBarButton.selected = YES;
+            }
+            [self updateBadge];
         }
-        [self updateBadge];
-
+        
         [self.selectionScrollView addSubview:aButton];
+        
         NSMutableDictionary *btnDict = [NSMutableDictionary dictionaryWithDictionary:regDict];
         [btnDict setObject:aButton forKey:kRegPickerJSONIdentifierButton];
         [self.allButtons addObject:btnDict];
+    
     }
 }
 
