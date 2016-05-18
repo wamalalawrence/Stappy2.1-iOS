@@ -7,11 +7,19 @@
 //
 
 #import "STRightMenuSubCell.h"
-
+#import "STAppSettingsManager.h"
 @implementation STRightMenuSubCell
 
 - (void)awakeFromNib {
     // Initialization code
+    
+      UIFont *meineStadtwerkeFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"rightmenu.subcell.font"];
+    
+    if (meineStadtwerkeFont) {
+        self.subCellText.font =meineStadtwerkeFont;
+ 
+    }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

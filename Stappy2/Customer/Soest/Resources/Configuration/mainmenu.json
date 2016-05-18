@@ -254,6 +254,12 @@
                     "size": "18"
                 }
             },
+            "subcell": {
+                "font": {
+                    "name": "Merriweather-BoldItalic",
+                    "size": "16"
+                }
+            },
             "meineStadtwerke": {
                 "font": {
                     "name": "Merriweather-BoldItalic",

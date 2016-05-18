@@ -363,7 +363,7 @@
                 },
                 "current_temperature": {
                     "font": {
-                        "name": "PTSans-Regular",
+                        "name": "Bitter-Italic",
                         "size": "35"
                     }
                 },
@@ -401,19 +401,19 @@
                 },
                 "degrees_label": {
                     "font": {
-                        "name": "PTSans-Regular",
+                        "name": "Bitter-Italic",
                         "size": "22"
                     }
                 },
                 "precip_prediction_label": {
                     "font": {
-                        "name": "Bitter-Italic",
+                        "name": "PTSans-Regular",
                         "size": "15"
                     }
                 },
                 "wind_speed_label": {
                     "font": {
-                        "name": "Bitter-Italic",
+                        "name": "PTSans-Regular",
                         "size": "15"
                     }
                 }
@@ -762,7 +762,7 @@
                                },
                                {
                                "id":"ParkenList",
-                               "caption": "Liste",
+                               "caption": "Listenansicht",
                                "icon_name": "liste",
                                "type": "list",
                                "type_api": "liste",

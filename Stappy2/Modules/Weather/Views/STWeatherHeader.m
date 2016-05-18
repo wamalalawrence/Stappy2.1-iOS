@@ -25,21 +25,24 @@
 }
 
 -(void)awakeFromNib {
-    [self.weatherChangeSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
-    [self.weatherChangeSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
     
     //remove borders
-    
+    [self.weatherChangeSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+    [self.weatherChangeSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
+
     [self.weatherChangeSegmentedControl setBackgroundImage:[UIImage st_imageWithColor:[UIColor transparencyColor]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [self.weatherChangeSegmentedControl setBackgroundImage:[UIImage st_imageWithColor:[UIColor partnerColor]] forState:UIControlStateSelected  barMetrics:UIBarMetricsDefault];
     
         STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
-    UIFont *headerFont = [settings customFontForKey:@"lokalnews.header_view.weekDayLabel.font"];
+        UIFont *headerFont = [settings customFontForKey:@"detailscreen.time.font"];
     
     if (headerFont) {
         NSDictionary *highlightedAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:headerFont };
         
         [self.weatherChangeSegmentedControl setTitleTextAttributes:highlightedAttributes forState:UIControlStateHighlighted];
+         [self.weatherChangeSegmentedControl setTitleTextAttributes:highlightedAttributes forState:UIControlStateNormal]; [self.weatherChangeSegmentedControl setTitleTextAttributes:highlightedAttributes forState:UIControlStateSelected];
+     
+
     }
 
     
