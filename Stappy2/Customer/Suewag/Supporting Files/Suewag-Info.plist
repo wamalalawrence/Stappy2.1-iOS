@@ -44,6 +44,10 @@
 		<string>Resources/Fonts/RWE/RWEHeadline-RegularCondens.ttf</string>
 		<string>Resources/Fonts/RWE/RWEHeadline-MediumCondens.ttf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

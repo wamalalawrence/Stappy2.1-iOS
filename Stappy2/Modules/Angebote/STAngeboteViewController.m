@@ -51,7 +51,10 @@
                                              [strongSelf.originalFetchedNews addObjectsFromArray:originalNews];
                                              strongSelf.expandableTableDataArray = [NSMutableArray arrayWithArray:news];
                                              [strongSelf.lokalNewsTable reloadData];
+                                             [self updateHeaders];
+
                                               [self addInfititeScrolling];
+
                                          }];
 }
 
@@ -121,12 +124,13 @@
     STNewsModel * firstNewsModel = secondaryKeyObject.secondaryKeyArray[0];
     sectionHeaderView.categoryLabel.text = firstNewsModel.mainKey;
     sectionHeaderView.mapButton.tag = section;
+    sectionHeaderView.backgroundContent.backgroundColor = [UIColor clearColor];
     [sectionHeaderView.mapButton addTarget:self action:@selector(mapButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     return sectionHeaderView;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 58.0f;
+    return 60.0f;
 }
 
 #pragma mark - Scroll view delegate
@@ -135,6 +139,33 @@
     [self updateHeaders];
 }
 
+//-(void)updateHeaders {
+//    //get the top most visible table section
+//    NSArray *visibleCells = [self.lokalNewsTable indexPathsForVisibleRows];
+//    if (visibleCells.count > 0) {
+//        NSInteger topSection = [[self.lokalNewsTable indexPathsForVisibleRows].firstObject section];
+//        NSInteger sectionYOffset = [self.lokalNewsTable rectForHeaderInSection:topSection].origin.y;
+//        STAngeboteHeaderView *pinnedHeader = (STAngeboteHeaderView *)[self.lokalNewsTable headerViewForSection:topSection];
+//        if ((self.lokalNewsTable.contentOffset.y - sectionYOffset) > 0 || self.lokalNewsTable.contentOffset.y < 5) {
+//            if (![pinnedHeader isKindOfClass:[STAngeboteHeaderView class]]) {
+//                return;
+//            }
+//            pinnedHeader.backgroundContent.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+//        } else {
+//            pinnedHeader.backgroundContent.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+//        }
+//        if (1 < visibleCells.count) {
+//            NSInteger secondSection = [[[self.lokalNewsTable indexPathsForVisibleRows] objectAtIndex:1] section];
+//            if (secondSection != topSection) {
+//                STAngeboteHeaderView *secondHeader = (STAngeboteHeaderView *)[self.lokalNewsTable headerViewForSection:secondSection];
+//                if (pinnedHeader != secondHeader) {
+//                    secondHeader.backgroundContent.backgroundColor = [UIColor clearColor];
+//                }
+//            }
+//        }
+//    }
+//}
+
 -(void)updateHeaders {
     //get the top most visible table section
     NSArray *visibleCells = [self.lokalNewsTable indexPathsForVisibleRows];
@@ -142,15 +173,16 @@
         NSInteger topSection = [[self.lokalNewsTable indexPathsForVisibleRows].firstObject section];
         NSInteger sectionYOffset = [self.lokalNewsTable rectForHeaderInSection:topSection].origin.y;
         STAngeboteHeaderView *pinnedHeader = (STAngeboteHeaderView *)[self.lokalNewsTable headerViewForSection:topSection];
+                
         if ((self.lokalNewsTable.contentOffset.y - sectionYOffset) > 0 || self.lokalNewsTable.contentOffset.y < 5) {
             if (![pinnedHeader isKindOfClass:[STAngeboteHeaderView class]]) {
                 return;
             }
-            pinnedHeader.backgroundContent.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+            pinnedHeader.backgroundContent.backgroundColor =    [UIColor colorWithWhite:0 alpha:0.7];
         } else {
             pinnedHeader.backgroundContent.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
         }
-        if (1 < visibleCells.count) {
+        if (1 < visibleCells.count && self.lokalNewsTable.contentOffset.y != 0) {
             NSInteger secondSection = [[[self.lokalNewsTable indexPathsForVisibleRows] objectAtIndex:1] section];
             if (secondSection != topSection) {
                 STAngeboteHeaderView *secondHeader = (STAngeboteHeaderView *)[self.lokalNewsTable headerViewForSection:secondSection];

@@ -79,10 +79,12 @@
     
     if ([STAppSettingsManager sharedSettingsManager].shouldUseUserPositionInApotheken) {
           self.shouldCenterOnUserLocation = YES;
+        self.mapView.showsUserLocation = YES;
 
     }
     else{
       self.shouldCenterOnUserLocation = NO;
+        self.mapView.showsUserLocation = NO;
 
     }
     
@@ -280,8 +282,8 @@
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     
     if (status==kCLAuthorizationStatusAuthorizedAlways || status==kCLAuthorizationStatusAuthorizedWhenInUse) {
-        self.mapView.showsUserLocation = YES;
         self.locationButton.hidden = NO;
+
     }
      if (status==kCLAuthorizationStatusDenied) {
         self.mapView.showsUserLocation = NO;

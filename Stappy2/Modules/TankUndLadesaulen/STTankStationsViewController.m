@@ -62,7 +62,7 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(defaultCityLocation, 40000, 40000);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     [self.mapView setRegion:adjustedRegion animated:NO];
-    self.mapView.showsUserLocation = YES;
+    self.mapView.showsUserLocation = NO;
 
     [self fetchTankStationsFromServer];
 }
@@ -106,6 +106,8 @@
 -(IBAction)locationButtonTapped:(id)sender{
     
     self.shouldCenterOnUserLocation = YES;
+    self.mapView.showsUserLocation = YES;
+
     [self.locationManager startUpdatingLocation];
 }
 
@@ -174,6 +176,7 @@
 
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
         self.locationButton.hidden = NO;
+
     }
     else{
         self.locationButton.hidden = YES;

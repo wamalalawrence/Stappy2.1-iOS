@@ -6875,7 +6875,6 @@
 				TargetAttributes = {
 					EF746B9B1CE8702F002CF5D2 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = JVX6DNXT36;
 					};
 					EF746BB71CE8702F002CF5D2 = {
 						CreatedOnToolsVersion = 7.3;
@@ -6884,6 +6883,36 @@
 					EF746BC21CE8702F002CF5D2 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = EF746B9B1CE8702F002CF5D2;
+					};
+					EFCB46F01CE9B8BD009A59F9 = {
+						DevelopmentTeam = VKZUEJ58M7;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					EFCB48B41CE9B9A6009A59F9 = {
+						DevelopmentTeam = 37XC23XRG7;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					EFCB4C3E1CE9BBF1009A59F9 = {
+						DevelopmentTeam = JVX6DNXT36;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -11687,11 +11716,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Soest";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Soest/Supporting Files/Soest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.endios.Stappy2;
+				PRODUCT_BUNDLE_IDENTIFIER = de.endios.stappy.soest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stappy2/Core/BridgingHeader/Stappy2-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Stappy2-Swift.h";
@@ -11705,11 +11735,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Soest";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Soest/Supporting Files/Soest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.endios.Stappy2;
+				PRODUCT_BUNDLE_IDENTIFIER = de.endios.stappy.soest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stappy2/Core/BridgingHeader/Stappy2-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Stappy2-Swift.h";
@@ -11722,6 +11754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Trier";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Trier/Supporting Files/Trier-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11740,6 +11773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Trier";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Trier/Supporting Files/Trier-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11792,6 +11826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Suewag";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Suewag/Supporting Files/Suewag-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11810,6 +11845,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Suewag";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Suewag/Supporting Files/Suewag-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
