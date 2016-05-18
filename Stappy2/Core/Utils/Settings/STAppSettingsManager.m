@@ -349,6 +349,19 @@
     return [shouldShow isEqualToString:@"YES"];
 }
 
+- (BOOL)shouldUseUserPositionInApotheken{
+    
+    if ([self.configurationDictionary objectForKey:@"shouldUseUserPositionInApotheken"]) {
+        int shouldShow = [[self.configurationDictionary objectForKey:@"shouldUseUserPositionInApotheken"] intValue];
+        return shouldShow == 1;
+    }
+    
+    else{
+        return NO;
+    }
+}
+
+
 #pragma mark - Coupons
 
 -(NSString*)backendValueForKey:(NSString*)keyPath

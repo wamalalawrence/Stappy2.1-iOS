@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -25,7 +25,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMN-5x-H6g" userLabel="Start background">
                         <rect key="frame" x="8" y="8" width="586" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="3o9-ew-ZYu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="3o9-ew-ZYu">
                                 <rect key="frame" x="8" y="0.0" width="42" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KievitSlabOffc" family="Kievit Slab Offc" pointSize="20"/>
@@ -82,7 +82,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-0P-cb9" userLabel="Target background">
                         <rect key="frame" x="8" y="66" width="586" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wo möchtest du hin?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="46T-ps-z3O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wo möchtest du hin?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="46T-ps-z3O">
                                 <rect key="frame" x="8" y="0.0" width="182" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aw7-cV-3dp"/>
@@ -97,7 +97,7 @@
                                     <action selector="destinationAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KjD-ed-j2l"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_aerrow_search" translatesAutoresizingMaskIntoConstraints="NO" id="ajU-m3-3iI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_arrow_search" translatesAutoresizingMaskIntoConstraints="NO" id="ajU-m3-3iI">
                                 <rect key="frame" x="509" y="0.0" width="77" height="50"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBK-4U-xGR" userLabel="nextActionButton">
@@ -156,7 +156,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_content_oepnv_aerrow_search" width="48" height="48"/>
+        <image name="icon_content_oepnv_arrow_search" width="48" height="48"/>
         <image name="icon_content_oepnv_location" width="48" height="48"/>
     </resources>
 </document>

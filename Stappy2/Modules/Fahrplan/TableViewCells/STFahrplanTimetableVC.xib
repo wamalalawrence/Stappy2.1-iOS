@@ -116,7 +116,7 @@
         </view>
     </objects>
     <resources>
-        <image name="background_blurred" width="320" height="566"/>
+        <image name="background_blurred" width="320" height="480"/>
         <image name="icon_content_overlay_close" width="30" height="30"/>
     </resources>
 </document>

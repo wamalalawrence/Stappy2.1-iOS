@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,7 +26,7 @@
                             <constraint firstAttribute="width" constant="50" id="77U-ID-6qT"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fqO-vW-gfQ">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="fqO-vW-gfQ">
                         <rect key="frame" x="12" y="10" width="30" height="30"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -34,8 +34,8 @@
                             <constraint firstAttribute="height" constant="30" id="jje-zd-ea2"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label side menu" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-fO-ctZ" userLabel="MenuItemLabel">
-                        <rect key="frame" x="60" y="12" width="260" height="25"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label side menu" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-fO-ctZ" userLabel="MenuItemLabel">
+                        <rect key="frame" x="60" y="2" width="260" height="44"/>
                         <fontDescription key="fontDescription" name="OfficinaSansITCPro-Book" family="Officina Sans ITC Pro" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -58,8 +58,8 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="VZ4-5v-Kau" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0We-6c-NUi"/>
-                    <constraint firstAttribute="bottom" secondItem="zlE-fO-ctZ" secondAttribute="bottom" constant="12" id="2LK-4e-VSE"/>
-                    <constraint firstItem="zlE-fO-ctZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="A9U-QR-CoP"/>
+                    <constraint firstAttribute="bottom" secondItem="zlE-fO-ctZ" secondAttribute="bottom" constant="3" id="2LK-4e-VSE"/>
+                    <constraint firstItem="zlE-fO-ctZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="A9U-QR-CoP"/>
                     <constraint firstItem="fqO-vW-gfQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CBB-KC-wUE"/>
                     <constraint firstItem="fqO-vW-gfQ" firstAttribute="leading" secondItem="VZ4-5v-Kau" secondAttribute="trailing" constant="7" id="JQj-Di-JFY"/>
                     <constraint firstAttribute="bottom" secondItem="QaJ-8N-NEH" secondAttribute="bottom" id="REL-VE-z6H"/>
@@ -73,13 +73,7 @@
                     <constraint firstAttribute="trailing" secondItem="qij-7m-JKw" secondAttribute="trailing" id="rKK-6z-hhI"/>
                     <constraint firstAttribute="bottom" secondItem="VZ4-5v-Kau" secondAttribute="bottom" id="tCx-na-J0l"/>
                     <constraint firstAttribute="trailing" secondItem="zlE-fO-ctZ" secondAttribute="trailing" id="ymV-F9-MOh"/>
-                    <constraint firstItem="fqO-vW-gfQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ypx-f3-dCD"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="ypx-f3-dCD"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
@@ -91,6 +85,7 @@
                 <outlet property="separator" destination="qij-7m-JKw" id="LZO-bX-sfh"/>
                 <outlet property="separatorLeadingConstraint" destination="eCe-T2-eeS" id="eWx-eG-Sd6"/>
             </connections>
+            <point key="canvasLocation" x="693" y="457"/>
         </tableViewCell>
     </objects>
 </document>

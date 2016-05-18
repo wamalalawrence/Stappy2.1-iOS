@@ -9,6 +9,7 @@
         "rightMenuItemsUrl": "/sinfo?id=6165",
         "rightMenuItemsId":97975,
         "leftMenuUrl": "side-menu.",
+         "shouldUseUserPositionInApotheken": 0,
         "fahrplan": {
             "api_url":"http://endios.hafas.de/openapi/",
             "access_id":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad",
@@ -99,7 +100,7 @@
          "angebote":"angebote",
          "events":"events",
          "ticker":"news",
-         "vereine":"vereine",
+         "vereine":"vereine"
     },
     "startScreenIgnoredItems": [
                                 "test"
@@ -113,7 +114,7 @@
         "longitude": 7.8259
     },
     "default_ids": {
-        "news": [78097]
+        "news": [108833]
     },
     "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events", "lokalnews"],
     "overlayScreens": {

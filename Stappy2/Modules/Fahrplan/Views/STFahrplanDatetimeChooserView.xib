@@ -34,10 +34,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="584" height="400"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="icon_content_oepnv_time_5" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-8Z-uzM">
-                            <rect key="frame" x="121" y="70" width="50" height="50"/>
+                            <rect key="frame" x="122" y="70" width="48" height="48"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" image="icon_content_oepnv_time_15" translatesAutoresizingMaskIntoConstraints="NO" id="RtE-yl-raE">
-                            <rect key="frame" x="267" y="70" width="50" height="50"/>
+                            <rect key="frame" x="268" y="70" width="48" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="RtE-yl-raE" secondAttribute="height" multiplier="1:1" id="8nx-CP-cdz"/>
                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="LxV-3q-ecg"/>
@@ -46,15 +46,15 @@
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="icon_content_oepnv_time_30" translatesAutoresizingMaskIntoConstraints="NO" id="gL2-Sn-Gi9">
-                            <rect key="frame" x="413" y="70" width="50" height="50"/>
+                            <rect key="frame" x="414" y="70" width="48" height="48"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="+ 5 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-2Y-LQo">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" text="+ 5 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-2Y-LQo">
                             <rect key="frame" x="96" y="128" width="100" height="21"/>
                             <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="+ 15 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2z-1r-BZ4">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" text="+ 15 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2z-1r-BZ4">
                             <rect key="frame" x="242" y="128" width="100" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" id="6nL-Hu-sfX"/>
@@ -66,13 +66,13 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="+ 30 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTG-qm-ait">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" text="+ 30 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTG-qm-ait">
                             <rect key="frame" x="388" y="128" width="100" height="21"/>
                             <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <datePicker contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="eTK-fL-zVe">
+                        <datePicker contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="eTK-fL-zVe">
                             <rect key="frame" x="0.0" y="157" width="584" height="175"/>
                             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,19 +166,19 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRC-dE-pxP" userLabel="button +5">
-                            <rect key="frame" x="121" y="70" width="50" height="50"/>
+                            <rect key="frame" x="122" y="70" width="48" height="48"/>
                             <connections>
                                 <action selector="actionAdd5Min:" destination="-1" eventType="touchUpInside" id="diI-fw-sIN"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOn-iy-Egs" userLabel="button +15">
-                            <rect key="frame" x="267" y="70" width="50" height="50"/>
+                            <rect key="frame" x="268" y="70" width="48" height="48"/>
                             <connections>
                                 <action selector="actionAdd15Min:" destination="-1" eventType="touchUpInside" id="Spe-SX-GxM"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4e-m7-h4S" userLabel="button +30">
-                            <rect key="frame" x="413" y="70" width="50" height="50"/>
+                            <rect key="frame" x="414" y="70" width="48" height="48"/>
                             <connections>
                                 <action selector="actionAdd30Min:" destination="-1" eventType="touchUpInside" id="vgD-QH-w91"/>
                             </connections>
@@ -278,8 +278,8 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_content_oepnv_time_15" width="250" height="250"/>
-        <image name="icon_content_oepnv_time_30" width="250" height="250"/>
-        <image name="icon_content_oepnv_time_5" width="250" height="250"/>
+        <image name="icon_content_oepnv_time_15" width="48" height="48"/>
+        <image name="icon_content_oepnv_time_30" width="48" height="48"/>
+        <image name="icon_content_oepnv_time_5" width="48" height="48"/>
     </resources>
 </document>

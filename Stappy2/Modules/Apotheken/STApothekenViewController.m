@@ -59,10 +59,9 @@
     { [self.locationManager requestWhenInUseAuthorization]; }
     
     [self.locationManager startUpdatingLocation];
-    self.shouldCenterOnUserLocation = YES;
+  
 
     self.mapView.delegate = self;
-    self.mapView.showsUserLocation = YES;
     
     [self segmentedControlValueChanged:self.segmentedControl];
     
@@ -76,6 +75,16 @@
 
     UIFont *segmentControlFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"apotheken_notdienst.segment_control.font"];
     if (segmentControlFont) [self.segmentedControl setTitleTextAttributes:@{ NSFontAttributeName : segmentControlFont } forState:UIControlStateNormal];
+    
+    
+    if ([STAppSettingsManager sharedSettingsManager].shouldUseUserPositionInApotheken) {
+          self.shouldCenterOnUserLocation = YES;
+
+    }
+    else{
+      self.shouldCenterOnUserLocation = NO;
+
+    }
     
     [self.segmentedControl setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5]];
 }
@@ -274,11 +283,13 @@
         self.mapView.showsUserLocation = YES;
         self.locationButton.hidden = NO;
     }
-    else{
+     if (status==kCLAuthorizationStatusDenied) {
         self.mapView.showsUserLocation = NO;
         self.locationButton.hidden = YES;
         [[[UIAlertView alloc] initWithTitle:nil message:@"Bitte aktiviere in den Einstellungen deine Telefons die Ortungsdienste, um diese Funktion zu nutzen" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+
     }
+  
     
 }
 
@@ -288,6 +299,7 @@
 -(IBAction)locationButtonTapped:(id)sender{
     
     self.shouldCenterOnUserLocation = YES;
+    self.mapView.showsUserLocation = YES;
     [self.locationManager startUpdatingLocation];
 }
 

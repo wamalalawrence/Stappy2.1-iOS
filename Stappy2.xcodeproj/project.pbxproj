@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5DC50FA77804E676825C4AF0 /* Pods_Stappy2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9473523418EBD01AD420EAFE /* Pods_Stappy2.framework */; };
+		C366280F1CEC767600F44E93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C366280E1CEC767600F44E93 /* GoogleService-Info.plist */; };
 		C3CCC79B1CEB58BB003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
 		C3CCC79C1CEB590A003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
 		C3CCC79D1CEB590A003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
@@ -1779,7 +1780,6 @@
 		EFCB48131CE9B8BD009A59F9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F431CE8A9F7002CF5D2 /* StartViewController.xib */; };
 		EFCB48141CE9B8BD009A59F9 /* OpeningHoursMultipleViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DF81CE8A779002CF5D2 /* OpeningHoursMultipleViews.xib */; };
 		EFCB48161CE9B8BD009A59F9 /* icon_content_overlay_close.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F6A1CE8A9F7002CF5D2 /* icon_content_overlay_close.png */; };
-		EFCB48171CE9B8BD009A59F9 /* GeneralAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF746D201CE8A71C002CF5D2 /* GeneralAssets.xcassets */; };
 		EFCB48181CE9B8BD009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D1F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf */; };
 		EFCB48191CE9B8BD009A59F9 /* icon_tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F711CE8A9F7002CF5D2 /* icon_tick@2x.png */; };
 		EFCB481A1CE9B8BD009A59F9 /* STParkingDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F4F1CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib */; };
@@ -2088,7 +2088,6 @@
 		EFCB49D71CE9B9A6009A59F9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F431CE8A9F7002CF5D2 /* StartViewController.xib */; };
 		EFCB49D81CE9B9A6009A59F9 /* OpeningHoursMultipleViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DF81CE8A779002CF5D2 /* OpeningHoursMultipleViews.xib */; };
 		EFCB49DA1CE9B9A6009A59F9 /* icon_content_overlay_close.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F6A1CE8A9F7002CF5D2 /* icon_content_overlay_close.png */; };
-		EFCB49DB1CE9B9A6009A59F9 /* GeneralAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF746D201CE8A71C002CF5D2 /* GeneralAssets.xcassets */; };
 		EFCB49DC1CE9B9A6009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D1F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf */; };
 		EFCB49DD1CE9B9A6009A59F9 /* icon_tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F711CE8A9F7002CF5D2 /* icon_tick@2x.png */; };
 		EFCB49DE1CE9B9A6009A59F9 /* STParkingDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F4F1CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib */; };
@@ -3861,6 +3860,7 @@
 		157E62A7A7B4D19D3435D5A5 /* Pods-Stappy2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stappy2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stappy2/Pods-Stappy2.debug.xcconfig"; sourceTree = "<group>"; };
 		17615C8238C755D36205F892 /* Pods-Stappy2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stappy2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stappy2/Pods-Stappy2.release.xcconfig"; sourceTree = "<group>"; };
 		9473523418EBD01AD420EAFE /* Pods_Stappy2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stappy2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C366280E1CEC767600F44E93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3CCC7991CEB58BB003BB297 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C3CCC79A1CEB58BB003BB297 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C3CCC7A61CEB59AA003BB297 /* STGenerralParkhausTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STGenerralParkhausTableViewController.h; sourceTree = "<group>"; };
@@ -6160,6 +6160,7 @@
 		EFCB48AD1CE9B8DC009A59F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C366280E1CEC767600F44E93 /* GoogleService-Info.plist */,
 				EFCB48AE1CE9B8DC009A59F9 /* Soest-Info.plist */,
 			);
 			path = "Supporting Files";
@@ -7876,7 +7877,6 @@
 				EFCB48131CE9B8BD009A59F9 /* StartViewController.xib in Resources */,
 				EFCB48141CE9B8BD009A59F9 /* OpeningHoursMultipleViews.xib in Resources */,
 				EFCB48161CE9B8BD009A59F9 /* icon_content_overlay_close.png in Resources */,
-				EFCB48171CE9B8BD009A59F9 /* GeneralAssets.xcassets in Resources */,
 				EFCB48181CE9B8BD009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFEF71AE1CEA09DE00979D4B /* STWeatherTopViewController.xib in Resources */,
 				EFEF70631CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
@@ -7990,6 +7990,7 @@
 				EFCB48891CE9B8BD009A59F9 /* image_content_bg_national_blur@2x.jpg in Resources */,
 				EFCB488A1CE9B8BD009A59F9 /* map.png in Resources */,
 				EFEF70E11CEA087D00979D4B /* GarbageCalendarViewController.xib in Resources */,
+				C366280F1CEC767600F44E93 /* GoogleService-Info.plist in Resources */,
 				EFCB488C1CE9B8BD009A59F9 /* STLokalNewsHeaderView.xib in Resources */,
 				EFCB48B31CE9B8DC009A59F9 /* Soest-Info.plist in Resources */,
 				EFEF6FAF1CEA080A00979D4B /* STFahrplanSubCellWithCheckmarkTVC.xib in Resources */,
@@ -8061,7 +8062,6 @@
 				EFEF6D7B1CEA06EC00979D4B /* STFahrplanRouteCellTVC.xib in Resources */,
 				EFCB49D81CE9B9A6009A59F9 /* OpeningHoursMultipleViews.xib in Resources */,
 				EFCB49DA1CE9B9A6009A59F9 /* icon_content_overlay_close.png in Resources */,
-				EFCB49DB1CE9B9A6009A59F9 /* GeneralAssets.xcassets in Resources */,
 				EFEF70521CEA080A00979D4B /* STFahrplanFavouritePickerView.xib in Resources */,
 				EFCB49DC1CE9B9A6009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFEF6DD51CEA06EC00979D4B /* STFahrplanDebugVC.xib in Resources */,

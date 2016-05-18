@@ -44,6 +44,16 @@
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    NSMutableArray *annotations = [self.mapView.annotations mutableCopy];
+    [annotations removeObject:self.mapView.userLocation];
+    [self.mapView showAnnotations:annotations animated:YES];
+
+
+}
+
 #pragma mark - MKMapViewDelegate
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
@@ -76,10 +86,5 @@
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
 }
 
-- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView {
-    NSMutableArray *annotations = [mapView.annotations mutableCopy];
-    [annotations removeObject:mapView.userLocation];
-    [self.mapView showAnnotations:annotations animated:YES];
-}
 
 @end
