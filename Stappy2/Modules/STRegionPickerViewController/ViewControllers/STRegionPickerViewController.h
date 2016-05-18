@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "STRegionPickerSearchViewController.h"
+
+typedef NS_ENUM (NSUInteger, PickerState) {
+    PickerStateStart = 0,
+    PickerStateSelect
+};
+
 @class RandomImageView;
 
 @interface STRegionPickerViewController : UIViewController <CLLocationManagerDelegate, UIScrollViewDelegate, STRegionPickerSearchDelegate>
@@ -31,5 +37,7 @@
 @property (weak, nonatomic) IBOutlet UIView *startView;
 @property (weak, nonatomic) IBOutlet UIImageView *startImageView;
 @property (weak, nonatomic) IBOutlet UILabel *startLabel;
+
+@property PickerState currentState;
 
 @end

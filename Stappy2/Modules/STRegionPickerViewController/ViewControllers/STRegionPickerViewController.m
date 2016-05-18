@@ -15,11 +15,6 @@
 #import "Defines.h"
 #import "RandomImageView.h"
 
-typedef NS_ENUM (NSUInteger, PickerState) {
-    PickerStateStart = 0,
-    PickerStateSelect
-};
-
 #define kNavBarTintColor [UIColor colorWithRed:26.0/255.0 green:96.0/255.0 blue:166.0/255.0 alpha:1.0]
 //
 #define kRegPickerJSONIdentifierRegions @"regions"
@@ -55,7 +50,6 @@ typedef NS_ENUM (NSUInteger, PickerState) {
 
 @property (nonatomic,retain) CLLocationManager *locationManager;
 @property BOOL haveLocation;
-@property PickerState currentState;
 @property (nonatomic, retain) UIImage *mapImage;
 @property (nonatomic, retain) UIImageView *mapImageView;
 @property (nonatomic, retain) NSArray *allRegions;
@@ -75,7 +69,6 @@ typedef NS_ENUM (NSUInteger, PickerState) {
     self.badgeCounter = 0;
     self.haveLocation = NO;
     self.returnedFromSearch = NO;
-    self.currentState = PickerStateStart;
     self.allRegions = [self loadRegions];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:kRegPickerNavBarIconLeft] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemTapped:)];
@@ -394,21 +387,25 @@ typedef NS_ENUM (NSUInteger, PickerState) {
 #pragma mark - button actions
 
 - (IBAction)searchButtonTapped:(id)sender {
-    if (self.currentState != PickerStateStart) {
-        STRegionPickerSearchViewController *vc = [[STRegionPickerSearchViewController alloc] initWithNibName:@"STRegionPickerSearchViewController" bundle:nil];
-        vc.delegate = self;
-        vc.modalPresentationStyle = UIModalPresentationFullScreen;
-        vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-        NSMutableArray *notSelectedRegions = [[NSMutableArray alloc] init];
-        for (NSDictionary *regDict in self.allButtons) {
-            UIButton *theButton = (UIButton*)[regDict objectForKey:kRegPickerJSONIdentifierButton];
-            if (!theButton.selected) {
-                [notSelectedRegions addObject:regDict];
-            }
+
+    self.currentState = PickerStateSelect;
+    self.selectionScrollView.hidden = NO;
+    self.startView.hidden = YES;
+    [self.actionButton setTitle:@"Auswahl speichern" forState:UIControlStateNormal];
+
+    STRegionPickerSearchViewController *vc = [[STRegionPickerSearchViewController alloc] initWithNibName:@"STRegionPickerSearchViewController" bundle:nil];
+    vc.delegate = self;
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    NSMutableArray *notSelectedRegions = [[NSMutableArray alloc] init];
+    for (NSDictionary *regDict in self.allButtons) {
+        UIButton *theButton = (UIButton*)[regDict objectForKey:kRegPickerJSONIdentifierButton];
+        if (!theButton.selected) {
+            [notSelectedRegions addObject:regDict];
         }
-        vc.allRegions = notSelectedRegions;
-        [self presentViewController:vc animated:YES completion:nil];
     }
+    vc.allRegions = notSelectedRegions;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (IBAction)actionButtonTapped:(id)sender {
@@ -476,6 +473,12 @@ typedef NS_ENUM (NSUInteger, PickerState) {
     [self adjustFont];
     self.actionButton.backgroundColor = kRegPickerSelectColor;
     self.messageView.hidden = YES;
+    
+    if (self.currentState == PickerStateSelect) {
+        self.selectionScrollView.hidden = NO;
+        self.startView.hidden = YES;
+        [self.actionButton setTitle:@"Auswahl speichern" forState:UIControlStateNormal];        
+    }
 }
 
 - (void)addBorderToView:(UIView*)currentView {

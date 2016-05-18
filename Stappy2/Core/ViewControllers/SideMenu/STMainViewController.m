@@ -115,6 +115,7 @@ static const int kHeightOfTheCollectionCell = 84.f;
         if (![defaults boolForKey:@"regionPickerShowed"]) {
             STRegionPickerViewController *vc = [[STRegionPickerViewController alloc] initWithNibName:@"STRegionPickerViewController" bundle:nil];
             UINavigationController *nvc = [[UINavigationController alloc] init];
+            vc.currentState = PickerStateStart;
             nvc.navigationBar.barTintColor = [UIColor colorWithRed:26.0/255.0 green:96.0/255.0 blue:166.0/255.0 alpha:1.0];
             [nvc setViewControllers:@[vc]];
             nvc.modalPresentationStyle = UIModalPresentationFullScreen;

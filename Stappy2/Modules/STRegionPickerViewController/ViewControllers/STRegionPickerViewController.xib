@@ -35,6 +35,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="87T-qs-nvg"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="Landkreis / KFZ Kennzeichen suchen" image="icon_menu_left_suche.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -107,9 +108,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfU-Q0-nFw">
                             <rect key="frame" x="38" y="128" width="508" height="228"/>
-                            <string key="text">Legen Sie vor dem Start der App relevante Regionen fest. Legen Sie vor dem Start der App relevante Regionen fest. Legen Sie vor dem Start der App relevante Regionen fest.
-
-Bitte beachten: Legen Sie vor dem Start der App relevante Regionen fest.</string>
+                            <string key="text">Bestimmen Sie Ihre Region durch Ihren Landkreis oder KFZ-Kennzeichen. Sie erhalten damit bspw. Nachrichten, Informationen oder Gutscheine aus Ihrer Umgebung.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>

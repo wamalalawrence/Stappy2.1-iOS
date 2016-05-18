@@ -171,7 +171,7 @@
                     //present region picker controller
                     STRegionPickerViewController *vc = [[STRegionPickerViewController alloc] initWithNibName:@"STRegionPickerViewController" bundle:nil];
                     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
- 
+                    vc.currentState = PickerStateSelect;
                     nvc.navigationBar.barTintColor =[UIColor partnerColor];
                     nvc.navigationBar.tintColor = [UIColor partnerColor];
                     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
