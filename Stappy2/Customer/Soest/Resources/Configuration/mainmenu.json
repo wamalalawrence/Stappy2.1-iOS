@@ -187,6 +187,27 @@
             }
         },
         
+        "openingHours": {
+            "cellLabelTop": {
+                "font": {
+                    "name": "Merriweather-BoldItalic",
+                    "size": "12"
+                }
+            },
+            "cellLabel": {
+                "font": {
+                    "name": "Merriweather-BoldItalic",
+                    "size": "12"
+                }
+            },
+            "titleLabel": {
+                "font": {
+                    "name": "KievitSlabOffc",
+                    "size": "16"
+                }
+            }
+        },
+        
         "sidemenu": {
             "cell": {
                 "font": {
