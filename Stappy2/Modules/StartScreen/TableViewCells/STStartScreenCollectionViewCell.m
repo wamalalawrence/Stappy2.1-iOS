@@ -53,7 +53,7 @@
     static NSString *cellIdentifier = @"collectionStartCell";
     STStartTableCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.titleLabel.attributedText = [Utils text:((STStartModel*)self.dataForItemsTable[indexPath.row]).title withSpacing:4 lineBreakMode:NSLineBreakByTruncatingTail];
+    cell.titleLabel.attributedText = [Utils text:((STStartModel*)self.dataForItemsTable[indexPath.row]).title withSpacing:2 lineBreakMode:NSLineBreakByWordWrapping];
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
     UIFont *categoryLabelFont = [settings customFontForKey:@"startscreen.collectionview.cell.font"];
     UIFont *titleLabelFont = [settings customFontForKey:@"startscreen.tablecellcollectionviewcell.cell.font"];

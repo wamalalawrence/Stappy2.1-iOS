@@ -60,6 +60,10 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *timeLabelDistanceToActionOptions;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *locationViewDistanceToBodyViewConstraint;
 @property (nonatomic, strong) NSString* detailUrl;
+
+@property (strong, nonatomic) IBOutlet UIView *contentView;
+
+
 @property (nonatomic, strong) NSMutableArray* imagesDataSource;
 @end
 
@@ -109,6 +113,10 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+    
+    
     // See if we need to show coupons or not
     if (![self.dataModel isKindOfClass:[STAngeboteModel class]] || ![[STAppSettingsManager sharedSettingsManager] showCoupons]) {
         self.customerViewHeightConstraint.constant = 0;
@@ -322,7 +330,7 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
     self.descriptionLabel.linkTextAttributes = @{NSForegroundColorAttributeName: [UIColor partnerColor], NSUnderlineStyleAttributeName: [NSNumber numberWithInt:NSUnderlineStyleSingle]};
         self.descriptionLabel.text = bodyString;
         self.descriptionLabel.textColor = [UIColor whiteColor];
-        [NSLayoutConstraint deactivateConstraints:self.activeInfoViewConstraints];
+     [NSLayoutConstraint deactivateConstraints:self.activeInfoViewConstraints];
     } else {
         self.infoViewHeightConstraint.constant = 0;
         self.infoLabel.text = nil;
@@ -332,9 +340,11 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
         self.eventTypeLabel.text = self.dataModel.secondaryKey;
     }
     [self setImageAndBackgroundImage];
-    self.pdfButton.hidden = YES;
+   self.pdfButton.hidden = YES;
     [self updateImagesAndPDF];
     [self setFonts];
+
+
 }
 
 -(void)setImageAndBackgroundImage {
@@ -897,6 +907,15 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
     webView.frame = frame;
     self.openingHoursMultipleViewsHeightConstraint.constant = fittingSize.height;
     [self.view layoutIfNeeded];
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.detailsScrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetMaxY(self.customerNumberView.frame));
+    
+    NSLog(@"CONTENT SIZE: %f",self.contentView.frame.size.height);
+    
 }
 
 #pragma mark-

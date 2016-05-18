@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface Defines : NSObject
 
 extern NSString *const kEmptyString;

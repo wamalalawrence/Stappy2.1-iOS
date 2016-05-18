@@ -8,6 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		5DC50FA77804E676825C4AF0 /* Pods_Stappy2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9473523418EBD01AD420EAFE /* Pods_Stappy2.framework */; };
+		C366280F1CEC767600F44E93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C366280E1CEC767600F44E93 /* GoogleService-Info.plist */; };
+		C3CCC79B1CEB58BB003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC79C1CEB590A003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC79D1CEB590A003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC79E1CEB590A003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC7A01CEB590B003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC7A11CEB590C003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC7A21CEB590D003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC7A31CEB590D003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC7A41CEB590D003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
+		C3CCC7A81CEB59AA003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7A91CEB59AA003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7AA1CEB59B6003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7AB1CEB59B6003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7AC1CEB59B7003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7AD1CEB59B7003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7AE1CEB59B7003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7AF1CEB59B8003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7B01CEB59B9003BB297 /* STGenerralParkhausTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */; };
+		C3CCC7B51CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7B61CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7B71CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7B81CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7B91CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7BA1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7BB1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7BC1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		C3CCC7BD1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
 		EF746BBD1CE8702F002CF5D2 /* Stappy2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746BBC1CE8702F002CF5D2 /* Stappy2Tests.m */; };
 		EF746BC81CE8702F002CF5D2 /* Stappy2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746BC71CE8702F002CF5D2 /* Stappy2UITests.m */; };
 		EF746BF41CE8728F002CF5D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746BD61CE8728F002CF5D2 /* AppDelegate.m */; };
@@ -123,7 +151,6 @@
 		EF746E071CE8A779002CF5D2 /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD21CE8A779002CF5D2 /* Defines.m */; };
 		EF746E081CE8A779002CF5D2 /* Filters-UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD41CE8A779002CF5D2 /* Filters-UnitTests.swift */; };
 		EF746E0A1CE8A779002CF5D2 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD61CE8A779002CF5D2 /* Filters.swift */; };
-		EF746E0C1CE8A779002CF5D2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EF746E0D1CE8A779002CF5D2 /* STAppSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DDC1CE8A779002CF5D2 /* STAppSettingsManager.m */; };
 		EF746E0E1CE8A779002CF5D2 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DDE1CE8A779002CF5D2 /* Utils.m */; };
 		EF746E191CE8A779002CF5D2 /* Indicators.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DF21CE8A779002CF5D2 /* Indicators.m */; };
@@ -340,7 +367,6 @@
 		EFCB3FDD1CE9A4F1009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB3FDE1CE9A4F1009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB3FDF1CE9A4F1009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB3FE11CE9A4F1009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB3FE21CE9A4F1009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB3FE31CE9A4F1009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB3FE41CE9A4F1009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -649,7 +675,6 @@
 		EFCB41BC1CE9ABF7009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB41BD1CE9ABF7009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB41BE1CE9ABF7009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB41C01CE9ABF7009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB41C11CE9ABF7009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB41C21CE9ABF7009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB41C31CE9ABF7009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -953,7 +978,6 @@
 		EFCB43821CE9B0C7009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB43831CE9B0C7009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB43841CE9B0C7009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB43861CE9B0C7009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB43871CE9B0C7009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB43881CE9B0C7009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB43891CE9B0C7009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -1265,7 +1289,6 @@
 		EFCB45481CE9B74A009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB45491CE9B74A009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB454A1CE9B74A009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB454C1CE9B74A009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB454D1CE9B74A009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB454E1CE9B74A009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB454F1CE9B74A009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -1570,7 +1593,6 @@
 		EFCB470E1CE9B8BD009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB470F1CE9B8BD009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB47101CE9B8BD009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB47121CE9B8BD009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB47131CE9B8BD009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB47141CE9B8BD009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB47151CE9B8BD009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -1758,7 +1780,6 @@
 		EFCB48131CE9B8BD009A59F9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F431CE8A9F7002CF5D2 /* StartViewController.xib */; };
 		EFCB48141CE9B8BD009A59F9 /* OpeningHoursMultipleViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DF81CE8A779002CF5D2 /* OpeningHoursMultipleViews.xib */; };
 		EFCB48161CE9B8BD009A59F9 /* icon_content_overlay_close.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F6A1CE8A9F7002CF5D2 /* icon_content_overlay_close.png */; };
-		EFCB48171CE9B8BD009A59F9 /* GeneralAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF746D201CE8A71C002CF5D2 /* GeneralAssets.xcassets */; };
 		EFCB48181CE9B8BD009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D1F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf */; };
 		EFCB48191CE9B8BD009A59F9 /* icon_tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F711CE8A9F7002CF5D2 /* icon_tick@2x.png */; };
 		EFCB481A1CE9B8BD009A59F9 /* STParkingDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F4F1CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib */; };
@@ -1880,7 +1901,6 @@
 		EFCB48D21CE9B9A6009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB48D31CE9B9A6009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB48D41CE9B9A6009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB48D61CE9B9A6009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB48D71CE9B9A6009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB48D81CE9B9A6009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB48D91CE9B9A6009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -2068,7 +2088,6 @@
 		EFCB49D71CE9B9A6009A59F9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F431CE8A9F7002CF5D2 /* StartViewController.xib */; };
 		EFCB49D81CE9B9A6009A59F9 /* OpeningHoursMultipleViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DF81CE8A779002CF5D2 /* OpeningHoursMultipleViews.xib */; };
 		EFCB49DA1CE9B9A6009A59F9 /* icon_content_overlay_close.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F6A1CE8A9F7002CF5D2 /* icon_content_overlay_close.png */; };
-		EFCB49DB1CE9B9A6009A59F9 /* GeneralAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF746D201CE8A71C002CF5D2 /* GeneralAssets.xcassets */; };
 		EFCB49DC1CE9B9A6009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D1F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf */; };
 		EFCB49DD1CE9B9A6009A59F9 /* icon_tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F711CE8A9F7002CF5D2 /* icon_tick@2x.png */; };
 		EFCB49DE1CE9B9A6009A59F9 /* STParkingDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F4F1CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib */; };
@@ -2191,7 +2210,6 @@
 		EFCB4A981CE9BAB1009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB4A991CE9BAB1009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB4A9A1CE9BAB1009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB4A9C1CE9BAB1009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB4A9D1CE9BAB1009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB4A9E1CE9BAB1009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB4A9F1CE9BAB1009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -2501,7 +2519,6 @@
 		EFCB4C5C1CE9BBF1009A59F9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E6D1CE8A9A7002CF5D2 /* UIImage+ImageEffects.m */; };
 		EFCB4C5D1CE9BBF1009A59F9 /* STWeatherCurrentObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C881CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m */; };
 		EFCB4C5E1CE9BBF1009A59F9 /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C1B1CE8A65B002CF5D2 /* UIViewController+Swizzling.m */; };
-		EFCB4C601CE9BBF1009A59F9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746DD91CE8A779002CF5D2 /* Reachability.m */; };
 		EFCB4C611CE9BBF1009A59F9 /* STApothekenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746E7F1CE8A9F6002CF5D2 /* STApothekenViewController.m */; };
 		EFCB4C621CE9BBF1009A59F9 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746C591CE8A6A3002CF5D2 /* STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi.m */; };
 		EFCB4C631CE9BBF1009A59F9 /* STPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746FA11CE8A9F7002CF5D2 /* STPrediction.m */; };
@@ -3843,6 +3860,13 @@
 		157E62A7A7B4D19D3435D5A5 /* Pods-Stappy2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stappy2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stappy2/Pods-Stappy2.debug.xcconfig"; sourceTree = "<group>"; };
 		17615C8238C755D36205F892 /* Pods-Stappy2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stappy2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stappy2/Pods-Stappy2.release.xcconfig"; sourceTree = "<group>"; };
 		9473523418EBD01AD420EAFE /* Pods_Stappy2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stappy2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C366280E1CEC767600F44E93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3CCC7991CEB58BB003BB297 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C3CCC79A1CEB58BB003BB297 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C3CCC7A61CEB59AA003BB297 /* STGenerralParkhausTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STGenerralParkhausTableViewController.h; sourceTree = "<group>"; };
+		C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STGenerralParkhausTableViewController.m; sourceTree = "<group>"; };
+		C3CCC7B21CEB5B50003BB297 /* STParkHausTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STParkHausTableViewCell.h; sourceTree = "<group>"; };
+		C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STParkHausTableViewCell.m; sourceTree = "<group>"; };
 		EF746B9C1CE8702F002CF5D2 /* Stappy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stappy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF746BB81CE8702F002CF5D2 /* Stappy2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stappy2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF746BBC1CE8702F002CF5D2 /* Stappy2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stappy2Tests.m; sourceTree = "<group>"; };
@@ -4039,8 +4063,6 @@
 		EF746DD21CE8A779002CF5D2 /* Defines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defines.m; sourceTree = "<group>"; };
 		EF746DD41CE8A779002CF5D2 /* Filters-UnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Filters-UnitTests.swift"; sourceTree = "<group>"; };
 		EF746DD61CE8A779002CF5D2 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
-		EF746DD81CE8A779002CF5D2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		EF746DD91CE8A779002CF5D2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		EF746DDB1CE8A779002CF5D2 /* STAppSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAppSettingsManager.h; sourceTree = "<group>"; };
 		EF746DDC1CE8A779002CF5D2 /* STAppSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAppSettingsManager.m; sourceTree = "<group>"; };
 		EF746DDD1CE8A779002CF5D2 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -4669,6 +4691,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C3CCC7B11CEB5B0B003BB297 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3CCC7B21CEB5B50003BB297 /* STParkHausTableViewCell.h */,
+				C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EF746B931CE8702F002CF5D2 = {
 			isa = PBXGroup;
 			children = (
@@ -4874,8 +4905,8 @@
 				EF746F361CE8A9F7002CF5D2 /* LokalNews */,
 				EF746F391CE8A9F7002CF5D2 /* QRCode */,
 				EF746F3C1CE8A9F7002CF5D2 /* StadtInfo */,
-				EF746F401CE8A9F7002CF5D2 /* StartScreen */,
 				EF746F441CE8A9F7002CF5D2 /* STGeneralParkhaus */,
+				EF746F401CE8A9F7002CF5D2 /* StartScreen */,
 				EF746F501CE8A9F7002CF5D2 /* STRegionPickerViewController */,
 				EF746F8C1CE8A9F7002CF5D2 /* STReporter */,
 				EF746FB91CE8A9F7002CF5D2 /* TankUndLadesaulen */,
@@ -5287,11 +5318,11 @@
 		EF746DD01CE8A779002CF5D2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C3CCC7991CEB58BB003BB297 /* Reachability.h */,
+				C3CCC79A1CEB58BB003BB297 /* Reachability.m */,
 				EF746DD11CE8A779002CF5D2 /* Defines.h */,
 				EF746DD21CE8A779002CF5D2 /* Defines.m */,
 				EF746DD31CE8A779002CF5D2 /* Filters */,
-				EF746DD81CE8A779002CF5D2 /* Reachability.h */,
-				EF746DD91CE8A779002CF5D2 /* Reachability.m */,
 				EF746DDA1CE8A779002CF5D2 /* Settings */,
 				EF746DDD1CE8A779002CF5D2 /* Utils.h */,
 				EF746DDE1CE8A779002CF5D2 /* Utils.m */,
@@ -5597,6 +5628,7 @@
 		EF746F441CE8A9F7002CF5D2 /* STGeneralParkhaus */ = {
 			isa = PBXGroup;
 			children = (
+				C3CCC7B11CEB5B0B003BB297 /* Views */,
 				EF746F451CE8A9F7002CF5D2 /* STGeneralParkhausViewController.h */,
 				EF746F461CE8A9F7002CF5D2 /* STGeneralParkhausViewController.m */,
 				EF746F471CE8A9F7002CF5D2 /* STParkhausAnnotation.h */,
@@ -5608,6 +5640,8 @@
 				EF746F4D1CE8A9F7002CF5D2 /* STParkingDetailsViewController.h */,
 				EF746F4E1CE8A9F7002CF5D2 /* STParkingDetailsViewController.m */,
 				EF746F4F1CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib */,
+				C3CCC7A61CEB59AA003BB297 /* STGenerralParkhausTableViewController.h */,
+				C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */,
 			);
 			path = STGeneralParkhaus;
 			sourceTree = "<group>";
@@ -6126,6 +6160,7 @@
 		EFCB48AD1CE9B8DC009A59F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C366280E1CEC767600F44E93 /* GoogleService-Info.plist */,
 				EFCB48AE1CE9B8DC009A59F9 /* Soest-Info.plist */,
 			);
 			path = "Supporting Files";
@@ -6848,6 +6883,36 @@
 					EF746BC21CE8702F002CF5D2 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = EF746B9B1CE8702F002CF5D2;
+					};
+					EFCB46F01CE9B8BD009A59F9 = {
+						DevelopmentTeam = VKZUEJ58M7;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					EFCB48B41CE9B9A6009A59F9 = {
+						DevelopmentTeam = 37XC23XRG7;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					EFCB4C3E1CE9BBF1009A59F9 = {
+						DevelopmentTeam = JVX6DNXT36;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -7841,7 +7906,6 @@
 				EFCB48131CE9B8BD009A59F9 /* StartViewController.xib in Resources */,
 				EFCB48141CE9B8BD009A59F9 /* OpeningHoursMultipleViews.xib in Resources */,
 				EFCB48161CE9B8BD009A59F9 /* icon_content_overlay_close.png in Resources */,
-				EFCB48171CE9B8BD009A59F9 /* GeneralAssets.xcassets in Resources */,
 				EFCB48181CE9B8BD009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFEF71AE1CEA09DE00979D4B /* STWeatherTopViewController.xib in Resources */,
 				EFEF70631CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
@@ -7955,6 +8019,7 @@
 				EFCB48891CE9B8BD009A59F9 /* image_content_bg_national_blur@2x.jpg in Resources */,
 				EFCB488A1CE9B8BD009A59F9 /* map.png in Resources */,
 				EFEF70E11CEA087D00979D4B /* GarbageCalendarViewController.xib in Resources */,
+				C366280F1CEC767600F44E93 /* GoogleService-Info.plist in Resources */,
 				EFCB488C1CE9B8BD009A59F9 /* STLokalNewsHeaderView.xib in Resources */,
 				EFCB48B31CE9B8DC009A59F9 /* Soest-Info.plist in Resources */,
 				EFEF6FAF1CEA080A00979D4B /* STFahrplanSubCellWithCheckmarkTVC.xib in Resources */,
@@ -8026,7 +8091,6 @@
 				EFEF6D7B1CEA06EC00979D4B /* STFahrplanRouteCellTVC.xib in Resources */,
 				EFCB49D81CE9B9A6009A59F9 /* OpeningHoursMultipleViews.xib in Resources */,
 				EFCB49DA1CE9B9A6009A59F9 /* icon_content_overlay_close.png in Resources */,
-				EFCB49DB1CE9B9A6009A59F9 /* GeneralAssets.xcassets in Resources */,
 				EFEF70521CEA080A00979D4B /* STFahrplanFavouritePickerView.xib in Resources */,
 				EFCB49DC1CE9B9A6009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFEF6DD51CEA06EC00979D4B /* STFahrplanDebugVC.xib in Resources */,
@@ -8968,7 +9032,6 @@
 				EF746E721CE8A9A7002CF5D2 /* UIImage+ImageEffects.m in Sources */,
 				EF746CD01CE8A6A3002CF5D2 /* STWeatherCurrentObservation.m in Sources */,
 				EF746C2A1CE8A65B002CF5D2 /* UIViewController+Swizzling.m in Sources */,
-				EF746E0C1CE8A779002CF5D2 /* Reachability.m in Sources */,
 				EFEF6F7D1CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA51CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EF746FDA1CE8A9F7002CF5D2 /* STApothekenViewController.m in Sources */,
@@ -8986,6 +9049,7 @@
 				EF746CDE1CE8A6A3002CF5D2 /* STTickerModel.m in Sources */,
 				EF746CF01CE8A6BC002CF5D2 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF710F1CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC79B1CEB58BB003BB297 /* Reachability.m in Sources */,
 				EF746CC71CE8A6A3002CF5D2 /* OpeningClosingTimesModel.m in Sources */,
 				EF74703D1CE8A9F7002CF5D2 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70AF1CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -9021,6 +9085,7 @@
 				EFEF701F1CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EF7470A11CE8A9F7002CF5D2 /* STTankStationsViewController.m in Sources */,
 				EF746CC51CE8A6A3002CF5D2 /* STNewsModel.m in Sources */,
+				C3CCC7A81CEB59AA003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EF61CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6D2D1CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
 				EFEF6DA21CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
@@ -9073,6 +9138,7 @@
 				EFEF6D901CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EF746C201CE8A65B002CF5D2 /* NSError+NoConnection.m in Sources */,
 				EFEF717F1CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7B51CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EF74708A1CE8A9F7002CF5D2 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EF746C281CE8A65B002CF5D2 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EF746E1B1CE8A779002CF5D2 /* OpeningHoursHeaderView.swift in Sources */,
@@ -9239,7 +9305,6 @@
 				EFCB3FDD1CE9A4F1009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB3FDE1CE9A4F1009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB3FDF1CE9A4F1009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB3FE11CE9A4F1009A59F9 /* Reachability.m in Sources */,
 				EFEF6F7E1CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA61CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB3FE21CE9A4F1009A59F9 /* STApothekenViewController.m in Sources */,
@@ -9257,6 +9322,7 @@
 				EFCB3FED1CE9A4F1009A59F9 /* STTickerModel.m in Sources */,
 				EFCB3FEE1CE9A4F1009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71101CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC79C1CEB590A003BB297 /* Reachability.m in Sources */,
 				EFCB3FEF1CE9A4F1009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB3FF01CE9A4F1009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B01CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -9292,6 +9358,7 @@
 				EFEF70201CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB40191CE9A4F1009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D2E1CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7AE1CEB59B7003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EF71CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DA31CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB401D1CE9A4F1009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -9344,6 +9411,7 @@
 				EFEF6D911CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB40441CE9A4F1009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71801CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7B61CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB40451CE9A4F1009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB40461CE9A4F1009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB40471CE9A4F1009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -9494,7 +9562,6 @@
 				EFCB41BC1CE9ABF7009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB41BD1CE9ABF7009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB41BE1CE9ABF7009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB41C01CE9ABF7009A59F9 /* Reachability.m in Sources */,
 				EFEF6F7F1CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA71CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB41C11CE9ABF7009A59F9 /* STApothekenViewController.m in Sources */,
@@ -9512,6 +9579,7 @@
 				EFCB41CC1CE9ABF7009A59F9 /* STTickerModel.m in Sources */,
 				EFCB41CD1CE9ABF7009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71111CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC79D1CEB590A003BB297 /* Reachability.m in Sources */,
 				EFCB41CE1CE9ABF7009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB41CF1CE9ABF7009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B11CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -9547,6 +9615,7 @@
 				EFEF70211CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB41F71CE9ABF7009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D2F1CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7AD1CEB59B7003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EF81CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DA41CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB41FB1CE9ABF7009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -9599,6 +9668,7 @@
 				EFEF6D921CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB42221CE9ABF7009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71811CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7B71CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB42231CE9ABF7009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB42241CE9ABF7009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB42251CE9ABF7009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -9749,7 +9819,6 @@
 				EFCB43821CE9B0C7009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB43831CE9B0C7009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB43841CE9B0C7009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB43861CE9B0C7009A59F9 /* Reachability.m in Sources */,
 				EFEF6F801CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA81CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB43871CE9B0C7009A59F9 /* STApothekenViewController.m in Sources */,
@@ -9767,6 +9836,7 @@
 				EFCB43921CE9B0C7009A59F9 /* STTickerModel.m in Sources */,
 				EFCB43931CE9B0C7009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71121CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC79E1CEB590A003BB297 /* Reachability.m in Sources */,
 				EFCB43941CE9B0C7009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB43951CE9B0C7009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B21CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -9802,6 +9872,7 @@
 				EFEF70221CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB43BD1CE9B0C7009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D301CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7AC1CEB59B7003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EF91CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DA51CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB43C11CE9B0C7009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -9854,6 +9925,7 @@
 				EFEF6D931CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB43E81CE9B0C7009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71821CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7B81CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB43E91CE9B0C7009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB43EA1CE9B0C7009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB43EB1CE9B0C7009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -10004,7 +10076,6 @@
 				EFCB45481CE9B74A009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB45491CE9B74A009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB454A1CE9B74A009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB454C1CE9B74A009A59F9 /* Reachability.m in Sources */,
 				EFEF6F811CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EA91CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB454D1CE9B74A009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10022,6 +10093,7 @@
 				EFCB45581CE9B74A009A59F9 /* STTickerModel.m in Sources */,
 				EFCB45591CE9B74A009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71131CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC7A11CEB590C003BB297 /* Reachability.m in Sources */,
 				EFCB455A1CE9B74A009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB455B1CE9B74A009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B31CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -10057,6 +10129,7 @@
 				EFEF70231CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB45831CE9B74A009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D311CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7AB1CEB59B6003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EFA1CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DA61CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB45871CE9B74A009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -10109,6 +10182,7 @@
 				EFEF6D941CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB45AE1CE9B74A009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71831CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7B91CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB45AF1CE9B74A009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB45B01CE9B74A009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB45B11CE9B74A009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -10259,7 +10333,6 @@
 				EFCB470E1CE9B8BD009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB470F1CE9B8BD009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB47101CE9B8BD009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB47121CE9B8BD009A59F9 /* Reachability.m in Sources */,
 				EFEF6F821CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAA1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB47131CE9B8BD009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10277,6 +10350,7 @@
 				EFCB471E1CE9B8BD009A59F9 /* STTickerModel.m in Sources */,
 				EFCB471F1CE9B8BD009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71141CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC7A01CEB590B003BB297 /* Reachability.m in Sources */,
 				EFCB47201CE9B8BD009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB47211CE9B8BD009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B41CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -10312,6 +10386,7 @@
 				EFEF70241CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB47491CE9B8BD009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D321CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7AA1CEB59B6003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EFB1CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DA71CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB474D1CE9B8BD009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -10364,6 +10439,7 @@
 				EFEF6D951CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB47741CE9B8BD009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71841CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7BA1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB47751CE9B8BD009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB47761CE9B8BD009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB47771CE9B8BD009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -10514,7 +10590,6 @@
 				EFCB48D21CE9B9A6009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB48D31CE9B9A6009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB48D41CE9B9A6009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB48D61CE9B9A6009A59F9 /* Reachability.m in Sources */,
 				EFEF6F831CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAB1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB48D71CE9B9A6009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10532,6 +10607,7 @@
 				EFCB48E21CE9B9A6009A59F9 /* STTickerModel.m in Sources */,
 				EFCB48E31CE9B9A6009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71151CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC7A21CEB590D003BB297 /* Reachability.m in Sources */,
 				EFCB48E41CE9B9A6009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB48E51CE9B9A6009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B51CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -10567,6 +10643,7 @@
 				EFEF70251CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB490D1CE9B9A6009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D331CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7A91CEB59AA003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EFC1CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DA81CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB49111CE9B9A6009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -10619,6 +10696,7 @@
 				EFEF6D961CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB49381CE9B9A6009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71851CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7BB1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB49391CE9B9A6009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB493A1CE9B9A6009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB493B1CE9B9A6009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -10769,7 +10847,6 @@
 				EFCB4A981CE9BAB1009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB4A991CE9BAB1009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB4A9A1CE9BAB1009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB4A9C1CE9BAB1009A59F9 /* Reachability.m in Sources */,
 				EFEF6F841CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAC1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB4A9D1CE9BAB1009A59F9 /* STApothekenViewController.m in Sources */,
@@ -10787,6 +10864,7 @@
 				EFCB4AA81CE9BAB1009A59F9 /* STTickerModel.m in Sources */,
 				EFCB4AA91CE9BAB1009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71161CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC7A31CEB590D003BB297 /* Reachability.m in Sources */,
 				EFCB4AAA1CE9BAB1009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB4AAB1CE9BAB1009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B61CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -10822,6 +10900,7 @@
 				EFEF70261CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB4AD31CE9BAB1009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D341CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7AF1CEB59B8003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EFD1CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DA91CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB4AD71CE9BAB1009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -10874,6 +10953,7 @@
 				EFEF6D971CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB4AFE1CE9BAB1009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71861CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7BC1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB4AFF1CE9BAB1009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB4B001CE9BAB1009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB4B011CE9BAB1009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -11024,7 +11104,6 @@
 				EFCB4C5C1CE9BBF1009A59F9 /* UIImage+ImageEffects.m in Sources */,
 				EFCB4C5D1CE9BBF1009A59F9 /* STWeatherCurrentObservation.m in Sources */,
 				EFCB4C5E1CE9BBF1009A59F9 /* UIViewController+Swizzling.m in Sources */,
-				EFCB4C601CE9BBF1009A59F9 /* Reachability.m in Sources */,
 				EFEF6F851CEA080A00979D4B /* STFahrplanMapCellTVC.m in Sources */,
 				EFEF6EAD1CEA080A00979D4B /* STFahrplanGoogleMapsDirectionsApiResponseMapper.m in Sources */,
 				EFCB4C611CE9BBF1009A59F9 /* STApothekenViewController.m in Sources */,
@@ -11042,6 +11121,7 @@
 				EFCB4C6C1CE9BBF1009A59F9 /* STTickerModel.m in Sources */,
 				EFCB4C6D1CE9BBF1009A59F9 /* AFXMLDictionaryRequestSerializer.m in Sources */,
 				EFEF71171CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.m in Sources */,
+				C3CCC7A41CEB590D003BB297 /* Reachability.m in Sources */,
 				EFCB4C6E1CE9BBF1009A59F9 /* OpeningClosingTimesModel.m in Sources */,
 				EFCB4C6F1CE9BBF1009A59F9 /* GarbageCalendarManager.swift in Sources */,
 				EFEF70B71CEA087D00979D4B /* GarbageTypesTableViewCell.m in Sources */,
@@ -11077,6 +11157,7 @@
 				EFEF70271CEA080A00979D4B /* STFahrplanPremiumSettingsVC.m in Sources */,
 				EFCB4C971CE9BBF1009A59F9 /* STNewsModel.m in Sources */,
 				EFEF6D351CEA06EC00979D4B /* STAdressSearchResultCellTVC.m in Sources */,
+				C3CCC7B01CEB59B9003BB297 /* STGenerralParkhausTableViewController.m in Sources */,
 				EFEF6EFE1CEA080A00979D4B /* STFahrplanHafasRestProxyApiUrlBuilder.m in Sources */,
 				EFEF6DAA1CEA06EC00979D4B /* STFahrplanTimetableVC.m in Sources */,
 				EFCB4C9B1CE9BBF1009A59F9 /* BTGlassScrollView.m in Sources */,
@@ -11129,6 +11210,7 @@
 				EFEF6D981CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.m in Sources */,
 				EFCB4CC21CE9BBF1009A59F9 /* STGoogleAutocompleteResponseModel.m in Sources */,
 				EFEF71871CEA09AB00979D4B /* STReporterInfoViewController.m in Sources */,
+				C3CCC7BD1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */,
 				EFCB4CC31CE9BBF1009A59F9 /* UILabel+WhiteUIDatePickerLabels.m in Sources */,
 				EFCB4CC41CE9BBF1009A59F9 /* OpeningHoursHeaderView.swift in Sources */,
 				EFCB4CC51CE9BBF1009A59F9 /* STDetailImageGalleryViewController.m in Sources */,
@@ -11414,6 +11496,7 @@
 			baseConfigurationReference = 157E62A7A7B4D19D3435D5A5 /* Pods-Stappy2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Core/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11430,6 +11513,7 @@
 			baseConfigurationReference = 17615C8238C755D36205F892 /* Pods-Stappy2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Core/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11632,11 +11716,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Soest";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Soest/Supporting Files/Soest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.endios.Stappy2;
+				PRODUCT_BUNDLE_IDENTIFIER = de.endios.stappy.soest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stappy2/Core/BridgingHeader/Stappy2-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Stappy2-Swift.h";
@@ -11650,11 +11735,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Soest";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Soest/Supporting Files/Soest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.endios.Stappy2;
+				PRODUCT_BUNDLE_IDENTIFIER = de.endios.stappy.soest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stappy2/Core/BridgingHeader/Stappy2-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Stappy2-Swift.h";
@@ -11667,6 +11754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Trier";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Trier/Supporting Files/Trier-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11685,6 +11773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Trier";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Trier/Supporting Files/Trier-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11737,6 +11826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Suewag";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Suewag/Supporting Files/Suewag-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11755,6 +11845,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Suewag";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Suewag/Supporting Files/Suewag-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

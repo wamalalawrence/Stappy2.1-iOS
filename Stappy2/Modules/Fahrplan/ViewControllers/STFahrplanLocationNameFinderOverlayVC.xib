@@ -87,7 +87,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="57" id="AE0-qP-yv2"/>
                             </constraints>
-                            <state key="normal" backgroundImage="icon_content_oepnv_aerrow"/>
+                            <state key="normal" backgroundImage="icon_content_oepnv_arrow"/>
                             <connections>
                                 <action selector="actionSelectAddress:" destination="-1" eventType="touchUpInside" id="ADb-cP-8yh"/>
                             </connections>
@@ -142,8 +142,8 @@
         </view>
     </objects>
     <resources>
-        <image name="background_blurred" width="320" height="566"/>
-        <image name="icon_content_oepnv_aerrow" width="48" height="48"/>
+        <image name="background_blurred" width="320" height="480"/>
+        <image name="icon_content_oepnv_arrow" width="48" height="48"/>
         <image name="icon_content_overlay_close" width="30" height="30"/>
     </resources>
 </document>

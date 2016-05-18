@@ -100,6 +100,7 @@
     self.automaticallyAdjustsScrollViewInsets = false;
     self.backgroundBlured.needsBlur = YES;
     
+    
     __weak typeof(self) weakself = self;
     [[STRequestsHandler sharedInstance] weatherForStartScreenWithCompletion:^(STWeatherCurrentObservation *currentObservation, NSError *error) {
         if (!error) {
@@ -163,15 +164,8 @@
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl setTintColor:[UIColor whiteColor]];
-    [self.refreshControl tintColorDidChange];
     [self.refreshControl addTarget:self action:@selector(loadNews) forControlEvents:UIControlEventValueChanged];
     [self.lokalNewsTable addSubview:self.refreshControl];
-    
-    __weak typeof(self) weakSelf = self;
-    [self.lokalNewsTable addInfiniteScrollingWithActionHandler:^{
-        [weakSelf loadMoreNews];
-        // call [tableView.infiniteScrollingView stopAnimating] when done
-    }];
     
     // create parameters dictioanry
     self.parameters = [NSMutableDictionary dictionary];
@@ -239,7 +233,24 @@
                                                   strongSelf.expandableTableDataArray = [NSMutableArray arrayWithArray:news];
                                                   [strongSelf.lokalNewsTable reloadData];
                                                   [self updateHeaders];
+                                                  
+                                                  [self addInfititeScrolling];
+
+                                                  
                                               }];
+    
+  
+    
+}
+
+-(void)addInfititeScrolling{
+    __weak typeof(self) weakSelf = self;
+    [self.lokalNewsTable addInfiniteScrollingWithActionHandler:^{
+        [weakSelf loadMoreNews];
+        // call [tableView.infiniteScrollingView stopAnimating] when done
+    }];
+
+    
 }
 
 #pragma mark - UITableView data source
@@ -579,15 +590,18 @@
         NSInteger topSection = [[self.lokalNewsTable indexPathsForVisibleRows].firstObject section];
         NSInteger sectionYOffset = [self.lokalNewsTable rectForHeaderInSection:topSection].origin.y;
         STLokalNewsHeaderView *pinnedHeader = (STLokalNewsHeaderView *)[self.lokalNewsTable headerViewForSection:topSection];
+        
+        NSLog(@"OFFSET: %f / %f",(self.lokalNewsTable.contentOffset.y - sectionYOffset),self.lokalNewsTable.contentOffset.y);
+        
         if ((self.lokalNewsTable.contentOffset.y - sectionYOffset) > 0 || self.lokalNewsTable.contentOffset.y < 5) {
             if (![pinnedHeader isKindOfClass:[STLokalNewsHeaderView class]]) {
                 return;
             }
-            pinnedHeader.backgroundContent.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
+            pinnedHeader.backgroundContent.backgroundColor =    [UIColor colorWithWhite:0 alpha:0.7];
         } else {
             pinnedHeader.backgroundContent.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
         }
-        if (1 < visibleCells.count) {
+        if (1 < visibleCells.count && self.lokalNewsTable.contentOffset.y != 0) {
             NSInteger secondSection = [[[self.lokalNewsTable indexPathsForVisibleRows] objectAtIndex:1] section];
             if (secondSection != topSection) {
                 STLokalNewsHeaderView *secondHeader = (STLokalNewsHeaderView *)[self.lokalNewsTable headerViewForSection:secondSection];

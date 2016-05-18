@@ -20,7 +20,6 @@
     STParkhausAnnotation*annot = (STParkhausAnnotation*)annotation;
 
     UIImage* pinImage  =[UIImage imageNamed:kSTParkHuasAnnotationPin];
-    
 
    
     if (annot.parkHausModel.availability == 0) {

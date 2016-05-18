@@ -99,9 +99,11 @@
         self.mapView.showsUserLocation = YES;
         self.locationButton.hidden = NO;
     }
-    else{
+    if (status==kCLAuthorizationStatusDenied) {
         self.mapView.showsUserLocation = NO;
         self.locationButton.hidden = YES;
+        [[[UIAlertView alloc] initWithTitle:nil message:@"Bitte aktiviere in den Einstellungen deine Telefons die Ortungsdienste, um diese Funktion zu nutzen" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+        
     }
     
 }

@@ -363,7 +363,7 @@
                 },
                 "current_temperature": {
                     "font": {
-                        "name": "PTSans-Regular",
+                        "name": "Bitter-Italic",
                         "size": "35"
                     }
                 },
@@ -401,19 +401,19 @@
                 },
                 "degrees_label": {
                     "font": {
-                        "name": "PTSans-Regular",
+                        "name": "Bitter-Italic",
                         "size": "22"
                     }
                 },
                 "precip_prediction_label": {
                     "font": {
-                        "name": "Bitter-Italic",
+                        "name": "PTSans-Regular",
                         "size": "15"
                     }
                 },
                 "wind_speed_label": {
                     "font": {
-                        "name": "Bitter-Italic",
+                        "name": "PTSans-Regular",
                         "size": "15"
                     }
                 }
@@ -749,6 +749,27 @@
                   "type": "parkhaeuser",
                   "type_api": "parkhaeuser",
                   "url": "/mittagsangebote-v2",
+                  "sub_items":[
+                               {
+                               "id":"ParkenMap",
+                               "caption": "Karte",
+                               "icon_name": "karte",
+                               "type": "karte",
+                               "type_api": "karte",
+                               "url": "",
+                               "sub_items":[]
+                               
+                               },
+                               {
+                               "id":"ParkenList",
+                               "caption": "Listenansicht",
+                               "icon_name": "liste",
+                               "type": "list",
+                               "type_api": "liste",
+                               "url": "",
+                               "sub_items":[]
+                               }
+                               ]
                   },
                   {
                   "caption":"Meine Stadt",

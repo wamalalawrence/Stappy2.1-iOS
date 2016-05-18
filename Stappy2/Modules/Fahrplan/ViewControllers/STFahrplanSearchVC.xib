@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -96,7 +96,7 @@
                         <action selector="actionOpenAdressFinderOverlayForTarget:" destination="-1" eventType="touchUpInside" id="eag-Jc-FYo"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_aerrow_search" translatesAutoresizingMaskIntoConstraints="NO" id="dGb-FP-A7d">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_arrow_search" translatesAutoresizingMaskIntoConstraints="NO" id="dGb-FP-A7d">
                     <rect key="frame" x="520" y="61" width="68" height="61"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="68" id="BrZ-ps-eba"/>
@@ -248,8 +248,8 @@
         <barButtonItem image="right_menu_open" id="PIY-eW-mQ9" userLabel="right bar button item"/>
     </objects>
     <resources>
-        <image name="background_blurred" width="320" height="566"/>
-        <image name="icon_content_oepnv_aerrow_search" width="48" height="48"/>
+        <image name="background_blurred" width="320" height="480"/>
+        <image name="icon_content_oepnv_arrow_search" width="48" height="48"/>
         <image name="icon_content_oepnv_location" width="48" height="48"/>
         <image name="menu.png" width="28" height="20"/>
         <image name="right_menu_open" width="24" height="24"/>

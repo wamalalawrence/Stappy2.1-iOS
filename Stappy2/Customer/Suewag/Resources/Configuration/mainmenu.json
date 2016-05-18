@@ -39,7 +39,8 @@
         "rightMenuItemsUrl": "/sinfo?id=85245",
         "rightMenuItemsId":85245,
         "leftMenuUrl": "side-menu.",
-        "fahrplan": {
+        "shouldUseUserPositionInApotheken": 1,
+                "fahrplan": {
             "api_url":"http://endios.hafas.de/openapi/",
             "access_id":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad",
             
@@ -498,7 +499,7 @@
                         "size": "12"
                     },
                     "color":{
-                        "value":"#e60000",
+                        "value":"#FFCC00",
                         "alpha":1.0
                     }
                 },

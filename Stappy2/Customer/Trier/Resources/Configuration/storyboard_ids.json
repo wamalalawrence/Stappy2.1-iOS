@@ -27,8 +27,21 @@
        }
        },
                {
-               "key": "Parken",
-               "storyboard_id": "Park",
+               "key": "Karte",
+               "storyboard_id": "ParkMap",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#009ee0",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Listenansicht",
+               "storyboard_id": "ParkList",
                "nibname":"",
                "navigationbar":{
                "barTintColor": "#009ee0",

@@ -41,5 +41,5 @@ static NSString* kSTWerbungTableViewCell = @"STWerbungTableViewCell";
 -(void)loadWerbung;
 -(void)populateWithNextPageWithPageElements:(NSArray*)elementsArray;
 -(void)mapButtonPressed:(UIButton *)sender;
-
+-(void)addInfititeScrolling;
 @end

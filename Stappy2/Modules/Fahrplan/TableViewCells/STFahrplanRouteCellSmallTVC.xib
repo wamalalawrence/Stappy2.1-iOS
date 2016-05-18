@@ -192,6 +192,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_content_oepnv_fussweg" width="25" height="25"/>
+        <image name="icon_content_oepnv_fussweg" width="36" height="36"/>
     </resources>
 </document>

@@ -54,6 +54,8 @@
 - (void)setCustomFontForKey:(NSString*)key toView:(UIView *)view;
 - (NSString*)backendValueForKey:(NSString*)keyPath;
 - (BOOL)shouldHideNameAndAddressInDetailsScreen;
+- (BOOL)shouldUseUserPositionInApotheken;
+
 - (BOOL)shouldDisplayRegionPicker;
 - (BOOL)showCoupons;
 - (NSString*)activeCoupon;

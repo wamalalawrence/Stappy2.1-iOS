@@ -878,6 +878,8 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
                            else {
                                 model.availability = 2;
                             }
+                            model.freePlaces = av.shortFree;
+                            model.capacity = av.shortMax;
                             
                         }
                         
