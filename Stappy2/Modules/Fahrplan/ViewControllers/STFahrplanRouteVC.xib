@@ -104,8 +104,8 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_arrow_start_to_finish" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-5X-vPF">
-                            <rect key="frame" x="76" y="27" width="20" height="45"/>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_oepnv_arrow_start_to_finish" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-5X-vPF">
+                            <rect key="frame" x="76" y="24" width="20" height="53"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="kAp-ay-WFh"/>
                             </constraints>
@@ -120,7 +120,7 @@
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49105603448275864" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="z3N-uQ-nRq" secondAttribute="trailing" constant="8" id="59Q-yv-6zz"/>
-                        <constraint firstItem="oZN-5X-vPF" firstAttribute="top" secondItem="2iS-bV-hEN" secondAttribute="top" constant="27" id="8tv-ry-gx5"/>
+                        <constraint firstItem="oZN-5X-vPF" firstAttribute="top" secondItem="2iS-bV-hEN" secondAttribute="top" constant="24" id="8tv-ry-gx5"/>
                         <constraint firstItem="z3N-uQ-nRq" firstAttribute="leading" secondItem="2iS-bV-hEN" secondAttribute="leading" constant="111" id="AeA-63-Kkw"/>
                         <constraint firstItem="oZN-5X-vPF" firstAttribute="leading" secondItem="2iS-bV-hEN" secondAttribute="leading" constant="76" id="C9M-Nk-Nev"/>
                         <constraint firstAttribute="bottom" secondItem="mcy-nK-GGl" secondAttribute="bottom" constant="8" id="DqN-JH-o7U"/>
@@ -133,7 +133,7 @@
                         <constraint firstItem="z3N-uQ-nRq" firstAttribute="height" secondItem="2iS-bV-hEN" secondAttribute="height" multiplier="0.5" constant="-8" id="p17-U9-CmD"/>
                         <constraint firstItem="SHw-wJ-DhI" firstAttribute="leading" secondItem="2iS-bV-hEN" secondAttribute="leading" id="pTX-CR-A7w"/>
                         <constraint firstItem="SHw-wJ-DhI" firstAttribute="top" secondItem="2iS-bV-hEN" secondAttribute="top" id="prR-ag-mv3"/>
-                        <constraint firstAttribute="bottom" secondItem="oZN-5X-vPF" secondAttribute="bottom" constant="28" id="vGb-MK-RRH"/>
+                        <constraint firstAttribute="bottom" secondItem="oZN-5X-vPF" secondAttribute="bottom" constant="23" id="vGb-MK-RRH"/>
                         <constraint firstAttribute="height" constant="100" id="y4f-RE-2km"/>
                     </constraints>
                     <variation key="default">

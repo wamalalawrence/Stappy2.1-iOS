@@ -343,8 +343,8 @@
         "stadtinfos": {
             "cell": {
                 "font": {
-                    "name": "PTSans-Regular",
-                    "size": "18"
+                    "name": "Bitter-Italic",
+                    "size": "16"
                 },
                 "headerFont": {
                     "name": "Bitter-Italic",
@@ -546,7 +546,7 @@
                 },
                 "cell_secondary": {
                     "font": {
-                        "name": "Bitter-Italic",
+                        "name": "PTSans-Regular",
                         "size": "14"
                     },
                     "text_color": "#ffffff",
@@ -570,7 +570,7 @@
                 },
                 "cell_secondary": {
                     "font": {
-                        "name": "Bitter-Italic",
+                        "name": "PTSans-Regular",
                         "size": "15"
                     },
                     "text_color": "#ffffff"
@@ -615,7 +615,7 @@
                 "date": {
                     "primary": {
                         "font": {
-                            "name": "Bitter-Italic",
+                            "name": "PTSans-Regular",
                             "size": "12"
                         },
                         "text_color": "#ffffff"
@@ -624,7 +624,7 @@
                 "departurearrival": {
                     "primary": {
                         "font": {
-                            "name": "Bitter-Italic",
+                            "name": "PTSans-Regular",
                             "size": "12"
                         },
                         "text_color": "#ffffff"
@@ -693,8 +693,8 @@
         "apotheken_notdienst": {
             "segment_control": {
                 "font": {
-                    "name": "Bitter-Italic",
-                    "size": "18"
+                    "name": "PTSans-Regular",
+                    "size": "16"
                 },
             }
         }

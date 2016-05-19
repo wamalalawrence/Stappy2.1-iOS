@@ -123,6 +123,7 @@
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         
     }
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
     // Configure tracker from GoogleService-Info.plist.
     NSError *configureError;

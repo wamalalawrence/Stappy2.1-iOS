@@ -81,17 +81,17 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evE-lT-sdU">
-                            <rect key="frame" x="8" y="441" width="359" height="32"/>
+                            <rect key="frame" x="8" y="441" width="359" height="44"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-a3-CzH">
-                                    <rect key="frame" x="6" y="4" width="25" height="25"/>
+                                    <rect key="frame" x="6" y="10" width="25" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="2cs-7i-qy3"/>
                                         <constraint firstAttribute="height" constant="25" id="aI8-rA-HcJ"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="20" text="Brook, 20457 Hamburg" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-3t-Q64">
-                                    <rect key="frame" x="37" y="6" width="314" height="20"/>
+                                    <rect key="frame" x="37" y="12" width="314" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="zmo-x1-gg3"/>
                                     </constraints>
@@ -102,8 +102,9 @@
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="6k4-3t-Q64" firstAttribute="top" secondItem="evE-lT-sdU" secondAttribute="top" constant="6" id="7Dc-NN-hVK"/>
+                                <constraint firstItem="6k4-3t-Q64" firstAttribute="top" secondItem="evE-lT-sdU" secondAttribute="top" constant="12" id="7Dc-NN-hVK"/>
                                 <constraint firstItem="cnm-a3-CzH" firstAttribute="leading" secondItem="evE-lT-sdU" secondAttribute="leading" constant="6" id="AWD-MY-hNK"/>
+                                <constraint firstAttribute="bottom" secondItem="6k4-3t-Q64" secondAttribute="bottom" constant="12" id="EH6-2B-znQ"/>
                                 <constraint firstItem="6k4-3t-Q64" firstAttribute="centerY" secondItem="cnm-a3-CzH" secondAttribute="centerY" id="QyK-0O-1oC"/>
                                 <constraint firstItem="cnm-a3-CzH" firstAttribute="centerY" secondItem="evE-lT-sdU" secondAttribute="centerY" id="cUF-iL-xsM"/>
                                 <constraint firstItem="6k4-3t-Q64" firstAttribute="leading" secondItem="cnm-a3-CzH" secondAttribute="trailing" constant="6" id="hLP-1r-CHG"/>
@@ -128,7 +129,7 @@
                             <size key="shadowOffset" width="1" height="1"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVB-aJ-sly">
-                            <rect key="frame" x="8" y="485" width="359" height="30"/>
+                            <rect key="frame" x="8" y="497" width="359" height="42"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ber-f4-qjf">
                                     <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
@@ -167,12 +168,12 @@
                                 <constraint firstAttribute="trailing" secondItem="h6Q-Yg-Rff" secondAttribute="trailing" id="POE-h6-nXl"/>
                                 <constraint firstItem="h6Q-Yg-Rff" firstAttribute="top" secondItem="Ber-f4-qjf" secondAttribute="bottom" id="XIP-l6-Ydt"/>
                                 <constraint firstItem="Ber-f4-qjf" firstAttribute="top" secondItem="eVB-aJ-sly" secondAttribute="top" id="cdF-fK-F8o"/>
-                                <constraint firstAttribute="bottom" secondItem="h6Q-Yg-Rff" secondAttribute="bottom" id="oCM-d2-2r7"/>
+                                <constraint firstAttribute="bottom" secondItem="h6Q-Yg-Rff" secondAttribute="bottom" constant="12" id="oCM-d2-2r7"/>
                                 <constraint firstAttribute="trailing" secondItem="Ber-f4-qjf" secondAttribute="trailing" id="y5i-dw-FTM"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pc-aq-G5C" customClass="OpeningHoursMultipleViews" customModule="BadNauheim" customModuleProvider="target">
-                            <rect key="frame" x="8" y="525" width="359" height="0.0"/>
+                            <rect key="frame" x="8" y="549" width="359" height="0.0"/>
                             <subviews>
                                 <webView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yqm-Mw-vgH">
                                     <rect key="frame" x="0.0" y="0.0" width="359" height="0.0"/>
@@ -194,7 +195,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="q9D-gm-hiU" userLabel="Images Collection View">
-                            <rect key="frame" x="8" y="533" width="359" height="70"/>
+                            <rect key="frame" x="8" y="557" width="359" height="70"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="CyH-v6-wee"/>
@@ -211,14 +212,14 @@
                             </connections>
                         </collectionView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCO-2S-Gi3" userLabel="goToPDFButton">
-                            <rect key="frame" x="147" y="857" width="80" height="80"/>
+                            <rect key="frame" x="147" y="881" width="80" height="80"/>
                             <state key="normal" image="content_pdf"/>
                             <connections>
                                 <action selector="showPdf:" destination="-1" eventType="touchUpInside" id="bV8-W6-ju3"/>
                             </connections>
                         </button>
                         <view clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-uc-uZL" userLabel="CustomerNumberView">
-                            <rect key="frame" x="36" y="611" width="303" height="302"/>
+                            <rect key="frame" x="36" y="635" width="303" height="302"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZI-11-1mz" userLabel="QRTitleLabel">
                                     <rect key="frame" x="15" y="8" width="274" height="28"/>

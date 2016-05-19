@@ -37,13 +37,14 @@
     if (cellPrimaryFont) {
         [self.startTimeLabel setFont:cellPrimaryFont];
         [self.startStationNameLabel setFont:cellPrimaryFont];
-        [self.startStationPlatform setFont:cellPrimaryFont];
         
         [self.targetTimeLabel setFont:cellPrimaryFont];
         [self.targetStationNameLabel setFont:cellPrimaryFont];
-        [self.targetStationPlatformLabel setFont:cellPrimaryFont];
+  
     }
     if (cellSecondaryFont) {
+        [self.targetStationPlatformLabel setFont:cellSecondaryFont];
+        [self.startStationPlatform setFont:cellSecondaryFont];
         [self.directionNameLabel setFont:cellSecondaryFont];
     }
 }

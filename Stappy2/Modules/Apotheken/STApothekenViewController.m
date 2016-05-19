@@ -73,6 +73,9 @@
     // UI customizations
     [self.segmentedControl setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] } forState:UIControlStateSelected];
 
+    
+    
+    
     UIFont *segmentControlFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"apotheken_notdienst.segment_control.font"];
     if (segmentControlFont) [self.segmentedControl setTitleTextAttributes:@{ NSFontAttributeName : segmentControlFont } forState:UIControlStateNormal];
     

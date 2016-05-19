@@ -102,7 +102,7 @@
             if ([startStationName isEqualToString:@""]) {
                 startStationName = @"Abfahrt";
             }*/
-            NSString *startStationName = @"Abfahrt";
+            NSString *startStationName = @"Start";
             
             NSString *targetTime = subtripLast.endPointTimeFormatted;
             

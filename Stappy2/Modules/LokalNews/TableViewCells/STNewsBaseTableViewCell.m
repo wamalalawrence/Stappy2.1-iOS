@@ -84,7 +84,7 @@ static NSString* kSectionFooterViewID = @"sectionCollectionFooterItemId";
         self.eventCategoryWidthConstraint.constant = 0;
     }
     else {
-        self.eventCategoryImage.image = [UIImage imageNamed: [Utils replaceSpecialCharactersFrom: [newsModel.secondaryKey lowercaseString]]];
+        self.eventCategoryImage.image = [UIImage imageNamed: [[Utils replaceSpecialCharactersFrom: newsModel.secondaryKey] lowercaseString]];
     }
     
     [self.newsCellCollectionView reloadData];
