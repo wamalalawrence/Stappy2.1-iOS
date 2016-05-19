@@ -61,8 +61,6 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *locationViewDistanceToBodyViewConstraint;
 @property (nonatomic, strong) NSString* detailUrl;
 
-@property (strong, nonatomic) IBOutlet UIView *contentView;
-
 
 @property (nonatomic, strong) NSMutableArray* imagesDataSource;
 @end
@@ -353,6 +351,7 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
     UIImage *placeholderImage = [UIImage imageNamed:placeholderImageName];
     placeholderImage = placeholderImage != nil ? placeholderImage : [UIImage imageNamed:@"image_content_article_default"];
     self.detailRightBgImageView.image = placeholderImage;
+    
     if (self.dataModel.background && self.dataModel.background.length > 0) {
         NSURL* imageUrl = [[STRequestsHandler sharedInstance] buildImageUrl:self.dataModel.background];
         [self.detailRightBgImageView sd_setImageWithURL:imageUrl
@@ -362,10 +361,8 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
                                                   }
                                               }];
         self.detailBgImageView.needsBlur = YES;
-    } else if ([UIImage imageNamed:@"placeholder"]){
-        self.detailRightBgImageView.image = [UIImage imageNamed:@"placeholder"];
-        self.detailBgImageView.needsBlur = YES;
-    } else if ([self modelImageString].length > 0) {
+    }
+    else if ([self modelImageString].length > 0) {
         [self.detailRightBgImageView sd_setImageWithURL:[self buildModelImageString] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageUrl) {
             if (!image) {
                 self.detailRightBgImageView.image = placeholderImage;
@@ -378,10 +375,14 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
             }
         }];
     }
-    else {
+
+    else if ([UIImage imageNamed:@"placeholder"]){
+        self.detailRightBgImageView.image = [UIImage imageNamed:@"placeholder"];
         self.detailBgImageView.needsBlur = YES;
+    }     else {
     }
-    
+    self.detailBgImageView.needsBlur = YES;
+
     self.originalImageFrame= self.detailRightBgImageView.frame;
     
 }
@@ -914,7 +915,6 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
     [super viewDidLayoutSubviews];
     self.detailsScrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.frame), CGRectGetMaxY(self.customerNumberView.frame));
     
-    NSLog(@"CONTENT SIZE: %f",self.contentView.frame.size.height);
     
 }
 

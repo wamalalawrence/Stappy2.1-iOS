@@ -563,7 +563,7 @@
                                                                     error:&mtlError];
                     STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController"
                                                                                                                              bundle:nil
-                                                                                                                       andDataModel:angeboteModel];
+                                                                                                                       andDataModel:detailData];
                     detailView.ignoreCalenderButton = YES;
                     [self.navigationController pushViewController:detailView animated:YES];
                 });

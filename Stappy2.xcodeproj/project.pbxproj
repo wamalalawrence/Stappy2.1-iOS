@@ -2706,7 +2706,6 @@
 		EFCB4D611CE9BBF1009A59F9 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F431CE8A9F7002CF5D2 /* StartViewController.xib */; };
 		EFCB4D621CE9BBF1009A59F9 /* OpeningHoursMultipleViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DF81CE8A779002CF5D2 /* OpeningHoursMultipleViews.xib */; };
 		EFCB4D641CE9BBF1009A59F9 /* icon_content_overlay_close.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F6A1CE8A9F7002CF5D2 /* icon_content_overlay_close.png */; };
-		EFCB4D651CE9BBF1009A59F9 /* GeneralAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF746D201CE8A71C002CF5D2 /* GeneralAssets.xcassets */; };
 		EFCB4D661CE9BBF1009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D1F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf */; };
 		EFCB4D671CE9BBF1009A59F9 /* icon_tick@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F711CE8A9F7002CF5D2 /* icon_tick@2x.png */; };
 		EFCB4D681CE9BBF1009A59F9 /* STParkingDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746F4F1CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib */; };
@@ -8451,7 +8450,6 @@
 				EFEF6F8E1CEA080A00979D4B /* STFahrplanMapCellTVC.xib in Resources */,
 				EFCB4D621CE9BBF1009A59F9 /* OpeningHoursMultipleViews.xib in Resources */,
 				EFCB4D641CE9BBF1009A59F9 /* icon_content_overlay_close.png in Resources */,
-				EFCB4D651CE9BBF1009A59F9 /* GeneralAssets.xcassets in Resources */,
 				EFEF6D3E1CEA06EC00979D4B /* STAdressSearchResultCellTVC.xib in Resources */,
 				EFCB4D661CE9BBF1009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFCB4D671CE9BBF1009A59F9 /* icon_tick@2x.png in Resources */,
