@@ -7,12 +7,20 @@
 //
 
 #import "STStartBottomCustomCollectionViewCell.h"
-
+#import "STAppSettingsManager.h"
 @implementation STStartBottomCustomCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+  
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+
+    UIFont *categoryLabelFont = [settings customFontForKey:@"startscreen.collectionview.cell.font"];
+    
+        if (categoryLabelFont) {
+        self.actionName.font = categoryLabelFont;
+    }
+
 }
 
 @end

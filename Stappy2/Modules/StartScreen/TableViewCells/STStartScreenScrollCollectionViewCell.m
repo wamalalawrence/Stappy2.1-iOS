@@ -48,12 +48,18 @@ static NSString* kCollectionViewCellId = @"customScroll";
     return cell;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSInteger numberOfItemsPerPage = self.sourceArray.count >= 5 ? 5 : self.sourceArray.count;
-    CGSize newSize = CGSizeMake((collectionView.frame.size.width - 2*(CGRectGetMinX(self.frame)))/ numberOfItemsPerPage, 50.f);
-    return newSize;
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    // Add inset to the collection view if there are not enough cells to fill the width.
+    CGFloat cellSpacing = ((UICollectionViewFlowLayout *) collectionViewLayout).minimumLineSpacing;
+    CGFloat cellWidth = ((UICollectionViewFlowLayout *) collectionViewLayout).itemSize.width;
+    NSInteger cellCount = [collectionView numberOfItemsInSection:section];
+    CGFloat inset = (collectionView.bounds.size.width - (cellCount * (cellWidth + cellSpacing))) * 0.5;
+    inset = MAX(inset, 0.0);
+    return UIEdgeInsetsMake(0.0, inset, 0.0, 0.0);
 }
+
+
 
 #pragma mark - collection view delegate
 

@@ -67,7 +67,7 @@
 -(NSString *)reportingEmail {
     if (_reportingEmail == nil) {
         //get base _zahlerstandEmail from configuration file
-        _zahlerstandEmail = [self.configurationDictionary objectForKey:@"backend"][@"reportingEmail"];
+        _reportingEmail = [self.configurationDictionary objectForKey:@"backend"][@"reportingEmail"];
     }
     return _reportingEmail;
 }
@@ -386,6 +386,17 @@
 - (BOOL)showCoupons {
     NSString * showCoupons = [self.configurationDictionary objectForKey:kShowCoupons];
     return [showCoupons isEqualToString:@"YES"];
+}
+
+- (BOOL)showCityName {
+    NSString * showCityName = [self.configurationDictionary objectForKey:@"shouldShowCityName"];
+    
+    BOOL returnBool = YES;
+    if (showCityName && [showCityName isEqualToString:@"NO"]) {
+        returnBool= NO;
+    }
+    
+    return returnBool;
 }
 
 - (NSString*)couponsSettingsTitle {

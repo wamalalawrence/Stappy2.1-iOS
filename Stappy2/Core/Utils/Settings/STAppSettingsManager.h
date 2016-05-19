@@ -58,6 +58,7 @@
 
 - (BOOL)shouldDisplayRegionPicker;
 - (BOOL)showCoupons;
+- (BOOL)showCityName;
 - (NSString*)activeCoupon;
 
 - (NSString*)parkingKeyForId:(NSString*)Id;

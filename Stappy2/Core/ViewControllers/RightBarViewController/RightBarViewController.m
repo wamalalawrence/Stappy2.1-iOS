@@ -177,25 +177,40 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
         STRightMenuItemsModel *rowModel = ((STRightMenuItemsModel*)dataArray[gestureRecognizer.view.tag]);
         if (rowModel.children.count == 0) {
             
-            NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
-            STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:rowModel.title];
-            if (viewControllerItem) {
-                UIViewController * newViewController = [Utils loadViewControllerWithTitle:rowModel.title];
-                [self loadViewController:newViewController withViewControllerItem:viewControllerItem];
+             if ([rowModel.optionType isEqualToString:@"sinfo_feed"]) {
+                //show overview
+                NSString* url =  [[STRequestsHandler sharedInstance] buildUrl:rowModel.detailsUrl withParameters:nil forPage:0];
+                NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+                NSString* key = [viewControllerItems allKeys][1];
+                STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:key];
+                STStadtInfoOverviewViewController* overview = [[STStadtInfoOverviewViewController alloc] initWithUrl:url title:rowModel.title];
+                overview.ignoreFavoritesButton = YES;
+                [self loadViewController:overview withViewControllerItem:viewControllerItem];
             }
-            else {
-            if ([rowModel.optionType isEqualToString:@"website"]) {
-                [self showWebViewFor:rowModel.detailsUrl];
-            } else {
-                [self requestDetailedDataForItem:rowModel.detailsUrl];
-            }
-            }
-        }
+             else{
+                 
+                 NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+                 STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:rowModel.title];
+                 if (viewControllerItem) {
+                     UIViewController * newViewController = [Utils loadViewControllerWithTitle:rowModel.title];
+                     [self loadViewController:newViewController withViewControllerItem:viewControllerItem];
+                 }
+                 else {
+                     if ([rowModel.optionType isEqualToString:@"website"]) {
+                         [self showWebViewFor:rowModel.detailsUrl];
+                     } else {
+                         [self requestDetailedDataForItem:rowModel.detailsUrl];
+                     }
+                 }
+
+             }
+
+               }
         else if ([rowModel.optionType isEqualToString:@"sinfo_feed"]) {
             //show overview
             NSString* url =  [[STRequestsHandler sharedInstance] buildUrl:rowModel.detailsUrl withParameters:nil forPage:0];
             NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
-            NSString* key = [viewControllerItems allKeys][0];
+            NSString* key = [viewControllerItems allKeys][1];
             STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:key];
             STStadtInfoOverviewViewController* overview = [[STStadtInfoOverviewViewController alloc] initWithUrl:url title:rowModel.title];
             overview.ignoreFavoritesButton = YES;
@@ -227,9 +242,25 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
     STRightMenuItemsModel *rowModel = ((STRightMenuItemsModel*)dataArray[indexPath.section]).children[indexPath.row];
     if ([rowModel.type isEqualToString:@"website"]) {
         [self showWebViewFor:rowModel.detailsUrl];
-    } else {
+    }
+    
+    else if ([rowModel.optionType isEqualToString:@"sinfo_feed"]) {
+        //show overview
+        NSString* url =  [[STRequestsHandler sharedInstance] buildUrl:rowModel.detailsUrl withParameters:nil forPage:0];
+        NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+        NSString* key = [viewControllerItems allKeys][1];
+        STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:key];
+        STStadtInfoOverviewViewController* overview = [[STStadtInfoOverviewViewController alloc] initWithUrl:url title:rowModel.title];
+        overview.ignoreFavoritesButton = YES;
+        [self loadViewController:overview withViewControllerItem:viewControllerItem];
+    }
+
+    else {
         [self requestDetailedDataForItem:rowModel.detailsUrl];
     }
+    
+ 
+    
 }
 
 -(void)showWebViewFor:(NSString*)detailUrl {

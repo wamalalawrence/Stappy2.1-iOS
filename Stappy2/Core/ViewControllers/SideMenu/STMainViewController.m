@@ -311,9 +311,18 @@ static const int kHeightOfTheCollectionCell = 84.f;
     self.navigationController.navigationBar.translucent = translucent;
     self.navigationController.navigationBar.barStyle = barStyle;
 
+    viewController.title  = [viewController.title uppercaseString];
+    
     [self updateMainMenuPosition];
     [self.navigationController popToRootViewControllerAnimated:false];
     [self.navigationController pushViewController:viewController animated:false];
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+    UIFont *navigationbarTitleFont = [settings customFontForKey:@"navigationbar.title.font"];
+    
+    //For iOS8+
+    [self.navigationController.navigationBar setTitleTextAttributes:@{ NSFontAttributeName: navigationbarTitleFont,NSForegroundColorAttributeName: [UIColor whiteColor]}];
+
+    
     self.detailsContentView.hidden = false;
 }
 

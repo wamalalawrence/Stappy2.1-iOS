@@ -8,7 +8,6 @@
 
 #import "STReporterLocationViewController.h"
 #import <MapKit/MapKit.h>
-#import "SWRevealViewController.h"
 #import "STAppSettingsManager.h"
 #import "STRoundedButton.h"
 #import "UIImage+tintImage.h"
@@ -22,7 +21,6 @@
 
 @interface STReporterLocationViewController ()<CLLocationManagerDelegate, MKMapViewDelegate,STReportAddressSearchViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *leftBarButton;
 @property (weak, nonatomic) IBOutlet UIImageView *pinImageView;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
@@ -40,12 +38,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if (revealViewController)
-    {
-        [self.leftBarButton setTarget: self.revealViewController];
-        [self.leftBarButton setAction: @selector(revealToggle:)];
-    }
     
     self.shouldCenterOnUserLocation = YES;
     
@@ -69,10 +61,7 @@
 
 -(void)customizeAppearance{
     
-    UIImage *image = [UIImage imageNamed:@"Reporter"];
-    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    [self.pinImageView setImage:image];
-    self.pinImageView.tintColor = [UIColor partnerColor];
+
     
     UIFont* inputTextFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"reporter.inputText.font"];
     UIFont* buttonTextFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"reporter.buttonText.font"];

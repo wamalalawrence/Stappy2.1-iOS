@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5DC50FA77804E676825C4AF0 /* Pods_Stappy2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9473523418EBD01AD420EAFE /* Pods_Stappy2.framework */; };
+		C3177E881CEE11A600CF7F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF746E2B1CE8A79F002CF5D2 /* LaunchScreen.storyboard */; };
 		C366280F1CEC767600F44E93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C366280E1CEC767600F44E93 /* GoogleService-Info.plist */; };
 		C3CCC79B1CEB58BB003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
 		C3CCC79C1CEB590A003BB297 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC79A1CEB58BB003BB297 /* Reachability.m */; };
@@ -2730,7 +2731,6 @@
 		EFCB4D861CE9BBF1009A59F9 /* icon_tick_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F731CE8A9F7002CF5D2 /* icon_tick_active.png */; };
 		EFCB4D871CE9BBF1009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFCB3F541CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.xib */; };
 		EFCB4D881CE9BBF1009A59F9 /* icon_content_oepnv_arrow_search.png in Resources */ = {isa = PBXBuildFile; fileRef = EF746F641CE8A9F7002CF5D2 /* icon_content_oepnv_arrow_search.png */; };
-		EFCB4D891CE9BBF1009A59F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF746E2B1CE8A79F002CF5D2 /* LaunchScreen.storyboard */; };
 		EFCB4D8A1CE9BBF1009A59F9 /* MerriweatherSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D111CE8A71C002CF5D2 /* MerriweatherSans-Regular.ttf */; };
 		EFCB4D8B1CE9BBF1009A59F9 /* OfficinaSansITCPro-BlackIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF746D141CE8A71C002CF5D2 /* OfficinaSansITCPro-BlackIt.otf */; };
 		EFCB4D8C1CE9BBF1009A59F9 /* OpeningHoursHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF746DF61CE8A779002CF5D2 /* OpeningHoursHeaderView.xib */; };
@@ -8485,7 +8485,6 @@
 				EFCB4D881CE9BBF1009A59F9 /* icon_content_oepnv_arrow_search.png in Resources */,
 				EFEF6DA11CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.xib in Resources */,
 				EFEF6E0D1CEA06EC00979D4B /* STFahrplanSearchVC.xib in Resources */,
-				EFCB4D891CE9BBF1009A59F9 /* LaunchScreen.storyboard in Resources */,
 				EFCB4D8A1CE9BBF1009A59F9 /* MerriweatherSans-Regular.ttf in Resources */,
 				EFEF6F221CEA080A00979D4B /* RouteToCalendarButtonCellTVC.xib in Resources */,
 				EFCB4D8B1CE9BBF1009A59F9 /* OfficinaSansITCPro-BlackIt.otf in Resources */,
@@ -8571,6 +8570,7 @@
 				EFCB4DD61CE9BBF1009A59F9 /* icon_content_oepnv_arrow_search@3x.png in Resources */,
 				EFCB4DD71CE9BBF1009A59F9 /* image_content_bg_national_blur@2x.jpg in Resources */,
 				EFCB4DD81CE9BBF1009A59F9 /* map.png in Resources */,
+				C3177E881CEE11A600CF7F67 /* LaunchScreen.storyboard in Resources */,
 				EFCB4DDA1CE9BBF1009A59F9 /* STLokalNewsHeaderView.xib in Resources */,
 				EFEF70C01CEA087D00979D4B /* GarbageTypesTableViewCell.xib in Resources */,
 				EFCB4DDC1CE9BBF1009A59F9 /* icon_menu_left_suche@3x.png in Resources */,
@@ -11771,7 +11771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Trier";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Trier/Supporting Files/Trier-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -11825,12 +11825,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Suewag";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Suewag/Supporting Files/Suewag-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.endios.Stappy2;
+				PRODUCT_BUNDLE_IDENTIFIER = de.endios.stappy.suewag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stappy2/Core/BridgingHeader/Stappy2-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Stappy2-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -11843,13 +11845,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-Suewag";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Stappy2/Customer/Suewag/Supporting Files/Suewag-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.endios.Stappy2;
+				PRODUCT_BUNDLE_IDENTIFIER = de.endios.stappy.suewag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stappy2/Core/BridgingHeader/Stappy2-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Stappy2-Swift.h";
 			};

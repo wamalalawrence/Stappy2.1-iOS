@@ -37,6 +37,7 @@
 #define kRegPickerSearchForegroundColor [UIColor colorWithRed:66.0/255.0 green:80.0/255.0 blue:75.0/255.0 alpha:1.0]
 #define kRegPickerSearchBackgroundColor [UIColor colorWithRed:44.0/255.0 green:60.0/255.0 blue:55.0/255.0 alpha:1.0]
 #define kRegPickerSelectColor [UIColor colorWithRed:254.0/255.0 green:197.0/255.0 blue:3.0/255.0 alpha:1.0]
+#define kRegPickerActionButtonColor [UIColor colorWithRed:136.0/255.0 green:186.0/255.0 blue:20.0/255.0 alpha:1.0]
 #define kRegPickerTextColor [UIColor whiteColor]
 //
 #define kRegPickerSearchClearButtonImage @"icon_content_clear_text.png"
@@ -489,7 +490,7 @@
     [self addBorderToView:self.selectionScrollView];
     [self addBorderToView:self.actionButton];
     [self adjustFont];
-    self.actionButton.backgroundColor = kRegPickerSelectColor;
+    self.actionButton.backgroundColor = kRegPickerActionButtonColor;
     self.messageView.hidden = YES;
     
     if (self.currentState == PickerStateSelect) {

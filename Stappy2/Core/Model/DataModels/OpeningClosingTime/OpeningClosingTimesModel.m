@@ -28,8 +28,14 @@
     {
         for (OpeningClosingTimeModel *tm in d.openingHours)
         {
-            if (![tm.openingTime isEqual:[NSNull null]] || ![tm.closingTime isEqual:[NSNull null]])
+            if (![tm.openingTime isEqual:[NSNull null]] || ![tm.closingTime isEqual:[NSNull null]]){
+              
+                 if (tm.openingTime != nil || tm.closingTime !=nil){
                 return NO;
+                 }
+
+            }
+                
         }
     }
     

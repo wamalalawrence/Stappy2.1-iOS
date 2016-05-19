@@ -31,6 +31,17 @@
                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <size key="shadowOffset" width="1" height="1"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ya-Md-02C">
+                    <rect key="frame" x="246" y="0.0" width="64" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="NGC-Da-1U8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pB9-EJ-qLA">
                     <rect key="frame" x="0.0" y="50" width="320" height="518"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -45,17 +56,6 @@
                         <outlet property="delegate" destination="-1" id="L39-hR-mim"/>
                     </connections>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ya-Md-02C">
-                    <rect key="frame" x="246" y="0.0" width="64" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="NGC-Da-1U8"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <size key="shadowOffset" width="1" height="1"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>

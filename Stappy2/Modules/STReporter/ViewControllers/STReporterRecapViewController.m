@@ -176,13 +176,36 @@
         _mailComposer.mailComposeDelegate = self;
     }
     NSMutableString*mutableString = [[NSMutableString alloc] init];
-    [mutableString appendString:[NSString stringWithFormat:@"<p>Bemerkung: %@</p><br>",self.currentReport.note]];
-    [mutableString appendString:[NSString stringWithFormat:@"<p>Kategorie: %@</p>",self.currentReport.category.name]];
-    [mutableString appendString:[NSString stringWithFormat:@"<p>Art: %@</p>",self.currentReport.type.name]];
-    [mutableString appendString:[NSString stringWithFormat:@"<p>Adresse: %@</p>",self.currentReport.fullAddress]];
-    [mutableString appendString:[NSString stringWithFormat:@"<p>Lage (GPS): %f | %f</p>",self.currentReport.latitude, self.currentReport.longitude]];
-    [mutableString appendString:[NSString stringWithFormat:@"<p>Vorname: %@</p>",self.currentReport.firstName]];
-    [mutableString appendString:[NSString stringWithFormat:@"<p>Nachname: %@</p>",self.currentReport.lastName]];
+    
+    if(self.currentReport.note){
+        [mutableString appendString:[NSString stringWithFormat:@"<p>Bemerkung: %@</p><br>",self.currentReport.note]];
+
+    }
+    if(self.currentReport.category.name){
+        [mutableString appendString:[NSString stringWithFormat:@"<p>Kategorie: %@</p>",self.currentReport.category.name]];
+     
+    }
+    if(self.currentReport.type.name){
+        [mutableString appendString:[NSString stringWithFormat:@"<p>Art: %@</p>",self.currentReport.type.name]];
+  
+    }
+    if(self.currentReport.fullAddress){
+        [mutableString appendString:[NSString stringWithFormat:@"<p>Adresse: %@</p>",self.currentReport.fullAddress]];
+
+    }
+    if(self.currentReport.latitude !=0.0){
+        [mutableString appendString:[NSString stringWithFormat:@"<p>Lage (GPS): %f | %f</p>",self.currentReport.latitude, self.currentReport.longitude]];
+  
+    }
+    if(self.currentReport.firstName){
+        [mutableString appendString:[NSString stringWithFormat:@"<p>Vorname: %@</p>",self.currentReport.firstName]];
+
+    }
+    if(self.currentReport.lastName){
+        [mutableString appendString:[NSString stringWithFormat:@"<p>Nachname: %@</p>",self.currentReport.lastName]];
+
+    }
+    
     
     [_mailComposer setSubject:@"Meldung"];
     [_mailComposer setToRecipients:@[[STAppSettingsManager sharedSettingsManager].reportingEmail]];

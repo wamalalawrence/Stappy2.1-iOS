@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blurred" translatesAutoresizingMaskIntoConstraints="NO" id="PfU-BI-Ubg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blurred" translatesAutoresizingMaskIntoConstraints="NO" id="PfU-BI-Ubg" customClass="RandomImageView">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4W-QF-88E">

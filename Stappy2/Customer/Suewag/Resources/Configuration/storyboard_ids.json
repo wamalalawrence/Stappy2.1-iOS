@@ -8,9 +8,9 @@
                 "barTintColor": "#ffffff",
                 "barTintColor_alpha": 0.0,
                 "tintColor": "#ffffff",
-                "tintColor_alpha": 1.0,
+                "tintColor_alpha": 0.0,
                 "translucent": true,
-                "barStyle": 1
+                "barStyle": 0
             } 
         },
        {
@@ -41,7 +41,7 @@
        },
                
                {
-               "key": "Störmelder",
+               "key": "Störungsmeldung",
                "storyboard_id": "Reporter",
                "nibname":"",
                "navigationbar":{

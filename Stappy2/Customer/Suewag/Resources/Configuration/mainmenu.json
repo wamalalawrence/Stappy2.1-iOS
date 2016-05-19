@@ -3,6 +3,7 @@
     "shouldShowAddressAndNameFields":"NO",
     "shouldDisplayRegionPicker":"YES",
     "shouldShowCouponsFunctionality":"YES",
+     "shouldShowCityName":"NO",
     "settingsCouponsTitle":"SÜWAG GUTSCHEINSPEZIAL",
     "reportCategories":[
     {"id":1,
@@ -34,10 +35,11 @@
         "settingsUrlString" : "https://data4.stappy.de/data/de.endios.stappy.suewag/options-v2",
         "baseUrl": "https://data4.stappy.de",
         "basePartnerUrl": "https://data4.stappy.de",
-        "zahlerstandEmail":"info@stadtwerke-soest.de",
-        "reportingEmail":"app@meine.suewag.de",
+        "zahlerstandEmail":"app@meine.suewag.de",
+        "reportingEmail":"tma@syna.de",
         "rightMenuItemsUrl": "/sinfo?id=85245",
         "rightMenuItemsId":85245,
+        "rightMenuTitle":"Meine Kraft vor Ort",
         "leftMenuUrl": "side-menu.",
         "shouldUseUserPositionInApotheken": 1,
                 "fahrplan": {
@@ -248,12 +250,12 @@
             "settings_cell": {
                 "font": {
                     "name": "RWEHeadline-RegularCondensed",
-                    "size": "18"
+                    "size": "14"
                 }
             },
             "settings_top_cell": {
                 "font": {
-                    "name": "RWEHeadline-RegularCondensed",
+                    "name": "RWEHeadline-MediumCondensed",
                     "size": "18"
                 }
             }
@@ -266,9 +268,15 @@
                     "size": "18"
                 }
             },
-            "meineStadtwerke": {
+            "subcell": {
                 "font": {
                     "name": "RWEHeadline-RegularCondensed",
+                    "size": "16"
+                }
+            },
+            "meineStadtwerke": {
+                "font": {
+                    "name": "RWEHeadline-MediumCondensed",
                     "size": "32"
                 }
             }
@@ -277,8 +285,8 @@
         "startscreen": {
             "startLocation": {
                 "font": {
-                    "name": "RWEHeadline-RegularCondensed",
-                    "size": "22"
+                    "name": "RWEHeadline-MediumCondensed",
+                    "size": "32"
                 }
             },
             "collectionview": {
@@ -293,7 +301,7 @@
                 "cell":{
                     "font": {
                         "name": "RWEHeadline-RegularCondensed",
-                        "size": "16"
+                        "size": "18"
                     }
                 }
             }
@@ -302,7 +310,7 @@
         "detailscreen": {
             "title": {
                 "font": {
-                    "name": "RWEHeadline-RegularCondensed",
+                    "name": "RWEHeadline-MediumCondensed",
                     "size": "25"
                 }
             },
@@ -321,7 +329,7 @@
             "event_type": {
                 "font": {
                     "name": "RWEHeadline-RegularCondensed",
-                    "size": "17"
+                    "size": "15"
                 }
             },
             "info": {
@@ -341,7 +349,7 @@
         "stadtinfos": {
             "cell": {
                 "font": {
-                    "name": "RWEHeadline-RegularCondensed",
+                    "name": "RWEHeadline-MediumCondensed",
                     "size": "18"
                 },
                 "headerFont": {
@@ -377,7 +385,7 @@
             "inputText": {
                 "font": {
                     "name": "RWEHeadline-LightCondensed",
-                    "size": "15"
+                    "size": "16"
                 }},
             "buttonText": { "font": {
                 "name": "RWEHeadline-RegularCondensed",
@@ -400,7 +408,7 @@
                 },
                 "current_temperature": {
                     "font": {
-                        "name": "RWEHeadline-RegularCondensed",
+                        "name": "RWEHeadline-MediumCondensed",
                         "size": "35"
                     }
                 },
@@ -438,7 +446,7 @@
                 },
                 "degrees_label": {
                     "font": {
-                        "name": "RWEHeadline-RegularCondensed",
+                        "name": "RWEHeadline-MediumCondensed",
                         "size": "22"
                     }
                 },
@@ -481,7 +489,7 @@
                         "size": "12"
                     },
                     "color":{
-                        "value":"#e60000",
+                        "value":"#86bc25",
                         "alpha":1.0
                     }
                 },
@@ -499,7 +507,7 @@
                         "size": "12"
                     },
                     "color":{
-                        "value":"#FFCC00",
+                        "value":"#86bc25",
                         "alpha":1.0
                     }
                 },
@@ -744,13 +752,7 @@
       "type_api": "start",
       "url": "/start"
       },
-                  {
-                  "caption": "Störmelder",
-                  "icon_name": "Reporter",
-                  "type": "reporter",
-                  "type_api": "reporter",
-                  "url": "/reporter"
-                  },
+                
                   {
       "caption": "Veranstaltungen",
       "icon_name": "events",

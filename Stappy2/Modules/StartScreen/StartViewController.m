@@ -83,7 +83,15 @@ static NSString * const kFahrPlanViewControlerId = @"STFahrplanSearchVC";
         cityName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
     }
     
-    self.startLocationLabel.text = [NSString stringWithFormat:@"%@, %@",[cityName splitString:cityName],stringFromDate];
+    if (settings.showCityName) {
+        self.startLocationLabel.text = [NSString stringWithFormat:@"%@, %@",[cityName splitString:cityName],stringFromDate];
+
+    }
+    else{
+        self.startLocationLabel.text = [NSString stringWithFormat:@"%@",stringFromDate];
+
+    }
+    
     
     self.startCollectionView.allowsSelection = NO;
     self.startCollectionView.scrollEnabled = YES;

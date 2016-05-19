@@ -41,7 +41,7 @@ NSString *const kSessionImagesArray = @"sessionIamgesArray";
             if (imagesArray.count > 0) {
                 NSUInteger randomIndex = arc4random_uniform([imagesArray count]);
                 sessionImageName = [imagesArray objectAtIndex: randomIndex];
-
+                
                 [[NSUserDefaults standardUserDefaults] setObject:sessionImageName forKey:kSessionImage];
                 [[NSUserDefaults standardUserDefaults] synchronize];
             }
@@ -50,7 +50,7 @@ NSString *const kSessionImagesArray = @"sessionIamgesArray";
     if (self.needsBlur) {
         sessionImageName =[sessionImageName stringByAppendingString:@"_blur"];
     }
-    
+
     UIImage * sessionImage = [UIImage imageNamed:sessionImageName];
     
     if (!sessionImage) {

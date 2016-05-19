@@ -12,7 +12,6 @@
                 <outlet property="actionsOptions" destination="L9S-kF-M36" id="6BQ-oK-iuy"/>
                 <outlet property="customerNumberButton" destination="LKF-Yn-O99" id="bvY-lT-VG9"/>
                 <outlet property="customerNumberButtonHeightConstraint" destination="7w4-42-aHc" id="KxY-xO-rTL"/>
-                <outlet property="customerNumberButtonTopConstraint" destination="i3L-c3-YHd" id="nWM-35-Rd8"/>
                 <outlet property="customerNumberView" destination="CbC-uc-uZL" id="d8h-fz-Qvr"/>
                 <outlet property="customerViewHeightConstraint" destination="ri8-aY-AgW" id="K4c-8p-rOC"/>
                 <outlet property="descriptionLabel" destination="h6Q-Yg-Rff" id="10w-Du-ts2"/>
@@ -212,7 +211,7 @@
                             </connections>
                         </collectionView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCO-2S-Gi3" userLabel="goToPDFButton">
-                            <rect key="frame" x="147" y="881" width="80" height="80"/>
+                            <rect key="frame" x="147" y="837" width="80" height="80"/>
                             <state key="normal" image="content_pdf"/>
                             <connections>
                                 <action selector="showPdf:" destination="-1" eventType="touchUpInside" id="bV8-W6-ju3"/>
@@ -222,7 +221,7 @@
                             <rect key="frame" x="36" y="635" width="303" height="302"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZI-11-1mz" userLabel="QRTitleLabel">
-                                    <rect key="frame" x="15" y="8" width="274" height="28"/>
+                                    <rect key="frame" x="15" y="8" width="274" height="1"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -253,7 +252,7 @@
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="LKF-Yn-O99" firstAttribute="centerX" secondItem="oPa-OC-uQE" secondAttribute="centerX" constant="1" id="0HU-pf-0XH"/>
-                                <constraint firstItem="oPa-OC-uQE" firstAttribute="top" secondItem="lZI-11-1mz" secondAttribute="bottom" constant="17" id="1jh-Xx-aVq"/>
+                                <constraint firstItem="oPa-OC-uQE" firstAttribute="top" secondItem="lZI-11-1mz" secondAttribute="bottom" constant="44" id="1jh-Xx-aVq"/>
                                 <constraint firstItem="LKF-Yn-O99" firstAttribute="bottom" secondItem="CbC-uc-uZL" secondAttribute="bottomMargin" id="1vy-yR-YYr"/>
                                 <constraint firstItem="LKF-Yn-O99" firstAttribute="leading" secondItem="CbC-uc-uZL" secondAttribute="leading" constant="15" id="7Qe-mW-LZ4"/>
                                 <constraint firstItem="lZI-11-1mz" firstAttribute="leading" secondItem="CbC-uc-uZL" secondAttribute="leading" constant="15" id="EZa-B1-9Hg"/>
@@ -262,11 +261,11 @@
                                 <constraint firstItem="oPa-OC-uQE" firstAttribute="leading" secondItem="CbC-uc-uZL" secondAttribute="leading" constant="46" id="VIj-fz-WGf"/>
                                 <constraint firstItem="lZI-11-1mz" firstAttribute="top" secondItem="CbC-uc-uZL" secondAttribute="topMargin" id="Y64-rA-i8r"/>
                                 <constraint firstAttribute="trailing" secondItem="oPa-OC-uQE" secondAttribute="trailing" constant="47" id="b4n-xM-aM9"/>
-                                <constraint firstItem="LKF-Yn-O99" firstAttribute="top" secondItem="oPa-OC-uQE" secondAttribute="bottom" constant="8" symbolic="YES" id="i3L-c3-YHd"/>
                                 <constraint firstItem="lZI-11-1mz" firstAttribute="centerX" secondItem="oPa-OC-uQE" secondAttribute="centerX" constant="1" id="ni3-Eu-TNE"/>
                                 <constraint firstItem="oPa-OC-uQE" firstAttribute="centerX" secondItem="CbC-uc-uZL" secondAttribute="centerX" id="rc2-uZ-ow0"/>
                                 <constraint firstAttribute="height" constant="302" id="ri8-aY-AgW"/>
                                 <constraint firstAttribute="trailing" secondItem="LKF-Yn-O99" secondAttribute="trailing" constant="14" id="xwy-ne-m68"/>
+                                <constraint firstAttribute="bottom" secondItem="oPa-OC-uQE" secondAttribute="bottom" constant="46" id="zh1-Rl-JIp"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -295,7 +294,7 @@
                         <constraint firstItem="6pc-aq-G5C" firstAttribute="top" secondItem="eVB-aJ-sly" secondAttribute="bottom" constant="10" id="c02-QC-DkG"/>
                         <constraint firstItem="EHC-iJ-1dx" firstAttribute="leading" secondItem="wPs-lz-KwK" secondAttribute="leading" id="dxM-K2-eCf"/>
                         <constraint firstAttribute="trailing" secondItem="oCU-yh-7r4" secondAttribute="trailing" constant="8" id="eak-C0-X4m"/>
-                        <constraint firstItem="lCO-2S-Gi3" firstAttribute="top" secondItem="CbC-uc-uZL" secondAttribute="bottom" constant="-56" id="fep-Sf-Oja"/>
+                        <constraint firstItem="lCO-2S-Gi3" firstAttribute="top" secondItem="CbC-uc-uZL" secondAttribute="bottom" constant="-100" id="fep-Sf-Oja"/>
                         <constraint firstAttribute="trailing" secondItem="CbC-uc-uZL" secondAttribute="trailing" constant="36" id="gBv-UE-He5"/>
                         <constraint firstItem="lCO-2S-Gi3" firstAttribute="centerX" secondItem="q9D-gm-hiU" secondAttribute="centerX" id="j3h-NF-idu"/>
                         <constraint firstItem="eVB-aJ-sly" firstAttribute="top" secondItem="evE-lT-sdU" secondAttribute="bottom" constant="12" id="lgm-2H-ZLS"/>

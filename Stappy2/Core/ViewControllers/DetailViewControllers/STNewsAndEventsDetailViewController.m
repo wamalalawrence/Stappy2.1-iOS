@@ -270,9 +270,14 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
         if ([OpeningClosingTimesModel isEmpty:data]) {
             self.openingHoursMultipleViewsHeightConstraint.constant = 0;
         }
+        else{
+            self.openingHoursMultipleViewsHeightConstraint.constant = [OpeningHoursMultipleViews heightForData:data];
+            self.openingHoursMultipleViews.openingHoursData = data;
+        }
         
-        self.openingHoursMultipleViewsHeightConstraint.constant = [OpeningHoursMultipleViews heightForData:data];
-        self.openingHoursMultipleViews.openingHoursData = data;
+        
+        
+      
     } else {
         //TODO: remove the constraints of the openingHoursMultipleView
     }
