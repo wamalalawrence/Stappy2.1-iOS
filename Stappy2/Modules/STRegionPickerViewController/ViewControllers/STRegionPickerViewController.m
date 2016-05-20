@@ -177,61 +177,6 @@
             [self updateBadge];
         }
     }
-    
-//    CGFloat scale = self.selectionScrollView.zoomScale;
-//    self.allButtons = [[NSMutableArray alloc] init];
-//    
-//    for (NSMutableDictionary *regDict in self.allRegions) {
-//        
-//        CGSize size = [[regDict objectForKey:kRegPickerJSONIdentifierShortcut] sizeWithAttributes:@{NSFontAttributeName:kRegPickerAnnotationFont}];
-//        CGRect buttonRect = CGRectMake(([[regDict objectForKey:kRegPickerJSONIdentifierXPos] floatValue] * scale) - (size.width/1.5),
-//                                       ([[regDict objectForKey:kRegPickerJSONIdentifierYPos] floatValue] * scale) - (size.height/2),
-//                                       size.width,
-//                                       size.height);
-//        UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        aButton.frame = buttonRect;
-//        [aButton addTarget:self action:@selector(regionButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-//        [aButton setTitle:[regDict objectForKey:kRegPickerJSONIdentifierShortcut] forState:UIControlStateNormal];
-//        [aButton setTitleColor:kRegPickerTextColor forState:UIControlStateNormal];
-//        [aButton setTitleColor:kRegPickerSelectColor forState:UIControlStateSelected];
-//        aButton.titleLabel.font = kRegPickerAnnotationFont;
-//        aButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-//        aButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
-//        aButton.contentMode = UIViewContentModeCenter;
-//        aButton.tag = [self.allRegions indexOfObject:regDict];
-//        
-//        CGRect buttonRect2 = CGRectMake(aButton.frame.origin.x+(aButton.frame.size.width/2)-((kRegPickerMarkerIconSize/2)*scale),
-//                                        aButton.frame.origin.y-(kRegPickerMarkerIconSize*scale),
-//                                        (kRegPickerMarkerIconSize*scale),
-//                                        (kRegPickerMarkerIconSize*scale));
-//        UIButton *aButton2 = [UIButton buttonWithType:UIButtonTypeCustom];
-//        aButton2.frame = buttonRect2;
-//        [aButton2 addTarget:self action:@selector(regionButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-//        [aButton2 setImage:[UIImage imageNamed:kRegPickerMarkerIconUnselected] forState:UIControlStateNormal];
-//        [aButton2 setImage:[UIImage imageNamed:kRegPickerMarkerIconSelected] forState:UIControlStateSelected];
-//        aButton2.contentMode = UIViewContentModeScaleAspectFill;
-//        aButton2.tag = [self.allRegions indexOfObject:regDict];
-//        [self.selectionScrollView addSubview:aButton2];
-//        
-//        [regDict setObject:aButton forKey:kRegPickerJSONIdentifierButton];
-//        [regDict setObject:aButton2 forKey:kRegPickerJSONIdentifierIconButton];
-//
-//        if (regions) {
-//            if ([regions indexOfObject:[regDict objectForKey:kRegPickerJSONIdentifierID]] != NSNotFound) {
-//                aButton.selected = YES;
-//                self.badgeCounter++;
-//                self.navBarButton.selected = YES;
-//            }
-//            [self updateBadge];
-//        }
-//
-//        [self.selectionScrollView addSubview:aButton];
-//        
-////        NSMutableDictionary *btnDict = [NSMutableDictionary dictionaryWithDictionary:regDict];
-////        [btnDict setObject:aButton forKey:kRegPickerJSONIdentifierButton];
-////        [self.allButtons addObject:btnDict];
-//    
-//    }
 }
 
 - (void)adjustRegionButtonsToMap {
@@ -308,25 +253,7 @@
 }
 
 - (void)regionButtonTapped:(id)sender {
-//    UIButton *theButton = (UIButton*)sender;
-//    theButton.selected = !theButton.selected;
-//    if (theButton.selected) {
-//        [self refreshMessageLabelForRegion:[self.allRegions objectAtIndex:theButton.tag] added:YES];
-//        CGRect posRect = CGRectMake(theButton.frame.origin.x - (self.selectionScrollView.frame.size.width/2) + (theButton.frame.size.width/2),
-//                                    theButton.frame.origin.y - (self.selectionScrollView.frame.size.height/2) + (theButton.frame.size.height/2),
-//                                    self.selectionScrollView.frame.size.width,
-//                                    self.selectionScrollView.frame.size.height);
-//        [self.selectionScrollView scrollRectToVisible:posRect animated:YES];
-//        self.badgeCounter++;
-//        self.navBarButton.selected = YES;
-//    } else {
-//        [self refreshMessageLabelForRegion:[self.allRegions objectAtIndex:theButton.tag] added:NO];
-//        self.badgeCounter--;
-//        if (self.badgeCounter == 0) {
-//            self.navBarButton.selected = NO;
-//        }
-//    }
-//    [self updateBadge];
+
     UIButton *theButton = (UIButton*)sender;
     theButton.selected = !theButton.selected;
     
@@ -554,6 +481,8 @@
         self.currentState = PickerStateSelect;
         self.selectionScrollView.hidden = NO;
         self.startView.hidden = YES;
+        self.messageView.hidden = NO;
+        self.messageLabel.text = @"Fügen Sie durch das Klicken auf die Pins Regionen hinzu";
         [self.actionButton setTitle:@"Auswahl speichern" forState:UIControlStateNormal];
     } else if (self.currentState == PickerStateSelect) {
         [self selectRegionsDone];
@@ -612,12 +541,15 @@
     [self addBorderToView:self.actionButton];
     [self adjustFont];
     self.actionButton.backgroundColor = kRegPickerActionButtonColor;
-    self.messageView.hidden = YES;
     
     if (self.currentState == PickerStateSelect) {
         self.selectionScrollView.hidden = NO;
         self.startView.hidden = YES;
         [self.actionButton setTitle:@"Auswahl speichern" forState:UIControlStateNormal];        
+        self.messageView.hidden = NO;
+        self.messageLabel.text = @"Fügen Sie durch das Klicken auf die Pins Regionen hinzu";
+    } else {
+        self.messageView.hidden = YES;
     }
 }
 
