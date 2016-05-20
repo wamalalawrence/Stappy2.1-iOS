@@ -14,6 +14,7 @@
 #import "RandomImageView.h"
 #import "Defines.h"
 #import "RandomImageView.h"
+#import "Stappy2-Swift.h"
 
 #define kNavBarTintColor [UIColor colorWithRed:26.0/255.0 green:96.0/255.0 blue:166.0/255.0 alpha:1.0]
 //
@@ -235,7 +236,12 @@
             NSLog(@"Region %@, ID %i", [buttonDict objectForKey:kRegPickerJSONIdentifierName], [[buttonDict objectForKey:kRegPickerJSONIdentifierID] intValue]);
         }
     }
-    
+
+    NSError *error;
+    [[Filters sharedInstance] saveFilterWithFilterIds:selectedRegions
+                                  forStringFilterType:@"regionen"
+                                                error:&error];
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[NSArray arrayWithArray:selectedRegions] forKey:@"filter_regionen"];
     [defaults setBool:YES forKey:@"regionPickerShowed"];

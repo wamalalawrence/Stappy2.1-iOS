@@ -20,6 +20,7 @@ enum FilterError: ErrorType {
     case Events
     case Angebote
     case Vereinsnews
+    case Regionen
     
     static func filterTypeFromString(filterType: NSString?) throws -> FilterType {
         guard let filterType = filterType else { // if nil Optional is passed to the function
@@ -36,6 +37,8 @@ enum FilterError: ErrorType {
             return .Angebote
         } else if (filterType.isEqualToString("vereinsnews") || filterType.isEqualToString("vereine")) {
             return .Vereinsnews
+        } else if (filterType.isEqualToString("regionen") || filterType.isEqualToString("regions")) {
+            return .Regionen
         } else {
             throw FilterError.InvalidStringFilterType
         }
@@ -48,11 +51,12 @@ enum FilterError: ErrorType {
             case .Events: return "events"
             case .Angebote: return "angebote"
             case .Vereinsnews: return "vereinsnews"
+            case .Regionen: return "regionen"
         }
     }
     
     static func totalFilterTypesCount() -> Int {
-        return 5
+        return 6
     }
 }
 
