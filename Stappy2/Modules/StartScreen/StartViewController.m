@@ -342,14 +342,14 @@ static NSString * const kFahrPlanViewControlerId = @"STFahrplanSearchVC";
                         withNavigationBarBarTintColor:uiStyling[@"barTintColor"]
                                          andTintColor:uiStyling[@"tintColor"]
                                           translucent:((NSNumber *)uiStyling[@"translucent"]).boolValue
-                                             barStyle:((NSNumber *)uiStyling[@"translucent"]).integerValue];
+                                             barStyle:((NSNumber *)uiStyling[@"barStyle"]).integerValue];
         } else {
             [self.sideMenuDelegate loadViewController:newViewController
                                              animated:YES
                     withNavigationBarBarTintColor:uiStyling[@"barTintColor"]
                                      andTintColor:uiStyling[@"tintColor"]
                                       translucent:((NSNumber *)uiStyling[@"translucent"]).boolValue
-                                         barStyle:((NSNumber *)uiStyling[@"translucent"]).integerValue];
+                                         barStyle:((NSNumber *)uiStyling[@"barStyle"]).integerValue];
         }
     }
 }
