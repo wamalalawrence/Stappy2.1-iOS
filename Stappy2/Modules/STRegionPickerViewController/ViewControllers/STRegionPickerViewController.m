@@ -29,6 +29,8 @@
 //
 #define kRegPickerMapImage @"map.png"
 #define kRegPickerBackgroundImage @"image_content_bg_national_blur.jpg"
+#define kRegPickerMessageIconSelect @"icon_tick_active.png"
+#define kRegPickerMessageIconDeselect @"icon_tick.png"
 #define kRegPickerNavBarIconLeft @"back"
 #define kRegPickerNavBarIcon @"icon_content_badge_map_germany.png"
 #define kRegPickerNavBarIconWithBadge @"icon_content_badge_map_germany_cutted.png"
@@ -516,10 +518,12 @@
         [msgString appendAttributedString:[[NSAttributedString alloc]
                                            initWithString:@" hinzugefügt"
                                            attributes:fontAttributes]];
+        self.messageIconImageView.image = [UIImage imageNamed:kRegPickerMessageIconSelect];
     } else {
         [msgString appendAttributedString:[[NSAttributedString alloc]
                                            initWithString:@" entfernt"
                                            attributes:fontAttributes]];
+        self.messageIconImageView.image = [UIImage imageNamed:kRegPickerMessageIconDeselect];
     }
     self.messageLabel.attributedText = msgString;
 }
