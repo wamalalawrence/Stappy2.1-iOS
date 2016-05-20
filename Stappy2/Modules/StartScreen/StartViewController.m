@@ -31,6 +31,7 @@
 #import "STViewControllerNavigationBarStyle.h"
 #import "Utils.h"
 #import "NSString+Utils.h"
+#import "SidebarViewController.h"
 
 static NSString * const startCollectionHeaderViewIdentifier = @"STStartScreenHeaderView";
 static NSString * const kFahrPlanViewControlerId = @"STFahrplanSearchVC";
@@ -259,6 +260,13 @@ static NSString * const kFahrPlanViewControlerId = @"STFahrplanSearchVC";
         barStyle = navBarStyle.barStyle;
     }
 
+    NSDictionary *uiStyling = @{
+            @"barTintColor": barTintColor,
+            @"tintColor": tintColor,
+            @"translucent": @(translucent),
+            @"barStyle": @(barStyle)
+    };
+
     switch (type) {
         case 1:
             //start request cells
@@ -284,59 +292,65 @@ static NSString * const kFahrPlanViewControlerId = @"STFahrplanSearchVC";
         }
             break;
         case 2: controllerId = self.allKeysForScrollActions[self.allKeysForScrollActions.allKeys[index]];
-        case 3:
-            //bottom quick action buttons
-            if (controllerId == nil) {
-                controllerId = [self.allKeysForBottomActions allKeys][index];
+            [self loadViewControllerWithId:controllerId withUIPreferences:uiStyling];
+            break;
+        case 3: [self loadViewControllerWithId:[self.allKeysForBottomActions allKeys][index] withUIPreferences:uiStyling]; //bottom quick action buttons
+            break;
+        default: break;
+    }
+}
+
+- (void)loadViewControllerWithId:(NSString *)controllerId withUIPreferences:(NSDictionary *)uiStyling
+{
+    if ([controllerId isEqualToString:@"StadtInfo"] || [controllerId isEqualToString:@"Meine Stadt"] || [controllerId isEqualToString:@"Ortsinformationen"]) {
+        [self.sideMenuDelegate showStadtInfoLeftMenu];
+    } else {
+        UIViewController * newViewController = [Utils loadViewControllerWithTitle:controllerId];
+        NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+
+        //WORKAROUND
+        NSString*viewControllerIdTranslation;
+
+        if ([controllerId isEqualToString:kFahrPlanViewControlerId]) {
+            viewControllerIdTranslation = @"Fahrplan";
+            NSString* title = [[STAppSettingsManager sharedSettingsManager].startScreenBottomActions valueForKey:kFahrPlanViewControlerId];
+            newViewController.title = title;
+        }
+        else if ([controllerId isEqualToString:@"Fahrplan"]) {
+
+            if (newViewController == nil) {
+                newViewController = [Utils loadViewControllerWithTitle:@"ÖPNV"];
             }
-        
-        if ([controllerId isEqualToString:@"StadtInfo"] || [controllerId isEqualToString:@"Meine Stadt"] || [controllerId isEqualToString:@"Ortsinformationen"]) {
-                [self.sideMenuDelegate showStadtInfoLeftMenu];
-            }
+
+            viewControllerIdTranslation = @"ÖPNV";
+            NSString* title = [[STAppSettingsManager sharedSettingsManager].startScreenBottomActions valueForKey:@"Fahrplan"];
+            newViewController.title = title;
+        }
+        else if ([controllerId isEqualToString:@"STWeatherViewController"]) {
+            viewControllerIdTranslation = @"Wetter";
+        }
         else {
-                UIViewController * newViewController = [Utils loadViewControllerWithTitle:controllerId];
-                NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
-                
-                //WORKAROUND
-                NSString*viewControllerIdTranslation;
-                
-                if ([controllerId isEqualToString:kFahrPlanViewControlerId]) {
-                    viewControllerIdTranslation = @"Fahrplan";
-                    NSString* title = [[STAppSettingsManager sharedSettingsManager].startScreenBottomActions valueForKey:kFahrPlanViewControlerId];
-                   newViewController.title = title;
-                }
-                else if ([controllerId isEqualToString:@"Fahrplan"]) {
-                    
-                    if (newViewController == nil) {
-                        newViewController = [Utils loadViewControllerWithTitle:@"ÖPNV"];
-                    }
-                    
-                    viewControllerIdTranslation = @"ÖPNV";
-                    NSString* title = [[STAppSettingsManager sharedSettingsManager].startScreenBottomActions valueForKey:@"Fahrplan"];
-                    newViewController.title = title;
-                }
-                else if ([controllerId isEqualToString:@"STWeatherViewController"]) {
-                    viewControllerIdTranslation = @"Wetter";
-                }
-                else{
-                    viewControllerIdTranslation = controllerId;
-                }
-                STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:viewControllerIdTranslation];
-
-                
-                if ([newViewController isKindOfClass:[STWebViewDetailViewController class]]) {
-                    
-                    newViewController = [[STWebViewDetailViewController alloc] initWithURL:viewControllerItem.url];
-                    [self.sideMenuDelegate loadViewController:newViewController animated:YES withNavigationBarBarTintColor:barTintColor andTintColor:tintColor translucent:translucent barStyle:barStyle];
-                    break;
-                }
+            viewControllerIdTranslation = controllerId;
+        }
+        STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:viewControllerIdTranslation];
 
 
-                [self.sideMenuDelegate loadViewController:newViewController animated:YES withNavigationBarBarTintColor:barTintColor andTintColor:tintColor translucent:translucent barStyle:barStyle];
-            }
-            break;
-        default:
-            break;
+        if ([newViewController isKindOfClass:[STWebViewDetailViewController class]]) {
+            newViewController = [[STWebViewDetailViewController alloc] initWithURL:viewControllerItem.url];
+            [self.sideMenuDelegate loadViewController:newViewController
+                                             animated:YES
+                        withNavigationBarBarTintColor:uiStyling[@"barTintColor"]
+                                         andTintColor:uiStyling[@"tintColor"]
+                                          translucent:((NSNumber *)uiStyling[@"translucent"]).boolValue
+                                             barStyle:((NSNumber *)uiStyling[@"translucent"]).integerValue];
+        } else {
+            [self.sideMenuDelegate loadViewController:newViewController
+                                             animated:YES
+                    withNavigationBarBarTintColor:uiStyling[@"barTintColor"]
+                                     andTintColor:uiStyling[@"tintColor"]
+                                      translucent:((NSNumber *)uiStyling[@"translucent"]).boolValue
+                                         barStyle:((NSNumber *)uiStyling[@"translucent"]).integerValue];
+        }
     }
 }
 
