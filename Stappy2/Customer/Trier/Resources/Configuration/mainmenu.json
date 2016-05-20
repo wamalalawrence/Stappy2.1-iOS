@@ -103,8 +103,8 @@
         "StadtInfo":"Meine Stadt"
     },
     "startScreenScrollActions": {
-         "Apotheken":"Apothekennotdienst",
-         "ticker":"news",
+         "Apotheken":"Apotheken",
+         "ticker":"Ticker",
          "karte":"ParkMap",
          "qrscanner_icon":"QR-Scanner"
     },
@@ -754,6 +754,15 @@
                                }
                                },
                                {
+                               "id":"carsharing",
+                               "caption": "Carsharing",
+                               "icon_name": "carsharing",
+                               "type": "website",
+                               "type_api": "carsharing",
+                               "url": "https://mobil.stadtmobil.de/",
+                               "sub_items":[]
+                               },
+                               {
                                "id":"tank",
                                "caption": "Tank- und Ladesäulen",
                                "icon_name": "tank",
@@ -762,16 +771,8 @@
                                "url": "",
                                "sub_items":[]
                                
-                               },
-                               {
-                               "id":"carsharing",
-                               "caption": "Carsharing",
-                               "icon_name": "carsharing",
-                               "type": "website",
-                               "type_api": "carsharing",
-                               "url": "https://mobil.stadtmobil.de/",
-                               "sub_items":[]
                                }
+                              
                                ]
                   
                   },

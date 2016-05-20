@@ -2349,7 +2349,7 @@
             </objects>
             <point key="canvasLocation" x="2656" y="-344"/>
         </scene>
-        <!--Parken-->
+        <!--PARKEN-->
         <scene sceneID="ElI-Ee-qey">
             <objects>
                 <viewController storyboardIdentifier="ParkMap" id="kNq-FN-APF" customClass="STGeneralParkhausViewController" sceneMemberID="viewController">
@@ -2402,7 +2402,7 @@
                             <constraint firstItem="OnK-ge-MyS" firstAttribute="top" secondItem="rPO-cP-kNx" secondAttribute="top" id="tfI-oF-0bY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Parken" id="4ta-vm-6X6">
+                    <navigationItem key="navigationItem" title="PARKEN" id="4ta-vm-6X6">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="Khs-6F-RRM"/>
                         <barButtonItem key="rightBarButtonItem" image="right_menu_open" id="BHt-JU-W3V"/>
                     </navigationItem>
