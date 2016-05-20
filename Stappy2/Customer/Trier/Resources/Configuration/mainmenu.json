@@ -103,10 +103,10 @@
         "StadtInfo":"Meine Stadt"
     },
     "startScreenScrollActions": {
-         "angebote":"angebote",
-         "events":"events",
-         "ticker":"Ticker",
-         "vereine":"Vereinsticker"
+         "Apotheken":"Apothekennotdienst",
+         "ticker":"news",
+         "karte":"ParkMap",
+         "qrscanner_icon":"QR-Scanner"
     },
     
    
