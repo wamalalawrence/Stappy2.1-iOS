@@ -37,6 +37,87 @@
 		C3CCC7BB1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
 		C3CCC7BC1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
 		C3CCC7BD1CEB5B50003BB297 /* STParkHausTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */; };
+		EF12109E1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF12109F1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A01CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A11CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A21CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A31CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A41CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A51CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A61CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */; };
+		EF1210A71CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210A81CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210A91CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210AA1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210AB1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210AC1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210AD1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210AE1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210AF1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */; };
+		EF1210B01CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B11CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B21CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B31CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B41CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B51CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B61CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B71CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B81CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */; };
+		EF1210B91CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210BA1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210BB1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210BC1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210BD1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210BE1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210BF1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210C01CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210C11CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */; };
+		EF1210C21CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210C31CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210C41CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210C51CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210C61CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210C71CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210C81CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210C91CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210CA1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */; };
+		EF1210CB1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210CC1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210CD1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210CE1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210CF1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210D01CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210D11CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210D21CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210D31CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */; };
+		EF1210D41CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210D51CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210D61CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210D71CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210D81CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210D91CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210DA1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210DB1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210DC1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */; };
+		EF1210DD1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210DE1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210DF1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210E01CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210E11CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210E21CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210E31CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210E41CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210E51CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */; };
+		EF1210E61CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210E71CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210E81CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210E91CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210EA1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210EB1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210EC1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210ED1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
+		EF1210EE1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */; };
 		EF746BBD1CE8702F002CF5D2 /* Stappy2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746BBC1CE8702F002CF5D2 /* Stappy2Tests.m */; };
 		EF746BC81CE8702F002CF5D2 /* Stappy2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746BC71CE8702F002CF5D2 /* Stappy2UITests.m */; };
 		EF746BF41CE8728F002CF5D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF746BD61CE8728F002CF5D2 /* AppDelegate.m */; };
@@ -3866,6 +3947,15 @@
 		C3CCC7A71CEB59AA003BB297 /* STGenerralParkhausTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STGenerralParkhausTableViewController.m; sourceTree = "<group>"; };
 		C3CCC7B21CEB5B50003BB297 /* STParkHausTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STParkHausTableViewCell.h; sourceTree = "<group>"; };
 		C3CCC7B31CEB5B50003BB297 /* STParkHausTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STParkHausTableViewCell.m; sourceTree = "<group>"; };
+		EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_regionenfilter_pin_accept.png; sourceTree = "<group>"; };
+		EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_regionenfilter_pin_accept@2x.png"; sourceTree = "<group>"; };
+		EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_regionenfilter_pin_accept@3x.png"; sourceTree = "<group>"; };
+		EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_regionenfilter_pin_active.png; sourceTree = "<group>"; };
+		EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_regionenfilter_pin_active@2x.png"; sourceTree = "<group>"; };
+		EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_regionenfilter_pin_active@3x.png"; sourceTree = "<group>"; };
+		EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_regionenfilter_pin.png; sourceTree = "<group>"; };
+		EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_regionenfilter_pin@2x.png"; sourceTree = "<group>"; };
+		EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_regionenfilter_pin@3x.png"; sourceTree = "<group>"; };
 		EF746B9C1CE8702F002CF5D2 /* Stappy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stappy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF746BB81CE8702F002CF5D2 /* Stappy2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stappy2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF746BBC1CE8702F002CF5D2 /* Stappy2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stappy2Tests.m; sourceTree = "<group>"; };
@@ -5713,6 +5803,15 @@
 				EF746F761CE8A9F7002CF5D2 /* icon_tick_more.png */,
 				EF746F771CE8A9F7002CF5D2 /* icon_tick_more@2x.png */,
 				EF746F781CE8A9F7002CF5D2 /* icon_tick_more@3x.png */,
+				EF1210951CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png */,
+				EF1210961CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png */,
+				EF1210971CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png */,
+				EF1210981CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png */,
+				EF1210991CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png */,
+				EF12109A1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png */,
+				EF12109B1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png */,
+				EF12109C1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png */,
+				EF12109D1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png */,
 				EF746F791CE8A9F7002CF5D2 /* image_content_bg_national_blur.jpg */,
 				EF746F7A1CE8A9F7002CF5D2 /* image_content_bg_national_blur@2x.jpg */,
 				EF746F7B1CE8A9F7002CF5D2 /* image_content_bg_national_blur@3x.jpg */,
@@ -6990,6 +7089,7 @@
 				EFEF71A91CEA09DE00979D4B /* STWeatherTopViewController.xib in Resources */,
 				EFEF705E1CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
 				EF746D3F1CE8A71C002CF5D2 /* RWEHeadline-RegularCondens.ttf in Resources */,
+				EF1210CB1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
 				EF7470701CE8A9F7002CF5D2 /* icon_tick@2x.png in Resources */,
 				EF7470541CE8A9F7002CF5D2 /* STParkingDetailsViewController.xib in Resources */,
 				EFCB3F251CE999A1009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
@@ -7015,12 +7115,15 @@
 				EFCB3F961CE99D83009A59F9 /* PDFPreviewCollectionViewCell.xib in Resources */,
 				EFCB3F3A1CE999EB009A59F9 /* STStartBottomCustomCollectionViewCell.xib in Resources */,
 				EFCB3FAB1CE99E63009A59F9 /* STRightMenuSubCell.xib in Resources */,
+				EF12109E1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFEF6DBD1CEA06EC00979D4B /* STFahrplanConnectionsVC.xib in Resources */,
+				EF1210C21CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EF74705D1CE8A9F7002CF5D2 /* icon_content_badge_map_germany_cutted.png in Resources */,
 				EFCB3F401CE999EB009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
 				EFEF6DAB1CEA06EC00979D4B /* STFahrplanTimetableVC.xib in Resources */,
 				EF7470721CE8A9F7002CF5D2 /* icon_tick_active.png in Resources */,
 				EFEF71061CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
+				EF1210B91CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFEF6F981CEA080A00979D4B /* STFahrplanSettingsCellWithCheckmarkTVC.xib in Resources */,
 				EFCB3F601CE99AC1009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
 				EF7470631CE8A9F7002CF5D2 /* icon_content_oepnv_arrow_search.png in Resources */,
@@ -7031,6 +7134,7 @@
 				EF746E1C1CE8A779002CF5D2 /* OpeningHoursHeaderView.xib in Resources */,
 				EFEF6FF21CEA080A00979D4B /* STFahrplanPremiumConnectionsVC.xib in Resources */,
 				EF746D3B1CE8A71C002CF5D2 /* OFL.txt in Resources */,
+				EF1210E61CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFEF6D5A1CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
 				EFCB3F9E1CE99DDF009A59F9 /* STNewsBaseExpandedTableViewCell.xib in Resources */,
 				EF746FDE1CE8A9F7002CF5D2 /* STBaederOverviewViewController.xib in Resources */,
@@ -7051,9 +7155,11 @@
 				EF746FDC1CE8A9F7002CF5D2 /* STAquaFunViewController.xib in Resources */,
 				EF746E5A1CE8A79F002CF5D2 /* STNewsAndEventsDetailViewController.xib in Resources */,
 				EF746D281CE8A71C002CF5D2 /* FlatAssets.xcassets in Resources */,
+				EF1210DD1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFEF6F741CEA080A00979D4B /* STFahrplanFavouritePickerCellTVC.xib in Resources */,
 				EF7470811CE8A9F7002CF5D2 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EF746D3A1CE8A71C002CF5D2 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
+				EF1210B01CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EF74705C1CE8A9F7002CF5D2 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFCB3F911CE99D40009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
 				EFEF70701CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
@@ -7072,6 +7178,7 @@
 				EFCB3F0B1CE9984C009A59F9 /* STWeatherHeader.xib in Resources */,
 				EFCB3FB41CE99F3E009A59F9 /* STRightMenuHeaderView.xib in Resources */,
 				EF746D3C1CE8A71C002CF5D2 /* PT_Sans-Web-Regular.ttf in Resources */,
+				EF1210A71CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EF74707F1CE8A9F7002CF5D2 /* map_small.png in Resources */,
 				EFEF6DF31CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFEF6DE11CEA06EC00979D4B /* STFahrplanLocationNameFinderOverlayVC.xib in Resources */,
@@ -7079,6 +7186,7 @@
 				EF746E551CE8A79F002CF5D2 /* Main.storyboard in Resources */,
 				EF746D241CE8A71C002CF5D2 /* weather_icons.json in Resources */,
 				EF746D371CE8A71C002CF5D2 /* OfficinaSansITCPro-Bold.otf in Resources */,
+				EF1210D41CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EF7470751CE8A9F7002CF5D2 /* icon_tick_more.png in Resources */,
 				EFCB3EF91CE99751009A59F9 /* STAngeboteHeaderView.xib in Resources */,
 				EFEF6D631CEA06EC00979D4B /* STFahrplanRouteCellSmallTVC.xib in Resources */,
@@ -7185,6 +7293,7 @@
 				EFEF71AA1CEA09DE00979D4B /* STWeatherTopViewController.xib in Resources */,
 				EFEF705F1CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
 				EFCB40E71CE9A4F1009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
+				EF1210CC1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
 				EFCB40E81CE9A4F1009A59F9 /* icon_tick@2x.png in Resources */,
 				EFCB40E91CE9A4F1009A59F9 /* STParkingDetailsViewController.xib in Resources */,
 				EFCB40EB1CE9A4F1009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
@@ -7210,12 +7319,15 @@
 				EFCB41031CE9A4F1009A59F9 /* STRightMenuSubCell.xib in Resources */,
 				EFCB41051CE9A4F1009A59F9 /* icon_content_badge_map_germany_cutted.png in Resources */,
 				EFEF6DBE1CEA06EC00979D4B /* STFahrplanConnectionsVC.xib in Resources */,
+				EF12109F1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFCB41071CE9A4F1009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
+				EF1210C31CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFCB41081CE9A4F1009A59F9 /* icon_tick_active.png in Resources */,
 				EFCB41091CE9A4F1009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
 				EFEF6DAC1CEA06EC00979D4B /* STFahrplanTimetableVC.xib in Resources */,
 				EFCB410A1CE9A4F1009A59F9 /* icon_content_oepnv_arrow_search.png in Resources */,
 				EFEF71071CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
+				EF1210BA1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFEF6F991CEA080A00979D4B /* STFahrplanSettingsCellWithCheckmarkTVC.xib in Resources */,
 				EFCB410B1CE9A4F1009A59F9 /* LaunchScreen.storyboard in Resources */,
 				EFCB410C1CE9A4F1009A59F9 /* MerriweatherSans-Regular.ttf in Resources */,
@@ -7226,6 +7338,7 @@
 				EFCB41121CE9A4F1009A59F9 /* STNewsBaseExpandedTableViewCell.xib in Resources */,
 				EFEF6FF31CEA080A00979D4B /* STFahrplanPremiumConnectionsVC.xib in Resources */,
 				EFCB41131CE9A4F1009A59F9 /* STBaederOverviewViewController.xib in Resources */,
+				EF1210E71CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFEF6D5B1CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
 				EFCB41141CE9A4F1009A59F9 /* icon_content_badge_map_germany_cutted@3x.png in Resources */,
 				EFCB41151CE9A4F1009A59F9 /* ActionOptionsCollectionViewCell.xib in Resources */,
@@ -7246,9 +7359,11 @@
 				EFCB41251CE9A4F1009A59F9 /* FlatAssets.xcassets in Resources */,
 				EFCB41291CE9A4F1009A59F9 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EFCB412B1CE9A4F1009A59F9 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
+				EF1210DE1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFEF6F751CEA080A00979D4B /* STFahrplanFavouritePickerCellTVC.xib in Resources */,
 				EFCB412D1CE9A4F1009A59F9 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFCB412E1CE9A4F1009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
+				EF1210B11CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFCB41981CE9A571009A59F9 /* storyboard_ids.json in Resources */,
 				EFCB41301CE9A4F1009A59F9 /* icon_content_clear_text.png in Resources */,
 				EFEF70711CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
@@ -7267,6 +7382,7 @@
 				EFCB413D1CE9A4F1009A59F9 /* STWeatherHeader.xib in Resources */,
 				EFCB413E1CE9A4F1009A59F9 /* STRightMenuHeaderView.xib in Resources */,
 				EFCB413F1CE9A4F1009A59F9 /* PT_Sans-Web-Regular.ttf in Resources */,
+				EF1210A81CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFCB41411CE9A4F1009A59F9 /* map_small.png in Resources */,
 				EFEF6DF41CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFEF6DE21CEA06EC00979D4B /* STFahrplanLocationNameFinderOverlayVC.xib in Resources */,
@@ -7274,6 +7390,7 @@
 				EFCB41421CE9A4F1009A59F9 /* Main.storyboard in Resources */,
 				EFCB41441CE9A4F1009A59F9 /* OfficinaSansITCPro-Bold.otf in Resources */,
 				EFCB41451CE9A4F1009A59F9 /* icon_tick_more.png in Resources */,
+				EF1210D51CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFCB41461CE9A4F1009A59F9 /* STAngeboteHeaderView.xib in Resources */,
 				EFCB41471CE9A4F1009A59F9 /* STWebViewDetailViewController.xib in Resources */,
 				EFEF6D641CEA06EC00979D4B /* STFahrplanRouteCellSmallTVC.xib in Resources */,
@@ -7366,6 +7483,7 @@
 				EFEF71AB1CEA09DE00979D4B /* STWeatherTopViewController.xib in Resources */,
 				EFEF70601CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
 				EFCB42C71CE9ABF7009A59F9 /* icon_tick@2x.png in Resources */,
+				EF1210CD1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
 				EFCB42C81CE9ABF7009A59F9 /* STParkingDetailsViewController.xib in Resources */,
 				EFCB42CA1CE9ABF7009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
 				EFCB42CB1CE9ABF7009A59F9 /* Bitter-Regular.ttf in Resources */,
@@ -7391,12 +7509,15 @@
 				EFCB42E31CE9ABF7009A59F9 /* icon_content_badge_map_germany_cutted.png in Resources */,
 				EFCB42E51CE9ABF7009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
 				EFEF6DBF1CEA06EC00979D4B /* STFahrplanConnectionsVC.xib in Resources */,
+				EF1210A01CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFCB42E61CE9ABF7009A59F9 /* icon_tick_active.png in Resources */,
+				EF1210C41CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFCB42E71CE9ABF7009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
 				EFCB42E81CE9ABF7009A59F9 /* icon_content_oepnv_arrow_search.png in Resources */,
 				EFEF6DAD1CEA06EC00979D4B /* STFahrplanTimetableVC.xib in Resources */,
 				EFCB42E91CE9ABF7009A59F9 /* LaunchScreen.storyboard in Resources */,
 				EFEF71081CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
+				EF1210BB1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFEF6F9A1CEA080A00979D4B /* STFahrplanSettingsCellWithCheckmarkTVC.xib in Resources */,
 				EFCB42EA1CE9ABF7009A59F9 /* MerriweatherSans-Regular.ttf in Resources */,
 				EFCB42EB1CE9ABF7009A59F9 /* OfficinaSansITCPro-BlackIt.otf in Resources */,
@@ -7407,6 +7528,7 @@
 				EFCB42F11CE9ABF7009A59F9 /* STBaederOverviewViewController.xib in Resources */,
 				EFEF6FF41CEA080A00979D4B /* STFahrplanPremiumConnectionsVC.xib in Resources */,
 				EFCB4E271CE9C3C4009A59F9 /* weather_icons.json in Resources */,
+				EF1210E81CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFEF6D5C1CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
 				EFCB42F21CE9ABF7009A59F9 /* icon_content_badge_map_germany_cutted@3x.png in Resources */,
 				EFCB42F31CE9ABF7009A59F9 /* ActionOptionsCollectionViewCell.xib in Resources */,
@@ -7427,9 +7549,11 @@
 				EFCB43031CE9ABF7009A59F9 /* FlatAssets.xcassets in Resources */,
 				EFCB43071CE9ABF7009A59F9 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EFCB43091CE9ABF7009A59F9 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
+				EF1210DF1CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFEF6F761CEA080A00979D4B /* STFahrplanFavouritePickerCellTVC.xib in Resources */,
 				EFCB430B1CE9ABF7009A59F9 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFCB430C1CE9ABF7009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
+				EF1210B21CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFCB4E241CE9C3C4009A59F9 /* BadNauheim.xcassets in Resources */,
 				EFCB430F1CE9ABF7009A59F9 /* icon_content_clear_text.png in Resources */,
 				EFEF70721CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
@@ -7448,6 +7572,7 @@
 				EFCB431E1CE9ABF7009A59F9 /* STRightMenuHeaderView.xib in Resources */,
 				EFCB431F1CE9ABF7009A59F9 /* PT_Sans-Web-Regular.ttf in Resources */,
 				EFCB43211CE9ABF7009A59F9 /* map_small.png in Resources */,
+				EF1210A91CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFCB43221CE9ABF7009A59F9 /* Main.storyboard in Resources */,
 				EFEF6DF51CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFEF6DE31CEA06EC00979D4B /* STFahrplanLocationNameFinderOverlayVC.xib in Resources */,
@@ -7455,6 +7580,7 @@
 				EFCB43241CE9ABF7009A59F9 /* OfficinaSansITCPro-Bold.otf in Resources */,
 				EFCB43251CE9ABF7009A59F9 /* icon_tick_more.png in Resources */,
 				EFCB43261CE9ABF7009A59F9 /* STAngeboteHeaderView.xib in Resources */,
+				EF1210D61CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFCB43271CE9ABF7009A59F9 /* STWebViewDetailViewController.xib in Resources */,
 				EFCB43281CE9ABF7009A59F9 /* KievitSlabOffc.ttf in Resources */,
 				EFEF6D651CEA06EC00979D4B /* STFahrplanRouteCellSmallTVC.xib in Resources */,
@@ -7547,6 +7673,7 @@
 				EFEF71AC1CEA09DE00979D4B /* STWeatherTopViewController.xib in Resources */,
 				EFEF70611CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
 				EFCB448C1CE9B0C7009A59F9 /* icon_tick@2x.png in Resources */,
+				EF1210CE1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
 				EFCB448D1CE9B0C7009A59F9 /* STParkingDetailsViewController.xib in Resources */,
 				EFCB448F1CE9B0C7009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
 				EFCB44901CE9B0C7009A59F9 /* Bitter-Regular.ttf in Resources */,
@@ -7572,12 +7699,15 @@
 				EFCB44A61CE9B0C7009A59F9 /* STRightMenuSubCell.xib in Resources */,
 				EFCB44A81CE9B0C7009A59F9 /* icon_content_badge_map_germany_cutted.png in Resources */,
 				EFEF6DC01CEA06EC00979D4B /* STFahrplanConnectionsVC.xib in Resources */,
+				EF1210A11CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFCB44AA1CE9B0C7009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
+				EF1210C51CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFCB44AB1CE9B0C7009A59F9 /* icon_tick_active.png in Resources */,
 				EFCB44AC1CE9B0C7009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
 				EFEF6DAE1CEA06EC00979D4B /* STFahrplanTimetableVC.xib in Resources */,
 				EFCB44AD1CE9B0C7009A59F9 /* icon_content_oepnv_arrow_search.png in Resources */,
 				EFEF71091CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
+				EF1210BC1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFEF6F9B1CEA080A00979D4B /* STFahrplanSettingsCellWithCheckmarkTVC.xib in Resources */,
 				EFCB44AE1CE9B0C7009A59F9 /* LaunchScreen.storyboard in Resources */,
 				EFCB44AF1CE9B0C7009A59F9 /* MerriweatherSans-Regular.ttf in Resources */,
@@ -7588,6 +7718,7 @@
 				EFCB44B51CE9B0C7009A59F9 /* STNewsBaseExpandedTableViewCell.xib in Resources */,
 				EFEF6FF51CEA080A00979D4B /* STFahrplanPremiumConnectionsVC.xib in Resources */,
 				EFCB44B61CE9B0C7009A59F9 /* STBaederOverviewViewController.xib in Resources */,
+				EF1210E91CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFEF6D5D1CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
 				EFCB44B71CE9B0C7009A59F9 /* icon_content_badge_map_germany_cutted@3x.png in Resources */,
 				EFCB44B81CE9B0C7009A59F9 /* ActionOptionsCollectionViewCell.xib in Resources */,
@@ -7608,9 +7739,11 @@
 				EFCB44C81CE9B0C7009A59F9 /* FlatAssets.xcassets in Resources */,
 				EFCB44CC1CE9B0C7009A59F9 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EFCB44CE1CE9B0C7009A59F9 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
+				EF1210E01CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFEF6F771CEA080A00979D4B /* STFahrplanFavouritePickerCellTVC.xib in Resources */,
 				EFCB44D01CE9B0C7009A59F9 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFCB44D11CE9B0C7009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
+				EF1210B31CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFCB44D41CE9B0C7009A59F9 /* icon_content_clear_text.png in Resources */,
 				EFEF70731CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
 				EFCB44D61CE9B0C7009A59F9 /* ExpandedBottomTableViewCell.xib in Resources */,
@@ -7629,6 +7762,7 @@
 				EFCB44E61CE9B0C7009A59F9 /* map_small.png in Resources */,
 				EFCB44E71CE9B0C7009A59F9 /* Main.storyboard in Resources */,
 				EFCB44E91CE9B0C7009A59F9 /* OfficinaSansITCPro-Bold.otf in Resources */,
+				EF1210AA1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFCB44EA1CE9B0C7009A59F9 /* icon_tick_more.png in Resources */,
 				EFEF6DF61CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFEF6DE41CEA06EC00979D4B /* STFahrplanLocationNameFinderOverlayVC.xib in Resources */,
@@ -7636,6 +7770,7 @@
 				EFCB44EB1CE9B0C7009A59F9 /* STAngeboteHeaderView.xib in Resources */,
 				EFCB45261CE9B0EB009A59F9 /* Wuerzburg-Info.plist in Resources */,
 				EFCB44EC1CE9B0C7009A59F9 /* STWebViewDetailViewController.xib in Resources */,
+				EF1210D71CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFCB44ED1CE9B0C7009A59F9 /* KievitSlabOffc.ttf in Resources */,
 				EFCB44EE1CE9B0C7009A59F9 /* STStartScreenCollectionViewCell.xib in Resources */,
 				EFEF6D661CEA06EC00979D4B /* STFahrplanRouteCellSmallTVC.xib in Resources */,
@@ -7730,15 +7865,19 @@
 				EFCB46501CE9B74A009A59F9 /* icon_content_overlay_close.png in Resources */,
 				EFEF70501CEA080A00979D4B /* STFahrplanFavouritePickerView.xib in Resources */,
 				EFCB46511CE9B74A009A59F9 /* GeneralAssets.xcassets in Resources */,
+				EF1210A21CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFEF6DD31CEA06EC00979D4B /* STFahrplanDebugVC.xib in Resources */,
 				EFCB46521CE9B74A009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFCB46531CE9B74A009A59F9 /* icon_tick@2x.png in Resources */,
 				EFCB46541CE9B74A009A59F9 /* STParkingDetailsViewController.xib in Resources */,
+				EF1210CF1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
+				EF1210D81CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFEF6DAF1CEA06EC00979D4B /* STFahrplanTimetableVC.xib in Resources */,
 				EFCB46561CE9B74A009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
 				EFEF710A1CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
 				EFCB46571CE9B74A009A59F9 /* Bitter-Regular.ttf in Resources */,
 				EFCB46581CE9B74A009A59F9 /* SideMenuTableViewCell.xib in Resources */,
+				EF1210EA1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFCB46591CE9B74A009A59F9 /* SearchTopTableViewCell.xib in Resources */,
 				EFCB465E1CE9B74A009A59F9 /* Bitter-Bold.ttf in Resources */,
 				EFEF6D9D1CEA06EC00979D4B /* STFahrplanTimetableSectionCellTVC.xib in Resources */,
@@ -7793,6 +7932,7 @@
 				EFCB46971CE9B74A009A59F9 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFCB46981CE9B74A009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
 				EFCB469B1CE9B74A009A59F9 /* icon_content_clear_text.png in Resources */,
+				EF1210BD1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFEF6DF71CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFCB469D1CE9B74A009A59F9 /* ExpandedBottomTableViewCell.xib in Resources */,
 				EFEF70741CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
@@ -7813,6 +7953,7 @@
 				EFEF6FC01CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonViewTVC.xib in Resources */,
 				EFCB46AE1CE9B74A009A59F9 /* Main.storyboard in Resources */,
 				EFCB46B01CE9B74A009A59F9 /* OfficinaSansITCPro-Bold.otf in Resources */,
+				EF1210AB1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFCB46B11CE9B74A009A59F9 /* icon_tick_more.png in Resources */,
 				EFCB46B21CE9B74A009A59F9 /* STAngeboteHeaderView.xib in Resources */,
 				EFCB46B31CE9B74A009A59F9 /* STWebViewDetailViewController.xib in Resources */,
@@ -7832,6 +7973,7 @@
 				EFCB46BC1CE9B74A009A59F9 /* Merriweather-BoldItalic.ttf in Resources */,
 				EFCB46BD1CE9B74A009A59F9 /* icon_content_article_pin@3x.png in Resources */,
 				EFEF70621CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
+				EF1210E11CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFCB46BE1CE9B74A009A59F9 /* ExpandedTopTableViewCell.xib in Resources */,
 				EFCB46C01CE9B74A009A59F9 /* LaunchScreen.strings in Resources */,
 				EFCB46C11CE9B74A009A59F9 /* icon_content_badge_map_germany_cutted@2x.png in Resources */,
@@ -7846,6 +7988,7 @@
 				EFEF711C1CEA090B00979D4B /* STNewsTableCollectionExpandedHeader.xib in Resources */,
 				EFEF6D5E1CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
 				EFCB46C81CE9B74A009A59F9 /* icon_menu_left_suche@3x.png in Resources */,
+				EF1210B41CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFCB46CA1CE9B74A009A59F9 /* icon_content_clear_text@2x.png in Resources */,
 				EFCB46CB1CE9B74A009A59F9 /* Coupons.storyboard in Resources */,
 				EFCB46CE1CE9B74A009A59F9 /* map@3x.png in Resources */,
@@ -7859,6 +8002,7 @@
 				EFCB46D41CE9B74A009A59F9 /* OfficinaSansITCPro-Book.otf in Resources */,
 				EFEF703E1CEA080A00979D4B /* STFahrplanDatetimeChooserSmallView.xib in Resources */,
 				EFCB46D51CE9B74A009A59F9 /* Main.storyboard.orig in Resources */,
+				EF1210C61CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFCB46D61CE9B74A009A59F9 /* icon_content_article_pin.png in Resources */,
 				EFCB46D71CE9B74A009A59F9 /* RWEHeadline-LightCondens.ttf in Resources */,
 				EFEF701A1CEA080A00979D4B /* STFahrplanPremiumSearchVC.xib in Resources */,
@@ -7910,6 +8054,7 @@
 				EFEF70631CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
 				EFCB48191CE9B8BD009A59F9 /* icon_tick@2x.png in Resources */,
 				EFCB481A1CE9B8BD009A59F9 /* STParkingDetailsViewController.xib in Resources */,
+				EF1210D01CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
 				EFCB481C1CE9B8BD009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
 				EFCB481D1CE9B8BD009A59F9 /* Bitter-Regular.ttf in Resources */,
 				EFCB481E1CE9B8BD009A59F9 /* SideMenuTableViewCell.xib in Resources */,
@@ -7935,12 +8080,15 @@
 				EFCB48371CE9B8BD009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
 				EFEF6DC21CEA06EC00979D4B /* STFahrplanConnectionsVC.xib in Resources */,
 				EFCB48381CE9B8BD009A59F9 /* icon_tick_active.png in Resources */,
+				EF1210A31CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFCB48391CE9B8BD009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
+				EF1210C71CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFCB483A1CE9B8BD009A59F9 /* icon_content_oepnv_arrow_search.png in Resources */,
 				EFEF6DB01CEA06EC00979D4B /* STFahrplanTimetableVC.xib in Resources */,
 				EFCB483B1CE9B8BD009A59F9 /* LaunchScreen.storyboard in Resources */,
 				EFEF710B1CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
 				EFEF6F9D1CEA080A00979D4B /* STFahrplanSettingsCellWithCheckmarkTVC.xib in Resources */,
+				EF1210BE1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFCB483C1CE9B8BD009A59F9 /* MerriweatherSans-Regular.ttf in Resources */,
 				EFCB483D1CE9B8BD009A59F9 /* OfficinaSansITCPro-BlackIt.otf in Resources */,
 				EFCB483E1CE9B8BD009A59F9 /* OpeningHoursHeaderView.xib in Resources */,
@@ -7951,6 +8099,7 @@
 				EFEF6FF71CEA080A00979D4B /* STFahrplanPremiumConnectionsVC.xib in Resources */,
 				EFCB48441CE9B8BD009A59F9 /* icon_content_badge_map_germany_cutted@3x.png in Resources */,
 				EFEF6D5F1CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
+				EF1210EB1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFCB48451CE9B8BD009A59F9 /* ActionOptionsCollectionViewCell.xib in Resources */,
 				EFCB48461CE9B8BD009A59F9 /* Bitter-Italic.ttf in Resources */,
 				EFCB48471CE9B8BD009A59F9 /* map@2x.png in Resources */,
@@ -7971,9 +8120,11 @@
 				EFCB485B1CE9B8BD009A59F9 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
 				EFCB485D1CE9B8BD009A59F9 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFEF6F791CEA080A00979D4B /* STFahrplanFavouritePickerCellTVC.xib in Resources */,
+				EF1210E21CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFCB485E1CE9B8BD009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
 				EFCB48611CE9B8BD009A59F9 /* icon_content_clear_text.png in Resources */,
 				EFCB48631CE9B8BD009A59F9 /* ExpandedBottomTableViewCell.xib in Resources */,
+				EF1210B51CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFEF70751CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
 				EFCB48651CE9B8BD009A59F9 /* STStartScreenBottomCollectionViewCell.xib in Resources */,
 				EFCB48661CE9B8BD009A59F9 /* icon_content_badge_map_germany@2x.png in Resources */,
@@ -7992,6 +8143,7 @@
 				EFCB48761CE9B8BD009A59F9 /* OfficinaSansITCPro-Bold.otf in Resources */,
 				EFCB48771CE9B8BD009A59F9 /* icon_tick_more.png in Resources */,
 				EFCB48781CE9B8BD009A59F9 /* STAngeboteHeaderView.xib in Resources */,
+				EF1210AC1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFEF6DF81CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFEF6DE61CEA06EC00979D4B /* STFahrplanLocationNameFinderOverlayVC.xib in Resources */,
 				EFEF715E1CEA097100979D4B /* STRegionPickerViewController.xib in Resources */,
@@ -7999,6 +8151,7 @@
 				EFCB487A1CE9B8BD009A59F9 /* KievitSlabOffc.ttf in Resources */,
 				EFCB487B1CE9B8BD009A59F9 /* STStartScreenCollectionViewCell.xib in Resources */,
 				EFCB487C1CE9B8BD009A59F9 /* OpeningHoursViewCell.xib in Resources */,
+				EF1210D91CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFCB487D1CE9B8BD009A59F9 /* laserscanner.png in Resources */,
 				EFEF6D681CEA06EC00979D4B /* STFahrplanRouteCellSmallTVC.xib in Resources */,
 				EFEF702D1CEA080A00979D4B /* STFahrplanPremiumSettingsVC.xib in Resources */,
@@ -8091,6 +8244,7 @@
 				EFCB49D81CE9B9A6009A59F9 /* OpeningHoursMultipleViews.xib in Resources */,
 				EFCB49DA1CE9B9A6009A59F9 /* icon_content_overlay_close.png in Resources */,
 				EFEF70521CEA080A00979D4B /* STFahrplanFavouritePickerView.xib in Resources */,
+				EF1210D11CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
 				EFCB49DC1CE9B9A6009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFEF6DD51CEA06EC00979D4B /* STFahrplanDebugVC.xib in Resources */,
 				EFCB49DD1CE9B9A6009A59F9 /* icon_tick@2x.png in Resources */,
@@ -8116,12 +8270,15 @@
 				EFCB49F61CE9B9A6009A59F9 /* STStartBottomCustomCollectionViewCell.xib in Resources */,
 				EFEF6D4E1CEA06EC00979D4B /* STConnectionCellTVC.xib in Resources */,
 				EFCB49F71CE9B9A6009A59F9 /* STRightMenuSubCell.xib in Resources */,
+				EF1210A41CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFCB49F91CE9B9A6009A59F9 /* icon_content_badge_map_germany_cutted.png in Resources */,
+				EF1210C81CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFEF6E1D1CEA06EC00979D4B /* STFahrplanDatetimeChooserView.xib in Resources */,
 				EFCB49FB1CE9B9A6009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
 				EFCB49FC1CE9B9A6009A59F9 /* icon_tick_active.png in Resources */,
 				EFCB49FD1CE9B9A6009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
 				EFCB49FE1CE9B9A6009A59F9 /* icon_content_oepnv_arrow_search.png in Resources */,
+				EF1210BF1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFCB49FF1CE9B9A6009A59F9 /* LaunchScreen.storyboard in Resources */,
 				EFCB4A001CE9B9A6009A59F9 /* MerriweatherSans-Regular.ttf in Resources */,
 				EFCB4A011CE9B9A6009A59F9 /* OfficinaSansITCPro-BlackIt.otf in Resources */,
@@ -8132,6 +8289,7 @@
 				EFCB4A081CE9B9A6009A59F9 /* icon_content_badge_map_germany_cutted@3x.png in Resources */,
 				EFEF6F681CEA080A00979D4B /* STFahrplanFavouriteOriginWithDestinationCellTVC.xib in Resources */,
 				EFCB4A091CE9B9A6009A59F9 /* ActionOptionsCollectionViewCell.xib in Resources */,
+				EF1210EC1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFCB4A0A1CE9B9A6009A59F9 /* Bitter-Italic.ttf in Resources */,
 				EFEF6E2F1CEA06EC00979D4B /* STFahrplanDepartureArrivalDisplayView.xib in Resources */,
 				EFCB4A0B1CE9B9A6009A59F9 /* map@2x.png in Resources */,
@@ -8152,9 +8310,11 @@
 				EFCB4A191CE9B9A6009A59F9 /* FlatAssets.xcassets in Resources */,
 				EFCB4A1D1CE9B9A6009A59F9 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EFCB4A1F1CE9B9A6009A59F9 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
+				EF1210E31CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFCB4A211CE9B9A6009A59F9 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFCB4A221CE9B9A6009A59F9 /* ImagePreviewCollectionViewCell.xib in Resources */,
 				EFCB4A251CE9B9A6009A59F9 /* icon_content_clear_text.png in Resources */,
+				EF1210B61CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFEF6DF91CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFCB4A271CE9B9A6009A59F9 /* ExpandedBottomTableViewCell.xib in Resources */,
 				EFEF70761CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
@@ -8173,6 +8333,7 @@
 				EFCB4A371CE9B9A6009A59F9 /* map_small.png in Resources */,
 				EFCB4A381CE9B9A6009A59F9 /* Main.storyboard in Resources */,
 				EFEF6FC21CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonViewTVC.xib in Resources */,
+				EF1210AD1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFCB4A3A1CE9B9A6009A59F9 /* OfficinaSansITCPro-Bold.otf in Resources */,
 				EFCB4A3B1CE9B9A6009A59F9 /* icon_tick_more.png in Resources */,
 				EFCB4A3C1CE9B9A6009A59F9 /* STAngeboteHeaderView.xib in Resources */,
@@ -8180,6 +8341,7 @@
 				EFCB4A3E1CE9B9A6009A59F9 /* KievitSlabOffc.ttf in Resources */,
 				EFCB4A3F1CE9B9A6009A59F9 /* STStartScreenCollectionViewCell.xib in Resources */,
 				EFEF70BE1CEA087D00979D4B /* GarbageTypesTableViewCell.xib in Resources */,
+				EF1210DA1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFCB4A401CE9B9A6009A59F9 /* OpeningHoursViewCell.xib in Resources */,
 				EFCB4A411CE9B9A6009A59F9 /* laserscanner.png in Resources */,
 				EFCB4A421CE9B9A6009A59F9 /* icon_content_clear_text@3x.png in Resources */,
@@ -8272,6 +8434,7 @@
 				EFEF71B01CEA09DE00979D4B /* STWeatherTopViewController.xib in Resources */,
 				EFEF70651CEA080A00979D4B /* STFahrplanTimeDisplayWithFavouriteButtonView.xib in Resources */,
 				EFCB4BA01CE9BAB1009A59F9 /* icon_content_overlay_close.png in Resources */,
+				EF1210D21CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
 				EFCB4BA11CE9BAB1009A59F9 /* GeneralAssets.xcassets in Resources */,
 				EFCB4BA21CE9BAB1009A59F9 /* RWEHeadline-RegularCondens.ttf in Resources */,
 				EFCB4BA31CE9BAB1009A59F9 /* icon_tick@2x.png in Resources */,
@@ -8297,12 +8460,15 @@
 				EFCB4BBA1CE9BAB1009A59F9 /* STNewsTableCellCollectionViewCell.xib in Resources */,
 				EFCB4BBB1CE9BAB1009A59F9 /* PDFPreviewCollectionViewCell.xib in Resources */,
 				EFCB4BBC1CE9BAB1009A59F9 /* STStartBottomCustomCollectionViewCell.xib in Resources */,
+				EF1210A51CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFCB4BBD1CE9BAB1009A59F9 /* STRightMenuSubCell.xib in Resources */,
+				EF1210C91CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFEF6DC41CEA06EC00979D4B /* STFahrplanConnectionsVC.xib in Resources */,
 				EFCB4BBF1CE9BAB1009A59F9 /* icon_content_badge_map_germany_cutted.png in Resources */,
 				EFEF6DB21CEA06EC00979D4B /* STFahrplanTimetableVC.xib in Resources */,
 				EFCB4BC11CE9BAB1009A59F9 /* STStartScreenScrollCollectionViewCell.xib in Resources */,
 				EFEF710D1CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
+				EF1210C01CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFEF6F9F1CEA080A00979D4B /* STFahrplanSettingsCellWithCheckmarkTVC.xib in Resources */,
 				EFCB4BC21CE9BAB1009A59F9 /* icon_tick_active.png in Resources */,
 				EFCB4BC31CE9BAB1009A59F9 /* SettingsSelectionsTableViewCell.xib in Resources */,
@@ -8313,6 +8479,7 @@
 				EFCB4BC71CE9BAB1009A59F9 /* OfficinaSansITCPro-BlackIt.otf in Resources */,
 				EFEF6FF91CEA080A00979D4B /* STFahrplanPremiumConnectionsVC.xib in Resources */,
 				EFCB4BC81CE9BAB1009A59F9 /* OpeningHoursHeaderView.xib in Resources */,
+				EF1210ED1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFCB4BCA1CE9BAB1009A59F9 /* OFL.txt in Resources */,
 				EFEF6D611CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
 				EFCB4BCC1CE9BAB1009A59F9 /* STNewsBaseExpandedTableViewCell.xib in Resources */,
@@ -8333,9 +8500,11 @@
 				EFCB4BDA1CE9BAB1009A59F9 /* icon_content_overlay_close@2x.png in Resources */,
 				EFCB4BDC1CE9BAB1009A59F9 /* STAquaFunViewController.xib in Resources */,
 				EFCB4BDD1CE9BAB1009A59F9 /* STNewsAndEventsDetailViewController.xib in Resources */,
+				EF1210E41CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFEF6F7B1CEA080A00979D4B /* STFahrplanFavouritePickerCellTVC.xib in Resources */,
 				EFCB4BDF1CE9BAB1009A59F9 /* FlatAssets.xcassets in Resources */,
 				EFCB4BE31CE9BAB1009A59F9 /* RWEHeadline-MediumCondens.ttf in Resources */,
+				EF1210B71CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFCB4BE51CE9BAB1009A59F9 /* OfficinaSansITCPro-MediumIt.otf in Resources */,
 				EFCB4BE71CE9BAB1009A59F9 /* icon_content_badge_map_germany@3x.png in Resources */,
 				EFEF70771CEA080A00979D4B /* STFahrplanTransportationProgressIndicatorBarView.xib in Resources */,
@@ -8354,6 +8523,7 @@
 				EFCB4BF91CE9BAB1009A59F9 /* STWeatherHeader.xib in Resources */,
 				EFCB4C3A1CE9BAF8009A59F9 /* storyboard_ids.json in Resources */,
 				EFCB4BFA1CE9BAB1009A59F9 /* STRightMenuHeaderView.xib in Resources */,
+				EF1210AE1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFCB4BFB1CE9BAB1009A59F9 /* PT_Sans-Web-Regular.ttf in Resources */,
 				EFEF6DFA1CEA06EC00979D4B /* STFahrplanRouteVC.xib in Resources */,
 				EFEF6DE81CEA06EC00979D4B /* STFahrplanLocationNameFinderOverlayVC.xib in Resources */,
@@ -8361,6 +8531,7 @@
 				EFCB4BFD1CE9BAB1009A59F9 /* map_small.png in Resources */,
 				EFCB4BFE1CE9BAB1009A59F9 /* Main.storyboard in Resources */,
 				EFCB4C001CE9BAB1009A59F9 /* OfficinaSansITCPro-Bold.otf in Resources */,
+				EF1210DB1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFCB4C011CE9BAB1009A59F9 /* icon_tick_more.png in Resources */,
 				EFCB4C021CE9BAB1009A59F9 /* STAngeboteHeaderView.xib in Resources */,
 				EFEF6D6A1CEA06EC00979D4B /* STFahrplanRouteCellSmallTVC.xib in Resources */,
@@ -8455,15 +8626,19 @@
 				EFCB4D671CE9BBF1009A59F9 /* icon_tick@2x.png in Resources */,
 				EFCB4D681CE9BBF1009A59F9 /* STParkingDetailsViewController.xib in Resources */,
 				EFEF6FB21CEA080A00979D4B /* STFahrplanSubCellWithCheckmarkTVC.xib in Resources */,
+				EF1210A61CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept.png in Resources */,
 				EFCB4E051CE9BC88009A59F9 /* weather_icons.json in Resources */,
 				EFCB4D6A1CE9BBF1009A59F9 /* STStadtInfoTableViewCell.xib in Resources */,
 				EFEF6F6A1CEA080A00979D4B /* STFahrplanFavouriteOriginWithDestinationCellTVC.xib in Resources */,
 				EFCB4D6B1CE9BBF1009A59F9 /* Bitter-Regular.ttf in Resources */,
+				EF1210D31CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@3x.png in Resources */,
+				EF1210DC1CEEF0F80034DAC5 /* icon_regionenfilter_pin.png in Resources */,
 				EFEF6E1F1CEA06EC00979D4B /* STFahrplanDatetimeChooserView.xib in Resources */,
 				EFCB4D6C1CE9BBF1009A59F9 /* SideMenuTableViewCell.xib in Resources */,
 				EFCB4D6D1CE9BBF1009A59F9 /* SearchTopTableViewCell.xib in Resources */,
 				EFEF6FA01CEA080A00979D4B /* STFahrplanSettingsCellWithCheckmarkTVC.xib in Resources */,
 				EFCB4D721CE9BBF1009A59F9 /* Bitter-Bold.ttf in Resources */,
+				EF1210EE1CEEF0F80034DAC5 /* icon_regionenfilter_pin@3x.png in Resources */,
 				EFCB4D741CE9BBF1009A59F9 /* KievitOffc.ttf in Resources */,
 				EFCB4D751CE9BBF1009A59F9 /* OFL.txt in Resources */,
 				EFCB4D761CE9BBF1009A59F9 /* icon_tick.png in Resources */,
@@ -8518,6 +8693,7 @@
 				EFCB4DA11CE9BBF1009A59F9 /* STNewsAndEventsDetailViewController.xib in Resources */,
 				EFCB4DA31CE9BBF1009A59F9 /* FlatAssets.xcassets in Resources */,
 				EFCB4E011CE9BC88009A59F9 /* dynamic_weather_bg.json in Resources */,
+				EF1210C11CEEF0F80034DAC5 /* icon_regionenfilter_pin_active.png in Resources */,
 				EFCB4DA71CE9BBF1009A59F9 /* RWEHeadline-MediumCondens.ttf in Resources */,
 				EFEF70541CEA080A00979D4B /* STFahrplanFavouritePickerView.xib in Resources */,
 				EFEF710E1CEA090B00979D4B /* STNewsTableCollectionExpandedFooter.xib in Resources */,
@@ -8538,6 +8714,7 @@
 				EFCB4DB81CE9BBF1009A59F9 /* image_content_bg_national_blur@3x.jpg in Resources */,
 				EFCB4DBC1CE9BBF1009A59F9 /* OpeningHoursView.xib in Resources */,
 				EFCB4DBD1CE9BBF1009A59F9 /* STWeatherHeader.xib in Resources */,
+				EF1210AF1CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@2x.png in Resources */,
 				EFCB4DBE1CE9BBF1009A59F9 /* STRightMenuHeaderView.xib in Resources */,
 				EFCB4DBF1CE9BBF1009A59F9 /* PT_Sans-Web-Regular.ttf in Resources */,
 				EFCB4DC11CE9BBF1009A59F9 /* map_small.png in Resources */,
@@ -8557,6 +8734,7 @@
 				EFEF70AE1CEA087D00979D4B /* GarbageDateTableViewCell.xib in Resources */,
 				EFCB4DCB1CE9BBF1009A59F9 /* laserscanner.png in Resources */,
 				EFCB4DCC1CE9BBF1009A59F9 /* icon_content_clear_text@3x.png in Resources */,
+				EF1210E51CEEF0F80034DAC5 /* icon_regionenfilter_pin@2x.png in Resources */,
 				EFEF6DD71CEA06EC00979D4B /* STFahrplanDebugVC.xib in Resources */,
 				EFCB4DCD1CE9BBF1009A59F9 /* STNewsBaseTableViewCell.xib in Resources */,
 				EFCB4DCE1CE9BBF1009A59F9 /* icon_tick_more@2x.png in Resources */,
@@ -8571,6 +8749,7 @@
 				EFCB4DD71CE9BBF1009A59F9 /* image_content_bg_national_blur@2x.jpg in Resources */,
 				EFCB4DD81CE9BBF1009A59F9 /* map.png in Resources */,
 				C3177E881CEE11A600CF7F67 /* LaunchScreen.storyboard in Resources */,
+				EF1210B81CEEF0F80034DAC5 /* icon_regionenfilter_pin_accept@3x.png in Resources */,
 				EFCB4DDA1CE9BBF1009A59F9 /* STLokalNewsHeaderView.xib in Resources */,
 				EFEF70C01CEA087D00979D4B /* GarbageTypesTableViewCell.xib in Resources */,
 				EFCB4DDC1CE9BBF1009A59F9 /* icon_menu_left_suche@3x.png in Resources */,
@@ -8584,6 +8763,7 @@
 				EFCB4DE81CE9BBF1009A59F9 /* OfficinaSansITCPro-Book.otf in Resources */,
 				EFEF6F341CEA080A00979D4B /* STFahrplanDatetimeChooserSmallCellTVC.xib in Resources */,
 				EFCB4DE91CE9BBF1009A59F9 /* Main.storyboard.orig in Resources */,
+				EF1210CA1CEEF0F80034DAC5 /* icon_regionenfilter_pin_active@2x.png in Resources */,
 				EFEF6D621CEA06EC00979D4B /* STDebugHelperCellTVC.xib in Resources */,
 				EFCB4DEA1CE9BBF1009A59F9 /* icon_content_article_pin.png in Resources */,
 				EFCB4DEB1CE9BBF1009A59F9 /* RWEHeadline-LightCondens.ttf in Resources */,

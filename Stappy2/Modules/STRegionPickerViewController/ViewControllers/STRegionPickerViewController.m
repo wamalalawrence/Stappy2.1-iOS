@@ -25,12 +25,16 @@
 #define kRegPickerJSONIdentifierShortcut @"shortcut"
 #define kRegPickerJSONIdentifierZipCodes @"zipCodes"
 #define kRegPickerJSONIdentifierButton @"button"
+#define kRegPickerJSONIdentifierIconButton @"iconButton"
 //
 #define kRegPickerMapImage @"map.png"
 #define kRegPickerBackgroundImage @"image_content_bg_national_blur.jpg"
 #define kRegPickerNavBarIconLeft @"back"
 #define kRegPickerNavBarIcon @"icon_content_badge_map_germany.png"
 #define kRegPickerNavBarIconWithBadge @"icon_content_badge_map_germany_cutted.png"
+#define kRegPickerMarkerIconSelected @"icon_regionenfilter_pin_active.png"
+#define kRegPickerMarkerIconUnselected @"icon_regionenfilter_pin.png"
+#define kRegPickerMarkerIconSize 80.0
 #define kRegPickerRegionsFile @"regions-suewag.json"
 #define kRegPickerAnnotationFont [UIFont fontWithName:@"RWEHeadline-MediumCondensed" size:50.0f * scale]
 #define kRegPickerFont [UIFont fontWithName:@"RWEHeadline-MediumCondensed" size:18]
@@ -54,7 +58,7 @@
 @property (nonatomic, retain) UIImage *mapImage;
 @property (nonatomic, retain) UIImageView *mapImageView;
 @property (nonatomic, retain) NSArray *allRegions;
-@property (nonatomic, retain) NSMutableArray *allButtons;
+//@property (nonatomic, retain) NSMutableArray *allButtons;
 @property (nonatomic, retain) UIButton *navBarButton;
 @property (nonatomic, retain) CustomBadge *badge;
 @property (nonatomic, strong) NSDictionary* regionsDict;
@@ -101,6 +105,7 @@
 #pragma mark - regions
 
 - (NSArray*)loadRegions {
+
     NSString *fileName = [[kRegPickerRegionsFile lastPathComponent] stringByDeletingPathExtension];
     NSString *fileExt = [kRegPickerRegionsFile pathExtension];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileExt];
@@ -109,7 +114,12 @@
     self.regionsDict = [self.regionsDict objectForKey:kRegPickerJSONIdentifierRegions];
     NSArray *jsonArray = [self.regionsDict allValues];
     if (jsonArray) {
-        return jsonArray;
+        NSMutableArray *newArray = [[NSMutableArray alloc] init];
+        for (NSDictionary *dict in jsonArray) {
+            NSMutableDictionary *nextDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+            [newArray addObject:nextDict];
+        }
+        return [NSArray arrayWithArray:newArray];
     }
     return nil;
 }
@@ -120,13 +130,12 @@
     NSArray *regions = [defaults objectForKey:@"filter_regionen"];
 
     CGFloat scale = self.selectionScrollView.zoomScale;
-    self.allButtons = [[NSMutableArray alloc] init];
-    
-    for (NSDictionary *regDict in self.allRegions) {
+    for (NSMutableDictionary *regDict in self.allRegions) {
         
         CGSize size = [[regDict objectForKey:kRegPickerJSONIdentifierShortcut] sizeWithAttributes:@{NSFontAttributeName:kRegPickerAnnotationFont}];
-        CGRect buttonRect = CGRectMake(([[regDict objectForKey:kRegPickerJSONIdentifierXPos] floatValue] * scale) - (size.width/1.5),
-                                       ([[regDict objectForKey:kRegPickerJSONIdentifierYPos] floatValue] * scale) - (size.height/2),
+        
+        CGRect buttonRect = CGRectMake(([[regDict objectForKey:kRegPickerJSONIdentifierXPos] floatValue] * scale) - ((size.width/1.5)*scale),
+                                       ([[regDict objectForKey:kRegPickerJSONIdentifierYPos] floatValue] * scale) - ((size.height/2)*scale) + ((kRegPickerMarkerIconSize/2)*scale),
                                        size.width,
                                        size.height);
         UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -140,28 +149,94 @@
         aButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
         aButton.contentMode = UIViewContentModeCenter;
         aButton.tag = [self.allRegions indexOfObject:regDict];
+        [self.selectionScrollView addSubview:aButton];
+        
+        CGRect buttonRect2 = CGRectMake(aButton.frame.origin.x+(aButton.frame.size.width/2)-((kRegPickerMarkerIconSize/2)*scale),
+                                        aButton.frame.origin.y-(kRegPickerMarkerIconSize*scale),
+                                        (kRegPickerMarkerIconSize*scale),
+                                        (kRegPickerMarkerIconSize*scale));
+        UIButton *aButton2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        aButton2.frame = buttonRect2;
+        [aButton2 addTarget:self action:@selector(regionButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [aButton2 setImage:[UIImage imageNamed:kRegPickerMarkerIconUnselected] forState:UIControlStateNormal];
+        [aButton2 setImage:[UIImage imageNamed:kRegPickerMarkerIconSelected] forState:UIControlStateSelected];
+        aButton2.contentMode = UIViewContentModeScaleAspectFill;
+        aButton2.tag = [self.allRegions indexOfObject:regDict];
+        [self.selectionScrollView addSubview:aButton2];
+        
+        [regDict setObject:aButton forKey:kRegPickerJSONIdentifierButton];
+        [regDict setObject:aButton2 forKey:kRegPickerJSONIdentifierIconButton];
         
         if (regions) {
             if ([regions indexOfObject:[regDict objectForKey:kRegPickerJSONIdentifierID]] != NSNotFound) {
                 aButton.selected = YES;
+                aButton2.selected = YES;
                 self.badgeCounter++;
                 self.navBarButton.selected = YES;
             }
             [self updateBadge];
         }
-        
-        [self.selectionScrollView addSubview:aButton];
-        
-        NSMutableDictionary *btnDict = [NSMutableDictionary dictionaryWithDictionary:regDict];
-        [btnDict setObject:aButton forKey:kRegPickerJSONIdentifierButton];
-        [self.allButtons addObject:btnDict];
-    
     }
+    
+//    CGFloat scale = self.selectionScrollView.zoomScale;
+//    self.allButtons = [[NSMutableArray alloc] init];
+//    
+//    for (NSMutableDictionary *regDict in self.allRegions) {
+//        
+//        CGSize size = [[regDict objectForKey:kRegPickerJSONIdentifierShortcut] sizeWithAttributes:@{NSFontAttributeName:kRegPickerAnnotationFont}];
+//        CGRect buttonRect = CGRectMake(([[regDict objectForKey:kRegPickerJSONIdentifierXPos] floatValue] * scale) - (size.width/1.5),
+//                                       ([[regDict objectForKey:kRegPickerJSONIdentifierYPos] floatValue] * scale) - (size.height/2),
+//                                       size.width,
+//                                       size.height);
+//        UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        aButton.frame = buttonRect;
+//        [aButton addTarget:self action:@selector(regionButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+//        [aButton setTitle:[regDict objectForKey:kRegPickerJSONIdentifierShortcut] forState:UIControlStateNormal];
+//        [aButton setTitleColor:kRegPickerTextColor forState:UIControlStateNormal];
+//        [aButton setTitleColor:kRegPickerSelectColor forState:UIControlStateSelected];
+//        aButton.titleLabel.font = kRegPickerAnnotationFont;
+//        aButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+//        aButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
+//        aButton.contentMode = UIViewContentModeCenter;
+//        aButton.tag = [self.allRegions indexOfObject:regDict];
+//        
+//        CGRect buttonRect2 = CGRectMake(aButton.frame.origin.x+(aButton.frame.size.width/2)-((kRegPickerMarkerIconSize/2)*scale),
+//                                        aButton.frame.origin.y-(kRegPickerMarkerIconSize*scale),
+//                                        (kRegPickerMarkerIconSize*scale),
+//                                        (kRegPickerMarkerIconSize*scale));
+//        UIButton *aButton2 = [UIButton buttonWithType:UIButtonTypeCustom];
+//        aButton2.frame = buttonRect2;
+//        [aButton2 addTarget:self action:@selector(regionButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+//        [aButton2 setImage:[UIImage imageNamed:kRegPickerMarkerIconUnselected] forState:UIControlStateNormal];
+//        [aButton2 setImage:[UIImage imageNamed:kRegPickerMarkerIconSelected] forState:UIControlStateSelected];
+//        aButton2.contentMode = UIViewContentModeScaleAspectFill;
+//        aButton2.tag = [self.allRegions indexOfObject:regDict];
+//        [self.selectionScrollView addSubview:aButton2];
+//        
+//        [regDict setObject:aButton forKey:kRegPickerJSONIdentifierButton];
+//        [regDict setObject:aButton2 forKey:kRegPickerJSONIdentifierIconButton];
+//
+//        if (regions) {
+//            if ([regions indexOfObject:[regDict objectForKey:kRegPickerJSONIdentifierID]] != NSNotFound) {
+//                aButton.selected = YES;
+//                self.badgeCounter++;
+//                self.navBarButton.selected = YES;
+//            }
+//            [self updateBadge];
+//        }
+//
+//        [self.selectionScrollView addSubview:aButton];
+//        
+////        NSMutableDictionary *btnDict = [NSMutableDictionary dictionaryWithDictionary:regDict];
+////        [btnDict setObject:aButton forKey:kRegPickerJSONIdentifierButton];
+////        [self.allButtons addObject:btnDict];
+//    
+//    }
 }
 
 - (void)adjustRegionButtonsToMap {
     CGFloat scale = self.selectionScrollView.zoomScale;
-    for (NSDictionary *thisDict in self.allButtons) {
+    for (NSDictionary *thisDict in self.allRegions) {
         CGSize size = [[thisDict objectForKey:kRegPickerJSONIdentifierShortcut] sizeWithAttributes:@{NSFontAttributeName:kRegPickerAnnotationFont}];
         UIButton *thisButton = [thisDict objectForKey:kRegPickerJSONIdentifierButton];
         CGRect buttonRect = thisButton.frame;
@@ -171,11 +246,20 @@
         buttonRect.size.height = size.height;
         thisButton.frame = buttonRect;
         thisButton.titleLabel.font = kRegPickerAnnotationFont;
+        
+        UIButton *thisButton2 = [thisDict objectForKey:kRegPickerJSONIdentifierIconButton];
+        CGRect buttonRect2 = thisButton2.frame;
+        buttonRect2.origin.x = thisButton.frame.origin.x + (thisButton.frame.size.width/2) - ((kRegPickerMarkerIconSize/2)*scale);
+        buttonRect2.origin.y = thisButton.frame.origin.y - (80*scale);
+        buttonRect2.size.width = kRegPickerMarkerIconSize*scale;
+        buttonRect2.size.height = kRegPickerMarkerIconSize*scale;
+        thisButton2.frame = buttonRect2;
+
     }
 }
 
 - (void)adjustRegionForZipCode:(NSString*)zipCode {
-    for (NSDictionary *regDict in self.allButtons) {
+    for (NSDictionary *regDict in self.allRegions) {
         NSArray *zipArray = [regDict objectForKey:kRegPickerJSONIdentifierZipCodes];
         if ([zipArray indexOfObject:[NSNumber numberWithInt:[zipCode intValue]]] != NSNotFound) {
             UIButton *thisButton = (UIButton*)[regDict objectForKey:kRegPickerJSONIdentifierButton];
@@ -197,7 +281,7 @@
 - (void)selectRegionsDone {
     self.view.userInteractionEnabled = NO;
     NSMutableArray *selectedRegions = [[NSMutableArray alloc] init];
-    for (NSDictionary *buttonDict in self.allButtons) {
+    for (NSDictionary *buttonDict in self.allRegions) {
         UIButton *thisButton = (UIButton*)[buttonDict objectForKey:kRegPickerJSONIdentifierButton];
         if (thisButton.selected) {
             [selectedRegions addObject:[buttonDict objectForKey:kRegPickerJSONIdentifierID]];
@@ -224,8 +308,45 @@
 }
 
 - (void)regionButtonTapped:(id)sender {
+//    UIButton *theButton = (UIButton*)sender;
+//    theButton.selected = !theButton.selected;
+//    if (theButton.selected) {
+//        [self refreshMessageLabelForRegion:[self.allRegions objectAtIndex:theButton.tag] added:YES];
+//        CGRect posRect = CGRectMake(theButton.frame.origin.x - (self.selectionScrollView.frame.size.width/2) + (theButton.frame.size.width/2),
+//                                    theButton.frame.origin.y - (self.selectionScrollView.frame.size.height/2) + (theButton.frame.size.height/2),
+//                                    self.selectionScrollView.frame.size.width,
+//                                    self.selectionScrollView.frame.size.height);
+//        [self.selectionScrollView scrollRectToVisible:posRect animated:YES];
+//        self.badgeCounter++;
+//        self.navBarButton.selected = YES;
+//    } else {
+//        [self refreshMessageLabelForRegion:[self.allRegions objectAtIndex:theButton.tag] added:NO];
+//        self.badgeCounter--;
+//        if (self.badgeCounter == 0) {
+//            self.navBarButton.selected = NO;
+//        }
+//    }
+//    [self updateBadge];
     UIButton *theButton = (UIButton*)sender;
     theButton.selected = !theButton.selected;
+    
+    if (theButton.currentImage) {
+        for (NSDictionary *regDict in self.allRegions) {
+            UIButton *testBtn = (UIButton*)[regDict objectForKey:kRegPickerJSONIdentifierIconButton];
+            if ([testBtn isEqual:theButton]) {
+                UIButton *iconBtn = [regDict objectForKey:kRegPickerJSONIdentifierButton];
+                iconBtn.selected = theButton.selected;
+            }
+        }
+    } else {
+        for (NSDictionary *regDict in self.allRegions) {
+            UIButton *testBtn = (UIButton*)[regDict objectForKey:kRegPickerJSONIdentifierButton];
+            if ([testBtn isEqual:theButton]) {
+                UIButton *iconBtn = [regDict objectForKey:kRegPickerJSONIdentifierIconButton];
+                iconBtn.selected = theButton.selected;
+            }
+        }
+    }
     if (theButton.selected) {
         [self refreshMessageLabelForRegion:[self.allRegions objectAtIndex:theButton.tag] added:YES];
         CGRect posRect = CGRectMake(theButton.frame.origin.x - (self.selectionScrollView.frame.size.width/2) + (theButton.frame.size.width/2),
@@ -417,7 +538,7 @@
     vc.modalPresentationStyle = UIModalPresentationFullScreen;
     vc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     NSMutableArray *notSelectedRegions = [[NSMutableArray alloc] init];
-    for (NSDictionary *regDict in self.allButtons) {
+    for (NSDictionary *regDict in self.allRegions) {
         UIButton *theButton = (UIButton*)[regDict objectForKey:kRegPickerJSONIdentifierButton];
         if (!theButton.selected) {
             [notSelectedRegions addObject:regDict];
