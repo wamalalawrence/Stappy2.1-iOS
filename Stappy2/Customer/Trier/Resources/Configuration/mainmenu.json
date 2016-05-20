@@ -99,22 +99,25 @@
     },
     "startScreenBottomActions": {
         "STWeatherViewController":"Wetter",
-        "Fahrplan":"ÖPNV",
+        "Fahrplan":"Fahrplan",
         "StadtInfo":"Meine Stadt"
     },
     "startScreenScrollActions": {
          "angebote":"angebote",
          "events":"events",
-         "ticker":"Nachrichten",
-         "vereine":"Mein Verein"
+         "ticker":"Ticker",
+         "vereine":"Vereinsticker"
     },
+    
+   
+    
     "startScreenIgnoredItems": [
                                  "parkhaeuser"
                                 ],
     "startScreenOtherNamings": {
         "stadt":"Meine Stadt",
-        "news":"Nachrichten",
-        "lokalnews":"Aus der Region"
+        "news":"Ticker",
+        "lokalnews":"Lokales"
         
     },
     "cityLocation": {
@@ -708,14 +711,14 @@
       "url": "/start",
       },
                   {
-                  "caption": "Nachrichten",
+                  "caption": "Ticker",
                   "icon_name": "ticker",
                   "type": "ticker",
                   "type_api": "news",
                   "url": "/ticker",
                   },
                   {
-      "caption": "Aus der Region",
+      "caption": "Lokales",
       "icon_name": "lokalnews",
       "type": "lokalnews",
       "type_api": "news",
@@ -729,7 +732,7 @@
                   "url": "/events",
                   },
                   {
-                  "caption": "ÖPNV",
+                  "caption": "Fahrplan",
                   "icon_name": "fahrplan_icon",
                   "type": "oepnv_overview",
                   "type_api": "sinfo_kat",
@@ -779,7 +782,7 @@
                   "url":"/sinfo"
                   },
                   {
-                  "caption": "Mein Verein",
+                  "caption": "Vereinsticker",
                   "icon_name": "vereine",
                   "type": "vereine",
                   "type_api": "sports",
@@ -794,7 +797,7 @@
       "url": "/angebote",
       },
                   {
-                  "caption": "Apothekennotdienst",
+                  "caption": "Apotheken",
                   "icon_name": "Apotheken",
                   "type": "apotheken_overview",
                   "type_api": "apotheken_notdienst",

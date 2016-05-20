@@ -14,7 +14,7 @@
             } 
         },
        {
-       "key": "Aus der Region",
+       "key": "Lokales",
        "storyboard_id": "lokalnews",
        "nibname":"",
        "navigationbar":{
@@ -66,7 +66,7 @@
        }
        },
        {
-       "key": "ÖPNV",
+       "key": "Fahrplan",
        "storyboard_id": "",
        "nibname":"STFahrplanSearchVC",
        "navigationbar":{
@@ -133,7 +133,7 @@
        }
        },
        {
-       "key": "Mein Verein",
+       "key": "Vereinsticker",
        "storyboard_id": "vereine",
        "nibname":"",
        "navigationbar":{
@@ -146,7 +146,7 @@
        }
        },
        {
-       "key": "Nachrichten",
+       "key": "Ticker",
                "storyboard_id": "news",
                "nibname":"",
                "navigationbar":{
@@ -171,7 +171,7 @@
                }
                },
                {
-               "key": "Apothekennotdienst",
+               "key": "Apotheken",
                "storyboard_id": "STApothekenViewController",
                "nibname":"",
                "navigationbar":{
