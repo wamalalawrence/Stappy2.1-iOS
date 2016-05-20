@@ -117,7 +117,8 @@
     "startScreenOtherNamings": {
         "stadt":"Meine Stadt",
         "news":"Ticker",
-        "lokalnews":"Lokales"
+        "lokalnews":"Lokales",
+        "vereine":"Vereinsticker"
         
     },
     "cityLocation": {
@@ -947,7 +948,7 @@
                                     "caption": "Wahlen"
                                     }]
                       }, {
-                      "caption": "Vereinsnews",
+                      "caption": "Vereinsticker",
                       "icon_name": "vereinsnews_icon",
                       "sub_items": [{
                                     "caption": "FC Schwedt"
