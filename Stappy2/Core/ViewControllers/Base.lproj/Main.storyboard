@@ -455,13 +455,13 @@
                                         <constraints>
                                             <constraint firstItem="a5t-ON-Ohl" firstAttribute="leading" secondItem="5QE-JB-aI2" secondAttribute="leading" constant="5" id="861-V2-oTW"/>
                                             <constraint firstItem="Fhn-2v-Ghi" firstAttribute="leading" secondItem="5QE-JB-aI2" secondAttribute="leading" constant="10" id="IeC-H1-q7U"/>
-                                            <constraint firstItem="TN9-3L-Pt2" firstAttribute="leading" secondItem="5QE-JB-aI2" secondAttribute="leading" constant="4" id="UQ7-qE-NaW"/>
+                                            <constraint firstItem="TN9-3L-Pt2" firstAttribute="leading" secondItem="5QE-JB-aI2" secondAttribute="leading" constant="8" id="UQ7-qE-NaW"/>
                                             <constraint firstItem="Fhn-2v-Ghi" firstAttribute="top" secondItem="5QE-JB-aI2" secondAttribute="top" id="ivD-yS-wiH"/>
                                             <constraint firstItem="a5t-ON-Ohl" firstAttribute="top" secondItem="Fhn-2v-Ghi" secondAttribute="bottom" id="s8u-au-gg9"/>
                                             <constraint firstItem="TN9-3L-Pt2" firstAttribute="top" secondItem="a5t-ON-Ohl" secondAttribute="bottom" constant="10" id="u6g-yI-Qq8"/>
                                             <constraint firstAttribute="trailing" secondItem="Fhn-2v-Ghi" secondAttribute="trailing" constant="10" id="vgc-1u-KSf"/>
                                             <constraint firstAttribute="trailing" secondItem="a5t-ON-Ohl" secondAttribute="trailing" constant="5" id="xaf-a3-7Vi"/>
-                                            <constraint firstAttribute="trailing" secondItem="TN9-3L-Pt2" secondAttribute="trailing" constant="4" id="xcH-gO-eb3"/>
+                                            <constraint firstAttribute="trailing" secondItem="TN9-3L-Pt2" secondAttribute="trailing" constant="8" id="xcH-gO-eb3"/>
                                         </constraints>
                                     </view>
                                     <tableView hidden="YES" clipsSubviews="YES" tag="1003" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlU-ZO-OWZ" userLabel="ThirdTableSideMenu">
@@ -524,6 +524,7 @@
                         <outlet property="backgroundBlurred" destination="ueE-lx-glo" id="XAV-Ts-YA6"/>
                         <outlet property="bottomContentView" destination="P0G-XR-ph3" id="Fh7-vI-kCJ"/>
                         <outlet property="couponCodeTextField" destination="vdL-6Q-kyM" id="fGX-gr-9nZ"/>
+                        <outlet property="couponsBodyLabel" destination="TN9-3L-Pt2" id="Ej5-sZ-xgb"/>
                         <outlet property="couponsTitleLabel" destination="Fhn-2v-Ghi" id="KwB-Do-u1l"/>
                         <outlet property="couponsView" destination="5QE-JB-aI2" id="TFy-Gm-LZK"/>
                         <outlet property="favoritesButton" destination="cuA-cX-Vdb" id="qTM-h5-fsO"/>

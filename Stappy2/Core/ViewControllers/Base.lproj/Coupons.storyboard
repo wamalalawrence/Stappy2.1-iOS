@@ -95,7 +95,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <state key="normal" title="Überspringen">
-                                                    <color key="titleColor" red="0.91764705882352937" green="0.6588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.53333333333333333" green="0.72941176470588232" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>

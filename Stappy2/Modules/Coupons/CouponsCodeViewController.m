@@ -10,7 +10,7 @@
 #import "Utils.h"
 #import "Defines.h"
 #import "RandomImageView.h"
-
+#import "STAppSettingsManager.h"
 @interface CouponsCodeViewController ()
 
 @end
@@ -29,6 +29,15 @@
     self.couponsButton.layer.borderColor = [UIColor whiteColor].CGColor;
     [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:kCouponScreenShown];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+  
+    UIFont *couponesBodyFont = [settings customFontForKey:@"coupones.bodyText.font"];
+    if (couponesBodyFont) {
+        self.couponsBodyLabel.font = couponesBodyFont;
+        self.couponsButton.titleLabel.font = couponesBodyFont;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

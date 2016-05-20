@@ -75,6 +75,7 @@
 @property (nonatomic, strong)NSDictionary* backSubitemDict;
 @property (weak, nonatomic) IBOutlet StappyTextField *couponCodeTextField;
 @property (weak, nonatomic) IBOutlet UILabel *couponsTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *couponsBodyLabel;
 
 - (IBAction)tapOutsideTextFieldRecognized:(id)sender;
 

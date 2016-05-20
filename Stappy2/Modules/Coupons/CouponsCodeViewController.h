@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet StappyTextField *couponNumberTextField;
 @property (weak, nonatomic) IBOutlet UIButton *couponsButton;
 @property (weak, nonatomic) IBOutlet RandomImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel *couponsBodyLabel;
 
 @end

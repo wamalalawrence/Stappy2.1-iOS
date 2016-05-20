@@ -221,6 +221,20 @@
                 }
             }
         },
+        "coupones": {
+            "title":{
+                "font": {
+                    "name": "RWEHeadline-MediumCondensed",
+                    "size": "18"
+                }
+            },
+            "bodyText":{
+                "font": {
+                    "name": "RWEHeadline-RegularCondensed",
+                    "size": "16"
+                }
+            }
+        },
         
         "sidemenu": {
             "cell": {

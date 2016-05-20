@@ -132,6 +132,16 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
     UIFont *settingsFont  = [settings customFontForKey:@"sidemenu.settings.font"];
     UIFont *searchFont    = [settings customFontForKey:@"sidemenu.search.font"];
     UIFont *favoritesFont = [settings customFontForKey:@"sidemenu.favorites.font"];
+    UIFont *couponesTitleFont = [settings customFontForKey:@"coupones.title.font"];
+    UIFont *couponesBodyFont = [settings customFontForKey:@"coupones.bodyText.font"];
+
+    if (couponesBodyFont) {
+        self.couponsBodyLabel.font = couponesBodyFont;
+    }
+    
+    if (couponesTitleFont) {
+        self.couponsTitleLabel.font = couponesTitleFont;
+    }
     
     if (settingsFont)  [self.settingsButton.titleLabel  setFont:settingsFont];
     if (searchFont)    [self.searchButton.titleLabel    setFont:settingsFont];
