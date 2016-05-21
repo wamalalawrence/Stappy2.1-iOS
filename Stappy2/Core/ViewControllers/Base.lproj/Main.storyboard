@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -413,8 +413,8 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN9-3L-Pt2">
-                                                <rect key="frame" x="4" y="110" width="202" height="206"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN9-3L-Pt2">
+                                                <rect key="frame" x="4" y="110" width="202" height="224"/>
                                                 <string key="text">Mit unseren Gutscheine sind Ihnen und Ihrer ganzen Familie attraktive Preis- und Einkaufsvorteile garantiert. Profitieren Sie von interessanten Angeboten der Gutschein-Partner. Tragen Sie für den Registrierungspropozess lediglich Ihre Kundennummer ein - Viel Spaß!</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -464,6 +464,10 @@
                                             <constraint firstAttribute="trailing" secondItem="TN9-3L-Pt2" secondAttribute="trailing" constant="4" id="xcH-gO-eb3"/>
                                         </constraints>
                                     </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEo-Bm-bWH" customClass="STRegionPickerSettingsView">
+                                        <rect key="frame" x="50" y="50" width="210" height="328"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <tableView hidden="YES" clipsSubviews="YES" tag="1003" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlU-ZO-OWZ" userLabel="ThirdTableSideMenu">
                                         <rect key="frame" x="100" y="50" width="160" height="328"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -476,12 +480,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="zEo-Bm-bWH" firstAttribute="width" secondItem="13L-zc-XcT" secondAttribute="width" id="1gU-xv-9AN"/>
                                     <constraint firstAttribute="trailing" secondItem="Fjl-xO-YNV" secondAttribute="trailing" id="3sV-KE-ccK"/>
+                                    <constraint firstItem="zEo-Bm-bWH" firstAttribute="height" secondItem="13L-zc-XcT" secondAttribute="height" id="485-2z-Lis"/>
                                     <constraint firstAttribute="trailing" secondItem="mlU-ZO-OWZ" secondAttribute="trailing" id="7MV-Vs-dJe"/>
                                     <constraint firstItem="Fjl-xO-YNV" firstAttribute="leading" secondItem="P0G-XR-ph3" secondAttribute="leading" id="7ka-yn-HZq"/>
+                                    <constraint firstItem="zEo-Bm-bWH" firstAttribute="top" secondItem="13L-zc-XcT" secondAttribute="top" id="9hB-Ed-AdL"/>
                                     <constraint firstItem="G3n-ow-Vft" firstAttribute="centerX" secondItem="P0G-XR-ph3" secondAttribute="centerX" id="AxB-JX-9fC"/>
                                     <constraint firstItem="mlU-ZO-OWZ" firstAttribute="top" secondItem="P0G-XR-ph3" secondAttribute="top" constant="50" id="B7X-yb-L5x"/>
                                     <constraint firstItem="5QE-JB-aI2" firstAttribute="leading" secondItem="13L-zc-XcT" secondAttribute="leading" id="DaA-z7-Oeb"/>
+                                    <constraint firstItem="zEo-Bm-bWH" firstAttribute="leading" secondItem="13L-zc-XcT" secondAttribute="leading" id="DbV-9g-Ygw"/>
                                     <constraint firstItem="G3n-ow-Vft" firstAttribute="centerY" secondItem="P0G-XR-ph3" secondAttribute="centerY" id="Rhn-Wi-XFy"/>
                                     <constraint firstItem="iRj-lZ-kGR" firstAttribute="top" secondItem="P0G-XR-ph3" secondAttribute="top" id="Sqm-tO-JOR"/>
                                     <constraint firstItem="Fjl-xO-YNV" firstAttribute="top" secondItem="P0G-XR-ph3" secondAttribute="top" id="TfU-Ru-Yy0"/>
@@ -529,6 +537,7 @@
                         <outlet property="favoritesButton" destination="cuA-cX-Vdb" id="qTM-h5-fsO"/>
                         <outlet property="firstMenuTrailingConstraint" destination="3sV-KE-ccK" id="5L1-N3-lsj"/>
                         <outlet property="firstsideMenuTable" destination="Fjl-xO-YNV" id="fNR-Dn-owq"/>
+                        <outlet property="regionPickerSettingsView" destination="zEo-Bm-bWH" id="fcp-fv-mr3"/>
                         <outlet property="searchButton" destination="zX6-kV-PgZ" id="rPy-hc-dnk"/>
                         <outlet property="secondMenuLeadingConstraint" destination="dBM-P5-2he" id="nlv-ba-KoU"/>
                         <outlet property="secondMenuTopLabel" destination="Mrl-iu-JUK" id="PQy-ve-CVT"/>
@@ -1224,13 +1233,13 @@
                                                     <action selector="segmenteControllChanged:" destination="dvJ-k6-MTh" eventType="valueChanged" id="h4i-8W-jeS"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <view contentMode="scaleToFill" verticalHuggingPriority="200" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILU-yS-pel" userLabel="firstTabContainerView">
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="ILU-yS-pel" userLabel="firstTabContainerView">
                                                 <rect key="frame" x="8" y="44" width="304" height="200"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="200" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQk-ow-rnF" userLabel="topContainerView">
+                                                    <view contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="uQk-ow-rnF" userLabel="topContainerView">
                                                         <rect key="frame" x="8" y="8" width="288" height="73"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Folgende Zählerstände wurden dem Stadtwerk zuletzt zugeschickt." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np1-tl-G5h">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Folgende Zählerstände wurden dem Stadtwerk zuletzt zugeschickt." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np1-tl-G5h">
                                                                 <rect key="frame" x="8" y="44" width="272" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1257,7 +1266,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view hidden="YES" contentMode="scaleToFill" verticalHuggingPriority="200" horizontalCompressionResistancePriority="752" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-LJ-1b6" userLabel="secondContainerView">
+                                                    <view hidden="YES" contentMode="scaleToFill" verticalHuggingPriority="200" horizontalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-LJ-1b6" userLabel="secondContainerView">
                                                         <rect key="frame" x="8" y="96" width="288" height="37"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duV-C4-3AT">
@@ -1278,7 +1287,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXB-Tr-1ER">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXB-Tr-1ER">
                                                         <rect key="frame" x="8" y="148" width="288" height="32"/>
                                                         <fontDescription key="fontDescription" name="OfficinaSansITCPro-Book" family="Officina Sans ITC Pro" pointSize="20"/>
                                                         <state key="normal" title="Manuell Eingeben">
@@ -1687,7 +1696,7 @@
                                                         <rect key="frame" x="0.0" y="28" width="288" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VAU-ho-EVD" id="wiF-vK-deh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="49.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="icon_tick" translatesAutoresizingMaskIntoConstraints="NO" id="5xo-OR-JfQ">

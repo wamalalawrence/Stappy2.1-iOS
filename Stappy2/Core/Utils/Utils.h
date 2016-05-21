@@ -25,6 +25,8 @@
 
 + (NSString *)replaceSpecialCharactersFrom:(NSString*)text;
 
++ (BOOL)string:(NSString *)string equalsToAnyOfTheStringsInArrayOfString:(NSArray<NSString *> *)arrayOfStrings;
+
 + (void)swizzleMethodsForOriginalSelector:(SEL)originalSelector withSwizzledMethod:(SEL)swizzledSelector forClass:(Class)class;
 
 // Loads a new view controller with al the required data from local style files.

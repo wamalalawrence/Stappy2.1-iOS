@@ -129,9 +129,11 @@
 
 - (void)addRegionButtonsToMap {
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSArray *regions = [defaults objectForKey:@"filter_regionen"];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSArray *regions = [defaults objectForKey:@"filter_regionen"];
 
+    NSArray *regions = [[Filters sharedInstance] filtersForType:FilterTypeRegionen];
+    
     CGFloat scale = self.selectionScrollView.zoomScale;
     for (NSMutableDictionary *regDict in self.allRegions) {
         
@@ -243,7 +245,7 @@
                                                 error:&error];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSArray arrayWithArray:selectedRegions] forKey:@"filter_regionen"];
+//    [defaults setObject:[NSArray arrayWithArray:selectedRegions] forKey:@"filter_regionen"];
     [defaults setBool:YES forKey:@"regionPickerShowed"];
     
     //set also the array of background images

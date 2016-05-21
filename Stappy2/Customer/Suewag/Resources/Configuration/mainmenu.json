@@ -152,6 +152,9 @@
         "news": [85956]
     },
     "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events", "lokalnews"],
+    "regionPickerSettingsItem": {
+        "indexInLeftSideMenu": "first"
+    },
     "overlayScreens": {
         "stackOpticTutorial": {
             "viewControllers": ["STTickerViewController", "STLokalNewsViewController", "STAngeboteViewController", "STEventsViewController"],

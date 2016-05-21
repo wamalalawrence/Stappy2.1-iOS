@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Defines.h"
 #import "RandomImageView.h"
+#import "STRegionPickerSettingsView.h"
 @class StappyTextField;
 
 @protocol SideMenuViewControllerDelegate <NSObject>
@@ -24,6 +25,7 @@
 
 @interface SidebarViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *couponsView;
+@property (weak, nonatomic) IBOutlet STRegionPickerSettingsView *regionPickerSettingsView;
 
 @property (weak, nonatomic) IBOutlet UIView *topContentView;
 @property (weak, nonatomic) IBOutlet UIView *bottomContentView;

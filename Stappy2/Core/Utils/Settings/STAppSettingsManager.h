@@ -47,6 +47,8 @@
 @property(nonatomic,strong)NSString* rightMenuBackgroundColor;
 @property(nonatomic,strong)NSArray* reportCategories;
 
+@property (nonatomic, strong, readonly) NSDictionary *regionPickerSettingsItem;
+
 + (STAppSettingsManager*)sharedSettingsManager;
 
 - (UIColor*)customColorForKey:(NSString*)key;

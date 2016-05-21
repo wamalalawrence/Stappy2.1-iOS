@@ -31,6 +31,7 @@
 #import "STParkhausViewController.h"
 #import "STStadtInfoOverviewViewController.h"
 #import "STBaederOverviewViewController.h"
+#import "STRegionPickerSettingsView.h"
 #import "STLeftMenuSettingsModel.h"
 #import "STLeftObjRequestedModel.h"
 #import "SearchTopTableViewCell.h"
@@ -126,6 +127,9 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
     
     [self.secondSideMenuTable registerNib:searcTopNib forCellReuseIdentifier:kSearchTopTableViewCell];
     [self.thirdSideMenuTable registerNib:searcTopNib forCellReuseIdentifier:kSearchTopTableViewCell];
+
+    // STRegionPickerSettingsViewDelegate
+    self.regionPickerSettingsView.delegate = self;
 
     // Fonts
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];

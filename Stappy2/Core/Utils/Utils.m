@@ -98,6 +98,17 @@
     
 }
 
++ (BOOL)string:(NSString *)string equalsToAnyOfTheStringsInArrayOfString:(NSArray<NSString *> *)arrayOfStrings
+{
+    for (NSString *compareString in arrayOfStrings)
+    {
+        if ([string isEqualToString:compareString]) return YES;
+    }
+
+    return NO;
+}
+
+
 + (void)swizzleMethodsForOriginalSelector:(SEL)originalSelector withSwizzledMethod:(SEL)swizzledSelector forClass:(Class)class
 {
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
