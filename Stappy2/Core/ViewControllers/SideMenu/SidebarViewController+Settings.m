@@ -67,7 +67,7 @@
     [[STRequestsHandler sharedInstance] settingsOptionsFromUrl:settingsUrl andCompletion:^(NSArray *settingsArray, NSError *error) {
         if (!error) {
             NSMutableArray *mutableSettings = [NSMutableArray array];
-            NSDictionary *regionPickerSettingsItem = [STAppSettingsManager sharedSettingsManager].regionPickerSettingsItem;
+            
             // Load the same icons to the settings options as for menu options.
             for (STLeftMenuSettingsModel *leftMenuItem in self.leftMenuItems) {
                 for (STLeftMenuSettingsModel *settingsModel in settingsArray) {
@@ -83,13 +83,14 @@
                 }
             }
           
+            NSDictionary *regionPickerSettingsItem = [STAppSettingsManager sharedSettingsManager].regionPickerSettingsItem;
+            
             //Add items that are not found on the left menu
             for (STLeftMenuSettingsModel *settingsModel in settingsArray) {
                 if ([settingsModel.type isEqualToString:@"regionen"] && !regionPickerSettingsItem) {
                     settingsModel.iconName = @"regionen";
                     settingsModel.title = @"REGIONEN";
                     [mutableSettings insertObject:settingsModel atIndex:mutableSettings.count];
-
                 }
             }
             
@@ -182,10 +183,9 @@
                 /*
                  * Show custom views if needed
                  */
+                // show the region picker settings view
                 NSDictionary *regionPickerSettings = [STAppSettingsManager sharedSettingsManager].regionPickerSettingsItem;
                 NSArray *possibleMenuItemTexts = @[@"Regionen", @"Regionenfilter"];
-
-                // show the region picker settings view
                 BOOL regionPickerSettingsViewShouldBeShown = [Utils string:selectedCell.menuItemLabel.text
                                     equalsToAnyOfTheStringsInArrayOfString:possibleMenuItemTexts] && regionPickerSettings != nil;
                 self.regionPickerSettingsView.hidden = !regionPickerSettingsViewShouldBeShown;
@@ -209,27 +209,6 @@
             break;
     }
 
-}
-
-- (void)regionsButtonWasPressed
-{
-    //present region picker controller
-    STRegionPickerViewController *vc = [[STRegionPickerViewController alloc] initWithNibName:@"STRegionPickerViewController" bundle:nil];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
-    vc.currentState = PickerStateSelect;
-    nvc.navigationBar.barTintColor = [UIColor partnerColor];
-    nvc.navigationBar.tintColor = [UIColor partnerColor];
-    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
-    UIFont *navigationbarTitleFont = [settings customFontForKey:@"navigationbar.title.font"];
-
-    // For iOS8+
-    [nvc.navigationBar setTitleTextAttributes:@{ NSFontAttributeName: navigationbarTitleFont,NSForegroundColorAttributeName: [UIColor whiteColor]}];
-
-    nvc.navigationBar.translucent = YES;
-    nvc.navigationBar.barStyle = UIBarStyleDefault;
-    nvc.modalPresentationStyle = UIModalPresentationFullScreen;
-    nvc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (UITableViewCell *)settingsTableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -354,4 +333,27 @@
 {
     [self hideThirdMenuItems];
 }
+
+#pragma mark - STRegionPickerSettingsViewDelegate methods
+- (void)regionsButtonWasPressed
+{
+    //present region picker controller
+    STRegionPickerViewController *vc = [[STRegionPickerViewController alloc] initWithNibName:@"STRegionPickerViewController" bundle:nil];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.currentState = PickerStateSelect;
+    nvc.navigationBar.barTintColor = [UIColor partnerColor];
+    nvc.navigationBar.tintColor = [UIColor partnerColor];
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+    UIFont *navigationbarTitleFont = [settings customFontForKey:@"navigationbar.title.font"];
+    
+    // For iOS8+
+    [nvc.navigationBar setTitleTextAttributes:@{ NSFontAttributeName: navigationbarTitleFont,NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    nvc.navigationBar.translucent = YES;
+    nvc.navigationBar.barStyle = UIBarStyleDefault;
+    nvc.modalPresentationStyle = UIModalPresentationFullScreen;
+    nvc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:nvc animated:YES completion:nil];
+}
+
 @end

@@ -959,8 +959,11 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
 - (void)stadtInfoItemForUrl:(NSString *)url mappingClass:(Class)mappingClass withCompletion:(void (^)(NSArray *, NSError *))completion {
     NSString* requestUrl = [self buildUrl:url withParameters:nil forPage:0];
     requestUrl = [requestUrl stringByAppendingString:@"&apiVersion=2"];
+    
+    NSDictionary* params = @{@"regions": [[[Filters sharedInstance] filtersForType:FilterTypeRegionen] componentsJoinedByString:@","]};
+    
     [[STHTTPSessionManager manager] GET:requestUrl
-                             parameters:nil
+                             parameters:params
                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                                     if (completion) {
                                         NSError *mtlError = nil;
@@ -997,6 +1000,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
                                                 settingsModel.type = key;
                                                 [settingsModel loadSubItemsFromObject:childrenObject forFilterType:key];
                                                 [settingsArray addObject:settingsModel];
+                                                [[Filters sharedInstance] stringfilterTypeWasLoadedFromServer:key];
                                             }
                                         }
                                         completion(settingsArray,nil);
