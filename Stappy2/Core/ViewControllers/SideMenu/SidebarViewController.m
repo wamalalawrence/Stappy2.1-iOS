@@ -31,6 +31,7 @@
 #import "STParkhausViewController.h"
 #import "STStadtInfoOverviewViewController.h"
 #import "STBaederOverviewViewController.h"
+#import "STRegionPickerSettingsView.h"
 #import "STLeftMenuSettingsModel.h"
 #import "STLeftObjRequestedModel.h"
 #import "SearchTopTableViewCell.h"
@@ -56,7 +57,7 @@
 
 static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
 
-@interface SidebarViewController ()
+@interface SidebarViewController () <STRegionPickerSettingsViewDelegate>
 
 //@property (nonatomic, strong) NSArray *menuItems;
 @property (nonatomic, strong) NSIndexPath* firstMenuSelectedIndexPath;
@@ -126,6 +127,9 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
     
     [self.secondSideMenuTable registerNib:searcTopNib forCellReuseIdentifier:kSearchTopTableViewCell];
     [self.thirdSideMenuTable registerNib:searcTopNib forCellReuseIdentifier:kSearchTopTableViewCell];
+
+    // STRegionPickerSettingsViewDelegate
+    self.regionPickerSettingsView.delegate = self;
 
     // Fonts
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
@@ -312,6 +316,9 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
 }
 
 - (void)resetTopButtons {
+    self.regionPickerSettingsView.hidden = true;
+    self.couponsView.hidden = true;
+    
     self.settingsButton.selected = false;
     self.searchButton.selected = false;
     self.favoritesButton.selected = false;

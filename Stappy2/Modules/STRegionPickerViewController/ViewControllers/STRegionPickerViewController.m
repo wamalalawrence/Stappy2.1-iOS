@@ -14,6 +14,7 @@
 #import "RandomImageView.h"
 #import "Defines.h"
 #import "RandomImageView.h"
+#import "Stappy2-Swift.h"
 
 #define kNavBarTintColor [UIColor colorWithRed:26.0/255.0 green:96.0/255.0 blue:166.0/255.0 alpha:1.0]
 //
@@ -128,9 +129,11 @@
 
 - (void)addRegionButtonsToMap {
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSArray *regions = [defaults objectForKey:@"filter_regionen"];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSArray *regions = [defaults objectForKey:@"filter_regionen"];
 
+    NSArray *regions = [[Filters sharedInstance] filtersForType:FilterTypeRegionen];
+    
     CGFloat scale = self.selectionScrollView.zoomScale;
     for (NSMutableDictionary *regDict in self.allRegions) {
         
@@ -235,9 +238,14 @@
             NSLog(@"Region %@, ID %i", [buttonDict objectForKey:kRegPickerJSONIdentifierName], [[buttonDict objectForKey:kRegPickerJSONIdentifierID] intValue]);
         }
     }
-    
+
+    NSError *error;
+    [[Filters sharedInstance] saveFilterWithFilterIds:selectedRegions
+                                  forStringFilterType:@"regionen"
+                                                error:&error];
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSArray arrayWithArray:selectedRegions] forKey:@"filter_regionen"];
+//    [defaults setObject:[NSArray arrayWithArray:selectedRegions] forKey:@"filter_regionen"];
     [defaults setBool:YES forKey:@"regionPickerShowed"];
     
     //set also the array of background images

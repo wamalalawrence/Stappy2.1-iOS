@@ -349,6 +349,8 @@
     return [shouldShow isEqualToString:@"YES"];
 }
 
+- (NSDictionary *)regionPickerSettingsItem { return [self.configurationDictionary objectForKey:@"regionPickerSettingsItem"]; }
+
 - (BOOL)shouldUseUserPositionInApotheken{
     
     if ([self.configurationDictionary objectForKey:@"shouldUseUserPositionInApotheken"]) {

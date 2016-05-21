@@ -115,14 +115,17 @@ typedef NS_ENUM(NSInteger, ModelIdsState)
     
     if (_subItems.count == 0 )
     {
+        BOOL filtersWereAlreadyLoadedForFilterType = [[Filters sharedInstance] areFiltersAlreadyLoadedFromServerForStringFilterType:_filterType];
+        
         if ([defaultFilters containsObject:@([_modelId integerValue])]) return SettingsSelectionsStateAll;
-        else if ([allIdsAreOnPerDefaultInViewControllers containsObject:_filterType] && ([[NSUserDefaults standardUserDefaults] objectForKey:@"filters"] == nil)) {
-            NSError * error = nil;
+        else if ([allIdsAreOnPerDefaultInViewControllers containsObject:_filterType] && !filtersWereAlreadyLoadedForFilterType)
+        {
+            NSError *error = nil;
             [[Filters sharedInstance] saveFilterWithFilterIds:self.allModelIds forStringFilterType:_filterType notification:NO error:&error];
             
             return SettingsSelectionsStateAll;
         }
-        else                                                                     return SettingsSelectionsStateNone;
+        else return SettingsSelectionsStateNone;
     }
     else return [self selectionState];
 }

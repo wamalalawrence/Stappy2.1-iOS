@@ -108,7 +108,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
 }
 
 -(NSMutableDictionary *)buildParamsForUrl:(NSString*)type __attribute__((deprecated)) {
-    
+
     NSMutableDictionary* params;
     NSMutableArray* prepareParams = [NSMutableArray array];
     //array of STLeftMenuSettingsModels
@@ -125,15 +125,22 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
     }
     params = [NSMutableDictionary dictionaryWithDictionary:@{@"filter":[prepareParams componentsJoinedByString:@","]}];
     params[@"sort"] = @"DESC";
-    
+
     return params;
 }
 
-- (NSMutableDictionary *)buildParamsForType:(FilterType)type {
+- (NSMutableDictionary *)buildParamsForType:(FilterType)type withRegionFilters:(BOOL)shouldUseRegionFilters {
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     
     NSArray *enabledFilters = [[Filters sharedInstance] filtersForType:type];
     params[@"filter"] = [enabledFilters componentsJoinedByString:@","];
+
+    if (shouldUseRegionFilters)
+    {
+        NSArray *selectedRegions = [[Filters sharedInstance] filtersForType:FilterTypeRegionen];
+        params[@"regions"] = [selectedRegions componentsJoinedByString:@","];
+    }
+
     params[@"sort"] = @"DESC";
     
     return params;
@@ -246,7 +253,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
     }
     
     NSString* requestUrl = [self buildUrl:url withParameters:nil forPage:0];
-    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeAngebote];
+    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeAngebote withRegionFilters:YES];
     [parameters addEntriesFromDictionary:params];
     
     //build the url with param here to test pagination
@@ -294,7 +301,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
     }
     
     NSString* requestUrl = [self buildUrl:url withParameters:nil forPage:0];
-    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeEvents];
+    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeEvents withRegionFilters:YES];
     [parameters addEntriesFromDictionary:params];
     [parameters removeObjectForKey:@"sort"]; // FIXME: temporary solution. In the future all the parameters
     // for the requests should be store in configuration file
@@ -343,7 +350,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
     }
     
     NSString* requestUrl = [self buildUrl:url withParameters:nil forPage:0];
-    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeVereinsnews];
+    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeVereinsnews withRegionFilters:YES];
 //    [parameters addEntriesFromDictionary:params];
     
     [params addEntriesFromDictionary:@{@"sort":@"DESC"}];
@@ -392,7 +399,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
     }
     
     NSString* requestUrl = [self buildUrl:url withParameters:nil forPage:0];
-    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeLokalnews];
+    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeLokalnews withRegionFilters:YES];
     [parameters addEntriesFromDictionary:params];
     
     //build the url with param here to test pagination
@@ -439,7 +446,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
     }
     
     NSString* requestUrl = [self buildUrl:url withParameters:nil forPage:0];
-    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeTicker];
+    NSMutableDictionary* parameters = [self buildParamsForType:FilterTypeTicker withRegionFilters:NO];
     [parameters addEntriesFromDictionary:params];
     
     //build the url with param here to test pagination
@@ -952,8 +959,11 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
 - (void)stadtInfoItemForUrl:(NSString *)url mappingClass:(Class)mappingClass withCompletion:(void (^)(NSArray *, NSError *))completion {
     NSString* requestUrl = [self buildUrl:url withParameters:nil forPage:0];
     requestUrl = [requestUrl stringByAppendingString:@"&apiVersion=2"];
+    
+    NSDictionary* params = @{@"regions": [[[Filters sharedInstance] filtersForType:FilterTypeRegionen] componentsJoinedByString:@","]};
+    
     [[STHTTPSessionManager manager] GET:requestUrl
-                             parameters:nil
+                             parameters:params
                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                                     if (completion) {
                                         NSError *mtlError = nil;
@@ -990,6 +1000,7 @@ static NSString *STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
                                                 settingsModel.type = key;
                                                 [settingsModel loadSubItemsFromObject:childrenObject forFilterType:key];
                                                 [settingsArray addObject:settingsModel];
+                                                [[Filters sharedInstance] stringfilterTypeWasLoadedFromServer:key];
                                             }
                                         }
                                         completion(settingsArray,nil);

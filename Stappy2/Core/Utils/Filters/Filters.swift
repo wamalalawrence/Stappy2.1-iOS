@@ -20,22 +20,26 @@ enum FilterError: ErrorType {
     case Events
     case Angebote
     case Vereinsnews
+    case Regionen
     
     static func filterTypeFromString(filterType: NSString?) throws -> FilterType {
         guard let filterType = filterType else { // if nil Optional is passed to the function
             throw FilterError.NilStringFilterType
         }
         
-        if (filterType.isEqualToString("ticker") || filterType.isEqualToString("news") || filterType.isEqualToString("nachrichten")) {
+        let ft = filterType as String
+        if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["ticker", "news", "nachrichten", "national-ticker"]) {
             return .Ticker
-        } else if (filterType.isEqualToString("lokalnews")) {
+        } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["lokalnews", "regional-ticker"]) {
             return .Lokalnews
-        } else if (filterType.isEqualToString("events")) {
+        } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["events", "veranstaltungen"]) {
             return .Events
-        } else if (filterType.isEqualToString("angebote")) {
+        } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["angebote", "gutscheine"]) {
             return .Angebote
-        } else if (filterType.isEqualToString("vereinsnews") || filterType.isEqualToString("vereine")) {
+        } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["vereinsnews", "vereine"]) {
             return .Vereinsnews
+        } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["regionen", "regions"]) {
+            return .Regionen
         } else {
             throw FilterError.InvalidStringFilterType
         }
@@ -48,40 +52,61 @@ enum FilterError: ErrorType {
             case .Events: return "events"
             case .Angebote: return "angebote"
             case .Vereinsnews: return "vereinsnews"
+            case .Regionen: return "regionen"
         }
     }
     
     static func totalFilterTypesCount() -> Int {
-        return 5
+        return 6
     }
 }
 
 @objc class Filters: NSObject {
     static let sharedInstance = Filters()
-    private var filters = [[Int]]()
+    private var filters = Array<Array<Int>>(count: FilterType.totalFilterTypesCount(), repeatedValue: [])
+    private var loadedFiltersFromServer = Array<Bool>(count: FilterType.totalFilterTypesCount(), repeatedValue: false)
     
     private override init() {
         super.init()
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        let isFirstLaunch = defaults.objectForKey("isFirstAppLaunch")
         
+        func copyTheContentOfTheOldArrayAndResizeArrayIfNecessary<T>(from: Array<T>, to: Array<T>) -> Array<T> {
+            var result = to
+            
+            let requiredFiltersArraySize = FilterType.totalFilterTypesCount()
+            
+            if from.count < requiredFiltersArraySize {
+                for i in 0..<from.count {
+                    result[i] = from[i]
+                }
+            } else {
+                result = from
+            }
+            
+            return result
+        }
+        
+        let isFirstLaunch = defaults.objectForKey("isFirstAppLaunch")
         if (isFirstLaunch == nil) {
             loadDefaultFilters()
             defaults.setBool(true, forKey: "isFirstAppLaunch")
         } else {
             // load the filters from NSUserDefaults
-            if let savedFilters = defaults.objectForKey("filters") {
-                filters = savedFilters as! [[Int]]
+            if let savedFilters = defaults.objectForKey("filters") as? [[Int]] {
+                // check if new filterTypes were added & the array was resized
+                filters = copyTheContentOfTheOldArrayAndResizeArrayIfNecessary(savedFilters, to: filters)
             } else {
                 loadDefaultFilters()
+            }
+            
+            if let loadedFilterTypes = defaults.objectForKey("loadedFiltersFromServer") as? [Bool] {
+                loadedFiltersFromServer = copyTheContentOfTheOldArrayAndResizeArrayIfNecessary(loadedFilterTypes, to: loadedFiltersFromServer)
             }
         }
     }
 
     private func loadDefaultFilters() {
-        filters = [[Int]](count: FilterType.totalFilterTypesCount(), repeatedValue: []);
-
         // load default filters
         let defaultFilters = STAppSettingsManager.sharedSettingsManager().defaultFilters
         if defaultFilters != nil {
@@ -101,10 +126,36 @@ enum FilterError: ErrorType {
         return filtersForType(index)
     }
     
+//MARK: - check if the filters were already loaded from server and stored
+    func areFiltersAlreadyLoadedFromServerForType(filterType: FilterType) -> Bool {
+        return loadedFiltersFromServer[filterType.rawValue]
+    }
+    
+    func areFiltersAlreadyLoadedFromServerForStringFilterType(stringFilterType: NSString) -> Bool {
+        do {
+            let index = try FilterType.filterTypeFromString(stringFilterType)
+            return areFiltersAlreadyLoadedFromServerForType(index)
+        } catch {
+            return false
+        }
+    }
+
+    func filterTypeWasLoadedFromServer(filterType: FilterType) {
+        loadedFiltersFromServer[filterType.rawValue] = true
+    }
+    
+    func stringfilterTypeWasLoadedFromServer(stringFilterType: NSString) {
+        do {
+            let index = try FilterType.filterTypeFromString(stringFilterType)
+            return filterTypeWasLoadedFromServer(index)
+        } catch {}
+    }
+    
 //MARK: - save methods
     
     func saveFilters() {
         NSUserDefaults.standardUserDefaults().setObject(filters, forKey: "filters")
+        NSUserDefaults.standardUserDefaults().setObject(loadedFiltersFromServer, forKey: "loadedFiltersFromServer")
     }
     
     func saveFilter(filterIds filterIds: [Int], forEnumFilterType filterType: FilterType, notification: Bool = true) {

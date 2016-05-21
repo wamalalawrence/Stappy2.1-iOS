@@ -67,7 +67,7 @@
     [[STRequestsHandler sharedInstance] settingsOptionsFromUrl:settingsUrl andCompletion:^(NSArray *settingsArray, NSError *error) {
         if (!error) {
             NSMutableArray *mutableSettings = [NSMutableArray array];
-            BOOL hasRegionPicker = [STAppSettingsManager sharedSettingsManager].shouldDisplayRegionPicker;
+            
             // Load the same icons to the settings options as for menu options.
             for (STLeftMenuSettingsModel *leftMenuItem in self.leftMenuItems) {
                 for (STLeftMenuSettingsModel *settingsModel in settingsArray) {
@@ -83,13 +83,14 @@
                 }
             }
           
+            NSDictionary *regionPickerSettingsItem = [STAppSettingsManager sharedSettingsManager].regionPickerSettingsItem;
+            
             //Add items that are not found on the left menu
             for (STLeftMenuSettingsModel *settingsModel in settingsArray) {
-                if ([settingsModel.type isEqualToString:@"regionen"] && !hasRegionPicker) {
+                if ([settingsModel.type isEqualToString:@"regionen"] && !regionPickerSettingsItem) {
                     settingsModel.iconName = @"regionen";
                     settingsModel.title = @"REGIONEN";
                     [mutableSettings insertObject:settingsModel atIndex:mutableSettings.count];
-
                 }
             }
             
@@ -99,13 +100,23 @@
             closeSettings.iconName = @"close";
             [mutableSettings insertObject:closeSettings atIndex:0];
             
-            // Add region button if found
-            if (hasRegionPicker) {
+            // Add region button if needed
+            if (regionPickerSettingsItem) {
                 STLeftMenuSettingsModel *regionSettings = [[STLeftMenuSettingsModel alloc] init];
-                regionSettings.title = @"Regionen";
+                regionSettings.title = @"Regionenfilter";
+                regionSettings.title = @"Regionenfilter";
                 regionSettings.iconName = @"regionen";
-                NSUInteger lastIndex = mutableSettings.count;
-                [mutableSettings insertObject:regionSettings atIndex:lastIndex];
+
+                id index = regionPickerSettingsItem[@"indexInLeftSideMenu"];
+                NSUInteger insertIndex = 1;
+                if ([index isKindOfClass:[NSNumber class]])    insertIndex = ((NSNumber *)index).unsignedLongValue;
+                else if ([index isKindOfClass:[NSString class]])
+                {
+                    if ([index isEqualToString:@"last"])       insertIndex = mutableSettings.count;
+                    else if ([index isEqualToString:@"first"]) insertIndex = 1;
+                }
+
+                [mutableSettings insertObject:regionSettings atIndex:insertIndex];
             }
             
             // Add coupons if needed
@@ -159,6 +170,8 @@
             if (indexPath.row == 0) {
                 [self resetLeftMenuInitialState];
                 [[Filters sharedInstance] saveFilters];
+
+                self.regionPickerSettingsView.hidden = true;
             } else {
                 /*
                  * In order to save/delete the filters, we need to know to which type/category they belong.
@@ -166,26 +179,17 @@
                  */
                 SideMenuTableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
                 self.associatedObject = [selectedCell.menuItemLabel.text lowercaseString];
-                BOOL hasRegionPicker = [STAppSettingsManager sharedSettingsManager].shouldDisplayRegionPicker;
-                if ([selectedCell.menuItemLabel.text isEqualToString:@"Regionen"] && hasRegionPicker) {
-                    //present region picker controller
-                    STRegionPickerViewController *vc = [[STRegionPickerViewController alloc] initWithNibName:@"STRegionPickerViewController" bundle:nil];
-                    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
-                    vc.currentState = PickerStateSelect;
-                    nvc.navigationBar.barTintColor =[UIColor partnerColor];
-                    nvc.navigationBar.tintColor = [UIColor partnerColor];
-                    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
-                    UIFont *navigationbarTitleFont = [settings customFontForKey:@"navigationbar.title.font"];
-                    
-                    //For iOS8+
-                    [nvc.navigationBar setTitleTextAttributes:@{ NSFontAttributeName: navigationbarTitleFont,NSForegroundColorAttributeName: [UIColor whiteColor]}];
 
-                    nvc.navigationBar.translucent = YES;
-                    nvc.navigationBar.barStyle = UIBarStyleDefault;
-                    nvc.modalPresentationStyle = UIModalPresentationFullScreen;
-                    nvc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-                    [self presentViewController:nvc animated:YES completion:nil];
-                }
+                /*
+                 * Show custom views if needed
+                 */
+                // show the region picker settings view
+                NSDictionary *regionPickerSettings = [STAppSettingsManager sharedSettingsManager].regionPickerSettingsItem;
+                NSArray *possibleMenuItemTexts = @[@"Regionen", @"Regionenfilter"];
+                BOOL regionPickerSettingsViewShouldBeShown = [Utils string:selectedCell.menuItemLabel.text
+                                    equalsToAnyOfTheStringsInArrayOfString:possibleMenuItemTexts] && regionPickerSettings != nil;
+                self.regionPickerSettingsView.hidden = !regionPickerSettingsViewShouldBeShown;
+
                 if ([[STAppSettingsManager sharedSettingsManager] showCoupons]) {
                     self.couponsTitleLabel.text = [[STAppSettingsManager sharedSettingsManager] couponsSettingsTitle];
                     if ([selectedCell.menuItemLabel.text isEqualToString:self.couponsTitleLabel.text]) {
@@ -196,6 +200,9 @@
                         self.couponsView.hidden = true;
                     }
                 }
+
+                //TODO: refactor couponsView and regionPickerSettingsViews into a single UIView, that will be loaded
+                //      with right content when left menu item is pressed
 
                 [self selectFirstMenuItemAtIndexPath:indexPath];
             }
@@ -326,4 +333,27 @@
 {
     [self hideThirdMenuItems];
 }
+
+#pragma mark - STRegionPickerSettingsViewDelegate methods
+- (void)regionsButtonWasPressed
+{
+    //present region picker controller
+    STRegionPickerViewController *vc = [[STRegionPickerViewController alloc] initWithNibName:@"STRegionPickerViewController" bundle:nil];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.currentState = PickerStateSelect;
+    nvc.navigationBar.barTintColor = [UIColor partnerColor];
+    nvc.navigationBar.tintColor = [UIColor partnerColor];
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+    UIFont *navigationbarTitleFont = [settings customFontForKey:@"navigationbar.title.font"];
+    
+    // For iOS8+
+    [nvc.navigationBar setTitleTextAttributes:@{ NSFontAttributeName: navigationbarTitleFont,NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    nvc.navigationBar.translucent = YES;
+    nvc.navigationBar.barStyle = UIBarStyleDefault;
+    nvc.modalPresentationStyle = UIModalPresentationFullScreen;
+    nvc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:nvc animated:YES completion:nil];
+}
+
 @end
