@@ -57,7 +57,7 @@
 
 static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
 
-@interface SidebarViewController ()
+@interface SidebarViewController () <STRegionPickerSettingsViewDelegate>
 
 //@property (nonatomic, strong) NSArray *menuItems;
 @property (nonatomic, strong) NSIndexPath* firstMenuSelectedIndexPath;
@@ -306,6 +306,9 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
 }
 
 - (void)resetTopButtons {
+    self.regionPickerSettingsView.hidden = true;
+    self.couponsView.hidden = true;
+    
     self.settingsButton.selected = false;
     self.searchButton.selected = false;
     self.favoritesButton.selected = false;
