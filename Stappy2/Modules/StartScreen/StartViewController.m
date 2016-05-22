@@ -24,6 +24,8 @@
 
 //categories
 #import "UIColor+STColor.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 //models
 #import "STMainModel.h"
@@ -42,6 +44,7 @@ static NSString * const kFahrPlanViewControlerId = @"STFahrplanSearchVC";
 @property(nonatomic, strong)NSArray* allKeysOfStartData;
 @property(nonatomic, strong)NSDictionary* allKeysForScrollActions;
 @property(nonatomic, strong)NSDictionary* allKeysForBottomActions;
+@property(nonatomic, weak)IBOutlet UIImageView* weatherIconImageView;
 
 @end
 
@@ -131,10 +134,28 @@ static NSString * const kFahrPlanViewControlerId = @"STFahrplanSearchVC";
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Keine Internetverbindung." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     } ];
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"weather_icons" ofType:@"json"];
+    NSData* data = [NSData dataWithContentsOfFile:path];
+    NSDictionary* weatherDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+   NSDictionary*weatherDictionary = [weatherDict objectForKey:@"match_icons_condition"];
 
+   
+    
     [[STRequestsHandler sharedInstance] weatherForStartScreenWithCompletion:^(STWeatherCurrentObservation *currentObservation, NSError *error) {
         if (!error) {
             _startTemperatureLabel.text = [NSString stringWithFormat:@"%i°C", currentObservation.temperature];
+            
+            NSString *imageUrl = currentObservation.imageUrl;
+            NSString* imageName = weatherDictionary[[NSString stringWithFormat:@"%@",currentObservation.icon]];
+            UIImage * conditionsImage = [UIImage imageNamed:imageName];
+            if (!conditionsImage) {
+                [self.weatherIconImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
+            } else {
+                self.weatherIconImageView.image = conditionsImage;
+            }
+
+            
         }
     }];
 }
