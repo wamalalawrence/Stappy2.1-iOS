@@ -11,7 +11,7 @@
 #import "SearchAndFavoritesTableViewCell.h"
 #import "SearchTopTableViewCell.h"
 #import "STMainModel.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "STViewControllerItem.h"
 #import "STAppSettingsManager.h"
 #import "STViewControllerNavigationBarStyle.h"
@@ -85,7 +85,7 @@
             }
             else {
                 //show overview screen
-                STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController"
+                STDetailViewController * detailView = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController"
                                                                                                                          bundle:nil
                                                                                                                    andDataModel:mainModel];
                 [self.sideMenuDelegate loadViewController:detailView animated:YES];

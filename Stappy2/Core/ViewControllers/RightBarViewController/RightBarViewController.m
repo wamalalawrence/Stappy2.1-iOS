@@ -11,14 +11,14 @@
 #import "UIImage+tintImage.h"
 #import "STAppSettingsManager.h"
 #import "STRightMenuItemsModel.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "STRequestsHandler.h"
 #import "STDetailGenericModel.h"
 #import "SWRevealViewController.h"
 #import "UIColor+STColor.h"
 #import "Utils.h"
 #import "Defines.h"
-
+#import "STLeftMenuSettingsModel.h"
 #import "STRightMenuItemsModel.h"
 #import "STWebViewDetailViewController.h"
 #import "STRightMenuHeaderView.h"
@@ -26,14 +26,15 @@
 #import "STViewControllerItem.h"
 #import "STViewControllerNavigationBarStyle.h"
 #import "STStadtInfoOverviewViewController.h"
-
+#import "STTankStationsViewController.h"
+#import "STReporterLocationViewController.h"
 static NSString * const rightBarMenuCellIdentifier = @"SideMenuTableViewCell";
 static NSString *kRightMenuTableViewHeaderIdentifier = @"STRightMenuHeaderView";
 static NSString *kRightMenuTableSubCellIdentifier = @"STRightMenuSubCell";
 static CGFloat maxMaineStadtFontSize = 22.0f;
 
 @interface RightBarViewController () {
-//@property (nonatomic, strong) NSArray *menuItems;
+    //@property (nonatomic, strong) NSArray *menuItems;
     NSMutableArray *arrayForBool;
 }
 @end
@@ -49,9 +50,9 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
                                                       object:nil
                                                        queue:nil
                                                   usingBlock:^(NSNotification *notification)
-    {
-        self.menuItems = [STAppSettingsManager sharedSettingsManager].rightMenuItems == nil ? @[] : [STAppSettingsManager sharedSettingsManager].rightMenuItems;
-        [self.firstsideMenuTable reloadData];
+     {
+         self.menuItems = [STAppSettingsManager sharedSettingsManager].rightMenuItems == nil ? @[] : [STAppSettingsManager sharedSettingsManager].rightMenuItems;
+         [self.firstsideMenuTable reloadData];
      }];
 }
 
@@ -72,6 +73,7 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
             [arrayForBool addObject:[NSNumber numberWithBool:NO]];
         }
     }
+    
     UINib *sectionHeaderNib = [UINib nibWithNibName:@"STRightMenuHeaderView" bundle:nil];
     [self.firstsideMenuTable registerNib:sectionHeaderNib forHeaderFooterViewReuseIdentifier:kRightMenuTableViewHeaderIdentifier];
     
@@ -97,6 +99,20 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
     
     if (settings.rightMenuHeaderImage) {
         self.headerImageView.image = [UIImage imageNamed:settings.rightMenuHeaderImage];
+        self.stadtwerkLogoImageView.image = nil;
+    }
+    else{
+        UITapGestureRecognizer*tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeRightMenu)];
+        [self.stadtwerkLogoImageView addGestureRecognizer:tapRecognizer];
+        
+    }
+}
+
+-(void)closeRightMenu{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [revealViewController rightRevealToggleAnimated:YES];
     }
     
 }
@@ -121,7 +137,7 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
     }
     return 0;
     
-    }
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 54;
@@ -129,7 +145,10 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
 
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    STRightMenuHeaderView *sectionHeaderView = (STRightMenuHeaderView *)[tableView dequeueReusableHeaderFooterViewWithIdentifier:kRightMenuTableViewHeaderIdentifier];
+    NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"STRightMenuHeaderView" owner:self options:nil];
+    STRightMenuHeaderView *sectionHeaderView = [nibViews objectAtIndex:0];
+    
+    
     sectionHeaderView.tag = section;
     BOOL manyCells = [[arrayForBool objectAtIndex:section] boolValue];
     UITapGestureRecognizer  *headerTapped   = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sectionHeaderTapped:)];
@@ -137,27 +156,33 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
     //up or down arrow depending on the bool
     NSArray * dataArray = [self menuDataArrayForTableView:tableView];
     STRightMenuItemsModel *rowModel = ((STRightMenuItemsModel*)dataArray[section]);
-    if ([rowModel.optionType isEqualToString:@"sinfo_kat"]) {
+    if ([rowModel.type isEqualToString:@"sinfo_kat"]) {
         UIImage *upDownArrow = manyCells ? [UIImage imageNamed:@"Up_arrow"] : [UIImage imageNamed:@"Down_arrow"];
         upDownArrow = [upDownArrow imageTintedWithColor:[UIColor blackColor]];
         if (rowModel.children.count > 0) {
             sectionHeaderView.dropArrow.image = upDownArrow;
         }
     }
-        STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
-        UIFont *menuItemLabelFont = [settings customFontForKey:@"rightmenu.cell.font"];
-        if (menuItemLabelFont) [sectionHeaderView.headerLabel setFont:menuItemLabelFont];
     
-        UIImage *cellImage =  [UIImage imageNamed:[Utils replaceSpecialCharactersFrom:rowModel.title]];
-        cellImage = [cellImage imageTintedWithColor:[UIColor secondaryColor]];
-        sectionHeaderView.rightMenuImage.image = cellImage;
-        //add drop icon if row has subitems
-        sectionHeaderView.headerLabel.text = rowModel.title;
-        sectionHeaderView.headerLabel.textColor = [UIColor blackColor];
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+    UIFont *menuItemLabelFont = [settings customFontForKey:@"rightmenu.cell.font"];
+    if (menuItemLabelFont) [sectionHeaderView.headerLabel setFont:menuItemLabelFont];
+    
+    UIImage *cellImage =  [UIImage imageNamed:[Utils replaceSpecialCharactersFrom:rowModel.title]];
+    cellImage = [cellImage imageTintedWithColor:[UIColor secondaryColor]];
+    sectionHeaderView.rightMenuImage.image = cellImage;
+    //add drop icon if row has subitems
+    
+    
+    sectionHeaderView.headerLabel.text = rowModel.title;
+    sectionHeaderView.headerLabel.textColor = [UIColor blackColor];
     sectionHeaderView.separatorLabel.textColor = [UIColor secondaryColor];
+    sectionHeaderView.translatesAutoresizingMaskIntoConstraints = NO;
+    sectionHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(sectionHeaderView.frame));
     
     return sectionHeaderView;
 }
+
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     STRightMenuSubCell *cell = (STRightMenuSubCell*)[tableView dequeueReusableCellWithIdentifier:kRightMenuTableSubCellIdentifier];
@@ -177,7 +202,7 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
         STRightMenuItemsModel *rowModel = ((STRightMenuItemsModel*)dataArray[gestureRecognizer.view.tag]);
         if (rowModel.children.count == 0) {
             
-             if ([rowModel.optionType isEqualToString:@"sinfo_feed"]) {
+            if ([rowModel.type isEqualToString:@"sinfo_feed"]) {
                 //show overview
                 NSString* url =  [[STRequestsHandler sharedInstance] buildUrl:rowModel.detailsUrl withParameters:nil forPage:0];
                 NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
@@ -187,26 +212,85 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
                 overview.ignoreFavoritesButton = YES;
                 [self loadViewController:overview withViewControllerItem:viewControllerItem];
             }
-             else{
-                 
-                 NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
-                 STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:rowModel.title];
-                 if (viewControllerItem) {
-                     UIViewController * newViewController = [Utils loadViewControllerWithTitle:rowModel.title];
-                     [self loadViewController:newViewController withViewControllerItem:viewControllerItem];
-                 }
-                 else {
-                     if ([rowModel.optionType isEqualToString:@"website"]) {
-                         [self showWebViewFor:rowModel.detailsUrl];
-                     } else {
-                         [self requestDetailedDataForItem:rowModel.detailsUrl];
-                     }
-                 }
+            if ([rowModel.type isEqualToString:@"charging_station"]) {
+                //request stations
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                STTankStationsViewController *stationsController = (STTankStationsViewController*)[storyboard instantiateViewControllerWithIdentifier:@"Tank"];
+                stationsController.stationsId = [NSString stringWithFormat:@"%li",(long)rowModel.stadtInfosId];
+                
+                
+                NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+                STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:rowModel.title];
+                if (viewControllerItem) {
+                    
+                    UIColor *barTintColor = [UIColor clearColor];
+                    UIColor *tintColor = [UIColor whiteColor];
+                    BOOL translucent = YES;
+                    UIBarStyle barStyle = UIBarStyleBlackTranslucent;
+                    if (viewControllerItem.navigationBarStyle) {
+                        STViewControllerNavigationBarStyle *navBarStyle = viewControllerItem.navigationBarStyle;
+                        barTintColor = navBarStyle.barTintColor;
+                        tintColor = navBarStyle.tintColor;
+                        translucent = navBarStyle.translucent;
+                        barStyle = navBarStyle.barStyle;
+                    }
+                    
+                    stationsController.title = rowModel.title;
+                    [self.rightSideMenuDelegate loadRightViewController:stationsController animated:YES withNavigationBarBarTintColor:barTintColor andTintColor:tintColor translucent:translucent barStyle:barStyle];
+                 [self.revealViewController rightRevealToggleAnimated:YES];
 
-             }
-
-               }
-        else if ([rowModel.optionType isEqualToString:@"sinfo_feed"]) {
+                    return;
+                }
+            }
+            if ([rowModel.type isEqualToString:@"failure_report"]) {
+                //request stations
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                STReporterLocationViewController *stationsController = (STReporterLocationViewController*)[storyboard instantiateViewControllerWithIdentifier:@"Reporter"];
+               
+                
+                
+                NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+                STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:@"Strassenlaterne defekt?"];
+                if (viewControllerItem) {
+                    
+                    UIColor *barTintColor = [UIColor clearColor];
+                    UIColor *tintColor = [UIColor whiteColor];
+                    BOOL translucent = YES;
+                    UIBarStyle barStyle = UIBarStyleBlackTranslucent;
+                    if (viewControllerItem.navigationBarStyle) {
+                        STViewControllerNavigationBarStyle *navBarStyle = viewControllerItem.navigationBarStyle;
+                        barTintColor = navBarStyle.barTintColor;
+                        tintColor = navBarStyle.tintColor;
+                        translucent = navBarStyle.translucent;
+                        barStyle = navBarStyle.barStyle;
+                    }
+                    
+                    stationsController.title = rowModel.title;
+                    
+                    [self.rightSideMenuDelegate loadRightViewController:stationsController animated:YES withNavigationBarBarTintColor:barTintColor andTintColor:tintColor translucent:translucent barStyle:barStyle];
+                    [self.revealViewController rightRevealToggleAnimated:YES];
+                }
+            }
+            else{
+                
+                NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+                STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:rowModel.title];
+                if (viewControllerItem) {
+                    UIViewController * newViewController = [Utils loadViewControllerWithTitle:rowModel.title];
+                    [self loadViewController:newViewController withViewControllerItem:viewControllerItem];
+                }
+                else {
+                    if ([rowModel.type isEqualToString:@"website"]) {
+                        [self showWebViewFor:rowModel.detailsUrl];
+                    } else {
+                        [self requestDetailedDataForItem:rowModel.detailsUrl];
+                    }
+                }
+                
+            }
+            
+        }
+        else if ([rowModel.type isEqualToString:@"sinfo_feed"]) {
             //show overview
             NSString* url =  [[STRequestsHandler sharedInstance] buildUrl:rowModel.detailsUrl withParameters:nil forPage:0];
             NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
@@ -231,7 +315,7 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
             }
         }
     }
-
+    
 }
 
 #pragma mark - UITableView delegate
@@ -244,7 +328,7 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
         [self showWebViewFor:rowModel.detailsUrl];
     }
     
-    else if ([rowModel.optionType isEqualToString:@"sinfo_feed"]) {
+    else if ([rowModel.type isEqualToString:@"sinfo_feed"]) {
         //show overview
         NSString* url =  [[STRequestsHandler sharedInstance] buildUrl:rowModel.detailsUrl withParameters:nil forPage:0];
         NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
@@ -254,25 +338,27 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
         overview.ignoreFavoritesButton = YES;
         [self loadViewController:overview withViewControllerItem:viewControllerItem];
     }
-
+    
     else {
         [self requestDetailedDataForItem:rowModel.detailsUrl];
     }
     
- 
+    
     
 }
 
 -(void)showWebViewFor:(NSString*)detailUrl {
     
-        //show web view
-        STWebViewDetailViewController *webPage = [[STWebViewDetailViewController alloc] initWithNibName:@"STWebViewDetailViewController" bundle:nil andDetailUrl:detailUrl];
+    //show web view
+    STWebViewDetailViewController *webPage = [[STWebViewDetailViewController alloc] initWithNibName:@"STWebViewDetailViewController" bundle:nil andDetailUrl:detailUrl];
     [self.rightSideMenuDelegate loadRightViewController:webPage animated:YES withNavigationBarBarTintColor:nil andTintColor:nil translucent:NO barStyle:UIBarStyleDefault];
     [self.revealViewController rightRevealToggleAnimated:YES];
 }
 
--(void)requestDetailedDataForItem:(NSString*)detailsUrl {
 
+
+-(void)requestDetailedDataForItem:(NSString*)detailsUrl {
+    
     //request the detailed data for item
     __block STDetailGenericModel* detailData = [[STDetailGenericModel alloc] init];
     [[STRequestsHandler sharedInstance] itemDetailsForURL:detailsUrl completion:^(STDetailGenericModel *itemDetails,NSDictionary* itemResponseDict, NSError *error) {
@@ -286,9 +372,28 @@ static CGFloat maxMaineStadtFontSize = 22.0f;
 }
 
 -(void)presentDetailScreenWithData:(STMainModel*)detailData{
-    UIViewController* vc = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andDataModel:detailData];
-    [self.rightSideMenuDelegate loadRightViewController:vc animated:YES withNavigationBarBarTintColor:nil andTintColor:nil translucent:NO barStyle:UIBarStyleDefault
-];
+    NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+    
+    NSString* key = [viewControllerItems allKeys][1];
+    STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:key];
+    
+    UIColor *barTintColor = [UIColor clearColor];
+    UIColor *tintColor = [UIColor whiteColor];
+    BOOL translucent = YES;
+    UIBarStyle barStyle = UIBarStyleBlackTranslucent;
+    if (viewControllerItem.navigationBarStyle) {
+        STViewControllerNavigationBarStyle *navBarStyle = viewControllerItem.navigationBarStyle;
+        barTintColor = navBarStyle.barTintColor;
+        tintColor = navBarStyle.tintColor;
+        translucent = navBarStyle.translucent;
+        barStyle = navBarStyle.barStyle;
+    }
+    
+    UIViewController* vc = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController" bundle:nil andDataModel:detailData];
+    
+    [self.rightSideMenuDelegate loadRightViewController:vc animated:YES withNavigationBarBarTintColor:barTintColor andTintColor:tintColor translucent:translucent barStyle:barStyle];
+    
+    
     [self.revealViewController rightRevealToggleAnimated:YES];
 }
 

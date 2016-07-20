@@ -8,7 +8,7 @@
 
 #import "STNewsModel.h"
 #import "NSDate+DKHelper.h"
-
+#import "STStadtinfoOverwiewImages.h"
 @implementation STNewsModel
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -24,8 +24,28 @@
              @"url" : @"url",
              @"body" : @"body",
              @"endTimestamp" : @"enddatum_timestamp",
-             @"startTimestamp" : @"startdatum_timestamp"
+             @"startTimestamp" : @"startdatum_timestamp",
+             @"background" : @"background",
+             @"images" : @"images"
+
              };
 }
+
++(NSValueTransformer *)imagesJSONTransformer __unused {
+    
+    return [MTLValueTransformer transformerWithBlock:^id(id images) {
+        if ( [images isKindOfClass:[NSArray class]] ) {
+            return [[MTLValueTransformer mtl_JSONArrayTransformerWithModelClass:[STStadtinfoOverwiewImages class]] transformedValue:images];
+        }
+        else if ( [images isKindOfClass:[NSDictionary class]] ) {
+            NSMutableArray *images = [[NSMutableArray alloc] init];
+            [images addObject:[[MTLValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[STStadtinfoOverwiewImages class]] transformedValue:images]];
+            return images;
+        }
+        return nil;
+    }];
+    
+}
+
 
 @end

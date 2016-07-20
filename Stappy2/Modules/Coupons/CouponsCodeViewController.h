@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *couponsButton;
 @property (weak, nonatomic) IBOutlet RandomImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *couponsBodyLabel;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
 @end

@@ -44,7 +44,8 @@
 -(void)nearbyStopsForLatitude:(CLLocationDegrees)latitude andLongitude:(CLLocationDegrees)longitude;
 -(void)updateConnections;
 
--(void)allLocationsForSearchTerm:(NSString*)searchTerm onSuccess:(void (^)(NSArray *))completion onFailure:(void (^)(NSError*))failureCallback;
+//FAHRPLAN COORDINATE TEST
+-(void)allLocationsForSearchTerm:(NSString*)searchTerm coordinate:(CLLocationCoordinate2D)coordinate onSuccess:(void (^)(NSArray *))completion onFailure:(void (^)(NSError*))failureCallback;
 
 -(void) getJourneyDetailofDeparture:(STFahrplanDeparture*)departure onSuccess:(void (^)(STFahrplanJourneyDetail *))completion onFailure:(void (^)(NSError*))failureCallback;
 -(void) departureBoardForLocation:(STFahrplanNearbyStopLocation*)location onSuccess:(void (^)(NSArray *))completion onFailure:(void (^)(NSError*))failureCallback;

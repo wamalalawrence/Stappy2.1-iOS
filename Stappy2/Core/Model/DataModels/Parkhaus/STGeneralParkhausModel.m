@@ -7,8 +7,45 @@
 //
 
 #import "STGeneralParkhausModel.h"
-
+#import "NSDictionary+Default.h"
 @implementation STGeneralParkhausModel
+
++(instancetype)parkhausFromXMLDictionary:(NSDictionary*)dictionary{
+
+    STGeneralParkhausModel*parkHaus = [[STGeneralParkhausModel alloc]init];
+    parkHaus.title = [dictionary valueForKey:@"Name" withDefault:@""];
+    parkHaus.latitude = [[dictionary valueForKey:@"Latitude"] doubleValue];
+    parkHaus.longitude = [[dictionary valueForKey:@"Longitude"] doubleValue];
+    
+   
+    if ([[dictionary valueForKey:@"Status"] isEqualToString:@"Offen"]) {
+        parkHaus.isOpen = YES;
+    }
+    
+    parkHaus.capacity =[[dictionary valueForKey:@"Gesamt"]
+                        integerValue];
+
+    parkHaus.freePlaces =[[dictionary valueForKey:@"Gesamt"]
+                          integerValue]-[[dictionary valueForKey:@"Belegt"]
+                                         integerValue];
+
+
+    
+    double percetage = ((double)parkHaus.freePlaces/(double)parkHaus.capacity)*100;
+    
+    if (percetage<6) {
+        parkHaus.availability = 0;
+    }
+    else if (percetage>5&&percetage<70) {
+        parkHaus.availability = 1;
+    }
+    else {
+        parkHaus.availability = 2;
+    }
+
+    
+    return parkHaus;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
@@ -53,7 +90,17 @@
             
             openingClosingTimesModel.key = [key copy];
             openingClosingTimesModel.openingHours = openingClosingTimes;
-            [openingClosingTimesArray addObject:openingClosingTimesModel];
+            
+            
+            BOOL isEmpty = [OpeningClosingTimesModel isEmpty:@[openingClosingTimesModel]];
+            
+            if(!isEmpty)
+            {
+                [openingClosingTimesArray addObject:openingClosingTimesModel];
+                
+            }
+
+            
         }];
         return [NSArray arrayWithArray:openingClosingTimesArray];
     }];

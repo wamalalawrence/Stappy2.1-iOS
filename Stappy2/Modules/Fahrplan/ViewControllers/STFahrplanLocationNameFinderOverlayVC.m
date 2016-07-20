@@ -15,13 +15,15 @@
 #import "STFahrplanJourneyPlannerService.h"
 #import "STDebugHelper.h"
 #import "STAppSettingsManager.h"
+#import <CoreLocation/CoreLocation.h>
 
 static NSString *searchResultCellIdentifier = @"STAdressSearchResultCellTVC.Identifier";
 
 @interface STFahrplanLocationNameFinderOverlayVC () <UITableViewDataSource,
                                                         UITableViewDelegate,
                                                         UITextFieldDelegate,
-                                                        UIAlertViewDelegate>
+                                                        UIAlertViewDelegate,
+                                                CLLocationManagerDelegate>
 {
     NSRange previousRange;
     float oldWidth;
@@ -33,6 +35,11 @@ static NSString *searchResultCellIdentifier = @"STAdressSearchResultCellTVC.Iden
 @property (strong, nonatomic) NSTimer *timerBeforeStartSearchAfterEnteredString;
 @property (strong, nonatomic) NSString *enteredString;
 @property (strong,nonatomic) UIRefreshControl *refreshControl;
+
+//FAHRPLAN LOCATION TEST
+@property (assign, nonatomic) CLLocationCoordinate2D currentLocationCoordinate;
+@property (strong,nonatomic) CLLocationManager *locationManager;
+
 @end
 
 @implementation STFahrplanLocationNameFinderOverlayVC
@@ -42,6 +49,12 @@ static NSString *searchResultCellIdentifier = @"STAdressSearchResultCellTVC.Iden
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
     
     [self initStadtwerkLayout];
     
@@ -85,6 +98,11 @@ static NSString *searchResultCellIdentifier = @"STAdressSearchResultCellTVC.Iden
 {
     if (self.currentLocation) {
         [self.delegate locationNameFinderAdressChoosed:self.currentLocation];
+    }
+    
+    if (self.locationManager) {
+        [self.locationManager stopUpdatingLocation];
+        self.locationManager = nil;
     }
     
     [super viewWillDisappear:animated];
@@ -265,14 +283,18 @@ static NSString *searchResultCellIdentifier = @"STAdressSearchResultCellTVC.Iden
     [self.refreshControl beginRefreshing];
     [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentOffset.y-self.refreshControl.frame.size.height) animated:YES];
     
-    
-    
-    
-    
+
     __weak  typeof(self) weakSelf = self;
     
-    [[STFahrplanJourneyPlannerService sharedInstance] allLocationsForSearchTerm:name
-                                                                           onSuccess:^(NSArray *allNearbyLocations) {
+    //FAHRPLAN COORDINATE TEST
+
+    if (!CLLocationCoordinate2DIsValid(self.currentLocationCoordinate)){
+        self.currentLocationCoordinate = [STAppSettingsManager sharedSettingsManager].cityLocation;
+        
+    }
+    
+    [[STFahrplanJourneyPlannerService sharedInstance] allLocationsForSearchTerm:name coordinate:self.currentLocationCoordinate
+                                                onSuccess:^(NSArray *allNearbyLocations) {
     //[[STFahrplanJourneyPlannerService sharedInstance] allLocationsBySearchWithParams:params
     //                                                         onSuccess:^(NSArray *allNearbyLocations) {
                                                              __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -342,6 +364,27 @@ static NSString *searchResultCellIdentifier = @"STAdressSearchResultCellTVC.Iden
     UITouch *touch = [touches anyObject];
     if (touch.phase == UITouchPhaseBegan) {
         [self.textField resignFirstResponder];
+    }
+}
+
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+        [self.locationManager stopUpdatingLocation];
+        self.currentLocationCoordinate = currentLocation.coordinate;
     }
 }
 

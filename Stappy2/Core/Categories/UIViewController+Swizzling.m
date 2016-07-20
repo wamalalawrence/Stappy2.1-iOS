@@ -9,9 +9,9 @@
 #import "Utils.h"
 #import "UIViewController+Swizzling.h"
 #import "Stappy2-Swift.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "STWebViewDetailViewController.h"
-
+#import "STAppSettingsManager.h"
 #import <Google/Analytics.h>
 
 @implementation UIViewController (Swizzling)
@@ -38,7 +38,7 @@
     if (self.navigationItem.leftBarButtonItems.count == 0) {
         NSString *imageName;
         
-        if ([self class] == [STNewsAndEventsDetailViewController class] || [self class] == [STWebViewDetailViewController class]) {
+        if ([self class] == [STDetailViewController class] || [self class] == [STWebViewDetailViewController class]) {
             imageName = @"back_detail";
         } else {
             imageName = @"back";
@@ -49,6 +49,12 @@
         self.navigationItem.leftBarButtonItem = backButton;
     }
     
+    if (![STAppSettingsManager sharedSettingsManager].shouldNotUseUppercase) {
+    self.title = [self.title uppercaseString];
+    }
+    
+
+    
     [self ST_viewDidLoad];
 }
 
@@ -57,6 +63,7 @@
     [tracker set:kGAIScreenName value:[NSString stringWithFormat:@"%@",[self class]]];
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
     [[GAI sharedInstance] dispatch];
+    
 }
 
 - (void)ST_viewDidAppear:(BOOL)animate {

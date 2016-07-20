@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *distance;
 @property (weak, nonatomic) IBOutlet UIImageView *closingOpeningIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *distancePinImage;
 
 @end

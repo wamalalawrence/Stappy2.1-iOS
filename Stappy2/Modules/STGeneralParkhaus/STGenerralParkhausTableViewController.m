@@ -11,7 +11,7 @@
 #import "STRequestsHandler.h"
 #import "STGeneralParkhausModel.h"
 #import "SWRevealViewController.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "STParkHausTableViewCell.h"
 @interface STGenerralParkhausTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *leftBarButton;
@@ -47,11 +47,11 @@
     self.parkHauses = @[];
 
     
-    [self fetchTankStationsFromServer];
+    [self fetchParkahusesFromServer];
 
 }
 
--(void)fetchTankStationsFromServer{
+-(void)fetchParkahusesFromServer{
     
     __weak typeof(self) weakSelf = self;
     
@@ -99,7 +99,7 @@
 
 -(void)presentParkHausDetailScreenWithModel:(STGeneralParkhausModel*)parkHausModel {
     
-    STNewsAndEventsDetailViewController *detailViewController = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andGeneralParkHausModel:parkHausModel];
+    STDetailViewController *detailViewController = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController" bundle:nil andGeneralParkHausModel:parkHausModel];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

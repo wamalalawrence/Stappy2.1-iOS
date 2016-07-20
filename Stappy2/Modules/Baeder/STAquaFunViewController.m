@@ -8,6 +8,7 @@
 
 #import "STAquaFunViewController.h"
 #import "STRequestsHandler.h"
+#import "STAppSettingsManager.h"
 
 @interface STAquaFunViewController ()
 
@@ -24,7 +25,9 @@
     
     //request the data for the overview table
     __weak typeof(self) weakself = self;
-    [[STRequestsHandler sharedInstance] allStadtInfoOverviewItemsWithUrl:@"/sinfo?id=121101" andCompletion:^(NSArray *overviewItems, NSError *error) {
+    //get the ID from the configuration file
+    NSString* requestUrl = [STAppSettingsManager sharedSettingsManager].aquaUrl;
+    [[STRequestsHandler sharedInstance] allStadtInfoOverviewItemsWithUrl:requestUrl andCompletion:^(NSArray *overviewItems, NSError *error) {
         __strong typeof(weakself) strongSelf = weakself;
         strongSelf.overViewItems = overviewItems;
         strongSelf.backupOverviewItems = overviewItems;

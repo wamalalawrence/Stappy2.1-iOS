@@ -13,7 +13,7 @@
 #import "NSDictionary+Default.h"
 #import "STRequestsHandler.h"
 #import "NSObject+AssociatedObject.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "UIColor+STColor.h"
 #import "UIImage+tintImage.h"
 #import "STAppSettingsManager.h"
@@ -25,7 +25,6 @@
 @property (nonatomic, strong) NSMutableDictionary *annotations;
 @property (nonatomic, assign, getter=isFirstLoad) BOOL firstLoad;
 @property (nonatomic, strong) NSNumber *nearestEmergencyId;
-@property (nonatomic, strong) AFHTTPRequestOperation *currentLoadOperation;
 @property (weak, nonatomic) IBOutlet STRoundedButton *locationButton;
 -(IBAction)locationButtonTapped:(id)sender;
 
@@ -107,23 +106,34 @@
     
     [self.activityIndicator startAnimating];
     
-    self.currentLoadOperation = [[STRequestsHandler sharedInstance] drugstoresWithSuccess:^(NSArray <STDrugstoresModel *> *drugstores) {
-        for (STDrugstoresModel *drugstore in drugstores)
-        {
-            // Add an annotation
-            MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-            point.coordinate = CLLocationCoordinate2DMake(drugstore.latitude.doubleValue, drugstore.longitude.doubleValue);
-            point.title = drugstore.title;
-            point.associatedObject = drugstore;
-            [self.mapView addAnnotation:point];
+    [[STRequestsHandler sharedInstance] drugstoresWithCompletion:^(NSArray *array, NSError *error) {
+        
+        if (array) {
+            for (STDrugstoresModel *drugstore in array)
+            {
+                // Add an annotation
+                MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+                point.coordinate = CLLocationCoordinate2DMake(drugstore.latitude.doubleValue, drugstore.longitude.doubleValue);
+                point.title = drugstore.title;
+                point.associatedObject = drugstore;
+                [self.mapView addAnnotation:point];
+            }
+            
+            [self.mapView showAnnotations:self.mapView.annotations animated:YES];
+            [self.activityIndicator stopAnimating];
+        }
+        else{
+            if (error) {
+                [[[UIAlertView alloc] initWithTitle:@"Fehler beim Laden der Daten." message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                [self.activityIndicator stopAnimating];
+
+            }
+        
         }
         
-        [self.mapView showAnnotations:self.mapView.annotations animated:YES];
-        [self.activityIndicator stopAnimating];
-    } failure:^(NSError *error) {
-        [[[UIAlertView alloc] initWithTitle:@"Fehler beim Laden der Daten." message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        [self.activityIndicator stopAnimating];
     }];
+    
+ 
 }
 
 + (NSString *)urlForEmergenciesWithLatitude:(double)latitude longitude:(double)longitude distance:(NSUInteger)distance
@@ -133,64 +143,68 @@
 
 - (void)loadEmergencies
 {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer.acceptableContentTypes =
-    [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
     
     double lat = [STAppSettingsManager sharedSettingsManager].cityLocation.latitude;
     double longi = [STAppSettingsManager sharedSettingsManager].cityLocation.longitude;
     
-    
-//    double lat = self.mapView.centerCoordinate.latitude;
-//    double longi = self.mapView.centerCoordinate.longitude;
+
     NSUInteger distance = [self distanceInKilometersBetweenEastAndWestEndPointsOfTheMap];
     
     NSString *url = [[self class] urlForEmergenciesWithLatitude:lat longitude:longi distance:distance];
     [self.activityIndicator startAnimating];
     
     [[STRequestsHandler sharedInstance] setEmergenciesUrl:url];
-    self.currentLoadOperation = [[STRequestsHandler sharedInstance] emergenciesWithSuccess:^(NSArray<STEmergenciesModel *> *data) {
-        NSObject *nearestAnnotation = self.annotations[self.nearestEmergencyId];
-        
-        NSUInteger ignored = 0;
-        NSUInteger added = 0;
-        
-        for (STEmergenciesModel *emergency in data)
-        {
-            if (self.nearestEmergencyId == nil) self.nearestEmergencyId = emergency.itemId;
+
+    [[STRequestsHandler sharedInstance] emergenciesWithCompletion:^(NSArray *array, NSError *error) {
+       
+        if (array) {
+            NSObject *nearestAnnotation = self.annotations[self.nearestEmergencyId];
             
-            // Ignore drugstores/emergencies, that we already have
-            if (self.annotations[emergency.itemId] != nil)
+            NSUInteger ignored = 0;
+            NSUInteger added = 0;
+            
+            for (STEmergenciesModel *emergency in array)
             {
-                ++ignored;
-                continue;
+                if (self.nearestEmergencyId == nil) self.nearestEmergencyId = emergency.itemId;
+                
+                // Ignore drugstores/emergencies, that we already have
+                if (self.annotations[emergency.itemId] != nil)
+                {
+                    ++ignored;
+                    continue;
+                }
+                
+                // Add an annotation
+                MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+                point.coordinate = CLLocationCoordinate2DMake(emergency.latitude.doubleValue, emergency.longitude.doubleValue);
+                point.title = emergency.name;
+                point.associatedObject = emergency;
+                
+                if ([emergency.itemId isEqualToNumber:self.nearestEmergencyId])
+                {
+                    nearestAnnotation = point;
+                }
+                
+                self.annotations[emergency.itemId] = point;
+                [self.mapView addAnnotation:point];
+                
+                ++added;
             }
             
-            // Add an annotation
-            MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-            point.coordinate = CLLocationCoordinate2DMake(emergency.latitude.doubleValue, emergency.longitude.doubleValue);
-            point.title = emergency.name;
-            point.associatedObject = emergency;
-            
-            if ([emergency.itemId isEqualToNumber:self.nearestEmergencyId])
-            {
-                nearestAnnotation = point;
+            [self.activityIndicator stopAnimating];
+        }
+        else{
+            if (error) {
+                [[[UIAlertView alloc] initWithTitle:@"Fehler beim Laden der Daten." message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+                
+                [self.activityIndicator stopAnimating];
             }
-            
-            self.annotations[emergency.itemId] = point;
-            [self.mapView addAnnotation:point];
-            
-            ++added;
         }
         
-        [self.activityIndicator stopAnimating];
-    } failure:^(NSError *error) {
-        if (self.currentLoadOperation.cancelled)    return;
-        
-        [[[UIAlertView alloc] initWithTitle:@"Fehler beim Laden der Daten." message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        
-        [self.activityIndicator stopAnimating];
     }];
+    
+
 }
 
 - (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender
@@ -209,7 +223,6 @@
 
 - (void)reload
 {
-    [self.currentLoadOperation cancel];
     
     switch (self.segmentedControl.selectedSegmentIndex)
     {
@@ -243,7 +256,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     id dataToShowInDetailVC = [((NSObject *)view.annotation) associatedObject];
     
-    UIViewController *vc = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andDataModel:dataToShowInDetailVC];
+    UIViewController *vc = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController" bundle:nil andDataModel:dataToShowInDetailVC];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

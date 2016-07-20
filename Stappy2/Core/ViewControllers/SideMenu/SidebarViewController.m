@@ -36,6 +36,7 @@
 #import "STLeftObjRequestedModel.h"
 #import "SearchTopTableViewCell.h"
 #import "STLeftSideSubSettingsModel.h"
+#import "STXMLListTableViewController.h"
 //generic category model
 #import "STCategoryModel.h"
 
@@ -79,6 +80,8 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+  
+    
     self.backSubitemDict = @{@"title":@"Zurück"};
     NSArray* leftArray = [STAppSettingsManager sharedSettingsManager].leftMenuItems;
     NSError* mtlError = nil;
@@ -103,6 +106,11 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
     _thirdMenuLeadingConstraint.constant = _bottomContentView.frame.size.width + [self leftSideTablesOffset];
     _secondMenuTrailingConstraint.constant = 0;
     
+    //check if we should show search option
+    BOOL *shouldShowSearch = [STAppSettingsManager sharedSettingsManager].shouldShowSearchOption;
+    if (!shouldShowSearch) {
+        _searchButtonWidthConstraint.constant = -self.settingsButton.frame.size.width;
+    }
     self.menuState = leftMenuState;
     //Register the cells for the tableViews.
     //The menu tables have the same cell, only data is different.
@@ -172,11 +180,57 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
     _favoritesButton.layer.mask = maskLayer2;
     
     [self hideActivityIndicator];
+    
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
 }
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+
+    [self addDoneButton];
+}
+
+- (void)addDoneButton {
+    UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
+    [keyboardToolbar sizeToFit];
+    keyboardToolbar.barTintColor = [UIColor partnerColor];
+    
+    UIBarButtonItem *flexBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil action:nil];
+    UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                      target:self action:@selector(couponDoneButtonTapped:)];
+    doneBarButton.tintColor = [UIColor whiteColor];
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+    
+    UIFont *couponButtonFont = [settings customFontForKey:@"coupones.title.font"];
+
+    if (couponButtonFont) {
+        NSDictionary * attributes = @{NSFontAttributeName: couponButtonFont};
+        [doneBarButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    }
+    
+    keyboardToolbar.items = @[flexBarButton, doneBarButton];
+    self.couponCodeTextField.inputAccessoryView = keyboardToolbar;
+    
+  
+ 
+    
+}
+
+
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.backgroundBlurred.needsBlur = YES;
+    
+    NSString*couponCode=[[NSUserDefaults standardUserDefaults] objectForKey:kActiveCouponCode];
+    if (couponCode) {
+        self.couponCodeTextField.text = couponCode;
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getSettingsMenuFromServer) name:kRegionChagedNotification object:nil];
 }
 
 #pragma mark - Table view data source
@@ -358,9 +412,10 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
 -(void)autoselectStadtinfo {
     NSArray * dataArray = self.leftMenuItems;
     int stadtinfoIndex = 0;
+    
     for (int i = 0; i < dataArray.count; i++) {
         STLeftMenuSettingsModel *menuItem = [dataArray objectAtIndex:i];
-        if ([menuItem.title isEqualToString:@"Stadtinfos"] || [menuItem.title isEqualToString:@"Meine Stadt"] || [menuItem.title isEqualToString:@"Ortsinformationen"]) {
+        if ([menuItem.title isEqualToString:@"Stadtinfos"] || [menuItem.title isEqualToString:@"Meine Stadt"] || [menuItem.title isEqualToString:@"Ortsinformationen"] || [menuItem.title isEqualToString:@"Was ist wo?"] ) {
             stadtinfoIndex = i;
             break;
         }
@@ -473,13 +528,23 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
     [self.secondSideMenuTable reloadData];
 }
 
-- (IBAction)tapOutsideTextFieldRecognized:(id)sender {
+-(void)couponDoneButtonTapped:(id)sender{
+    [self saveCouponCode];
+
+}
+
+-(void)saveCouponCode{
     if ([[STAppSettingsManager sharedSettingsManager] showCoupons]) {
         if (self.couponCodeTextField.isFirstResponder) {
             [self validateAndSaveCouponCode];
         }
         [self.couponCodeTextField resignFirstResponder];
     }
+
+}
+
+- (IBAction)tapOutsideTextFieldRecognized:(id)sender {
+    [self saveCouponCode];
 }
 
 - (void)validateAndSaveCouponCode {
@@ -487,10 +552,13 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
     if ([Utils isCouponCodeValid:couponCode]) {
         [[NSUserDefaults standardUserDefaults] setObject:couponCode forKey:kActiveCouponCode];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [self dismissViewControllerAnimated:true completion:nil];
+        
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:nil message:@"Die eingegebene Kundennummer wurde gespeichert." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
+        [alert show];
+        
     } else {
         // Show alert
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Kundennummer Error" message:@"Die eingegebene Kundennummer ist leider ungültig." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:nil message:@"Die eingegebene Kundennummer ist leider ungültig." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
         [alert show];
     }
 }
@@ -537,6 +605,9 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
             NSArray * dataArray = [self menuDataArrayForTableView:tableView];
             STLeftMenuSettingsModel *menuItem = [dataArray objectAtIndex:indexPath.row];
             // Check if we show the second menu or another controller.
+            
+            if (![menuItem.type isEqualToString:@"menu_toggle"]) {
+        
             if (menuItem.subItems.count > 0) {
                 // Show next Submenu
                 self.secondSideMenuItems = [NSMutableArray arrayWithArray:menuItem.subItems] ;
@@ -544,10 +615,20 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
                 [self.secondSideMenuTable reloadData];
                 [self showSecondMenuItems];
             } else {
+
                 NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
                 STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:menuItem.title];
+                
+                if ([menuItem.type isEqualToString:@"website"]) {
+                    viewControllerItem.url = menuItem.url;
+                }
+                
                 UIViewController * newViewController = [Utils loadViewControllerWithTitle:menuItem.title];       
                 [self loadViewController:newViewController withViewControllerItem:viewControllerItem];
+            }
+                  }
+            else{
+                [self.revealViewController rightRevealToggleAnimated:YES];
             }
         }
             break;
@@ -569,14 +650,19 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
                 if ([[menuItem valueForKey:@"itemType"]  isEqualToString:@"website"]) {
                     //show web view
                     NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
-                    NSString* key = [viewControllerItems allKeys][0];
-                    STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:key];
-                    
+                    STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:[menuItem valueForKey:@"title"]];
                     NSString*detailUrl =[menuItem valueForKey:@"url"];
-                    
+                    viewControllerItem.url =detailUrl;
                     STWebViewDetailViewController *webPage = [[STWebViewDetailViewController alloc] initWithNibName:@"STWebViewDetailViewController" bundle:nil andDetailUrl:detailUrl];
                     [self loadViewController:webPage withViewControllerItem:viewControllerItem];
                     
+                }
+                else if ([[menuItem valueForKey:@"itemType"]  isEqualToString:@"xmlfeed"]) {
+                    NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
+                    STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:[menuItem valueForKey:@"title"]];
+                    STXMLListTableViewController * newViewController = (STXMLListTableViewController*)[Utils loadViewControllerWithTitle:[menuItem valueForKey:@"title"]];
+                    [newViewController setupWithXMLFeedUrl:[menuItem valueForKey:@"url"]];
+                    [self loadViewController:newViewController withViewControllerItem:viewControllerItem];
                 }
                 else {
                     //show overview screen
@@ -614,6 +700,7 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
                         NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];
                         NSString* key = [viewControllerItems allKeys][0];
                         STViewControllerItem *viewControllerItem = [viewControllerItems objectForKey:key];
+                        viewControllerItem.url =detailUrl;
                         STWebViewDetailViewController *webPage = [[STWebViewDetailViewController alloc] initWithNibName:@"STWebViewDetailViewController" bundle:nil andDetailUrl:detailUrl];
                         [self loadViewController:webPage withViewControllerItem:viewControllerItem];
                         
@@ -683,9 +770,9 @@ static NSString* const sideMenuCellIdentifier = @"SideMenuTableViewCell";
         translucent = navBarStyle.translucent;
         barStyle = navBarStyle.barStyle;
     }
-//    if ([newViewController isKindOfClass:[STWebViewDetailViewController class]]) {
-//        newViewController = [[STWebViewDetailViewController alloc] initWithURL:viewControllerItem.url];
-//    }
+    if ([newViewController isKindOfClass:[STWebViewDetailViewController class]]) {
+        newViewController = [[STWebViewDetailViewController alloc] initWithURL:viewControllerItem.url];
+    }
     [self.sideMenuDelegate loadViewController:newViewController animated:YES withNavigationBarBarTintColor:barTintColor andTintColor:tintColor translucent:translucent barStyle:barStyle];
     [self.revealViewController revealToggleAnimated:YES];
 }

@@ -11,7 +11,6 @@
 //Models
 #import "STDrugstoresModel.h"
 #import "STEmergenciesModel.h"
-@class AFHTTPRequestOperation;
 
 @class STTableMainKeyObject;
 @class STMainModel;
@@ -53,13 +52,9 @@ typedef NS_ENUM(NSInteger , STErrorCode)
 
 - (void)allTickerNewsWithUrl:(NSString*)url params:(NSMutableDictionary *)params type:(NSString*)type andCompletion:(void (^)(NSArray *news, NSArray *originalNews, NSUInteger pageCount, NSError *error))completion;
 
--(void)weatherForCurrentDayAndForecastWithCompletion:(void(^)(NSArray*, NSArray*, id, NSError*, NSError*))completion;
-- (void)weatherForStartScreenWithCompletion:(void(^)(STWeatherCurrentObservation *, NSError *))completion;
-
 -(void)itemDetailsForURL:(NSString *)url completion:(void (^)(STDetailGenericModel *, NSDictionary *, NSError *))completion;
-
-- (AFHTTPRequestOperation *)drugstoresWithSuccess:(void (^)(NSArray <STDrugstoresModel *>*))success failure:(void (^)(NSError *error))failure;
-- (AFHTTPRequestOperation *)emergenciesWithSuccess:(void (^)(NSArray <STEmergenciesModel *>*))success failure:(void (^)(NSError *error))failure;
+- (void)emergenciesWithCompletion:(void(^)(NSArray *array, NSError *error))completion ;
+- (void)drugstoresWithCompletion:(void(^)(NSArray *array, NSError *error))completion;
 
 -(void)loadParkHousesWithCompletion:(void(^)(NSArray *, NSError *))completion failure:(void (^)(NSError *error))failure;
 - (void)parkHausDetailsForUrl:(NSString*)url withCompletion:(void(^)(STParkHausModel *, NSError *))completion;
@@ -72,6 +67,7 @@ typedef NS_ENUM(NSInteger , STErrorCode)
 -(void)allTankStationsWithCompletion:(void(^)(NSArray *stations, NSError *error))completion;
 -(void)allElektroTankStationWithCompletion:(void(^)(NSArray *stations, NSError *error))completion;
 -(void)allGeneralParkHausesWithCompletion:(void(^)(NSArray *parkHauses, NSError *error))completion;
+-(void)allTankStationsWithId:(NSString*)stationId andCompletion:(void(^)(NSArray *, NSError *))completion;
 // Settings page
 -(void)settingsOptionsFromUrl:(NSString *)url andCompletion:(void (^)(NSArray *predictions, NSError *error))completion;
 
@@ -84,4 +80,10 @@ typedef NS_ENUM(NSInteger , STErrorCode)
 - (NSString *)buildUrl:(NSString *)inputUrl;
 - (NSString *)buildUrl:(NSString *)inputUrl withParameters:(NSMutableDictionary *)parameters forPage:(NSUInteger)page;
 
+-(void)postViewCouponWithOfferId:(NSInteger)offerId;
+-(void)postUseCouponWithOfferId:(NSInteger)offerId;
+-(void)postSecondUseOfCouponWithOfferId:(NSInteger)offerId name:(NSString*)name;
+
+-(void)getXMLFeed:(NSString*)xmlFeed completion:(void(^)(NSArray *, NSError *))completion;
+-(void)getReportListWithcompletion:(void(^)(NSArray *results, NSError *error))completion;
 @end

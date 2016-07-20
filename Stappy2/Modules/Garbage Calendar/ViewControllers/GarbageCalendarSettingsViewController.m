@@ -22,13 +22,34 @@ static NSString *cellIdentifier = @"garbageTypes";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if ([[GarbageCalendarManager sharedInstance] isConfigured]) return [[GarbageCalendarViewController alloc] init];
+    if ([[self.navigationController.viewControllers lastObject] isKindOfClass:[GarbageCalendarViewController class]] ||
+        ![GarbageCalendarManager sharedInstance].isConfigured)
+    {
+        return [self initSelf];
+    }
     
-    return [super initWithNibName:nibNameOrNil bundle:nil];
+    return [[GarbageCalendarViewController alloc] init];
 }
 
 - (void)viewDidLoad
 {
+    self.title = @"ABFALLKALENDER";
+    
+   
+    UIBarButtonItem *btnBack = [[UIBarButtonItem alloc]
+                                initWithImage:[UIImage imageNamed:@"menu.png"]
+                                style:UIBarButtonItemStylePlain
+                                target:self
+                                action:@selector(goBack)];
+    
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+    UIFont *navigationbarTitleFont = [settings customFontForKey:@"navigationbar.title.font"];
+    
+    if (navigationbarTitleFont) {
+        [btnBack setTitleTextAttributes:@{NSFontAttributeName:navigationbarTitleFont} forState:UIControlStateNormal];
+    }
+    self.navigationController.navigationBar.topItem.leftBarButtonItem = btnBack;
+    
     _showCalendarButton.layer.borderWidth = 1;
     _showCalendarButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
@@ -56,7 +77,7 @@ static NSString *cellIdentifier = @"garbageTypes";
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background_blurred"]]];
     
     // SMSegmentView configuration
-    _notificationSegmentedControl = [[SMSegmentView alloc] initWithFrame:CGRectMake(10, _notificationLabel.frame.origin.y + _notificationLabel.frame.size.height + 10, self.view.frame.size.width - 40, 30) separatorColour:[UIColor lightGrayColor] separatorWidth:1 segmentProperties:nil];
+    _notificationSegmentedControl = [[SMSegmentView alloc] initWithFrame:CGRectMake(10, _notificationLabel.frame.origin.y + _notificationLabel.frame.size.height + 10, [UIScreen mainScreen].bounds.size.width - 20, 30) separatorColour:[UIColor lightGrayColor] separatorWidth:1 segmentProperties:nil];
     [self.view.subviews[0] addSubview:_notificationSegmentedControl];
     
     [_notificationSegmentedControl addSegmentWithTitle:@"GAR NICHT" onSelectionImage:nil offSelectionImage:nil];
@@ -73,6 +94,10 @@ static NSString *cellIdentifier = @"garbageTypes";
     // Fonts
     _notificationSegmentedControl.segmentTitleFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"garbage_calendar_settings.segmented_control.font"];
     [self configureFonts];
+}
+
+-(void)goBack{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)configureFonts
@@ -194,6 +219,7 @@ static NSString *cellIdentifier = @"garbageTypes";
         [[GarbageCalenderService sharedInstance] possibleZips:string completion:^(NSArray<NSString *> *possibleZips) {
             handler(possibleZips);
         }];
+        _streetTextField.text = @"";
     }
     else
     {
@@ -201,11 +227,12 @@ static NSString *cellIdentifier = @"garbageTypes";
             if (possibleStreets.count == 0)
             {
                 [[[UIAlertView alloc] initWithTitle:@""
-                                            message:@"Es könnte keine Gebiete gefunden. Bitte eine neue Postleitzahl gewahlen!"
+                                            message:@"Es konnte keine Straße gefunden werden. Bitte eine neue Straße wählen!"
                                            delegate:nil
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil] show];
                 [_streetTextField resignFirstResponder];
+                _streetTextField.text = @"";
             }
             handler(possibleStreets);
         }];
@@ -228,7 +255,6 @@ static NSString *cellIdentifier = @"garbageTypes";
     [GarbageCalendarManager sharedInstance].enabledGarbageTypes = newEnabledGarbageTypes;
 }
 - (IBAction)tapGestureRecognized:(UITapGestureRecognizer *)sender {
-    NSLog(@"%@", sender.view.description);
     [_zipTextField resignFirstResponder];
     [_streetTextField resignFirstResponder];
 }

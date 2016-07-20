@@ -6,7 +6,11 @@
         "basePartnerUrl": "https://data2.stappy.de",
         "rightMenuItemsUrl": "/sinfo?id=6165",
         "rightMenuItemsId":6165,
+          "googleApiKey": "AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
         "leftMenuUrl": "side-menu.",
+        "googleMapsAPI": {
+            "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+        },
         "fahrplan": {
             "api_url":"http://endios.hafas.de/openapi/",
             "access_id":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad",
@@ -84,8 +88,8 @@
             }
         },
         "weather": {
-            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/Hemer.json",
-            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/Hemer.json",
+            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/",
+            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/",
         }
     },
     "startScreenBottomActions": {
@@ -109,6 +113,8 @@
         "latitude": 51.4187,
         "longitude": 7.8259
     },
+    "defaultRegion": "Hemer",
+    
     "default_ids": {
         "news": [78097]
     },
@@ -129,31 +135,31 @@
     },
     "detail_sharing_options": {
         "email": {
-            "SEL": "didClickEmail",
+            "SEL": "emailButtonTapped:",
             "icon": "action_options_mail"
         },
         "phone": {
-            "SEL": "didClickPhone",
+            "SEL": "phoneButtonTapped:",
             "icon": "action_options_phone"
         },
         "contactUrl": {
-            "SEL": "didClickWebsite",
+            "SEL": "websiteButtonTapped:",
             "icon": "action_options_web"
         },
         "latitude": {
-            "SEL": "didClickShowOnMap",
+            "SEL": "mapButtonTapped:",
             "icon": "action_options_map"
         },
         "share": {
-            "SEL": "didClickShare",
+            "SEL": "shareButtonTapped:",
             "icon": "action_options_share"
         },
         "endDate": {
-            "SEL": "didClickCalendar",
+            "SEL": "calendarButtonTapped:",
             "icon": "action_options_calendar"
         },
         "favorite":{
-            "SEL":"didClickFavorites:",
+            "SEL":"favoriteButtonTapped:",
             "icon": {
                 "on": "action_options_favoriten",
                 "off": "action_options_favoriten_inactive"
@@ -164,7 +170,8 @@
         "partner_color": "#41A62A",
         "texts_color": "#FFFFFF",
         "secondary_color":"#004F91",
-        
+        "startScreenIconColor": "#FFFFFF",
+
         "overlayScreen": {
             "button": {
                 "font": {
@@ -179,6 +186,27 @@
                 "font": {
                     "name": "KievitSlabOffc",
                     "size": "18"
+                }
+            }
+        },
+        
+        "openingHours": {
+            "cellLabelTop": {
+                "font": {
+                    "name": "KievitOffc",
+                    "size": "13"
+                }
+            },
+            "cellLabel": {
+                "font": {
+                    "name": "KievitOffc",
+                    "size": "13"
+                }
+            },
+            "titleLabel": {
+                "font": {
+                    "name": "KievitSlabOffc",
+                    "size": "16"
                 }
             }
         },

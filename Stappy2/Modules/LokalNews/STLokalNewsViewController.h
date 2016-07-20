@@ -38,7 +38,7 @@ static NSString* kSTWerbungTableViewCell = @"STWerbungTableViewCell";
 @property (nonatomic, copy, readonly) NSString *filterType;
 @property (nonatomic, copy, readonly) NSString *notificationCenterFilterChangeKey;
 
--(void)loadWerbung;
+-(void)loadWerbungWithType:(NSString*)werbungType;
 -(void)populateWithNextPageWithPageElements:(NSArray*)elementsArray;
 -(void)mapButtonPressed:(UIButton *)sender;
 -(void)addInfititeScrolling;

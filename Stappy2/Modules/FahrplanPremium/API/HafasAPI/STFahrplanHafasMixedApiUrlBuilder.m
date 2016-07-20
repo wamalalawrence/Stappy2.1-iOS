@@ -18,9 +18,9 @@
 -(NSString*)getApiUrlForSearchLocation
 {
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
-    //NSString *apiUrl = [settings backendValueForKey:@"fahrplan.api_url"];
+    NSString *apiUrl = [settings backendValueForKey:@"fahrplan.api_url"];
 //    NSString *apiUrl = @"http://fahrinfo.vbb.de/restproxy";
-    NSString *apiUrl = @"http://endios.hafas.de/openapi";
+//    NSString *apiUrl = @"http://endios.hafas.de/openapi";
     apiUrl = [apiUrl stringByAppendingString:@"/location.name"];
     
     //Demo
@@ -34,6 +34,25 @@
     return apiUrl;
 }
 
+//FAHRPLAN COORDINATE TEST
+-(NSDictionary*)getApiUrlParamsAllLocationsForSearchTerm:(NSString*)searchTerm coordinate:(CLLocationCoordinate2D)coordinate
+{
+    STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+    NSString *accessId = [settings backendValueForKey:@"fahrplan.access_id"];
+    
+    
+    NSDictionary* params = @{
+                             @"input":[NSString stringWithFormat:@"%@",searchTerm],
+                             @"maxNo":@"25",
+                             @"coordLong":@(coordinate.longitude),
+                             @"coordLat":@(coordinate.latitude),
+                             @"r":@(50000),
+                             @"accessId":accessId,
+                             @"format":@"json"
+                             };
+    return params;
+}
+
 -(NSDictionary*)getApiUrlParamsAllLocationsForSearchTerm:(NSString*)searchTerm
 {
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
@@ -41,7 +60,7 @@
     
     NSDictionary* params = @{
                              @"input":[NSString stringWithFormat:@"%@*",searchTerm],
-                             @"maxNo":@"10",
+                             @"maxNo":@"25",
                              @"accessId":accessId,
                              @"format":@"json"
                              };

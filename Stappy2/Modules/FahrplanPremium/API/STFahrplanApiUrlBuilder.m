@@ -35,6 +35,14 @@
                                  userInfo:nil];
 }
 
+//FAHRPLAN COORDINATE TEST
+-(NSDictionary*)getApiUrlParamsAllLocationsForSearchTerm:(NSString*)searchTerm coordinate:(CLLocationCoordinate2D)coordinate
+{
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+                                 userInfo:nil];
+}
+
 
 
 -(NSString*)getApiUrlForJourneyDetail

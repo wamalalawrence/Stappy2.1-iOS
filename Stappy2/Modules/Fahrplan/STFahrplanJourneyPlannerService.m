@@ -294,7 +294,7 @@ NSString *const STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
                                 }];
 }
 
--(void)allLocationsForSearchTerm:(NSString*)searchTerm onSuccess:(void (^)(NSArray *))completion onFailure:(void (^)(NSError*))failureCallback
+-(void)allLocationsForSearchTerm:(NSString*)searchTerm coordinate:(CLLocationCoordinate2D)coordinate onSuccess:(void (^)(NSArray *))completion onFailure:(void (^)(NSError*))failureCallback
 {
     [[STDebugHelper sharedInstance] incrementCounterOfKey:@"search.LocationName"];
     
@@ -305,7 +305,17 @@ NSString *const STOpenAPIErrorDomain = @"STOpenAPIErrorDomain";
     
     STFahrplanApiUrlBuilder *apiUrlBuilder = [self apiUrlBuilder];
     NSString *apiUrl = [apiUrlBuilder getApiUrlForSearchLocation];
-    NSDictionary* params = [apiUrlBuilder getApiUrlParamsAllLocationsForSearchTerm:searchTerm];
+    NSDictionary* params;
+    
+    //FAHRPLAN COORDINATE TEST
+    if ([apiUrl containsString:@"hafas"] && CLLocationCoordinate2DIsValid(coordinate)) {
+      params=  [apiUrlBuilder getApiUrlParamsAllLocationsForSearchTerm:searchTerm coordinate:coordinate];
+
+    }
+    else{
+         params=  [apiUrlBuilder getApiUrlParamsAllLocationsForSearchTerm:searchTerm];
+    
+}
     
     [[STHTTPSessionManager manager] GET:apiUrl
                              parameters:params

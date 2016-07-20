@@ -123,7 +123,7 @@ static NSString * const SectionHeaderViewIdentifier = @"SectionHeaderViewIdentif
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    return 60;
+    return 56;
 }
 
 

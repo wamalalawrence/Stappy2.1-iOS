@@ -17,6 +17,8 @@
 
 @interface ZaehlerstandMainViewController ()
 
+@property(nonatomic,strong)NSArray* zaehlerstandItems;
+
 @end
 
 @implementation ZaehlerstandMainViewController
@@ -24,6 +26,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //get Options from configuration file for the segmented control
+    if ([STAppSettingsManager sharedSettingsManager].zaehlerstandItems) {
+        self.zaehlerstandItems = [STAppSettingsManager sharedSettingsManager].zaehlerstandItems;
+        [self setSegments:self.zaehlerstandItems];
+    }
     self.selectedItemTitle = [NSString string];
     self.manualEnterButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
@@ -69,23 +77,17 @@
 }
 
 - (IBAction)segmenteControllChanged:(UISegmentedControl *)sender {
-    [self updateLabels];
+    NSString* selectedTitle = [sender titleForSegmentAtIndex:sender.selectedSegmentIndex];
+    self.zaehlerstandLabel.text = [NSString stringWithFormat:@"%@-Zählerstand", selectedTitle];
 }
 
-- (void)updateLabels {
-    self.selectedItemTitle = @"Strom";
-    switch (self.topSegmentedControl.selectedSegmentIndex) {
-        case 0:
-            self.selectedItemTitle = @"Strom";
-            break;
-        case 1:
-            self.selectedItemTitle = @"Wasser";
-            break;
-        default:
-            self.selectedItemTitle = @"Gas";
-            break;
+- (void)setSegments:(NSArray *)segments
+{
+    [self.topSegmentedControl removeAllSegments];
+    
+    for (NSString *segment in segments) {
+        [self.topSegmentedControl insertSegmentWithTitle:segment atIndex:self.topSegmentedControl.numberOfSegments animated:NO];
     }
-    self.zaehlerstandLabel.text = [NSString stringWithFormat:@"%@-Zählerstand", self.selectedItemTitle];
 }
 
 @end

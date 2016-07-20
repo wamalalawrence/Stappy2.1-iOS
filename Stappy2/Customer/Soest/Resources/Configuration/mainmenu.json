@@ -1,6 +1,8 @@
 {
     "__comment": "Schwedt configuration file",
     "shouldShowAddressAndNameFields":"NO",
+    "shouldNotUseUppercase": "YES",
+    
     "backend": {
         "settingsUrlString" : "https://data4.stappy.de/data/de.endios.stappy.soest/options-v2",
         "baseUrl": "https://data4.stappy.de",
@@ -8,7 +10,13 @@
         "zahlerstandEmail":"info@stadtwerke-soest.de",
         "rightMenuItemsUrl": "/sinfo?id=6165",
         "rightMenuItemsId":97975,
+          "googleApiKey": "AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
         "leftMenuUrl": "side-menu.",
+        "aquaUrl": "/sinfo?id=121101",
+        
+        "googleMapsAPI": {
+            "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+        },
          "shouldUseUserPositionInApotheken": 0,
         "fahrplan": {
             "api_url":"http://endios.hafas.de/openapi/",
@@ -87,8 +95,8 @@
             }
         },
         "weather": {
-            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/Hemer.json",
-            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/Hemer.json",
+            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/",
+            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/",
         }
     },
     "startScreenBottomActions": {
@@ -99,20 +107,32 @@
     "startScreenScrollActions": {
          "angebote":"angebote",
          "events":"events",
-         "ticker":"news",
-         "vereine":"vereine"
+        "mittagsangebote":"Mittagstisch",
+        "ticker":"Ticker"
+ 
+    },
+    "favoriteOtherNamings": {
+        "events":"Events",
+        "stadtinfos":"Stadtinfos",
+        "angebote":"Angebote"
     },
     "startScreenIgnoredItems": [
                                 "test"
                                 ],
     "startScreenOtherNamings": {
         "stadt":"Stadtinfos",
-        "news":"Ticker"
+        "news":"Ticker",
+        "vereine":"Vereinsnews"
+    },
+    "startScreenOtherIcons":{
+    "vereine":"Vereinsnews"
     },
     "cityLocation": {
         "latitude": 51.4187,
         "longitude": 7.8259
     },
+    "defaultRegion": "Hemer",
+
     "default_ids": {
         "news": [108833]
     },
@@ -133,31 +153,31 @@
     },
     "detail_sharing_options": {
         "email": {
-            "SEL": "didClickEmail",
+            "SEL": "emailButtonTapped:",
             "icon": "action_options_mail"
         },
         "phone": {
-            "SEL": "didClickPhone",
+            "SEL": "phoneButtonTapped:",
             "icon": "action_options_phone"
         },
         "contactUrl": {
-            "SEL": "didClickWebsite",
+            "SEL": "websiteButtonTapped:",
             "icon": "action_options_web"
         },
         "latitude": {
-            "SEL": "didClickShowOnMap",
+            "SEL": "mapButtonTapped:",
             "icon": "action_options_map"
         },
         "share": {
-            "SEL": "didClickShare",
+            "SEL": "shareButtonTapped:",
             "icon": "action_options_share"
         },
         "endDate": {
-            "SEL": "didClickCalendar",
+            "SEL": "calendarButtonTapped:",
             "icon": "action_options_calendar"
         },
         "favorite":{
-            "SEL":"didClickFavorites:",
+            "SEL":"favoriteButtonTapped:",
             "icon": {
                 "on": "action_options_favoriten",
                 "off": "action_options_favoriten_inactive"
@@ -168,7 +188,8 @@
         "partner_color": "#e60000",
         "texts_color": "#ffffff",
         "secondary_color":"#e60000",
-        
+        "startScreenIconColor": "#FFFFFF",
+
         "overlayScreen": {
             "button": {
                 "font": {
@@ -177,16 +198,14 @@
                 }
             }
         },
-        
         "navigationbar": {
             "title":{
                 "font": {
-                    "name": "KievitSlabOffc",
+                    "name": "Merriweather-BoldItalic",
                     "size": "18"
                 }
             }
         },
-        
         "openingHours": {
             "cellLabelTop": {
                 "font": {
@@ -202,12 +221,11 @@
             },
             "titleLabel": {
                 "font": {
-                    "name": "KievitSlabOffc",
+                    "name": "MerriweatherSans-Regular",
                     "size": "16"
                 }
             }
         },
-        
         "sidemenu": {
             "cell": {
                 "font": {
@@ -296,37 +314,37 @@
         "detailscreen": {
             "title": {
                 "font": {
-                    "name": "KievitSlabOffc",
+                    "name": "Merriweather-BoldItalic",
                     "size": "25"
                 }
             },
             "time": {
                 "font": {
-                    "name": "Merriweather-BoldItalic",
+                    "name": "MerriweatherSans-Regular",
                     "size": "15"
                 }
             },
             "location": {
                 "font": {
-                    "name": "Merriweather-BoldItalic",
+                    "name": "MerriweatherSans-Regular",
                     "size": "16"
                 }
             },
             "event_type": {
                 "font": {
-                    "name": "Merriweather-BoldItalic",
+                    "name": "MerriweatherSans-Regular",
                     "size": "17"
                 }
             },
             "info": {
                 "font": {
-                    "name": "KievitSlabOffc",
+                    "name": "MerriweatherSans-Regular",
                     "size": "16"
                 }
             },
             "description": {
                 "font": {
-                    "name": "Merriweather-BoldItalic",
+                    "name": "MerriweatherSans-Regular",
                     "size": "15"
                 }
             }
@@ -335,7 +353,7 @@
         "stadtinfos": {
             "cell": {
                 "font": {
-                    "name": "KievitSlabOffc",
+                    "name": "MerriweatherSans-Regular",
                     "size": "18"
                 },
                 "headerFont": {
@@ -355,7 +373,7 @@
                 },
                 "current_temperature": {
                     "font": {
-                        "name": "KievitSlabOffc",
+                        "name": "MerriweatherSans-Regular",
                         "size": "35"
                     }
                 },
@@ -393,7 +411,7 @@
                 },
                 "degrees_label": {
                     "font": {
-                        "name": "KievitSlabOffc",
+                        "name": "MerriweatherSans-Regular",
                         "size": "22"
                     }
                 },
@@ -420,7 +438,7 @@
             "base_cell":{
                 "category": {
                     "font": {
-                        "name": "Merriweather-BoldItalic",
+                        "name": "MerriweatherSans-Regular",
                         "size": "12"
                     },
                     "color":{
@@ -432,7 +450,7 @@
             "base_cell_expanded":{
                 "datetime": {
                     "font": {
-                        "name": "Merriweather-BoldItalic",
+                        "name": "MerriweatherSans-Regular",
                         "size": "12"
                     },
                     "color":{
@@ -442,7 +460,7 @@
                 },
                 "description":{
                     "font": {
-                        "name": "KievitSlabOffc",
+                        "name": "Merriweather-BoldItalic",
                         "size": "16"
                     }
                 }
@@ -450,7 +468,7 @@
             "collection_view_cell":{
                 "datetime": {
                     "font": {
-                        "name": "Merriweather-BoldItalic",
+                        "name": "MerriweatherSans-Regular",
                         "size": "12"
                     },
                     "color":{
@@ -460,7 +478,7 @@
                 },
                 "description":{
                     "font": {
-                        "name": "KievitSlabOffc",
+                        "name": "Merriweather-BoldItalic",
                         "size": "14"
                     }
                 }
@@ -492,13 +510,13 @@
             "header_view": {
                 "dateLabel" : {
                     "font": {
-                        "name": "KievitSlabOffc",
-                        "size": "30"
+                        "name": "Merriweather-BoldItalic",
+                        "size": "26"
                     }
                 },
                 "weekDayLabel" : {
                     "font": {
-                        "name": "KievitSlabOffc",
+                        "name": "Merriweather-BoldItalic",
                         "size": "14"
                     }
                 },
@@ -732,7 +750,7 @@
       },
                   {
       "caption": "Vereinsnews",
-      "icon_name": "vereine",
+      "icon_name": "Vereinsnews",
       "type": "vereine",
       "type_api": "sports",
       "url": "/vereinsnews",

@@ -11,6 +11,7 @@
 
 @interface STWeatherViewController : UIViewController <UIScrollViewDelegate,BTGlassScrollViewDelegate>
 
+@property (nonatomic, strong) NSString *region;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *rightBarButton;
 @property (weak, nonatomic) IBOutlet UIView *topDateContainer;

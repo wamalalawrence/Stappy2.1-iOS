@@ -15,6 +15,7 @@
 @interface STRegionPickerSettingsView : UIView
 @property (weak, nonatomic) IBOutlet UIButton *selectRegionsButton;
 @property (weak, nonatomic) id<STRegionPickerSettingsViewDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *settingsLabel;
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder;
 - (instancetype)initWithFrame:(CGRect)frame;

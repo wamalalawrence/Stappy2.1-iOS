@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = [@"Ort der Störung?" uppercaseString];
+    self.title = @"Ort der Störung?" ;
     
     self.searchResults = @[];
     [self.textField becomeFirstResponder];

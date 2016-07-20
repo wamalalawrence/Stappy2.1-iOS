@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="354" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="354" height="127"/>
+                <rect key="frame" x="0.0" y="0.0" width="354" height="127.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-jI-eTG">
@@ -79,7 +79,7 @@
                                     <constraint firstAttribute="height" constant="20" id="yrq-dB-CkW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-7X-qtx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-7X-qtx">
                                 <rect key="frame" x="300" y="14" width="30" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Phj-u1-Lip"/>
@@ -155,6 +155,7 @@
                 <outlet property="cityInfoImage" destination="6YX-UW-3nu" id="Qcf-S1-bS3"/>
                 <outlet property="closingOpeningIcon" destination="x7K-kn-pho" id="fgp-eC-iNe"/>
                 <outlet property="distance" destination="jKO-7X-qtx" id="H5w-n8-J51"/>
+                <outlet property="distancePinImage" destination="6vj-QF-90U" id="zft-pi-7Mp"/>
                 <outlet property="openingTime" destination="FW8-1J-igf" id="aR7-wt-YiO"/>
                 <outlet property="title" destination="0bo-Ej-xXn" id="n8g-l3-KUh"/>
             </connections>

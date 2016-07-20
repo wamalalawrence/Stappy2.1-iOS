@@ -1,20 +1,24 @@
 //
-//  STRightMenuItemsModel.h
-//  Stappy2
+//	STRightMenuItemsModel.h
 //
-//  Created by Cynthia Codrea on 27/01/2016.
-//  Copyright © 2016 Cynthia Codrea. All rights reserved.
+//	Create by Pavel Nemecek on 9/6/2016
+//	Copyright © 2016. All rights reserved.
 //
 
+//	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
+
+#import <UIKit/UIKit.h>
 #import <Mantle/Mantle.h>
-#import "STLeftMenuSettingsModel.h"
 
-@interface STRightMenuItemsModel : STLeftMenuSettingsModel <MTLJSONSerializing>
+@interface STRightMenuItemsModel : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, strong) NSNumber *modelId;
-@property(nonatomic,copy)NSString* detailsUrl;
-@property(nonatomic,copy)NSString* optionType;
-@property(nonatomic,strong)NSArray* children;
-@property(nonatomic,copy)NSString* icon_name;
+@property (nonatomic, strong) NSArray * children;
+@property (nonatomic, strong) NSString *creationdate;
+@property (nonatomic, assign) NSInteger modelId;
+@property (nonatomic, strong) NSString * title;
+@property (nonatomic, strong) NSString * type;
+@property (nonatomic, strong) NSString * detailsUrl;
+@property (nonatomic, assign) NSInteger stadtInfosId;
 
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 @end

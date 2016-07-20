@@ -60,18 +60,29 @@
         [value enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSArray *openingClosingTimeArray, BOOL *stop) {
             OpeningClosingTimesModel *openingClosingTimesModel = [[OpeningClosingTimesModel alloc] init];
             
-            NSMutableArray<OpeningClosingTimeModel *> *openingClosingTimes = [[NSMutableArray alloc] initWithCapacity:value.count];
+            NSMutableArray<OpeningClosingTimeModel *> *openingClosingTimes = [NSMutableArray  array];
             for (NSDictionary *dict in openingClosingTimeArray)
             {
                 OpeningClosingTimeModel *openingClosingTimeModel = [MTLJSONAdapter modelOfClass:OpeningClosingTimeModel.class
                                                                              fromJSONDictionary:dict
                                                                                           error:nil];
+                
+             
+                
                 [openingClosingTimes addObject:openingClosingTimeModel];
             }
             
             openingClosingTimesModel.key = [key copy];
             openingClosingTimesModel.openingHours = openingClosingTimes;
-            [openingClosingTimesArray addObject:openingClosingTimesModel];
+            
+            BOOL isEmpty = [OpeningClosingTimesModel isEmpty:@[openingClosingTimesModel]];
+            
+            if(!isEmpty)
+            {
+                [openingClosingTimesArray addObject:openingClosingTimesModel];
+
+            }
+            
         }];
         return [NSArray arrayWithArray:openingClosingTimesArray];
     }];

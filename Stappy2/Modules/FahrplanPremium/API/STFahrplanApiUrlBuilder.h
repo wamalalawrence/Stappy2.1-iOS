@@ -18,6 +18,9 @@
 -(NSString*)getApiUrlForSearchLocation;
 -(NSDictionary*)getApiUrlParamsAllLocationsForSearchTerm:(NSString*)searchTerm;
 
+//FAHRPLAN COORDINATE TEST
+-(NSDictionary*)getApiUrlParamsAllLocationsForSearchTerm:(NSString*)searchTerm coordinate:(CLLocationCoordinate2D)coordinate;
+
 -(NSString*)getApiUrlForJourneyDetail;
 -(NSDictionary*)getApiUrlParamsForJourneyDetailOfDeparture:(STFahrplanDeparture*)departure;
 

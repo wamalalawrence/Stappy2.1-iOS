@@ -19,7 +19,9 @@
 #import "MKMapView+ZoomLevel.h"
 @import AddressBookUI;
 
-@interface STReporterLocationViewController ()<CLLocationManagerDelegate, MKMapViewDelegate,STReportAddressSearchViewControllerDelegate>
+@interface STReporterLocationViewController ()<CLLocationManagerDelegate, MKMapViewDelegate,STReportAddressSearchViewControllerDelegate>{
+    BOOL _firstLaunch;
+}
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIImageView *pinImageView;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
@@ -37,8 +39,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
+    [self updateAddress:@"Wo liegt eine Störung vor?"];
+    _firstLaunch = YES;
     self.shouldCenterOnUserLocation = YES;
     
     self.locationManager = [[CLLocationManager alloc] init];
@@ -123,9 +125,12 @@
         if (lastLocation.horizontalAccuracy<=1500) {
             
             [self.locationManager stopUpdatingLocation];
-            
+
             CLLocationCoordinate2D defaultCityLocation = [locations lastObject].coordinate;
             [self.mapView setCenterCoordinate:defaultCityLocation zoomLevel:15 animated:NO];
+            [self gecodeCoordinate:self.mapView.centerCoordinate];
+
+            
         }
     }
 }
@@ -143,11 +148,36 @@
 #pragma mark - MapView
 
 -(void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated{
-    [self updateAddress:@"Suchen..."];
+    
+    if ([self mapViewRegionDidChangeFromUserInteraction]) {
+
+        [self updateAddress:@"Suchen..."];
+
+    }
+    
 }
 
+- (BOOL)mapViewRegionDidChangeFromUserInteraction
+{
+    UIView *view = self.mapView.subviews.firstObject;
+    //  Look through gesture recognizers to determine whether this region change is from user interaction
+    for(UIGestureRecognizer *recognizer in view.gestureRecognizers) {
+        if(recognizer.state == UIGestureRecognizerStateBegan || recognizer.state == UIGestureRecognizerStateEnded) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-    [self gecodeCoordinate:self.mapView.centerCoordinate];
+    
+    if ([self mapViewRegionDidChangeFromUserInteraction]) {
+        [self gecodeCoordinate:self.mapView.centerCoordinate];
+
+    }
+
 
 }
 

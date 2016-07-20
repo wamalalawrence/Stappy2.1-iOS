@@ -8,6 +8,10 @@
 
 #import "STMainModel.h"
 
-@interface STStartModel : STMainModel <MTLJSONSerializing>
+@interface STStartModel : STMainModel <MTLJSONSerializing, Favoritable>
+
+@property(nonatomic, assign)BOOL isOffer;
+@property(nonatomic,assign)NSInteger angebotItemID;
+@property (nonatomic, assign, getter=isFavorite) BOOL favorite;
 
 @end

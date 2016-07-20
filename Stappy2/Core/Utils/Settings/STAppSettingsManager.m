@@ -124,6 +124,21 @@
     return _rightItemsUrl;
 }
 
+
+-(NSString*)rightMenuCustom {
+    if (_rightMenuCustom == nil) {
+        // get right menu items url from configuration file
+        
+        if ([[self.configurationDictionary objectForKey:@"backend"] objectForKey:@"rightMenuCustom"]) {
+            _rightMenuCustom = [self.configurationDictionary objectForKey:@"backend"][@"rightMenuCustom"];
+
+        }
+        
+    }
+    return _rightMenuCustom;
+}
+
+
 -(NSString*)rightMenuTitle {
     if (_rightMenuTitle == nil) {
         // get right menu items url from configuration file
@@ -132,12 +147,35 @@
     return _rightMenuTitle;
 }
 
+-(NSString*)aquaUrl {
+    if (_aquaUrl == nil) {
+        // get right menu items url from configuration file
+        _aquaUrl = [self.configurationDictionary objectForKey:@"backend"][@"aquaUrl"];
+    }
+    return _aquaUrl;
+}
+
+-(NSString*)startHomeUrl {
+    if (_startHomeUrl == nil) {
+        // get right menu items url from configuration file
+        _startHomeUrl = [self.configurationDictionary objectForKey:@"backend"][@"startHomeUrl"];
+    }
+    return _startHomeUrl;
+}
+
 -(NSString*)homeScreenTitle {
     if (_homeScreenTitle == nil) {
         // get home screen title from configuration file
         _homeScreenTitle = [self.configurationDictionary objectForKey:@"backend"][kFirstPageTitleStringKey];
     }
     return _homeScreenTitle;
+}
+
+-(NSArray*)zaehlerstandItems {
+    if (_zaehlerstandItems == nil) {
+        _zaehlerstandItems = [self.configurationDictionary objectForKey:@"backend"][@"zaehlerstandItems"];
+    }
+    return _zaehlerstandItems;
 }
 
 -(NSArray *)settingsMenuItems {
@@ -174,6 +212,20 @@
     return _startScreenOtherNamings;
 }
 
+-(NSDictionary *)startScreenNamingsScrollItems {
+    if (_startScreenNamingsScrollItems == nil) {
+        _startScreenNamingsScrollItems = [self.configurationDictionary objectForKey:@"startScreenNamingsScrollItems"];
+    }
+    return _startScreenNamingsScrollItems;
+}
+
+-(NSDictionary *)startScreenOtherIcons {
+    if (_startScreenOtherIcons == nil) {
+        _startScreenOtherIcons = [self.configurationDictionary objectForKey:@"startScreenOtherIcons"];
+    }
+    return _startScreenOtherIcons;
+}
+
 -(NSDictionary *)startScreenScrollActions {
     if (_startScreenScrollActions == nil) {
         _startScreenScrollActions = [self.configurationDictionary objectForKey:@"startScreenScrollActions"];
@@ -181,11 +233,25 @@
     return _startScreenScrollActions;
 }
 
+-(NSDictionary *)favoriteNamingsDictionary {
+    if (_favoriteNamingsDictionary == nil && [self.configurationDictionary objectForKey:@"favoriteOtherNamings"]) {
+        _favoriteNamingsDictionary = [self.configurationDictionary objectForKey:@"favoriteOtherNamings"];
+    }
+    return _favoriteNamingsDictionary;
+}
+
 -(NSDictionary *)startScreenBottomActions {
     if (_startScreenBottomActions == nil) {
         _startScreenBottomActions = [self.configurationDictionary objectForKey:@"startScreenBottomActions"];
     }
     return _startScreenBottomActions;
+}
+
+-(NSDictionary *)startScreenBottomIcons {
+    if (_startScreenBottomIcons == nil) {
+        _startScreenBottomIcons = [self.configurationDictionary objectForKey:@"startScreenBottomIcons"];
+    }
+    return _startScreenBottomIcons;
 }
 
 - (NSArray *)allIdsAreOnPerDefaultInViewControllers
@@ -351,17 +417,48 @@
 
 - (NSDictionary *)regionPickerSettingsItem { return [self.configurationDictionary objectForKey:@"regionPickerSettingsItem"]; }
 
-- (BOOL)shouldUseUserPositionInApotheken{
-    
+- (BOOL)shouldUseUserPositionInApotheken {
     if ([self.configurationDictionary objectForKey:@"shouldUseUserPositionInApotheken"]) {
         int shouldShow = [[self.configurationDictionary objectForKey:@"shouldUseUserPositionInApotheken"] intValue];
         return shouldShow == 1;
     }
-    
-    else{
+    else {
         return NO;
     }
 }
+
+- (BOOL)shouldShowKundennumer {
+    if ([self.configurationDictionary objectForKey:@"shouldShowKundennumer"]) {
+        int shouldShow = [[self.configurationDictionary objectForKey:@"shouldShowKundennumer"] intValue];
+        return shouldShow == 1;
+    }
+    else {
+        return NO;
+    }
+}
+
+- (NSString *)googleApiKey { return [self backendValueForKey:@"googleApiKey"]; }
+
+- (NSDictionary *)googleMapsAPI { return [self backendValueForKey:@"googleMapsAPI"]; }
+
+- (NSString *)defaultRegion {
+    
+    NSString*region =[self.configurationDictionary valueForKey:@"defaultRegion"];
+    
+    return region;
+}
+
+- (NSString *)regionJSONFileName {
+    NSString*returnedValue;
+    if ([self.configurationDictionary objectForKey:@"regionJSONFileName"]) {
+        returnedValue =[self.configurationDictionary valueForKey:@"regionJSONFileName"];
+    }
+    return returnedValue;
+
+}
+
+
+
 
 
 #pragma mark - Coupons
@@ -390,6 +487,8 @@
     return [showCoupons isEqualToString:@"YES"];
 }
 
+
+
 - (BOOL)showCityName {
     NSString * showCityName = [self.configurationDictionary objectForKey:@"shouldShowCityName"];
     
@@ -399,6 +498,60 @@
     }
     
     return returnBool;
+}
+
+- (BOOL)showStadtInfoFilter {
+    NSString * showFilter = [self.configurationDictionary objectForKey:@"showStadtInfoFilter"];
+    
+    BOOL returnBool = YES;
+    if (showFilter && [showFilter isEqualToString:@"NO"]) {
+        returnBool= NO;
+    }
+    
+    return returnBool;
+}
+
+- (BOOL)showDetailScreenBlur {
+    NSString * showDetailScreenBlur = [self.configurationDictionary objectForKey:@"shouldShowBlur"];
+    
+    BOOL returnBool = YES;
+    if (showDetailScreenBlur && [showDetailScreenBlur isEqualToString:@"NO"]) {
+        returnBool= NO;
+    }
+    
+    return returnBool;
+}
+
+- (BOOL)shouldShowLabelsAndCollectionOnStartScreen {
+    NSString * showLabelsAndCollection = [self.configurationDictionary objectForKey:@"shouldShowLabelsAndCollectionOnStartScreen"];
+    
+    BOOL returnBool = YES;
+    if (showLabelsAndCollection && [showLabelsAndCollection isEqualToString:@"NO"]) {
+        returnBool= NO;
+    }
+    
+    return returnBool;
+}
+
+- (BOOL)shouldShowSearchOption {
+    NSString * showSearchOption = [self.configurationDictionary objectForKey:@"shouldShowSearchOption"];
+    
+    BOOL returnBool = YES;
+    if (showSearchOption && [showSearchOption isEqualToString:@"NO"]) {
+        returnBool= NO;
+    }
+    
+    return returnBool;
+}
+
+- (BOOL)shouldNotUseUppercase{
+
+    NSString * shouldNotUseUppercase = [self.configurationDictionary objectForKey:@"shouldNotUseUppercase"];
+
+    if (shouldNotUseUppercase && [shouldNotUseUppercase isEqualToString:@"YES"]) {
+        return YES;
+    }
+    return NO;
 }
 
 - (NSString*)couponsSettingsTitle {

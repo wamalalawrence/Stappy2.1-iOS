@@ -11,6 +11,7 @@
                   "chancerain":"rain",
                   "rain":"rain",
                   "chancestorms":"storm",
+                  "chancetstorms":"storm",
                   "tstorms":"storm",
                   "unknown":"storm",
                   "clear":"sunny",

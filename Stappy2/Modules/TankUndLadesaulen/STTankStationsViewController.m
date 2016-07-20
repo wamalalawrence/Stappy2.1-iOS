@@ -13,7 +13,7 @@
 #import "STRequestsHandler.h"
 #import "STTankStationModel.h"
 #import "NSObject+AssociatedObject.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "STTankStationAnnotation.h"
 #import "STTankStationAnnotationView.h"
 #import "STRoundedButton.h"
@@ -32,6 +32,8 @@
 @end
 
 @implementation STTankStationsViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,7 +66,34 @@
     [self.mapView setRegion:adjustedRegion animated:NO];
     self.mapView.showsUserLocation = NO;
 
-    [self fetchTankStationsFromServer];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    if (self.stationsId.length) {
+        [self fetchTankStationsFromServerWithId];
+    }
+    else {
+        [self fetchTankStationsFromServer];
+    }
+
+
+}
+
+-(void)fetchTankStationsFromServerWithId{
+    
+    __weak typeof(self) weakSelf = self;
+    NSString* reqUrl = [NSString stringWithFormat:@"/sinfo?id=%@",self.stationsId];
+    [[STRequestsHandler sharedInstance] allTankStationsWithId:reqUrl andCompletion:^(NSArray *stations, NSError *error) {
+        if (!error) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf addAnnotationsFromStationArray:stations];
+        }
+        else{
+            [[[UIAlertView alloc] initWithTitle:@"Fehler beim Laden der Daten." message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        }
+    }];
 }
 
 -(void)fetchTankStationsFromServer{
@@ -142,7 +171,7 @@
 
 -(void)presentTankStationDetailScreenWithModel:(STTankStationModel*)tankStationModel {
     
-    STNewsAndEventsDetailViewController *detailViewController = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andTankStationModel:tankStationModel];
+    STDetailViewController *detailViewController = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController" bundle:nil andTankStationModel:tankStationModel];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

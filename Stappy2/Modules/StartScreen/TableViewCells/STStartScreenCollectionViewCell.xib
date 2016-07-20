@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,19 +19,19 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOKALAAAA" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="52" translatesAutoresizingMaskIntoConstraints="NO" id="ley-fZ-ory">
-                        <rect key="frame" x="8" y="51" width="52" height="38"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOKALAAAA" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="52" translatesAutoresizingMaskIntoConstraints="NO" id="ley-fZ-ory">
+                        <rect key="frame" x="8" y="51" width="58" height="38"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="38" id="7fk-Zg-rTn"/>
-                            <constraint firstAttribute="width" constant="52" id="wcK-6i-gKP"/>
+                            <constraint firstAttribute="width" constant="58" id="wcK-6i-gKP"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="12"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9N-Pn-oUv">
-                        <rect key="frame" x="68" y="5" width="1" height="81"/>
+                        <rect key="frame" x="74" y="5" width="1" height="81"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="1" id="fgb-n9-iXQ"/>
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cKf-qt-sV4">
-                        <rect key="frame" x="70" y="0.0" width="242" height="91"/>
+                        <rect key="frame" x="76" y="0.0" width="236" height="91"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fYz-cn-tHK">
@@ -56,7 +56,7 @@
                         </connections>
                     </collectionView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lokalnews_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-89-f8e">
-                        <rect key="frame" x="19" y="22" width="30" height="30"/>
+                        <rect key="frame" x="22" y="22" width="30" height="30"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="0T4-eE-8PU"/>
@@ -77,7 +77,7 @@
                         </variation>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfq-Rl-YFg">
-                        <rect key="frame" x="8" y="8" width="51" height="75"/>
+                        <rect key="frame" x="8" y="8" width="57" height="75"/>
                         <fontDescription key="fontDescription" name="KievitOffc" family="Kievit Offc" pointSize="12"/>
                         <connections>
                             <action selector="showOverview:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eLA-7G-X8A"/>
@@ -92,13 +92,14 @@
                 <constraint firstItem="Kfq-Rl-YFg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="3IH-fo-TDx"/>
                 <constraint firstAttribute="trailing" secondItem="cKf-qt-sV4" secondAttribute="trailing" constant="8" id="8q1-wq-mSa"/>
                 <constraint firstItem="cKf-qt-sV4" firstAttribute="top" secondItem="pzW-d9-4KH" secondAttribute="bottom" constant="-28" id="Cs9-ny-Dae"/>
-                <constraint firstItem="rf6-89-f8e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="19" id="ETx-Jt-ULH"/>
+                <constraint firstItem="rf6-89-f8e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="21" id="ETx-Jt-ULH"/>
                 <constraint firstItem="pzW-d9-4KH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Kta-gx-G49"/>
                 <constraint firstAttribute="bottom" secondItem="Kfq-Rl-YFg" secondAttribute="bottom" constant="8" id="Ner-c3-Hu5"/>
                 <constraint firstItem="Kfq-Rl-YFg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="R5L-9E-rkT"/>
                 <constraint firstItem="A9N-Pn-oUv" firstAttribute="leading" secondItem="Kfq-Rl-YFg" secondAttribute="trailing" constant="9" id="RF3-o2-j5H"/>
                 <constraint firstItem="A9N-Pn-oUv" firstAttribute="leading" secondItem="ley-fZ-ory" secondAttribute="trailing" constant="8" id="S7t-8J-SQR"/>
                 <constraint firstItem="ley-fZ-ory" firstAttribute="top" secondItem="rf6-89-f8e" secondAttribute="bottom" constant="-1" id="TGx-hn-q33"/>
+                <constraint firstItem="ley-fZ-ory" firstAttribute="centerX" secondItem="rf6-89-f8e" secondAttribute="centerX" id="Wd5-Ry-6Om"/>
                 <constraint firstItem="rf6-89-f8e" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="22" id="XkI-SX-6Va"/>
                 <constraint firstItem="cKf-qt-sV4" firstAttribute="leading" secondItem="A9N-Pn-oUv" secondAttribute="trailing" constant="1" id="YDp-wJ-E3j"/>
                 <constraint firstItem="A9N-Pn-oUv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ZsT-J6-cRD"/>
@@ -117,6 +118,7 @@
             </userDefinedRuntimeAttributes>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="ETx-Jt-ULH"/>
                     <exclude reference="qRD-yl-UVj"/>
                 </mask>
             </variation>
@@ -124,6 +126,7 @@
                 <outlet property="categoryImageView" destination="rf6-89-f8e" id="Hac-HG-CKw"/>
                 <outlet property="categoryItemsCollection" destination="cKf-qt-sV4" id="l7x-DL-zAR"/>
                 <outlet property="categoryLabel" destination="ley-fZ-ory" id="Los-J0-Wq5"/>
+                <outlet property="iconTopConstraint" destination="XkI-SX-6Va" id="OC9-RN-vvw"/>
                 <outlet property="itemScrollPageControl" destination="pzW-d9-4KH" id="OSm-qO-kJF"/>
                 <outlet property="overviewButton" destination="Kfq-Rl-YFg" id="QrS-VS-u1S"/>
             </connections>

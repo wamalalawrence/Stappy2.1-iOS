@@ -30,7 +30,8 @@
     [self.weatherChangeSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
     [self.weatherChangeSegmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
 
-    [self.weatherChangeSegmentedControl setBackgroundImage:[UIImage st_imageWithColor:[UIColor transparencyColor]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [self.weatherChangeSegmentedControl setBackgroundImage:[UIImage st_imageWithColor:[UIColor colorWithWhite:1.0 alpha:0.1]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
     [self.weatherChangeSegmentedControl setBackgroundImage:[UIImage st_imageWithColor:[UIColor partnerColor]] forState:UIControlStateSelected  barMetrics:UIBarMetricsDefault];
     
         STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];

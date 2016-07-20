@@ -39,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    self.title = [@"Welche Störung?" uppercaseString];
+    self.title = @"Welche Störung?" ;
     
     self.categories = [STReportCategory allCategories];
     self.currentReport.category = self.categories[0];
@@ -165,9 +165,9 @@
             
             _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                        delegate:self
-                                              cancelButtonTitle:@"Cancel"
+                                              cancelButtonTitle:@"Stornieren"
                                          destructiveButtonTitle:nil
-                                              otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
+                                              otherButtonTitles:@"Mach ein Foto", @"Aus der Fotos auswählen", nil];
             
             [_actionSheet showInView:self.view];
             

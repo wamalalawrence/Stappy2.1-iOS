@@ -21,6 +21,9 @@
 //
 #import "CouponsCodeViewController.h"
 
+#import "UIColor+Hexadecimal.h"
+#import "UIColor+STColor.h"
+
 static const int kHeightOfTheCollectionCell = 84.f;
 
 @interface STMainViewController ()
@@ -83,8 +86,21 @@ static const int kHeightOfTheCollectionCell = 84.f;
     self.startScreenState = noSideMenuOpened;
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    if (self.startView) {
+        [self.startView viewWillDisappear:YES];
+    }
+}
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+  
+    if (self.startView) {
+        [self.startView viewWillAppear:YES];
+    }
     
     [self.startView loadStartData];
     
@@ -108,22 +124,35 @@ static const int kHeightOfTheCollectionCell = 84.f;
     self.navigationController.navigationBar.translucent = translucent;
     self.navigationController.navigationBar.barStyle = barStyle;
     [self setStartScreen:self.startScreenState];
+  
     [self tryToShowCouponCodeScreen];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-    if ([STAppSettingsManager sharedSettingsManager].shouldDisplayRegionPicker) {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    if ([STAppSettingsManager sharedSettingsManager].shouldDisplayRegionPicker && [defaults objectForKey:kCouponScreenShown]) {
         if (![defaults boolForKey:@"regionPickerShowed"]) {
             STRegionPickerViewController *vc = [[STRegionPickerViewController alloc] initWithNibName:@"STRegionPickerViewController" bundle:nil];
             UINavigationController *nvc = [[UINavigationController alloc] init];
             vc.currentState = PickerStateStart;
-            nvc.navigationBar.barTintColor = [UIColor colorWithRed:26.0/255.0 green:96.0/255.0 blue:166.0/255.0 alpha:1.0];
+        
+            nvc.navigationBar.barTintColor =[UIColor partnerColor];
             [nvc setViewControllers:@[vc]];
+            
+            UIFont *titleFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"navigationbar.title.font"];
+            
+            
+            [nvc.navigationBar setTitleTextAttributes:
+             @{NSForegroundColorAttributeName:[UIColor whiteColor],
+               NSFontAttributeName:titleFont}];
+            
             nvc.modalPresentationStyle = UIModalPresentationFullScreen;
             nvc.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
             [self presentViewController:nvc animated:YES completion:nil];
         }
     }
+    
 }
+
 
 - (void)viewWillLayoutSubviews
 {
@@ -136,18 +165,14 @@ static const int kHeightOfTheCollectionCell = 84.f;
 -(void)tryToShowCouponCodeScreen {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([[STAppSettingsManager sharedSettingsManager] showCoupons] && (![defaults objectForKey:kCouponScreenShown])) {
-        BOOL shouldShowCouponsSettingsScreen = YES;
-        if ([STAppSettingsManager sharedSettingsManager].shouldDisplayRegionPicker && (![defaults boolForKey:@"regionPickerShowed"])) {
-            shouldShowCouponsSettingsScreen = NO;
-        }
-        if (shouldShowCouponsSettingsScreen) {
+       
             if ([[[STAppSettingsManager sharedSettingsManager] activeCoupon] length] == 0) {
                 // Should show coupon screen now.
                 UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Coupons" bundle:nil];
                 CouponsCodeViewController * couponCodeVC = [sb instantiateViewControllerWithIdentifier:@"CouponsCodeViewController"];
                 [self presentViewController:couponCodeVC animated:true completion:nil];
             }
-        }
+     
     }
 }
 
@@ -275,7 +300,7 @@ static const int kHeightOfTheCollectionCell = 84.f;
     }
     [self.navigationController popToRootViewControllerAnimated:false];
     NSString *title = viewController.title;
-    viewController.title = [title uppercaseString];
+    viewController.title =[title uppercaseString];
     [self.navigationController pushViewController:viewController animated:false];
     self.detailsContentView.hidden = false;
 }
@@ -283,6 +308,10 @@ static const int kHeightOfTheCollectionCell = 84.f;
 - (void)showStadtInfoLeftMenu {
     self.autoselectStadtinfo = YES;
     [self revealLeftSideMenu:self.sidebarButton];
+}
+
+- (void)showRightMenu {
+    [self revealRightSideMenu:self.rightBarButton];
 }
 
 - (void)setStartScreen:(StartScreenState)state {
@@ -311,11 +340,11 @@ static const int kHeightOfTheCollectionCell = 84.f;
     self.navigationController.navigationBar.translucent = translucent;
     self.navigationController.navigationBar.barStyle = barStyle;
 
-    viewController.title  = [viewController.title uppercaseString];
+    viewController.title  = viewController.title;
     
     [self updateMainMenuPosition];
     [self.navigationController popToRootViewControllerAnimated:false];
-    [self.navigationController pushViewController:viewController animated:false];
+    [self.navigationController pushViewController:viewController animated:NO];
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
     UIFont *navigationbarTitleFont = [settings customFontForKey:@"navigationbar.title.font"];
     

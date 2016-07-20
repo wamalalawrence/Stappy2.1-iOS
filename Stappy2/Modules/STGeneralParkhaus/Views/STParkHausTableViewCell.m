@@ -97,7 +97,7 @@
     }
     self.coverImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.coverImageView sd_setImageWithURL:imageUrl  placeholderImage:[UIImage imageNamed:@"image_content_article_default_thumb"]];
-    self.freeLabel.text = [NSString stringWithFormat:@"Freie plätze: %ld/%ld",parkHaus.freePlaces,parkHaus.capacity];
+    self.freeLabel.text = [NSString stringWithFormat:@"freie Plätze: %ld/%ld",parkHaus.freePlaces,parkHaus.capacity];
     
 
 }

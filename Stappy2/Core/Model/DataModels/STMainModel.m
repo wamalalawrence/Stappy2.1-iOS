@@ -7,7 +7,7 @@
 //
 
 #import "STMainModel.h"
-
+#import "STStadtinfoOverwiewImages.h"
 @implementation STMainModel
 
 +(NSDictionary*)JSONKeyPathsByPropertyKey {
@@ -22,10 +22,28 @@
                                     @"startDateHourString":@"start",
                                     @"endDateString":@"end_date",
                                     @"endDateHourString":@"end-time",
-                                    @"background":@"background"
+                                    @"images":@"images"
+
                                     };
     return keysAndPaths;
 }
+
++(NSValueTransformer *)imagesJSONTransformer __unused {
+    
+    return [MTLValueTransformer transformerWithBlock:^id(id images) {
+        if ( [images isKindOfClass:[NSArray class]] ) {
+            return [[MTLValueTransformer mtl_JSONArrayTransformerWithModelClass:[STStadtinfoOverwiewImages class]] transformedValue:images];
+        }
+        else if ( [images isKindOfClass:[NSDictionary class]] ) {
+            NSMutableArray *images = [[NSMutableArray alloc] init];
+            [images addObject:[[MTLValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[STStadtinfoOverwiewImages class]] transformedValue:images]];
+            return images;
+        }
+        return nil;
+    }];
+    
+}
+
 
 -(void)setNilValueForKey:(NSString *)key
 {
@@ -35,6 +53,11 @@
 - (NSString *)phone {
     if (_phone.length == 0) return nil;
     return _phone;
+}
+
+- (NSString *)url {
+    if (_url.length == 0) return nil;
+    return [_url stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&"];
 }
 
 - (NSString *)email {

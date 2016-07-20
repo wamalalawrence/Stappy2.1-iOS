@@ -9,7 +9,7 @@ def shared_pods
     pod 'DKDBManager'
     pod 'DKHelper'
     pod 'Mantle', '~>2.0'
-    pod 'AFNetworking', '~> 2.0'
+    pod 'AFNetworking', '~> 3.1'
     pod 'SDWebImage', '~>3.7'
     pod 'SVPullToRefresh'
     pod 'MLPAutoCompleteTextField', '~>1.5'
@@ -17,6 +17,9 @@ def shared_pods
     pod 'NSDate+Calendar'
     pod 'SMSegmentView', '~> 1.1'
     pod 'Google/Analytics'
+    pod 'FBSDKCoreKit', '~> 4.12'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'Stappy2' do

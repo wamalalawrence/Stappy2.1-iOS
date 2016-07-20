@@ -98,8 +98,9 @@ class GarbageCalendarManager: NSObject {
         
         if reminderDate.timeIntervalSince1970 < NSDate().timeIntervalSince1970 {
             print("Reminder date already over, ignoring")
+            return
         }
-        
+  
         let n = UILocalNotification()
         n.fireDate = reminderDate;
         n.alertBody = "Denken Sie daran, Ihr Müll wird abgeholt";

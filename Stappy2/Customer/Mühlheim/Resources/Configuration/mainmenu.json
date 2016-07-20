@@ -1,0 +1,900 @@
+{
+    "__comment": "muhlheim configuration file",
+    "shouldShowAddressAndNameFields":"NO",
+    "shouldDisplayRegionPicker":"NO",
+    "shouldShowBlur":"NO",
+            "backend": {
+        "parkingMap":{"85595":"Vieh","84331":"City","84332":"Hauptm","84333":"Basi","84335" :"Kons","84334" :"Euro","84325":"Osta"},
+        "settingsUrlString" : "https://data4.stappy.de/data/de.endios.stappy.muehlheim/options-v2",
+        "baseUrl": "https://data4.stappy.de",
+        "aquaUrl": "/sinfo?id=232563",
+           "first_page_title":"Mühlheim",
+        "basePartnerUrl": "https://data4.stappy.de",
+        "zahlerstandEmail":"info@stadtwerke-soest.de",
+        "rightMenuItemsUrl": "/sinfo?id=120498",
+        "rightMenuTitle": "Ihre Stadtwerke",
+              "googleApiKey": "AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
+        "rightMenuItemsId":120498,
+            "googleMapsAPI": {
+                "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+            },
+        "leftMenuUrl": "side-menu.",
+    
+        "rightMenuBackgroundColor":"",
+            "fahrplan": {
+                "api_url":"http://endios.hafas.de/openapi/",
+                "access_id":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad",
+                "api_url_test_vbb":"http://demo.hafas.de/openapi/vbb-proxy",
+                "access_id_test_vbb":"endios-Schwedt-c4-ac64-ea40ec3edbd3",
+                
+                "api_url_test_openapi_demo":"http://endios.hafas.de/openapi/",
+                "access_id_test_openapi_demo":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad",
+                "fahrplan_api---GOOGLE": {
+                    "api_url_builder":"STFahrplanGoogleHafasMixedApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanGoogleHafasMixedApiResponseMapper",
+                    "api_transportationtype_strategy":"STFahrplanTransportationTypeStrategyGoogleMapsDirectionsApi",
+                    
+                    "api_url":"https://maps.googleapis.com/maps/api/directions/json",
+                    "access_id":"AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
+                    
+                    "api_url_autosuggestion":""
+                },
+                "fahrplan_api_productive": {
+                    "api_url":"http://endios.hafas.de/openapi/",
+                    "access_id":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad"
+                },
+                "fahrplan_api": {
+                    "api_url_builder":"STFahrplanHafasMixedApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanHafasApiResponseMapper",
+                    "api_transportationtype_strategy":"STFahrplanTransportationTypeStrategyHafas",
+                    
+                    "api_url":"http://fahrinfo.vbb.de/restproxy",
+                    "access_id":"endios-Schwedt-c4-ac64-ea40ec3edbd3"
+                },
+                "__comment_fahrplan_type":"Please change additional to the fahrplan_api-property the nibname in the file storyboard_ids.json.",
+                "comment_google_hafas_mixed_api": {
+                    "api_url_builder":"STFahrplanGoogleHafasMixedApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanGoogleHafasMixedApiResponseMapper"
+                },
+                "comment_google_maps_directions_api": {
+                    "api_url_builder":"STFahrplanGoogleMapsDirectionsApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanGoogleMapsDirectionsApiResponseMapper"
+                },
+                "comment_hafas_mixed": {
+                    "api_url_builder":"STFahrplanHafasMixedApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanHafasMixedApiResponseMapper",
+                    
+                    
+                    "api_url":"http://fahrinfo.vbb.de/restproxy",
+                    "access_id":"endios-Schwedt-c4-ac64-ea40ec3edbd3",
+                    
+                    "api_url_test_vbb":"http://demo.hafas.de/openapi/vbb-proxy",
+                    "access_id_test_vbb":"endios-Schwedt-c4-ac64-ea40ec3edbd3",
+                    
+                    "api_url_test_openapi_demo":"http://demo.hafas.de/openapi/dbrest",
+                    "access_id_test_openapi_demo":"e1cc4ef5-7702-4e5f-ad2f-f3d3c30fde36"
+                },
+                "comment_hafas_rest_proxy": {
+                    "api_url_builder":"STFahrplanHafasRestProxyApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanHafasRestProxyApiResponseMapper",
+                    
+                    "api_url":"http://fahrinfo.vbb.de/restproxy",
+                    "access_id":"endios-Schwedt-c4-ac64-ea40ec3edbd3"
+                },
+                "comment_hafas_open_api_vbb_proxy": {
+                    "api_url_builder":"STFahrplanHafasOpenApiVbbProxyApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanHafasOpenApiVbbProxyApiResponseMapper",
+                    
+                    "api_url":"http://demo.hafas.de/openapi/vbb-proxy",
+                    "access_id":"endios-Schwedt-c4-ac64-ea40ec3edbd3"
+                },
+                "comment_hafas_open_api_db_rest": {
+                    "api_url_builder":"STFahrplanHafasOpenApiDbRestApiUrlBuilder",
+                    "api_response_mapper":"STFahrplanHafasOpenApiDbRestApiResponseMapper",
+                    
+                    "api_url":"http://demo.hafas.de/openapi/dbrest",
+                    "access_id":"e1cc4ef5-7702-4e5f-ad2f-f3d3c30fde36"
+                }
+            },
+            "weather": {
+                "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/",
+            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/",
+        },
+        "parkHaus": {
+            "url":"http://parkinghq.com/services/v2/pois?access_key=WZBG_CITY&locale=de"
+        }
+    },
+    "favoriteOtherNamings": {
+        "events":"Events",
+        "stadtinfos":"Was ist wo?",
+        "angebote":"Angebote"
+    },
+    "startScreenBottomActions": {
+        "STWeatherViewController":"Wetter",
+        "Fahrplan":"Fahrplan",
+        "StadtInfo":"Was ist wo?"
+    },
+    "startScreenScrollActions": {
+         "qrscanner_icon":"QR-Scanner",
+        "baeder":"Bäder"
+    },
+
+    "startScreenIgnoredItems": [
+                                 "parkhaeuser",
+                                 "stadt"
+                                ],
+    "startScreenOtherNamings": {
+        "news":"News",
+        "lokalnews":"Lokales",
+        "vereine":"Vereinsnews"
+        
+    },
+    "cityLocation": {
+        "latitude": 49.7720,
+        "longitude": 6.6180
+    },
+    "defaultRegion": "Muhlheim",
+    "regionJSONFileName":"regions-muehlheim.json",
+    "default_ids": {
+    "news": [188444]
+    },
+    "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events", "lokalnews"],
+    "overlayScreens": {
+        "stackOpticTutorial": {
+            "viewControllers": ["STTickerViewController", "STLokalNewsViewController", "STAngeboteViewController", "STEventsViewController"],
+            "image": "image_content_demo_stapeloptik"
+        },
+        "settingsTutorial": {
+            "viewControllers": ["STTickerViewController", "STLokalNewsViewController", "STAngeboteViewController", "STEventsViewController"],
+            "image": "image_content_demo_einstellungen"
+        },
+        "actionOptionsTutorial": {
+            "viewControllers": ["STNewsAndEventsDetailViewController"],
+            "image": "image_content_demo_interaktion"
+        }
+      
+    },
+    "detail_sharing_options": {
+        "email": {
+            "SEL": "emailButtonTapped:",
+            "icon": "action_options_mail"
+        },
+        "phone": {
+            "SEL": "phoneButtonTapped:",
+            "icon": "action_options_phone"
+        },
+        "contactUrl": {
+            "SEL": "websiteButtonTapped:",
+            "icon": "action_options_web"
+        },
+        "latitude": {
+            "SEL": "mapButtonTapped:",
+            "icon": "action_options_map"
+        },
+        "share": {
+            "SEL": "shareButtonTapped:",
+            "icon": "action_options_share"
+        },
+        "endDate": {
+            "SEL": "calendarButtonTapped:",
+            "icon": "action_options_calendar"
+        },
+        "favorite":{
+            "SEL":"favoriteButtonTapped:",
+            "icon": {
+                "on": "action_options_favoriten",
+                "off": "action_options_favoriten_inactive"
+            }
+        }
+    },
+    "customizations": {
+        "partner_color": "#ff7800",
+        "texts_color": "#ffffff",
+        "startScreenIconColor": "#ff7800",
+        "secondary_color":"#ff7800",
+      
+        "overlayScreen": {
+            "button": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "20"
+                }
+            }
+        },
+        "openingHours": {
+            "cellLabelTop": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "12"
+                }
+            },
+            "cellLabel": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "12"
+                }
+            },
+            "titleLabel": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "16"
+                }
+            }
+        },
+        "navigationbar": {
+            "title":{
+                "font": {
+                    "name": "Georgia",
+                    "size": "18"
+                }
+            }
+        },
+        "sidemenu": {
+            "cell": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "15"
+                }
+            },
+            "settings": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "12"
+                }
+            },
+            "search": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "12"
+                }
+            },
+            "favorites": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "12"
+                }
+            },
+            "settings_cell": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "18"
+                }
+            },
+            "settings_top_cell": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "18"
+                }
+            }
+        },
+        
+        "rightmenu": {
+            "cell": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "18"
+                }
+            },
+            "meineStadtwerke": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "32"
+                }
+            }
+            
+        },
+        
+        "startscreen": {
+            "startLocation": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "25"
+                }
+            },
+            "collectionview": {
+                "cell": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "10"
+                    }
+                }
+            },
+            "tablecellcollectionviewcell":{
+                "cell":{
+                    "font": {
+                        "name": "Georgia",
+                        "size": "15"
+                    }
+                }
+            }
+        },
+        
+        "detailscreen": {
+            "title": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "25"
+                }
+            },
+            "time": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "15"
+                }
+            },
+            "location": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "16"
+                }
+            },
+            "event_type": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "15"
+                }
+            },
+            "info": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "16"
+                }
+            },
+            "description": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "15"
+                }
+            }
+        },
+        
+        "stadtinfos": {
+            "cell": {
+                "font": {
+                    "name": "Georgia",
+                    "size": "16"
+                },
+                "headerFont": {
+                    "name": "Georgia",
+                    "size": "14"
+                }
+            }
+        },
+        
+        "weather": {
+            "weather_header": {
+                "current_date": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "20"
+                    }
+                },
+                "current_temperature": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "35"
+                    }
+                },
+                "current_condition": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "20"
+                    }
+                },
+                "current_rain_condition": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "20"
+                    }
+                },
+                "current_wind_condition": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "20"
+                    }
+                }
+            },
+            "weather_cell": {
+                "condition_label": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "15"
+                    }
+                },
+                "time_of_forecast_label": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "15"
+                    }
+                },
+                "degrees_label": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "22"
+                    }
+                },
+                "precip_prediction_label": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "15"
+                    }
+                },
+                "wind_speed_label": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "15"
+                    }
+                }
+            }
+        },
+        
+        "annotationsmap": {
+            
+        },
+        
+        "news": {
+            "base_cell":{
+                "category": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "12"
+                    },
+                    "color":{
+                        "value":"#ffffff",
+                        "alpha":1.0
+                    }
+                }
+            },
+            "base_cell_expanded":{
+                "datetime": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "12"
+                    },
+                    "color":{
+                        "value":"#ff7800",
+                        "alpha":1.0
+                    }
+                },
+                "description":{
+                    "font": {
+                        "name": "Georgia",
+                        "size": "15"
+                    }
+                }
+            },
+            "collection_view_cell":{
+                "datetime": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "12"
+                    },
+                    "color":{
+                        "value":"#ff7800",
+                        "alpha":1.0
+                    }
+                },
+                "description":{
+                    "font": {
+                        "name": "Georgia",
+                        "size": "15"
+                    }
+                }
+            },
+            "cell_expanded_bottom":{
+                
+            },
+            "cell_expanded_top":{
+                "font": {
+                    "name": "Georgia",
+                    "size": "18"
+                }
+            },
+            "cell_collection_expanded_header":{
+                
+            },
+            "cell_collection_expanded":{
+                
+            },
+            "cell_collection_expanded_footer":{
+                "font": {
+                    "name": "Georgia",
+                    "size": "18"
+                }
+            }
+        },
+        
+        "lokalnews": {
+            "header_view": {
+                "dateLabel" : {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "26"
+                    }
+                },
+                "weekDayLabel" : {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "12"
+                    }
+                },
+            }
+        },
+        
+        "angebote": {
+            "header_view": {
+                "category": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "18"
+                    },
+                }
+            }
+        },
+        
+        "fahrplan": {
+            "__comment1": "Georgia",
+            "__comment2": "Georgia",
+            "search": {
+                "origin_departure_textfield": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "20"
+                    },
+                    "text_color": "#ffffff"
+                }
+            },
+            "connection": {
+                "cell_primary": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "38"
+                    },
+                    "text_color": "#ffffff"
+                },
+                "cell_secondary": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "14"
+                    },
+                    "text_color": "#ffffff",
+                    "sub_text_color": "#ff7800",
+                    "stationname": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "18"
+                        }
+                    }
+                }
+            },
+            "route": {
+                "cell_primary": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "18"
+                    },
+                    "text_color": "#ffffff",
+                    "text_sub_color": "#ffffff"
+                },
+                "cell_secondary": {
+                    "font": {
+                        "name": "OpenSans",
+                        "size": "15"
+                    },
+                    "text_color": "#ffffff"
+                }
+            },
+            "location_finder_overlay": {
+                "primary": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "21"
+                    },
+                    "text_color": "#ffffff"
+                },
+                "cell": {
+                    "primary": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "18"
+                        }
+                    },
+                    "text_color": "#ffffff"
+                }
+            },
+            "departure_arrival_display": {
+                "textinput": {
+                    "primary": {
+                        "font": {
+                        "name": "Georgia",
+                        "size": "20"},
+                        "text_color": "#ffffff"
+                    }
+                },
+                "time": {
+                    "primary": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "23"
+                        },
+                        "text_color": "#ffffff"
+                    }
+                },
+                "date": {
+                    "primary": {
+                        "font": {
+                            "name": "OpenSans",
+                            "size": "12"
+                        },
+                        "text_color": "#ffffff"
+                    }
+                },
+                "departurearrival": {
+                    "primary": {
+                        "font": {
+                            "name": "OpenSans",
+                            "size": "12"
+                        },
+                        "text_color": "#ffffff"
+                    }
+                }
+            },
+            "datetime_chooser": {
+                "primary": {
+                    "font": {
+                        "name": "Georgia",
+                        "size": "15"
+                    },
+                    "text_color": "#ffffff"
+                }
+            },
+            "timetable_view": {
+                "primary": {
+                    "title": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "20"
+                        }
+                    },
+                    "subtitle": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "16"
+                        }
+                    }
+                },
+                "section_cell": {
+                    "title": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "15"
+                        },
+                        "text_color": "#ffffff"
+                    },
+                    "time": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "15"
+                        },
+                        "text_color": "#ffffff"
+                    }
+                },
+                "cell": {
+                    "title": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "15"
+                        },
+                        "text_color": "#ffffff"
+                    },
+                    "time": {
+                        "font": {
+                            "name": "Georgia",
+                            "size": "15"
+                        },
+                        "text_color": "#ffffff"
+                    }
+                }
+            }
+        },
+        
+        "apotheken_notdienst": {
+            "segment_control": {
+                "font": {
+                    "name": "OpenSans",
+                    "size": "16"
+                },
+            }
+        }
+    },
+    "menu_left": [
+      {
+      "caption": "Startseite",
+      "icon_name": "Startseite",
+      "type": "startseite",
+      "type_api": "start",
+      "url": "/start",
+      },
+                  {
+                  "caption": "Ihre Stadtwerke Mühlheim",
+                  "icon_name": "right_menu_open",
+                  "type": "menu_toggle",
+                  "type_api": "angebote",
+                  "url": "/events"
+                  },
+                  {
+      "caption": "Lokales",
+      "icon_name": "lokalnews",
+      "type": "lokalnews",
+      "type_api": "news",
+      "url": "",
+      },
+      {
+      "caption": "Events",
+      "icon_name": "events",
+      "type": "events",
+      "type_api": "event",
+      "url": "/events",
+      },
+      {
+      "caption":"Was ist wo?",
+      "icon_name":"Wasistwo",
+      "type":"stadt",
+      "type_api":"stinfo",
+      "url":"/sinfo"
+      },
+                  {
+                  "caption": "Fahrplan",
+                  "icon_name": "Fahrplan",
+                  "type": "fahrplan",
+                  "type_api": "fahrplan",
+                  "url": "/fahrplan",
+                  },
+
+     
+      {
+      "caption": "Angebote",
+      "icon_name": "angebote",
+      "type": "angebote",
+      "type_api": "sports",
+      "url": "/angebote",
+      },
+      {
+      "caption": "Vereinsnews",
+      "icon_name": "Vereine",
+      "type": "vereine",
+      "type_api": "sports",
+      "url": "/vereinsnews",
+      },
+      {
+      "caption": "Bäder",
+      "icon_name": "baeder",
+      "type": "baeder",
+      "type_api": "baeder",
+      "url": "/sinfo?id=121101"
+      
+      },
+      {
+      "caption": "News",
+      "icon_name": "ticker",
+      "type": "ticker",
+      "type_api": "news",
+      "url": "/ticker",
+      },
+    {
+    "caption": "Wetter",
+    "icon_name": "wetter_icon",
+    "type": "wetter_overview",
+    "type_api": "",
+    },
+                  
+    {
+    "caption": "QR-Scanner",
+    "icon_name": "qrscanner_icon",
+    "type": "qr_overview",
+    "type_api": "",
+    }
+                  
+  ],
+    "menu_settings": [
+                      {
+                      "caption": "Regionenfilter",
+                      "icon_name": "icon_content_aricle_map",
+                      "sub_items": [{
+                                    "caption": "Blumenhagen",
+                                    "sub_items": [{
+                                                  "caption": "Nord"
+                                                  }, {
+                                                  "caption": "West"
+                                                  }, {
+                                                  "caption": "Ost"
+                                                  }, {
+                                                  "caption": "Süd"
+                                                  }]
+                                    }, {
+                                    "caption": "Downtown",
+                                    "sub_items": [{
+                                                  "caption": "City"
+                                                  }, {
+                                                  "caption": "Shopping"
+                                                  }, {
+                                                  "caption": "Hauptbahnhof"
+                                                  }]
+                                    }, {
+                                    "caption": "Frostenwalde"
+                                    }, {
+                                    "caption": "Herrenhof"
+                                    }, {
+                                    "caption": "Hohenfelde"
+                                    }, {
+                                    "caption": "Kummerow"
+                                    }, {
+                                    "caption": "Kunow"
+                                    }, {
+                                    "caption": "Stendell"
+                                    }, {
+                                    "caption": "Vierraden"
+                                    }]
+                      }, {
+                      "caption": "Lokalnews",
+                      "icon_name": "lokalnews_icon",
+                      "sub_items": [{
+                                    "caption": "Schwedter Anzeiger",
+                                    "sub_items": [{
+                                                  "caption": "Lokal"
+                                                  }, {
+                                                  "caption": "Überregional"
+                                                  }]
+                                    }, {
+                                    "caption": "Schwedter Abendzeitung"
+                                    }, {
+                                    "caption": "Guten Morgen Schwedt"
+                                    }]
+                      }, {
+                      "caption": "News",
+                      "icon_name": "ticker_icon",
+                      "sub_items": [{
+                                    "caption": "Bild"
+                                    }, {
+                                    "caption": "Stern"
+                                    }, {
+                                    "caption": "Spiegel",
+                                    "sub_items": [{
+                                                  "caption": "Magazin"
+                                                  }, {
+                                                  "caption": "For kids"
+                                                  }]
+                                    }]
+                      }, {
+                      "caption": "Events",
+                      "icon_name": "events_icon",
+                      "sub_items": [{
+                                    "caption": "Partys"
+                                    }, {
+                                    "caption": "Konzerte",
+                                    "sub_items": [{
+                                                  "caption": "Rock"
+                                                  }, {
+                                                  "caption": "Schlager"
+                                                  }, {
+                                                  "caption": "Hip Hop"
+                                                  }, {
+                                                  "caption": "Country"
+                                                  }]
+                                    }, {
+                                    "caption": "Versammlungen"
+                                    }, {
+                                    "caption": "Wahlen"
+                                    }]
+                      }, {
+                      "caption": "Vereinsticker",
+                      "icon_name": "vereinsnews_icon",
+                      "sub_items": [{
+                                    "caption": "FC Schwedt"
+                                    }, {
+                                    "caption": "Kegel Schwedt"
+                                    }, {
+                                    "caption": "Fit in Schwedt"
+                                    }]
+                      }]
+}

@@ -9,6 +9,7 @@
 #import "STFahrplanNearbyStopAnnotation.h"
 #import "UIColor+STColor.h"
 #import "STFahrplanNearbyStopLocation.h"
+#import "UIImage+tintImage.h"
 
 @implementation STFahrplanNearbyStopAnnotation
 
@@ -38,6 +39,7 @@
     CGFloat scale = [[UIScreen mainScreen] scale] * 2;//*2
     
     UIImage *annotationImage = [UIImage imageNamed:@"icon_content_oepnv_pin_card"];
+    annotationImage = [annotationImage imageTintedWithColor:[UIColor partnerColor]];
     UIImage *annotationImageScaled = [UIImage imageWithCGImage:annotationImage.CGImage
                                scale:scale
                                              orientation:annotationImage.imageOrientation];

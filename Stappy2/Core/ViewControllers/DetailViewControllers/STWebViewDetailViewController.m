@@ -33,7 +33,6 @@
     self.detailWebView.delegate = self;
     self.detailWebView.scalesPageToFit = YES;
     [self.activityIndicator startAnimating];
-    
     NSURL *requestUrl = [NSURL URLWithString:self.detailUrl];
     NSURLRequest *webRequest = [NSURLRequest requestWithURL:requestUrl];
     
@@ -50,6 +49,11 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.hidden = YES;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Error : %@",error);
 }
 
 @end

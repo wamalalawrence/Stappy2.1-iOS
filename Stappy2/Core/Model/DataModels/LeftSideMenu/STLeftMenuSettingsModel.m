@@ -22,6 +22,10 @@
         if (self.title.length == 0) {
             self.title = [dict valueForKey: kTitleStringKey withDefault:@""];
         }
+        if (self.url.length) {
+            self.url = [dict valueForKey:@"url" withDefault:@""];
+
+        }
     }
     
     return self;
@@ -65,6 +69,10 @@
     if (self.type) {
         [aCoder encodeObject:self.type forKey:kTypeStringKey];
     }
+    if (self.url) {
+        [aCoder encodeObject:self.url forKey:@"url"];
+    }
+
     [aCoder encodeBool:self.selected forKey:kElementSelectedString];
     [aCoder encodeBool:self.allSubitemsSelected forKey:kAllChildrenSelectedStringKey];
 }
@@ -75,6 +83,7 @@
     self.subItems = [aDecoder decodeObjectForKey:kSubitemsStringKey];
     self.selected = [aDecoder decodeBoolForKey:kElementSelectedString];
     self.type = [aDecoder decodeObjectForKey:kTypeStringKey];
+    self.url = [aDecoder decodeObjectForKey:@"url"];
     self.allSubitemsSelected = [aDecoder decodeBoolForKey:kAllChildrenSelectedStringKey];
     
     return self;
@@ -86,6 +95,7 @@
              @"title":@"caption",
              @"iconName":@"icon_name",
              @"type":@"type",
+             @"url":@"url",
              @"subItems":@"sub_items"
              };
 }

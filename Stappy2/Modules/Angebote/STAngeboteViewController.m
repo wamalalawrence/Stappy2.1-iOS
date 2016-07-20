@@ -34,7 +34,7 @@
 
 - (void)loadNews
 {
-    [self loadWerbung];
+    [self loadWerbungWithType:@"angebote"];
     [self.refreshControl beginRefreshing];
     __weak typeof(self) weakSelf = self;
     [[STRequestsHandler sharedInstance] allAngetboteWithUrl:@"/angebote-v2"
@@ -52,10 +52,42 @@
                                              strongSelf.expandableTableDataArray = [NSMutableArray arrayWithArray:news];
                                              [strongSelf.lokalNewsTable reloadData];
                                              [self updateHeaders];
-
-                                              [self addInfititeScrolling];
+                                             [self addInfititeScrolling];
 
                                          }];
+}
+
+- (void)refreshNews {
+    [self loadWerbungWithType:@"angebote"];
+    [self.refreshControl beginRefreshing];
+    self.currentPage = 1;
+    self.parameters[@"page"] = @(self.currentPage);
+    __weak typeof(self) weakSelf = self;
+    [[STRequestsHandler sharedInstance] allAngetboteWithUrl:@"/angebote-v2"
+                                                     params:self.parameters
+                                                       type:@"Angebote"
+                                              andCompletion:^(NSArray *news, NSArray *originalNews, NSUInteger pageCount, NSError *error) {
+                                                  __strong typeof(weakSelf) strongSelf = weakSelf;
+                                                  [strongSelf.refreshControl endRefreshing];
+                                                  strongSelf.newsTableDataArray = news;
+                                                  strongSelf.pageCount = pageCount;
+                                                  if (!strongSelf.originalFetchedNews.count) {
+                                                      strongSelf.originalFetchedNews = [NSMutableArray array];
+                                                  }
+                                                  
+                                                  // don't duplicate existing items
+                                                  for (id obj in originalNews) {
+                                                      if (![strongSelf.originalFetchedNews containsObject:obj]) {
+                                                          [strongSelf.originalFetchedNews addObject:obj];
+                                                      }
+                                                  }
+                                                  
+                                                  strongSelf.expandableTableDataArray = [NSMutableArray arrayWithArray:news];
+                                                  [strongSelf.lokalNewsTable reloadData];
+                                                  [self updateHeaders];
+                                                  [self addInfititeScrolling];
+                                                  
+                                              }];
 }
 
 -(void)loadMoreNews
@@ -74,7 +106,13 @@
                                                   type:@"Angebote"
                                          andCompletion:^(NSArray *news, NSArray * originalNews, NSUInteger pageCount, NSError *error) {
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
-                                             [strongSelf.originalFetchedNews addObjectsFromArray:originalNews];
+                                             
+                                             // don't duplicate existing items
+                                             for (id obj in originalNews) {
+                                                 if (![strongSelf.originalFetchedNews containsObject:obj]) {
+                                                     [strongSelf.originalFetchedNews addObject:obj];
+                                                 }
+                                             }
                                              //call method to group the data and reload the table
                                              [strongSelf populateWithNextPageWithPageElements:self.originalFetchedNews];
                                          }];
@@ -93,25 +131,11 @@
             [super onTap:detailData];
         } else {
             // Show alert
-            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Kundennummer Error" message:@"Die eingegebene Kundennummer ist leider ungültig." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
+            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:nil message:@"Bitte geben Sie Ihre Kundennummer ein, um die Gutscheine in Anspruch zu nehmen" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
             [alert show];
         }
     } else {
         [super onTap:detailData];
-    }
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[STAppSettingsManager sharedSettingsManager] showCoupons]) {
-        if ([[STAppSettingsManager sharedSettingsManager] activeCoupon].length > 0) {
-            [super tableView:tableView didSelectRowAtIndexPath:indexPath];
-        } else {
-            // Show alert
-            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Kundennummer Error" message:@"Die eingegebene Kundennummer ist leider ungültig." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
-            [alert show];
-        }
-    } else {
-        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
 }
 

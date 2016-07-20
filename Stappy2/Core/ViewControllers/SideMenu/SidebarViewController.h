@@ -19,11 +19,12 @@
 - (void)loadViewController:(UIViewController*)viewController animated:(BOOL) animated withNavigationBarBarTintColor:(UIColor*)barTintColor andTintColor:(UIColor*)tintColor translucent:(BOOL)translucent barStyle:(UIBarStyle)barStyle;
 - (void)loadViewController:(UIViewController*)viewController animated:(BOOL) animated;
 - (void)showStadtInfoLeftMenu;
+- (void)showRightMenu;
 - (void)refreshFramesForStartCollectionCells;
 
 @end
 
-@interface SidebarViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SidebarViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIView *couponsView;
 @property (weak, nonatomic) IBOutlet STRegionPickerSettingsView *regionPickerSettingsView;
 
@@ -51,6 +52,11 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondMenuTrailingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondMenuLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdMenuLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchButtonWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *favoritesButtonLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchButtonLeadingConstraint;
+
+
 @property (weak, nonatomic) IBOutlet UIView *secondMenuTopView;
 @property (weak, nonatomic) IBOutlet UILabel *secondMenuTopLabel;
 

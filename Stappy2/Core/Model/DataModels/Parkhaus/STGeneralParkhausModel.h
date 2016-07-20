@@ -33,5 +33,6 @@
 @property(nonatomic, assign)NSInteger capacity;
 @property(nonatomic, assign)NSInteger freePlaces;
 
++(instancetype)parkhausFromXMLDictionary:(NSDictionary*)dictionary;
 
 @end

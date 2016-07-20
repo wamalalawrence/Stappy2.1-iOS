@@ -11,7 +11,7 @@
 @interface GarbageDateTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *garbageImageView;
 @property (weak, nonatomic) IBOutlet UILabel *garbageLabel;
-
+@property (weak, nonatomic) IBOutlet UIView *separator;
 @property (weak, nonatomic) IBOutlet UIView *dataView;
 
 - (void)cornerRadiusForCorners:(UIRectCorner)rectCorner;

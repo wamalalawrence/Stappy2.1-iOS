@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "STFahrplanLocation.h"
 
-
 @protocol STFahrplanLocationNameFinderDelegate <NSObject>
 - (void)locationNameFinderAdressChoosed:(STFahrplanLocation *)adress;
 
@@ -18,6 +17,7 @@
 @interface STFahrplanLocationNameFinderOverlayVC : UIViewController
 
 @property (weak, nonatomic) id<STFahrplanLocationNameFinderDelegate> delegate;
+
 @property (strong, nonatomic) STFahrplanLocation *address;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @end

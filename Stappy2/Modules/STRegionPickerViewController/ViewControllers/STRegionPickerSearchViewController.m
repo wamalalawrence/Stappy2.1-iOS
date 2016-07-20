@@ -27,6 +27,7 @@
 #define kRegPickerRegionsFile @"regions-suewag.json"
 #define kRegPickerAnnotationFont [UIFont fontWithName:@"RWEHeadline-MediumCondensed" size:50.0f * scale]
 #define kRegPickerFont [UIFont fontWithName:@"RWEHeadline-MediumCondensed" size:18]
+#define kRegionPickerInputFont [UIFont fontWithName:@"RWEHeadline-RegularCondensed" size:15]
 #define kRegPickerSearchForegroundColor [UIColor colorWithRed:66.0/255.0 green:80.0/255.0 blue:75.0/255.0 alpha:1.0]
 #define kRegPickerSearchBackgroundColor [UIColor colorWithRed:44.0/255.0 green:60.0/255.0 blue:55.0/255.0 alpha:1.0]
 #define kRegPickerSelectColor [UIColor colorWithRed:254.0/255.0 green:197.0/255.0 blue:3.0/255.0 alpha:1.0]
@@ -80,6 +81,7 @@
     self.searchTextField.rightView = clearButton;
     self.searchTextField.rightViewMode = UITextFieldViewModeWhileEditing;
     self.searchView.backgroundColor = kRegPickerSearchBackgroundColor;
+    self.searchTextField.font = kRegionPickerInputFont;
     self.searchTextField.backgroundColor = kRegPickerSearchForegroundColor;
     self.searchTextField.tintColor = kRegPickerSelectColor;
     
@@ -156,6 +158,7 @@
         cell = [topLevelObjects objectAtIndex:0];
     }
     cell.titleTextLabel.text = [regDict objectForKey:kRegPickerJSONIdentifierName];
+    cell.shortTextLabel.text = [regDict objectForKey:kRegPickerJSONIdentifierShortcut];
     return cell;
     
 }

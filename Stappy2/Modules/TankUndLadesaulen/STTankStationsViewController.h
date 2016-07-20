@@ -10,4 +10,6 @@
 
 @interface STTankStationsViewController : UIViewController
 
+@property(nonatomic,strong)NSString *stationsId;
+-(void)fetchTankStationsFromServerWithId;
 @end

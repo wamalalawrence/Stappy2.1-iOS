@@ -37,7 +37,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = [@"Störung Melden" uppercaseString];
+    self.title = @"Störung Melden";
 
     self.categoryLabel.text = self.currentReport.category.name;
     self.typeLabel.text = self.currentReport.type.name;
@@ -149,16 +149,6 @@
 
 -(IBAction)sendButtonTapped:(id)sender{
     
-    if (self.firstNameTextField.text.length == 0) {
-        [[[UIAlertView alloc] initWithTitle:nil message:@"Bitte geben sie ihren Vornamen ein" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-        return;
-    }
-    
-    if (self.lastNameTextField.text.length == 0) {
-        [[[UIAlertView alloc] initWithTitle:nil message:@"Bitte geben sie ihren Nachnamen ein" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-        return;
-    }
-    
     self.currentReport.firstName = self.firstNameTextField.text;
     self.currentReport.lastName = self.lastNameTextField.text;
     
@@ -207,7 +197,7 @@
     }
     
     
-    [_mailComposer setSubject:@"Meldung"];
+    [_mailComposer setSubject:@"Meldung durch einen User der Süwag-App"];
     [_mailComposer setToRecipients:@[[STAppSettingsManager sharedSettingsManager].reportingEmail]];
     [_mailComposer setMessageBody:mutableString isHTML:YES];
     

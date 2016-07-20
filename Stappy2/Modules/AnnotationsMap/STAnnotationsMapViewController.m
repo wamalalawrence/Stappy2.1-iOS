@@ -10,7 +10,7 @@
 #import "NSObject+AssociatedObject.h"
 #import "UIImage+tintImage.h"
 #import "UIColor+STColor.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 
 @interface STAnnotationsMapViewController () <MKMapViewDelegate>
 @property (nonatomic, strong) NSArray<STMainModel *> *data;
@@ -18,7 +18,7 @@
 
 @implementation STAnnotationsMapViewController
 
-- (instancetype)initWithData:(NSArray<STMainModel *> *)data {
+- (instancetype)initWithData:(NSArray<id> *)data {
     if (self = [super initWithNibName:@"STAnnotationsMapViewController" bundle:nil]) {
         self.data = data;
     }
@@ -32,12 +32,15 @@
     
     self.mapView.delegate = self;
     
-    for(STMainModel *model in self.data) {
+    for(id model in self.data) {
         MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-        point.coordinate = CLLocationCoordinate2DMake([model.latitude doubleValue], [model.longitude doubleValue]);
-        point.title = model.title;
+        point.coordinate = CLLocationCoordinate2DMake([[model valueForKey:@"latitude"] doubleValue], [[model valueForKey:@"longitude"] doubleValue]);
+        point.title = [model valueForKey:@"title"];
         
-        if ([model respondsToSelector:@selector(subtitle)]) point.subtitle = model.subtitle;
+        if ([model respondsToSelector:@selector(subtitle)]){
+            point.subtitle = [model valueForKey:@"subtitle"];
+
+        }
         
         point.associatedObject = model;
         [self.mapView addAnnotation:point];
@@ -76,7 +79,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     id dataToShowInDetailVC = [((NSObject *)view.annotation) associatedObject];
     
-    STNewsAndEventsDetailViewController *detailsView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andDataModel:dataToShowInDetailVC];
+    STDetailViewController *detailsView = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController" bundle:nil andDataModel:dataToShowInDetailVC];
     detailsView.ignoreFavoritesButton = self.ignoreFavoritesButton;
     [self.navigationController pushViewController:detailsView animated:YES];
 }

@@ -22,7 +22,9 @@
                   "hazy":"fog",
                   "mostlysunny":"partlySun",
                   "partlysunny":"partlySun",
-                  "partlycloudy":"partlySun"
+                  "partlycloudy":"partlySun",
+                 "thunderstorm":"storm",
+                      "thundercloud":"storm"
                   },
     "match_backgrounds_condition":
     {
@@ -45,7 +47,10 @@
         "hazy":"bg_cloudy",
         "mostlysunny":"bg_cloudy",
         "partlysunny":"bg_cloudy",
-        "partlycloudy":"bg_cloudy"
+        "partlycloudy":"bg_cloudy",
+        "thunderstorm":"bg_rainy",
+          "thundercloud":"bg_rainy"
+        
     }
 
 }

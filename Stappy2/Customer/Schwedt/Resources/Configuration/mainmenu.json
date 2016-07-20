@@ -1,13 +1,26 @@
 {
     "__comment": "Schwedt configuration file",
-    "backend": {
+    "shouldShowBlur":"NO",
+        "backend": {
+        "shouldShowAddressAndNameFields":"NO",
+        "shouldDisplayRegionPicker":"NO",
+        "shouldShowCouponsFunctionality":"NO",
         "settingsUrlString" : "https://schwedt.stappy.de/data/de.endios.stappy.schwedt/options-v2",
         "baseUrl": "https://data4.stappy.de",
         "basePartnerUrl": "https://schwedt.stappy.de",
         "leftMenuUrl": "side-menu.",
+        "rightMenuCustom": "/xinfo/stadtwerk",
+        "googleApiKey": "AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
+        "shouldUseUserPositionInApotheken": 1,
+        "googleMapsAPI": {
+            "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+        },
         "fahrplan": {
             "api_url":"http://fahrinfo.vbb.de/restproxy",
             "access_id":"endios-Schwedt-c4-ac64-ea40ec3edbd3",
+            "googleMapsAPI": {
+                "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+            },
             
             "api_url_test_vbb":"http://demo.hafas.de/openapi/vbb-proxy",
             "access_id_test_vbb":"endios-Schwedt-c4-ac64-ea40ec3edbd3",
@@ -82,8 +95,8 @@
             }
         },
         "weather": {
-            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/Angermuende.json",
-            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/Angermuende.json",
+            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/",
+            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/",
         }
     },
     "startScreenBottomActions": {
@@ -92,12 +105,9 @@
          "StadtInfo":"Stadtinfos"
     },
     "startScreenScrollActions": {
-         "angebote":"angebote",
-         "events":"events",
-         "ticker":"news",
-         "vereine":"vereine",
-         "Apotheken":"STApothekenViewController"
-    },
+         "Apotheken":"STApothekenViewController",
+        "qrscanner_icon":"QR code"
+        },
     "startScreenIgnoredItems": ["test"],
     "startScreenOtherNamings": {},
         "cityLocation": {
@@ -107,6 +117,8 @@
     "default_ids": {
         "news": [84847]
     },
+    "defaultRegion": "Angermuende",
+
     "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events", "lokalnews"],
     "overlayScreens": {
         "stackOpticTutorial": {
@@ -124,31 +136,31 @@
     },
     "detail_sharing_options": {
         "email": {
-            "SEL": "didClickEmail",
+            "SEL": "emailButtonTapped:",
             "icon": "action_options_mail"
         },
         "phone": {
-            "SEL": "didClickPhone",
+            "SEL": "phoneButtonTapped:",
             "icon": "action_options_phone"
         },
         "contactUrl": {
-            "SEL": "didClickWebsite",
+            "SEL": "websiteButtonTapped:",
             "icon": "action_options_web"
         },
         "latitude": {
-            "SEL": "didClickShowOnMap",
+            "SEL": "mapButtonTapped:",
             "icon": "action_options_map"
         },
         "share": {
-            "SEL": "didClickShare",
+            "SEL": "shareButtonTapped:",
             "icon": "action_options_share"
         },
         "endDate": {
-            "SEL": "didClickCalendar",
+            "SEL": "calendarButtonTapped:",
             "icon": "action_options_calendar"
         },
         "favorite":{
-            "SEL":"didClickFavorites:",
+            "SEL":"favoriteButtonTapped:",
             "icon": {
                 "on": "action_options_favoriten",
                 "off": "action_options_favoriten_inactive"
@@ -159,7 +171,8 @@
         "partner_color": "#86bc25",
         "texts_color": "#86bc25",
         "secondary_color":"86bc25",
-        
+        "startScreenIconColor": "#86bc25",
+
         "overlayScreen": {
             "button": {
                 "font": {
@@ -652,11 +665,17 @@
         },
         
         "openingHours": {
+            "cellLabelTop": {
+                "font": {
+                    "name": "OfficinaSansITCPro-Book",
+                    "size": "16"
+                }
+            },
             "cellLabel": {
                 "font": {
                     "name": "OfficinaSansITCPro-Book",
                     "size": "16"
-                },
+                }
             },
             "titleLabel": {
                 "font": {
@@ -665,6 +684,7 @@
                 }
             }
         }
+        
     },
     "menu_left": [
       {
@@ -702,13 +722,6 @@
     "type_api": "event",
     "url": "/events",
     },
-      {
-      "caption": "Zählerstand",
-      "icon_name": "events",
-      "type": "zahler",
-      "type_api": "event",
-      "url": "/events",
-      },
     {
     "caption": "Angebote",
     "icon_name": "angebote",

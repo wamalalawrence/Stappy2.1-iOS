@@ -24,6 +24,7 @@
 
 #import "Stappy2-Swift.h"
 
+#import "STDetailViewController.h"
 
 //TODO: create cell
 static NSString *cellIdentifier = @"garbageDateCell";
@@ -42,27 +43,16 @@ static NSString *headerCellIdentifier = @"headerCell";
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
-    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([GarbageDateTableViewCell class])
-                                                       bundle:[NSBundle mainBundle]]
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([GarbageDateTableViewCell class]) bundle:[NSBundle mainBundle]]
      forCellReuseIdentifier:cellIdentifier];
-    
+
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([GarbageDateHeaderView class]) bundle:[NSBundle mainBundle]]
-forHeaderFooterViewReuseIdentifier:headerCellIdentifier];
+     forCellReuseIdentifier:headerCellIdentifier];
     
-    _tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.5];
+    _tableView.separatorColor = [UIColor clearColor];
     
-    self.title = @"ABFALL KALENDER";
-    
-    // UINavigationBar add settings button
-    UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"garbage_icon"]
-                                                                     style:UIBarButtonItemStylePlain
-                                                                    target:self
-                                                                    action:@selector(openSettings)];
-    
-    NSMutableArray *leftBarButtonItems = [NSMutableArray arrayWithArray:self.navigationItem.leftBarButtonItems];
-    [leftBarButtonItems addObject:settingsItem];
-    self.navigationItem.leftBarButtonItems = leftBarButtonItems;
-    
+    self.title = @"ABFALLKALENDER";
+        
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background_blurred"]]];
 }
 
@@ -71,18 +61,13 @@ forHeaderFooterViewReuseIdentifier:headerCellIdentifier];
     [_tableView reloadData];
 }
 
-- (void)openSettings
+- (void)viewDidAppear:(BOOL)animated
 {
-    UIViewController *preLastViewController = self.navigationController.viewControllers[self.navigationController.viewControllers.count - 2];
-    
-    if ([preLastViewController isKindOfClass:[GarbageCalendarViewController class]])
+    NSMutableArray *vcs = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    if (![[vcs objectAtIndex:vcs.count - 2] isKindOfClass:[GarbageCalendarSettingsViewController class]])
     {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    else
-    {
-        id controller = [[GarbageCalendarSettingsViewController alloc] initSelf];
-        [self.navigationController pushViewController:controller animated:YES];
+        [vcs insertObject:[[GarbageCalendarSettingsViewController alloc] initSelf] atIndex:vcs.count - 1];
+        [self.navigationController setViewControllers:vcs animated:YES];
     }
 }
 
@@ -92,14 +77,16 @@ forHeaderFooterViewReuseIdentifier:headerCellIdentifier];
 {
     NSDictionary *sectionData = [GarbageCalendarManager sharedInstance].results[(NSUInteger) section];
     NSArray *list = [sectionData valueForKey:@"list" withDefault:nil];
-    return [list count];
+    return [list count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 0) return [self createHeaderViewForHeaderInSection:indexPath.section];
+    
     NSDictionary *sectionData = [GarbageCalendarManager sharedInstance].results[(NSUInteger) indexPath.section];
     NSArray *list = [sectionData valueForKey:@"list" withDefault:nil];
-    NSDictionary *data = list[(NSUInteger) indexPath.row];
+    NSDictionary *data = list[(NSUInteger) indexPath.row - 1];
     
     NSString *type = [data valueForKey:@"type" withDefault:@""];
     NSDictionary *t = [self typeFromId:type];
@@ -123,13 +110,18 @@ forHeaderFooterViewReuseIdentifier:headerCellIdentifier];
     // check if the cell is the first of last in the section in order to round the corners
     NSInteger numberOfRowsInSection = [self tableView:tableView numberOfRowsInSection:indexPath.section];
     
-    cell.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10);
-    
-    if (indexPath.row == 0) [cell cornerRadiusForCorners:(UIRectCornerTopLeft|UIRectCornerTopRight)];
-    else if (indexPath.row == numberOfRowsInSection - 1)
+    [cell.separator setHidden:NO];
+    if (indexPath.row == 1 || indexPath.row == numberOfRowsInSection - 1)
     {
-        [cell cornerRadiusForCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight)];
-        cell.separatorInset = UIEdgeInsetsMake(0.f, 0.f, 0.f, cell.bounds.size.width);
+        if (indexPath.row == numberOfRowsInSection - 1)
+        {
+            [cell cornerRadiusForCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight)];
+            [cell.separator setHidden:YES];
+        }
+        else
+        {
+            [cell cornerRadiusForCorners:(UIRectCornerTopLeft|UIRectCornerTopRight)];
+        }
     }
     else cell.dataView.layer.mask = nil;
     
@@ -140,12 +132,12 @@ forHeaderFooterViewReuseIdentifier:headerCellIdentifier];
 {
     NSDictionary *sectionData = [GarbageCalendarManager sharedInstance].results[(NSUInteger) indexPath.section];
     NSArray *list = [sectionData valueForKey:@"list" withDefault:nil];
-    NSDictionary *rowData = list[(NSUInteger) indexPath.row];
+    NSDictionary *rowData = list[(NSUInteger) indexPath.row - 1];
     
     [[STRequestsHandler sharedInstance] itemDetailsForURL:rowData[@"url"] completion:^(STDetailGenericModel *itemDetails, NSDictionary* responseDict, NSError *error) {
         if (!error)
         {
-            STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithDataModel:itemDetails];
+            STDetailViewController * detailView = [[STDetailViewController alloc] initWithDataModel:itemDetails];
             [self.navigationController pushViewController:detailView animated:YES];
         }
     }];
@@ -155,11 +147,11 @@ forHeaderFooterViewReuseIdentifier:headerCellIdentifier];
 
 #pragma mark - Header View
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (UITableViewCell *)createHeaderViewForHeaderInSection:(NSInteger)section
 {
-    GarbageDateHeaderView *myHeader = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerCellIdentifier];
-    
-    myHeader.cView.backgroundColor = [UIColor clearColor];
+    GarbageDateHeaderView *myHeader = [_tableView dequeueReusableCellWithIdentifier:headerCellIdentifier];
+    myHeader.selectionStyle = UITableViewCellSelectionStyleNone;
+    myHeader.contentView.backgroundColor = [UIColor clearColor];
     
     NSDictionary *sectionData = [GarbageCalendarManager sharedInstance].results[(NSUInteger) section];
     NSString *dateString = [sectionData valueForKey:@"date" withDefault:nil];
@@ -178,35 +170,6 @@ forHeaderFooterViewReuseIdentifier:headerCellIdentifier];
     [[STAppSettingsManager sharedSettingsManager] setCustomFontForKey:@"garbage_calendar_view.garbage_header.font" toView:myHeader.dateLabel];
     
     return myHeader;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section { return 40; }
-
-#pragma mark - Scroll view delegate
-
--(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self updateHeaders];
-}
-
--(void)updateHeaders {
-    //get the top most visible table section
-    NSArray *visibleCells = [_tableView indexPathsForVisibleRows];
-    if (visibleCells.count > 0) {
-        NSInteger topSection = [[_tableView indexPathsForVisibleRows].firstObject section];
-        GarbageDateHeaderView *pinnedHeader = (GarbageDateHeaderView *)[_tableView headerViewForSection:topSection];
-        
-        pinnedHeader.cView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.6];
-        
-        if (1 < visibleCells.count) {
-            NSInteger secondSection = [[[_tableView indexPathsForVisibleRows] objectAtIndex:1] section];
-            if (secondSection != topSection) {
-                GarbageDateHeaderView *secondHeader = (GarbageDateHeaderView *)[_tableView headerViewForSection:secondSection];
-                if (pinnedHeader != secondHeader) {
-                    secondHeader.cView.backgroundColor = [UIColor clearColor];
-                }
-            }
-        }
-    }
 }
 
 #pragma mark - Helper Methods

@@ -33,8 +33,8 @@ class GarbageCalenderService: NSObject {
         let url = STRequestsHandler.sharedInstance().buildUrl("/garbage-calendar-filter")
         
         AFHTTPSessionManager.init().GET(url, parameters: nil, success: { (sessionTask, responseObject) in
-            guard let data = responseObject["data"] as? [String:AnyObject] else {
-                block(nil, GarbageCalendarServiceError.createNSError(.DataIsInWrongFormat, data: responseObject))
+            guard let data = responseObject!["data"] as? [String:AnyObject] else {
+                block(nil, GarbageCalendarServiceError.createNSError(.DataIsInWrongFormat, data: responseObject!))
                 return
             }
             
@@ -42,13 +42,14 @@ class GarbageCalenderService: NSObject {
                 block(enums, nil)
             }
             
-            }, failure: { (sessionTask, error) in
+            }) { (sessionTask, error) in
                 block(nil, GarbageCalendarServiceError.createNSError(.FailedToLoadData, userInfo: ["error": error]))
-            })
+        };
     }
     
     func garbageData(ForZip zip: String, street:String, completion:([[String: AnyObject]], NSError?) -> ()) {
         let url = STRequestsHandler.sharedInstance().buildUrl("/garbage-calendar-dates")
+        
         
         let typesArray = GarbageCalendarManager.sharedInstance.enabledGarbageTypes
         var types: [String] = []
@@ -57,20 +58,20 @@ class GarbageCalenderService: NSObject {
                 types.append(t)
             }
         }
-        
-        AFHTTPSessionManager.init().GET(url, parameters: ["street": street, "postalcode": zip, "types": types.joinWithSeparator(",")], success: { (sessionTask, responseObject) in
-            if let data = responseObject["data"] as? [[String: AnyObject]] {
+
+        AFHTTPSessionManager.init().GET(url, parameters: ["postalcode": zip, "street": street, "types": types.joinWithSeparator(",")], success: { (sessionTask, responseObject) in
+            if let data = responseObject!["data"] as? [[String: AnyObject]] {
                 if data == [] {
                     completion([], GarbageCalendarServiceError.createNSError(.FailedToLoadData, data: data))
                     return
                 }
                 completion(data, nil)
             } else {
-                completion([], GarbageCalendarServiceError.createNSError(.DataIsInWrongFormat, data: responseObject))
+                completion([], GarbageCalendarServiceError.createNSError(.DataIsInWrongFormat, data: responseObject!))
             }
-        }, failure: { (sessionTask, error) in
+        }) { (sessionTask, error) in
             completion([], GarbageCalendarServiceError.createNSError(.FailedToLoadData, userInfo: ["error": error]))
-        })
+        };
     }
     
 //MARK: - Methods for autocompletion
@@ -78,7 +79,7 @@ class GarbageCalenderService: NSObject {
         let url = STRequestsHandler.sharedInstance().buildUrl("/garbage-calendar-search-postalcode")
         
         AFHTTPSessionManager.init().GET(url, parameters: ["search": zip], success: { (sessionTask, responseObject) in
-            if let data = responseObject["data"] as? [String] {
+            if let data = responseObject!["data"] as? [String] {
                 completion(data)
             } else {
                 completion([])
@@ -100,9 +101,9 @@ class GarbageCalenderService: NSObject {
         }
         
         AFHTTPSessionManager.init().GET(url, parameters: parameters, success: { (sessionTask, responseObject) in
-            if let data = responseObject["data"] as? [String] {
+            if let data = responseObject!["data"] as? [String] {
                 completion(data)
-            } else if let data = responseObject["content"] as? [[String:String]] {
+            } else if let data = responseObject!["content"] as? [[String:String]] {
                 var streets = [String]()
                 for streetDict in data {
                     for street in streetDict.values {
@@ -114,6 +115,6 @@ class GarbageCalenderService: NSObject {
                 completion([])
             }
             
-            }, failure: { (sessionTask, error) in completion([])})
+        }, failure: { (sessionTask, error) in completion([])})
     }
 }

@@ -26,8 +26,13 @@ static NSString* kBottomCellIdentifier = @"bottomCellItedentifier";
     
     //register collection cell
     [self.bottomCollection registerNib:[UINib nibWithNibName:@"STStartBottomCustomCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:kBottomCellIdentifier];
-    self.titles = [[STAppSettingsManager sharedSettingsManager].startScreenBottomActions allValues];
-
+    //WORKAROUND SUEWAG
+    if ([[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"] isEqualToString:@"Frankfurt"]) {
+        self.titles = @[@"Wetter",@"Ortsinformationen",@"Süwag-Services"];
+    }
+    else {
+        self.titles = [[STAppSettingsManager sharedSettingsManager].startScreenBottomActions allValues];
+    }
 }
 //
 //-(void)showOverview:(id)sender {
@@ -47,8 +52,16 @@ static NSString* kBottomCellIdentifier = @"bottomCellItedentifier";
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     STStartBottomCustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kBottomCellIdentifier forIndexPath:indexPath];
+ 
     
-    NSString* text = [self.titles[indexPath.row] uppercaseString];
+     NSString* text = self.titles[indexPath.row];
+    
+    if (![STAppSettingsManager sharedSettingsManager].shouldNotUseUppercase) {
+        text = [text uppercaseString];
+    }
+ 
+    
+   
     [cell.actionName setText:text];
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
     UIFont *font = [settings customFontForKey:@"startscreen.bottomcollectionview.cell.font"];
@@ -56,6 +69,14 @@ static NSString* kBottomCellIdentifier = @"bottomCellItedentifier";
         [cell.actionName setFont:font];
     }
     NSString* imageName = [Utils replaceSpecialCharactersFrom:[[NSString stringWithFormat:@"%@_icon",self.titles[indexPath.row]] lowercaseString]];
+    // get custom icons if there are needed
+    NSDictionary * otherIcons= [STAppSettingsManager sharedSettingsManager].startScreenBottomIcons;
+    if (otherIcons.count) {
+        NSString*name =[otherIcons valueForKey:self.titles[indexPath.row]];
+        if (name) {
+            imageName = name;
+        }
+    }
     cell.actionImage.image = [UIImage imageNamed:imageName];
 
     return cell;

@@ -21,6 +21,18 @@
     return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
 }
 
++(UIColor*) startScreenIconColor{
+
+        
+        NSString* tintColor = [[STAppSettingsManager sharedSettingsManager].customizationsDict objectForKey:@"startScreenIconColor"];
+        unsigned rgbValue = 0;
+        NSScanner *scanner = [NSScanner scannerWithString:tintColor];
+        [scanner setScanLocation:1]; // bypass '#' character
+        [scanner scanHexInt:&rgbValue];
+        return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
+
+}
+
 +(UIColor*) textsColor {
     
     NSString* tintColor = [[STAppSettingsManager sharedSettingsManager].customizationsDict objectForKey:@"texts_color"];
@@ -44,6 +56,11 @@
 +(UIColor *)transparencyColor {
     UIColor* tranparentColor = [[UIColor blackColor] colorWithAlphaComponent:0.3f];
     return tranparentColor;
+}
+
++(UIColor *)loadingColor {
+    UIColor* loadingColor = [[UIColor blackColor] colorWithAlphaComponent:0.7f];
+    return loadingColor;
 }
 
 @end

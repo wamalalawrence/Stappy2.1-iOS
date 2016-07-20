@@ -11,6 +11,7 @@
 #import "Defines.h"
 #import "RandomImageView.h"
 #import "STAppSettingsManager.h"
+#import "UIColor+Hexadecimal.h"
 @interface CouponsCodeViewController ()
 
 @end
@@ -26,9 +27,9 @@
     [super viewDidLoad];
     self.backgroundImageView.needsBlur = YES;
     // Do any additional setup after loading the view.
-    self.couponsButton.layer.borderColor = [UIColor whiteColor].CGColor;
-    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:kCouponScreenShown];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    self.couponsButton.layer.borderColor = self.cancelButton.layer.borderColor = [UIColor whiteColor].CGColor;
+   [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:kCouponScreenShown];
+   [[NSUserDefaults standardUserDefaults] synchronize];
     
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
   
@@ -36,7 +37,18 @@
     if (couponesBodyFont) {
         self.couponsBodyLabel.font = couponesBodyFont;
         self.couponsButton.titleLabel.font = couponesBodyFont;
+        self.cancelButton.titleLabel.font = couponesBodyFont;
+        self.couponNumberTextField.font =couponesBodyFont;
+
     }
+    
+    UIFont *titleFont = [settings customFontForKey:@"navigationbar.title.font"];
+    
+    self.couponsButton.backgroundColor = [UIColor colorWithHexString:@"#88BA14"];
+    
+    [self.navBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor],
+       NSFontAttributeName:titleFont}];
 
 }
 
@@ -77,7 +89,7 @@
         [self dismissViewControllerAnimated:true completion:nil];
     } else {
         // Show alert
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Kundennummer Error" message:@"Die eingegebene Kundennummer ist leider ungültig." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:nil message:@"Die eingegebene Kundennummer ist leider ungültig." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
         [alert show];
     }
 }

@@ -1,28 +1,33 @@
 PODS:
-  - AFNetworking (2.6.3):
-    - AFNetworking/NSURLConnection (= 2.6.3)
-    - AFNetworking/NSURLSession (= 2.6.3)
-    - AFNetworking/Reachability (= 2.6.3)
-    - AFNetworking/Security (= 2.6.3)
-    - AFNetworking/Serialization (= 2.6.3)
-    - AFNetworking/UIKit (= 2.6.3)
-  - AFNetworking/NSURLConnection (2.6.3):
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.3)
-  - AFNetworking/Security (2.6.3)
-  - AFNetworking/Serialization (2.6.3)
-  - AFNetworking/UIKit (2.6.3):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Bolts (1.7.0):
+    - Bolts/AppLinks (= 1.7.0)
+    - Bolts/Tasks (= 1.7.0)
+  - Bolts/AppLinks (1.7.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.7.0)
+  - Crashlytics (3.7.2):
+    - Fabric (~> 1.6.3)
   - DKDBManager (0.6.5):
     - MagicalRecord (~> 2.3.2)
   - DKHelper (2.2.1)
+  - Fabric (1.6.7)
+  - FBSDKCoreKit (4.12.0):
+    - Bolts (~> 1.7)
   - Google/Analytics (2.0.4):
     - Google/Core
     - GoogleAnalytics (~> 3.12)
@@ -55,9 +60,12 @@ PODS:
   - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
+  - AFNetworking (~> 3.1)
+  - Crashlytics
   - DKDBManager
   - DKHelper
+  - Fabric
+  - FBSDKCoreKit (~> 4.12)
   - Google/Analytics
   - Mantle (~> 2.0)
   - MCDateExtensions (from `https://github.com/mirego/MCDateExtensions.git`)
@@ -77,9 +85,13 @@ CHECKOUT OPTIONS:
     :git: https://github.com/mirego/MCDateExtensions.git
 
 SPEC CHECKSUMS:
-  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
   DKDBManager: bb426f1aa26945507f500134c6fdb5023f6a0d75
   DKHelper: 19e2ea093acbe0e238bfd288d9f52c0b3a90b267
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  FBSDKCoreKit: 6e56d5a2a64a755ad4efb5dbeee8f82fb1b99775
   Google: d0932824c5b97c96be489aa6f4e8cd6c294d637d
   GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de

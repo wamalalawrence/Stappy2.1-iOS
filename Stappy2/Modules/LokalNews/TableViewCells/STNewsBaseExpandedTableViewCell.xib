@@ -17,7 +17,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-BO-B5I">
                         <rect key="frame" x="20" y="0.0" width="280" height="98"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncF-nx-3YV">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ncF-nx-3YV">
                                 <rect key="frame" x="8" y="12" width="84" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="Ew4-In-nII"/>
@@ -47,6 +47,7 @@
                             <constraint firstItem="Z1e-hB-yUj" firstAttribute="leading" secondItem="ncF-nx-3YV" secondAttribute="trailing" constant="12" id="jlQ-WP-APV"/>
                             <constraint firstAttribute="trailing" secondItem="Z1e-hB-yUj" secondAttribute="trailing" constant="8" id="mCe-85-z4U"/>
                             <constraint firstItem="dMU-qK-Eow" firstAttribute="leading" secondItem="ncF-nx-3YV" secondAttribute="trailing" constant="12" id="mSY-bq-D1n"/>
+                            <constraint firstAttribute="bottom" secondItem="ncF-nx-3YV" secondAttribute="bottom" constant="29" id="rAc-YO-YyM"/>
                             <constraint firstAttribute="trailing" secondItem="dMU-qK-Eow" secondAttribute="trailing" constant="8" id="yYf-Rr-8iY"/>
                         </constraints>
                     </view>

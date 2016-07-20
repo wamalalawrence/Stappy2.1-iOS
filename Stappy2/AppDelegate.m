@@ -16,9 +16,13 @@
 #import "Defines.h"
 #import "RandomImageView.h"
 #import "Stappy2-Swift.h"
-
+#import "STRegionManager.h"
+#import "STHTTPSessionManager.h"
 #import <Google/Analytics.h>
-
+#import "UIColor+STColor.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -34,79 +38,31 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     NSError *error = nil;
-    for (NSString* family in [UIFont familyNames])
-    {
-        NSLog(@"%@", family);
-        
-        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-        {
-            NSLog(@"  %@", name);
-        }
-    }
     //Read mainmenu.json
     NSString* path = [[NSBundle mainBundle] pathForResource:@"mainmenu" ofType:@"json"];
     NSData* data = [NSData dataWithContentsOfFile:path];
-
+    
     NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
     if (error) {
         @throw [NSException exceptionWithName:@"mainmenu.json error" reason:@"mainmenu.json can't read." userInfo:nil];
     }
     
+    
     [STAppSettingsManager sharedSettingsManager].configurationDictionary = dict;
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    if ([Utils connected]) {
-        //get all left menu items before starting the app
-        
-        NSString* requestString = [[STRequestsHandler sharedInstance] buildPartnerUrl:@"/side-menu."];
-        NSURL *url = [NSURL URLWithString:requestString];
-        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-        
-        NSURLResponse *response = nil;
-        error = nil;
-        NSData *dataLeftMenu = [NSURLConnection sendSynchronousRequest:urlRequest
-                                
-                                                     returningResponse:&response
-                                                                 error:&error];
-        if (!error) {
-            NSDictionary* dictLeftMenu = [NSJSONSerialization JSONObjectWithData:dataLeftMenu options:kNilOptions error:nil];
-            [STAppSettingsManager sharedSettingsManager].leftMenuItemsDictionary = dictLeftMenu;
-        } else {
-            [STAppSettingsManager sharedSettingsManager].leftMenuItemsDictionary = nil;
-        }
-        
-        /**
-         * Get the right menu items. 
-         * Since it is implemented using dispatch_group_t I didn't want to make it somehow synchronously,
-         * so I've decided to post a notification, when the download is finished.
-         *
-         * The download time is fast enough, so that there is almost no need for a notification, but in order to
-         * be sure, the notification is sent.
-         */
-        [[STRequestsHandler sharedInstance] rightMenuItemsWithCompletion:^(NSArray *data, NSError *error) {
-            if (!error) {
-                [STAppSettingsManager sharedSettingsManager].rightMenuItems = data;
-                [[NSNotificationCenter defaultCenter] postNotificationName:kRightMenuNotificationKey object:nil];
-            }
-        }];
-        //same logic for werbung
-        [[STRequestsHandler sharedInstance] werbungItemsWithCompletion:^(NSArray *data, NSError *error) {
-            if (!error) {
-                [STAppSettingsManager sharedSettingsManager].werbungItems = data;
-                [[NSNotificationCenter defaultCenter] postNotificationName:kWerbungMenuNotificationKey object:nil];
-            }
-        }];
-    }else{
-        NSLog(@"Side-menu was not loaded from the backend. (No internet connection)");
+    
+    [Fabric with:@[[Crashlytics class]]];
+
+
+    if ([[STAppSettingsManager sharedSettingsManager] backendValueForKey:@"shouldUseFacebook"]) {
+        [[FBSDKApplicationDelegate sharedInstance] application:application
+                                 didFinishLaunchingWithOptions:launchOptions];
     }
-    
-    /**
-     * GarbageCalendarManager restores the previous state.
-     * If necessary loads the data from the network
-     */
-    [GarbageCalendarManager sharedInstance];
-    
+
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     
     /**
      * Push notification registration
@@ -123,8 +79,14 @@
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         
     }
+   
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    
+
+    /**
+     * Getting region from userLocation
+     */
+    [[STRegionManager sharedInstance] getRegionFromCurrentUserLocation];
+
     // Configure tracker from GoogleService-Info.plist.
     NSError *configureError;
     [[GGLContext sharedInstance] configureWithError:&configureError];
@@ -137,7 +99,93 @@
     gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
 
     
+    
     return YES;
+}
+
+-(void)fetchInitialDataFromServer{
+
+ 
+    
+    NSUserDefaults*defaults = [NSUserDefaults standardUserDefaults];
+    BOOL shouldShowLoading = [defaults boolForKey:@"shouldShowLoading"];
+    
+    if (!shouldShowLoading) {
+        [defaults setBool:YES forKey:@"shouldShowLoading"];
+        [defaults synchronize];
+        [self showOverlay];
+    }
+    [[STHTTPSessionManager manager] GET:[[STRequestsHandler sharedInstance] buildPartnerUrl:@"/side-menu."] parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        
+        if (responseObject) {
+            [STAppSettingsManager sharedSettingsManager].leftMenuItemsDictionary = responseObject;
+        }
+        else{
+            [STAppSettingsManager sharedSettingsManager].leftMenuItemsDictionary = nil;
+            
+        }
+        [self hideOverlay];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self hideOverlay];
+
+        [STAppSettingsManager sharedSettingsManager].leftMenuItemsDictionary = nil;
+        
+    }];
+    
+    /**
+     * Get the right menu items.
+     * Since it is implemented using dispatch_group_t I didn't want to make it somehow synchronously,
+     * so I've decided to post a notification, when the download is finished.
+     *
+     * The download time is fast enough, so that there is almost no need for a notification, but in order to
+     * be sure, the notification is sent.
+     */
+    [[STRequestsHandler sharedInstance] rightMenuItemsWithCompletion:^(NSArray *data, NSError *error) {
+        if (!error) {
+            [STAppSettingsManager sharedSettingsManager].rightMenuItems = data;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kRightMenuNotificationKey object:nil];
+        }
+    }];
+    //same logic for werbung
+    [[STRequestsHandler sharedInstance] werbungItemsWithCompletion:^(NSArray *data, NSError *error) {
+        if (!error) {
+            [STAppSettingsManager sharedSettingsManager].werbungItems = data;
+            [[NSNotificationCenter defaultCenter] postNotificationName:kWerbungMenuNotificationKey object:nil];
+        }
+    }];
+    
+    /**
+     * GarbageCalendarManager restores the previous state.
+     * If necessary loads the data from the network
+     */
+    [GarbageCalendarManager sharedInstance];
+
+
+}
+
+-(void)showOverlay{
+    
+    self.loadingOverlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 90, 90)];
+    self.loadingOverlay.center = self.window.center;
+    self.loadingOverlay.layer.cornerRadius = 3.0;
+    self.loadingOverlay.clipsToBounds = YES;
+    self.loadingOverlay.backgroundColor = [UIColor loadingColor];
+
+    UIActivityIndicatorView*spinner = [[UIActivityIndicatorView alloc] init];
+
+    spinner.color = [UIColor whiteColor];
+    spinner.frame = CGRectMake((CGRectGetWidth(self.loadingOverlay.frame)-CGRectGetWidth(spinner.frame))/2, (CGRectGetHeight(self.loadingOverlay.frame)-CGRectGetHeight(spinner.frame))/2, CGRectGetWidth(spinner.frame), CGRectGetHeight(spinner.frame));
+    [spinner startAnimating];
+    [self.loadingOverlay addSubview:spinner];
+    [self.window addSubview:self.loadingOverlay];
+}
+-(void)hideOverlay{
+    if (self.loadingOverlay) {
+        [self.loadingOverlay removeFromSuperview];
+        self.loadingOverlay = nil;
+    }
+  
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -148,6 +196,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kSessionImage];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [[Filters sharedInstance] saveFilters];
     [[StLocalDataArchiever sharedArchieverManager] saveAllFavorites];
     [[StLocalDataArchiever sharedArchieverManager] saveSearchItems];
@@ -162,6 +212,13 @@
     if (application.applicationIconBadgeNumber>0) {
         application.applicationIconBadgeNumber = 0;
     }
+    
+    if ([[STAppSettingsManager sharedSettingsManager] backendValueForKey:@"shouldUseFacebook"]) {
+        [FBSDKAppEvents activateApp];
+    }
+    
+    [self fetchInitialDataFromServer];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -194,6 +251,11 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 forRemoteNotification:(NSDictionary *)notification completionHandler:(void(^)())completionHandler
 {
     NSLog(@"Received Action push notification: %@, identifier: %@", notification, identifier); // iOS 8
+    
+    if (application.applicationState == UIApplicationStateActive) {
+        [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@",notification] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    }
+    
     if (completionHandler) {
         completionHandler();
     }
@@ -204,6 +266,10 @@ didReceiveRemoteNotification:(NSDictionary *)notification
 {
     NSLog(@"Received push notification: %@", notification); // iOS 7 and earlier
     
+    
+    if (application.applicationState == UIApplicationStateActive) {
+        [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@",notification] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    }
     
     }
 
@@ -227,21 +293,27 @@ didReceiveRemoteNotification:(NSDictionary *)notification
     token = [token stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSLog(@"Token %@",token);
+    [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@",token] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
     NSString *bundleName = [NSBundle mainBundle].bundleIdentifier;
     NSString *baseUrl = [STAppSettingsManager sharedSettingsManager].baseUrl;
     NSString *url = [NSString stringWithFormat:@"%@/registertoken/%@/ios/%@?sandbox=0", baseUrl, bundleName, token];
 
     NSLog(@"Push Notifications URL: %@",url);
 
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    
+    STHTTPSessionManager *manager = [STHTTPSessionManager manager];
+    
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *root = responseObject;
         
         NSLog(@"Push Notifications registered: %@",root);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Error registering notification token : %@", error);
+
     }];
+    
+
     
 }
 
@@ -250,6 +322,23 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler {
     
     NSLog(@"Received push notification: %@", userInfo);
+    if (application.applicationState == UIApplicationStateActive) {
+        [[[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"%@",userInfo] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    }
+}
+
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Abfallkalender"
+                                                        message:notification.alertBody
+                                                       delegate:self cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    application.applicationIconBadgeNumber = 0;
 }
 
 
@@ -332,5 +421,6 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler {
         }
     }
 }
+
 
 @end

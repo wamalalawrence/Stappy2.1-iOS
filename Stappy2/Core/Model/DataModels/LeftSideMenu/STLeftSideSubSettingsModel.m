@@ -51,7 +51,8 @@ typedef NS_ENUM(NSInteger, ModelIdsState)
         if (self.title.length == 0) self.title = [dict valueForKey:kNameString withDefault:@""];
 
         id childrenObject = [dict valueForKey:kChildrenStringKey withDefault:nil];
-        if (childrenObject) [self loadSubItemsFromObject:childrenObject forFilterType:filterType];
+        if (([childrenObject isKindOfClass:[NSArray class]] && [childrenObject count] > 0) ||
+            [childrenObject isKindOfClass:[NSDictionary class]]) [self loadSubItemsFromObject:childrenObject forFilterType:filterType];
         else
         {
             _filterType = filterType;
@@ -125,9 +126,15 @@ typedef NS_ENUM(NSInteger, ModelIdsState)
             
             return SettingsSelectionsStateAll;
         }
-        else return SettingsSelectionsStateNone;
+        else
+        {
+            return SettingsSelectionsStateNone;
+
+        }
     }
-    else return [self selectionState];
+    else {
+        return [self selectionState];
+    }
 }
 
 /**

@@ -59,7 +59,17 @@
             
             openingClosingTimesModel.key = [key copy];
             openingClosingTimesModel.openingHours = openingClosingTimes;
-            [openingClosingTimesArray addObject:openingClosingTimesModel];
+
+            
+            BOOL isEmpty = [OpeningClosingTimesModel isEmpty:@[openingClosingTimesModel]];
+            
+            if(!isEmpty)
+            {
+                [openingClosingTimesArray addObject:openingClosingTimesModel];
+                
+            }
+
+        
         }];
         return [NSArray arrayWithArray:openingClosingTimesArray];
     }];

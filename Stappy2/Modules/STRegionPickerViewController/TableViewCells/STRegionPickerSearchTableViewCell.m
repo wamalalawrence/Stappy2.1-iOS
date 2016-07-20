@@ -7,12 +7,19 @@
 //
 
 #import "STRegionPickerSearchTableViewCell.h"
+#import "STAppSettingsManager.h"
+
+#define kRegionPickerCellFont [UIFont fontWithName:@"RWEHeadline-RegularCondensed" size:15]
+
 
 @implementation STRegionPickerSearchTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
+    self.titleTextLabel.font =kRegionPickerCellFont;
+    self.shortTextLabel.font = kRegionPickerCellFont;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

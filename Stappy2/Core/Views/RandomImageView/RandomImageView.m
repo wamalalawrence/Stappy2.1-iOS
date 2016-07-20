@@ -23,8 +23,8 @@ NSString *const kSessionImagesArray = @"sessionIamgesArray";
 -(instancetype)init {
     self = [super init];
     if (self) {
-        [self setRandomImage];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setRandomImage) name:kRegionChagedNotification object:nil];
+            [self setRandomImage];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setRandomImage) name:kRegionChagedNotification object:nil];
     }
     return self;
 }
@@ -34,6 +34,8 @@ NSString *const kSessionImagesArray = @"sessionIamgesArray";
 }
 
 -(void)setRandomImage {
+    //check if all regions are selected and for that case keep the existing image
+    BOOL allRegionsAreSelected = [[NSUserDefaults standardUserDefaults] boolForKey:@"allRegionsSelected"];
     NSString * sessionImageName = [[NSUserDefaults standardUserDefaults] objectForKey:kSessionImage];
     if (sessionImageName == nil) {
         NSArray * imagesArray = [[NSUserDefaults standardUserDefaults] objectForKey:kSessionImagesArray];
@@ -53,7 +55,7 @@ NSString *const kSessionImagesArray = @"sessionIamgesArray";
 
     UIImage * sessionImage = [UIImage imageNamed:sessionImageName];
     
-    if (!sessionImage) {
+    if (!sessionImage || allRegionsAreSelected) {
         if (self.needsBlur) {
             sessionImage = [UIImage imageNamed:@"background_blurred"];
         }
@@ -63,6 +65,11 @@ NSString *const kSessionImagesArray = @"sessionIamgesArray";
     }
     
     self.image = sessionImage;
+}
+
+-(void)awakeFromNib{
+    
+    [self setNeedsBlur:YES];
 }
 
 @end

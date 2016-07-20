@@ -12,5 +12,6 @@
 
 - (NSDate *)dateWithZeroSeconds;
 - (NSInteger)dayOfTheWeek;
+- (NSComparisonResult)compareDateOnly:(NSDate *)otherDate;
 
 @end

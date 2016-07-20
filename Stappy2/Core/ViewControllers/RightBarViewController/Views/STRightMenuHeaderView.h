@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STRightMenuHeaderView : UITableViewHeaderFooterView
+@interface STRightMenuHeaderView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *rightMenuImage;
 @property (weak, nonatomic) IBOutlet UIImageView *dropArrow;

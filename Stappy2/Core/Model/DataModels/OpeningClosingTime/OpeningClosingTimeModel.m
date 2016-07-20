@@ -29,25 +29,39 @@ const double secondInAMinute = 60;
     
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSCalendarIdentifierGregorian];
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:now];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday fromDate:now];
     [components setHour:[self.closingTime integerValue]];
     NSDate *closingDate = [calendar dateFromComponents:components];
     
+    if ([NSDate date].day != [self.dayOfWeek integerValue] && [self.closingTime integerValue]<12 ) {
+        return 0;
+    }
+
     NSTimeInterval distanceBetweenDates = [closingDate timeIntervalSinceDate:[NSDate date]];
-   return distanceBetweenDates;
+    return distanceBetweenDates;
 }
 
 -(NSInteger)remainingOpeningHours {
     if (!_remainingOpeningHours) {
-        _remainingOpeningHours = self.remainingOpeningTime / secondsInAnHour;
+        if (self.remainingOpeningTime > 0 ) {
+            _remainingOpeningHours = self.remainingOpeningTime / secondsInAnHour;
+        }
+        else{
+            _remainingOpeningHours = 0;
+        }
     }
     return _remainingOpeningHours;
 }
 
 -(NSInteger)remainingOpeningMinutes {
     if (!_remainingOpeningMinutes) {
-        NSUInteger remainingMinutes = self.remainingOpeningTime - (self.remainingOpeningHours * secondsInAnHour);
-        _remainingOpeningMinutes = remainingMinutes / secondInAMinute;
+        if (self.remainingOpeningTime > 0) {
+            NSUInteger remainingMinutes = self.remainingOpeningTime - (self.remainingOpeningHours * secondsInAnHour);
+            _remainingOpeningMinutes = remainingMinutes / secondInAMinute;
+        }
+        else {
+            _remainingOpeningMinutes = 0;
+        }
     }
     return _remainingOpeningMinutes;
 }

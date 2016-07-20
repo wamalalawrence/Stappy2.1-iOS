@@ -85,12 +85,20 @@
           
             NSDictionary *regionPickerSettingsItem = [STAppSettingsManager sharedSettingsManager].regionPickerSettingsItem;
             
+            
+            
             //Add items that are not found on the left menu
             for (STLeftMenuSettingsModel *settingsModel in settingsArray) {
                 if ([settingsModel.type isEqualToString:@"regionen"] && !regionPickerSettingsItem) {
                     settingsModel.iconName = @"regionen";
                     settingsModel.title = @"REGIONEN";
-                    [mutableSettings insertObject:settingsModel atIndex:mutableSettings.count];
+                    
+                    if(settingsModel.subItems.count>1){
+                        [mutableSettings insertObject:settingsModel atIndex:mutableSettings.count];
+
+                    }
+                        
+                    
                 }
             }
             
@@ -127,7 +135,10 @@
                 NSUInteger lastIndex = mutableSettings.count;
                 [mutableSettings insertObject:couponsSettings atIndex:lastIndex];
             }
-            self.settingsSideMenuItems = mutableSettings;
+            
+            @try { self.settingsSideMenuItems = mutableSettings; }
+            @catch (NSException *ex) {}
+            
             [self.firstsideMenuTable reloadData];
         } else {
             [self.firstsideMenuTable reloadData];
@@ -264,11 +275,20 @@
 }
 
 - (void)selectFirstMenuItemAtIndexPath:(NSIndexPath *)indexPath {
-    STLeftMenuSettingsModel *elementSelected = [self.settingsSideMenuItems objectAtIndex:indexPath.row];
-    self.secondSideMenuItems = [NSMutableArray arrayWithArray:elementSelected.subItems];
-    [self.secondSideMenuItems insertObject:elementSelected atIndex:0];
-    [self showSecondMenuItems];
-}
+    
+    if (indexPath) {
+        STLeftMenuSettingsModel *elementSelected = [self.settingsSideMenuItems objectAtIndex:indexPath.row];
+        
+        if (elementSelected) {
+            self.secondSideMenuItems = [NSMutableArray arrayWithArray:elementSelected.subItems];
+            
+            if (self.secondSideMenuItems) {
+                [self.secondSideMenuItems insertObject:elementSelected atIndex:0];
+                [self showSecondMenuItems];
+            }
+        }
+    }
+ }
 
 #pragma mark - TableView Animations
 
@@ -310,6 +330,7 @@
         {
             [[Filters sharedInstance] deleteFilterWithFilterIds:filterIds
                                             forStringFilterType:self.associatedObject
+                                                          notification:YES
                                                           error:&error];
             if (error) { /* how can I handle this error? */ }
         }; break;

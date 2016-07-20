@@ -22,21 +22,19 @@ class OpeningHoursViewAdapter {
         func adaptData(data: OpeningClosingTimesModel) {
             _nonAdaptedData = data
             _adaptedData = Array<Array<OpeningClosingTimeModel?>>(count: maxNumberOfOpeningHours(data),
-                                                                 repeatedValue: Array<OpeningClosingTimeModel?>())
+                                                                 repeatedValue: Array<OpeningClosingTimeModel?>(count: 7, repeatedValue: nil))
             
             var lastDayOfWeek = -1
             var adaptedDataIndex = 0
-            for timeModel in data.openingHours as! [OpeningClosingTimeModel] {
+            for timeModel in data.openingHours as NSArray as! [OpeningClosingTimeModel] {
                 if timeModel.dayOfWeek.integerValue == lastDayOfWeek {
                     adaptedDataIndex += 1
                 } else {
                     adaptedDataIndex = 0
                 }
                 
-                if (timeModel.openingTime == nil || timeModel.closingTime == nil) {
-                    _adaptedData[adaptedDataIndex].append(nil)
-                } else {
-                    _adaptedData[adaptedDataIndex].append(timeModel)
+                if timeModel.openingTime != nil && timeModel.closingTime != nil {
+                    _adaptedData[adaptedDataIndex][timeModel.dayOfWeek.integerValue - 1] = timeModel
                 }
                 
                 lastDayOfWeek = timeModel.dayOfWeek.integerValue
@@ -120,6 +118,32 @@ class OpeningHoursViewAdapter {
             index += 1
         }
         
+        
+        return colours
+    }
+
+    func headerTextColorForIndex(index: Int) -> [UIColor] {
+        let noOpeningHoursColor = UIColor.lightGrayColor()
+        let openingHoursColor = UIColor.whiteColor()
+        let todaysOpeningHoursColor = UIColor.partnerColor()
+        
+        var colours = Array<UIColor>(count: 7, repeatedValue: noOpeningHoursColor)
+
+        for dataForRow in adaptedData._adaptedData {
+
+            var index = 0
+            for data in dataForRow {
+                if data != nil {
+                    colours[index] = openingHoursColor
+                }
+                
+                if NSDate().dayOfTheWeek() - 1 == index {
+                    colours[index] = todaysOpeningHoursColor
+                }
+                
+                index += 1
+            }
+        }
         
         return colours
     }

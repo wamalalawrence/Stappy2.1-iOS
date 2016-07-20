@@ -7,7 +7,7 @@
 //
 
 #import "STRegionPickerSettingsView.h"
-
+#import "STAppSettingsManager.h"
 @implementation STRegionPickerSettingsView
 
 #pragma mark - Initializers
@@ -30,12 +30,22 @@
 
 - (void)setup
 {
+    
+    
     UIView *view = [[NSBundle mainBundle] loadNibNamed:@"STRegionPickerSettingsView" owner:self options:nil].firstObject;
     view.frame = self.bounds;
     [self addSubview:view];
     
     _selectRegionsButton.layer.borderWidth = 1;
     _selectRegionsButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    UIFont* buttonTextFont = [[STAppSettingsManager sharedSettingsManager] customFontForKey:@"reporter.buttonText.font"];
+
+    if (buttonTextFont) {
+        _settingsLabel.font = buttonTextFont;
+        _selectRegionsButton.titleLabel.font = buttonTextFont;
+    }
+    
 }
 
 #pragma mark -

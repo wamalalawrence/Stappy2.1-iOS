@@ -6,9 +6,9 @@
                 "shortcut": "AA",
                 "xPos": 3880,
                 "yPos": 4220,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Aalen"
                 },
             "120394":{
                 "id": 120394,
@@ -18,17 +18,17 @@
                 "yPos": 2400,
                 "image": "national",
                 "imageBlur": "national",
-                "weatherStation": ""
+                "weatherStation": "Aschaffenburg"
                 },
             "120401":{
                 "id": 120401,
-                "name": "Altenkirchen ",
+                "name": "Altenkirchen",
                 "shortcut": "AK",
                 "xPos": 1540,
                 "yPos": 1160,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Altenkirchen"
                 },
             "120404":{
                 "id": 120404,
@@ -38,7 +38,7 @@
                 "yPos": 1600,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Dernau"
                 },
             "120407":{
                 "id": 120407,
@@ -46,19 +46,19 @@
                 "shortcut": "BAD",
                 "xPos": 1920,
                 "yPos": 4440,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Ortenau",
+                "imageBlur": "Ortenau",
+                "weatherStation": "Baden-Baden"
                 },
             "120410":{
                 "id": 120410,
-                "name": "Bཫlingen",
+                "name": "Böbligen",
                 "shortcut": "BB",
                 "xPos": 2660,
                 "yPos": 4540,
-                "image": "Ortenau",
-                "imageBlur": "Ortenau",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Sindelfingen"
                 },
             "120413":{
                 "id": 120413,
@@ -66,9 +66,9 @@
                 "shortcut": "BN",
                 "xPos": 840,
                 "yPos": 1260,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Neuwied",
+                "imageBlur": "Neuwied",
+                "weatherStation": "Bonn"
                 },
             "120417":{
                 "id": 120417,
@@ -78,7 +78,7 @@
                 "yPos": 2200,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Cochem"
                 },
             "120416":{
                 "id": 120416,
@@ -86,9 +86,9 @@
                 "shortcut": "DA",
                 "xPos": 2500,
                 "yPos": 2660,
-                "image": "Neuwied",
-                "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Egelsbach"
                 },
             "120424":{
                 "id": 120424,
@@ -96,9 +96,9 @@
                 "shortcut": "EMS",
                 "xPos": 1560,
                 "yPos": 1980,
-                "image": "national",
-                "imageBlur": "national",
-                "weatherStation": ""
+                "image": "Neuwied",
+                "imageBlur": "Neuwied",
+                "weatherStation": "Eitelborn"
                 },
             "120426":{
                 "id": 120426,
@@ -106,9 +106,9 @@
                 "shortcut": "ERB",
                 "xPos": 2700,
                 "yPos": 2880,
-                "image": "Neuwied",
-                "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Erbach"
                 },
             "120429":{
                 "id": 120429,
@@ -116,9 +116,9 @@
                 "shortcut": "ES",
                 "xPos": 3140,
                 "yPos": 4600,
-                "image": "national",
-                "imageBlur": "national",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Ostfildern"
                 },
             "1204128":{
                 "id": 1204128,
@@ -126,9 +126,9 @@
                 "shortcut": "EU",
                 "xPos": 340,
                 "yPos": 1520,
-                "image": "Bammental/Leimen",
-                "imageBlur": "Bammental/Leimen",
-                "weatherStation": ""
+                "image": "Neuwied",
+                "imageBlur": "Neuwied",
+                "weatherStation": "Euskirchen"
                 },
             "188465":{
                 "id": 188465,
@@ -136,9 +136,9 @@
                 "shortcut": "F",
                 "xPos": 2380,
                 "yPos": 2240,
-                "image": "Neuwied",
-                "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Frankfurt"
                 },
             "120427":{
                 "id": 120427,
@@ -146,19 +146,19 @@
                 "shortcut": "FB",
                 "xPos": 2700,
                 "yPos": 1860,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Friedberg"
                 },
             "120383":{
                 "id": 120383,
-                "name": "Gie෾n",
+                "name": "Gießen",
                 "shortcut": "GI",
                 "xPos": 2580,
                 "yPos": 1500,
                 "image": "national",
                 "imageBlur": "national",
-                "weatherStation": ""
+                "weatherStation": "Gießen"
                 },
             "120382":{
                 "id": 120382,
@@ -166,9 +166,9 @@
                 "shortcut": "GP",
                 "xPos": 3460,
                 "yPos": 4580,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Göppingen"
                 },
             "120385":{
                 "id": 120385,
@@ -176,9 +176,9 @@
                 "shortcut": "HD",
                 "xPos": 2440,
                 "yPos": 3400,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Heidelberg"
                 },
             "120387":{
                 "id": 120387,
@@ -186,9 +186,9 @@
                 "shortcut": "HG",
                 "xPos": 2240,
                 "yPos": 1980,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Friedrichsdorf"
                 },
             "120390":{
                 "id": 120390,
@@ -196,9 +196,9 @@
                 "shortcut": "HN",
                 "xPos": 2940,
                 "yPos": 3800,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Heilbronn"
                 },
             "120393":{
                 "id": 120393,
@@ -206,9 +206,9 @@
                 "shortcut": "HU",
                 "xPos": 2740,
                 "yPos": 2160,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Erlensee"
                 },
             "120396":{
                 "id": 120396,
@@ -218,7 +218,7 @@
                 "yPos": 3920,
                 "image": "Ortenau",
                 "imageBlur": "Ortenau",
-                "weatherStation": ""
+                "weatherStation": "Ettlingen"
                 },
             "120399":{
                 "id": 120399,
@@ -228,7 +228,7 @@
                 "yPos": 580,
                 "image": "national",
                 "imageBlur": "national",
-                "weatherStation": ""
+                "weatherStation": "Korbach"
                 },
             "120400":{
                 "id": 120400,
@@ -238,7 +238,7 @@
                 "yPos": 1840,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Neuwied"
                 },
             "120402":{
                 "id": 120402,
@@ -246,9 +246,9 @@
                 "shortcut": "KÜN",
                 "xPos": 3380,
                 "yPos": 3580,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Ingelfingen"
                 },
             "120405":{
                 "id": 120405,
@@ -256,9 +256,9 @@
                 "shortcut": "LB",
                 "xPos": 2880,
                 "yPos": 4120,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Ludwigsburg"
                 },
             "120409":{
                 "id": 120409,
@@ -266,9 +266,9 @@
                 "shortcut": "LDK",
                 "xPos": 2080,
                 "yPos": 1400,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Wetzlar"
                 },
             "120411":{
                 "id": 120411,
@@ -276,9 +276,9 @@
                 "shortcut": "LM",
                 "xPos": 1920,
                 "yPos": 1740,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Diez"
                 },
             "120414":{
                 "id": 120414,
@@ -288,7 +288,7 @@
                 "yPos": 2760,
                 "image": "national",
                 "imageBlur": "national",
-                "weatherStation": ""
+                "weatherStation": "Miltenberg"
                 },
             "120384":{
                 "id": 120384,
@@ -296,9 +296,9 @@
                 "shortcut": "MKK",
                 "xPos": 3100,
                 "yPos": 2040,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "national",
+                "imageBlur": "national",
+                "weatherStation": "Gelnhausen"
                 },
             "120386":{
                 "id": 120386,
@@ -306,9 +306,9 @@
                 "shortcut": "MOS",
                 "xPos": 3020,
                 "yPos": 3280,
-                "image": "Bammental/Leimen",
-                "imageBlur": "Bammental/Leimen",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Mosbach"
                 },
             "120388":{
                 "id": 120388,
@@ -318,7 +318,7 @@
                 "yPos": 1100,
                 "image": "national",
                 "imageBlur": "national",
-                "weatherStation": ""
+                "weatherStation": "Marburg"
                 },
             "120389":{
                 "id": 120389,
@@ -326,9 +326,9 @@
                 "shortcut": "MTK",
                 "xPos": 2140,
                 "yPos": 2260,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Eppstein"
                 },
             "120392":{
                 "id": 120392,
@@ -338,7 +338,7 @@
                 "yPos": 1860,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Mayen"
                 },
             "120395":{
                 "id": 120395,
@@ -348,7 +348,7 @@
                 "yPos": 1580,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Neuwied"
                 },
             "120397":{
                 "id": 120397,
@@ -358,7 +358,7 @@
                 "yPos": 660,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Drolshagen"
                 },
             "120398":{
                 "id": 120398,
@@ -366,9 +366,9 @@
                 "shortcut": "OF",
                 "xPos": 2560,
                 "yPos": 2360,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Offenbach"
                 },
             "120403":{
                 "id": 120403,
@@ -378,7 +378,7 @@
                 "yPos": 4980,
                 "image": "Ortenau",
                 "imageBlur": "Ortenau",
-                "weatherStation": ""
+                "weatherStation": "Offenburg"
                 },
             "120406":{
                 "id": 120406,
@@ -388,17 +388,17 @@
                 "yPos": 4240,
                 "image": "Ortenau",
                 "imageBlur": "Ortenau",
-                "weatherStation": ""
+                "weatherStation": "Rastatt"
                 },
             "120408":{
                 "id": 120408,
                 "name": "Rheingau-Taunus-Kreis",
-                "shortcut": "R෍",
+                "shortcut": "RUED",
                 "xPos": 1820,
                 "yPos": 2160,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Taunusstein"
                 },
             "120412":{
                 "id": 120412,
@@ -406,9 +406,9 @@
                 "shortcut": "S",
                 "xPos": 2920,
                 "yPos": 4380,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Fellbach"
                 },
             "120415": {
                 "id": 120415,
@@ -416,9 +416,9 @@
                 "shortcut": "SHA",
                 "xPos": 3680,
                 "yPos": 3800,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Michelfeld"
                 },
             "120416":{
                 "id": 120416,
@@ -428,7 +428,7 @@
                 "yPos": 920,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Siegen"
                 },
             "120419":{
                 "id": 120419,
@@ -436,9 +436,9 @@
                 "shortcut": "SIM",
                 "xPos": 1220,
                 "yPos": 2340,
-                "image": "national",
-                "imageBlur": "national",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Simmern"
                 },
             "120421":{
                 "id": 120421,
@@ -448,7 +448,7 @@
                 "yPos": 1140,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Siegburg"
                 },
             "120423":{
                 "id": 120423,
@@ -456,9 +456,9 @@
                 "shortcut": "VB",
                 "xPos": 3020,
                 "yPos": 1400,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Schotten"
                 },
             "120425":{
                 "id": 120425,
@@ -466,9 +466,9 @@
                 "shortcut": "WI",
                 "xPos": 2000,
                 "yPos": 2300,
-                "image": "Mitte",
-                "imageBlur": "Mitte",
-                "weatherStation": ""
+                "image": "Lorch",
+                "imageBlur": "Lorch",
+                "weatherStation": "Wiesbaden"
                 },
             "120422":{
                 "id": 120422,
@@ -476,9 +476,9 @@
                 "shortcut": "WN",
                 "xPos": 3240,
                 "yPos": 4180,
-                "image": "Bammental/PL",
-                "imageBlur": "Bammental/PL",
-                "weatherStation": ""
+                "image": "Bammental",
+                "imageBlur": "Bammental",
+                "weatherStation": "Waiblingen"
                 },
             "120420":{
                 "id": 120420,
@@ -488,7 +488,7 @@
                 "yPos": 1520,
                 "image": "Neuwied",
                 "imageBlur": "Neuwied",
-                "weatherStation": ""
+                "weatherStation": "Hachenburg"
                 }
     }
 }

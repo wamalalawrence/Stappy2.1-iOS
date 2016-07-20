@@ -13,8 +13,10 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"itemId": @"id",
+             @"angebotItemID": @"id",
              @"dateToShow": @"startdatum",
              @"image" : @"image",
+             @"images" : @"images",
              @"title" : @"title",
              @"subtitle" : @"subtitle",
              @"mainKey" : @"startdatum",
@@ -28,8 +30,21 @@
              @"url":@"url",
              @"type":@"type",
              @"startTimestamp": @"startdatum_timestamp",
-             @"endTimestamp": @"enddatum_timestamp"
+             @"endTimestamp": @"enddatum_timestamp",
+             @"address":@"location.address",
+             @"startDateString":@"startdatum",
+             @"startDateHourString":@"startzeit",
+             @"endDateString":@"enddatum",
+             @"endDateHourString":@"endzeit"
              };
+}
+
+- (NSDate *)startDate {
+    return [NSDate dateWithTimeIntervalSince1970:self.startTimestamp];
+}
+
+- (NSDate *)endDate {
+    return [NSDate dateWithTimeIntervalSince1970:self.endTimestamp];
 }
 
 @end

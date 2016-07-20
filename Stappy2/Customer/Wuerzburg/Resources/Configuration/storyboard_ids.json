@@ -131,7 +131,7 @@
                }
                },
                {
-               "key": "Fahrplan",
+               "key": "Auskunft",
                "storyboard_id": "",
                "nibname":"STFahrplanSearchVC",
                "navigationbar":{
@@ -160,8 +160,23 @@
             "__comment_Default-Fahrplan_nibname":"STFahrplanSearchVC",
             "__comment_Premium-Fahrplan_nibname":"STFahrplanPremiumSearchVC"
         },
-        {
-            "key": "Apotheken",
+               {
+               "key": "Fahrplan",
+               "storyboard_id": "",
+               "nibname":"STFahrplanSearchVC",
+               "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               },
+               "__comment_Default-Fahrplan_nibname":"STFahrplanSearchVC",
+               "__comment_Premium-Fahrplan_nibname":"STFahrplanPremiumSearchVC"
+               },
+               {
+               "key": "Apotheken",
             "storyboard_id": "STApothekenViewController",
             "nibname":"",
             "navigationbar":{
@@ -175,7 +190,7 @@
         },
        {
        "key": "Parkhäuser",
-       "storyboard_id": "STParkhausViewController",
+       "storyboard_id": "STParkhausWViewController",
        "nibname":"",
        "navigationbar":{
        "barTintColor": "#d50041",
@@ -186,6 +201,21 @@
        "barStyle": 1
        }
        },
+               
+               {
+               "key": "Störungsmeldungen",
+               "storyboard_id": "ReportList",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#d50041",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               
                {
            "key": "Zählerstand",
            "storyboard_id": "zaehler",

@@ -1,9 +1,12 @@
 {
     "__comment": "Suwag configuration file",
     "shouldShowAddressAndNameFields":"NO",
+    "detailScreenShouldBlur":"NO",
     "shouldDisplayRegionPicker":"YES",
     "shouldShowCouponsFunctionality":"YES",
      "shouldShowCityName":"NO",
+    "shouldShowLabelsAndCollectionOnStartScreen":"NO",
+    "shouldShowSearchOption":"NO",
     "settingsCouponsTitle":"SÜWAG GUTSCHEINSPEZIAL",
     "reportCategories":[
     {"id":1,
@@ -38,11 +41,16 @@
         "zahlerstandEmail":"app@meine.suewag.de",
         "reportingEmail":"tma@syna.de",
         "rightMenuItemsUrl": "/sinfo?id=85245",
+        
         "rightMenuItemsId":85245,
-        "rightMenuTitle":"Meine Kraft vor Ort",
+        "rightMenuTitle":"MEINE KRAFT VOR ORT",
         "leftMenuUrl": "side-menu.",
+        "googleApiKey": "AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
         "shouldUseUserPositionInApotheken": 1,
-                "fahrplan": {
+        "googleMapsAPI": {
+            "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+        },
+        "fahrplan": {
             "api_url":"http://endios.hafas.de/openapi/",
             "access_id":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad",
             
@@ -119,24 +127,26 @@
             }
         },
         "weather": {
-            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/Frankfurt.json",
-            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/Frankfurt.json",
+            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/Germany/",
+            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/Germany/"
         }
     },
     "startScreenBottomActions": {
-        "STWeatherViewController":"Wetter",
-        "STApothekenViewController":"Apothekennotdienst",
-        "StadtInfo":"Ortsinformationen"
+        "STWeatherPageViewController":"Wetter",
+        "StadtInfo":"Ortsinformationen",
+        "RightBarViewController":"Süwag-Services"
     },
     "startScreenScrollActions": {
          "angebote":"Gutscheine",
          "events":"Veranstaltungen",
          "ticker":"National-Ticker",
-         "lokalnews":"Regional-Ticker"
+         "lokalnews":"Regional-Ticker",
+          "apotheken":"Apothekennotdienst"
     },
     "startScreenIgnoredItems": [
-                                "test"
+                                "stadt"
                                 ],
+    
     "startScreenOtherNamings": {
         "stadt":"Ortsinformationen",
         "news":"National-Ticker",
@@ -144,14 +154,22 @@
         "events":"Veranstaltungen",
         "lokalnews":"Regional-Ticker"
     },
+    "favoriteOtherNamings": {
+        "events":"Veranstaltungen",
+        "stadtinfos":"Ortsinformationen",
+        "angebote":"Gutscheine"
+    },
     "cityLocation": {
         "latitude": 50.110556,
         "longitude": 8.682222
     },
+    "defaultRegion": "Frankfurt",
+    "regionJSONFileName":"regions-suewag.json",
     "default_ids": {
-        "news": [85956]
+        "news": [85956],
+        "lokalnews":[97710,97708,90391,105337,108938,108937,108939,108934,233190,85212]
     },
-    "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events", "lokalnews"],
+    "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events"],
     "regionPickerSettingsItem": {
         "indexInLeftSideMenu": "first"
     },
@@ -171,31 +189,31 @@
     },
     "detail_sharing_options": {
         "email": {
-            "SEL": "didClickEmail",
+            "SEL": "emailButtonTapped:",
             "icon": "action_options_mail"
         },
         "phone": {
-            "SEL": "didClickPhone",
+            "SEL": "phoneButtonTapped:",
             "icon": "action_options_phone"
         },
         "contactUrl": {
-            "SEL": "didClickWebsite",
+            "SEL": "websiteButtonTapped:",
             "icon": "action_options_web"
         },
         "latitude": {
-            "SEL": "didClickShowOnMap",
+            "SEL": "mapButtonTapped:",
             "icon": "action_options_map"
         },
         "share": {
-            "SEL": "didClickShare",
+            "SEL": "shareButtonTapped:",
             "icon": "action_options_share"
         },
         "endDate": {
-            "SEL": "didClickCalendar",
+            "SEL": "calendarButtonTapped:",
             "icon": "action_options_calendar"
         },
         "favorite":{
-            "SEL":"didClickFavorites:",
+            "SEL":"favoriteButtonTapped:",
             "icon": {
                 "on": "action_options_favoriten",
                 "off": "action_options_favoriten_inactive"
@@ -206,7 +224,8 @@
         "partner_color": "#88BA14",
         "texts_color": "#FFCC00",
         "secondary_color":"#FFCC00",
-        
+        "startScreenIconColor": "#FFCC00",
+
         "overlayScreen": {
             "button": {
                 "font": {
@@ -234,7 +253,7 @@
             "bodyText":{
                 "font": {
                     "name": "RWEHeadline-RegularCondensed",
-                    "size": "16"
+                    "size": "17"
                 }
             }
         },
@@ -243,7 +262,7 @@
             "cell": {
                 "font": {
                     "name": "RWEHeadline-RegularCondensed",
-                    "size": "15"
+                    "size": "16"
                 }
             },
             "settings": {
@@ -320,6 +339,27 @@
                         "name": "RWEHeadline-RegularCondensed",
                         "size": "18"
                     }
+                }
+            }
+        },
+        
+        "openingHours": {
+            "cellLabelTop": {
+                "font": {
+                    "name": "RWEHeadline-MediumCondensed",
+                    "size": "15"
+                }
+            },
+            "cellLabel": {
+                "font": {
+                    "name": "RWEHeadline-RegularCondensed",
+                    "size": "13"
+                }
+            },
+            "titleLabel": {
+                "font": {
+                    "name": "RWEHeadline-MediumCondensed",
+                    "size": "16"
                 }
             }
         },
@@ -531,7 +571,7 @@
                 "description":{
                     "font": {
                         "name": "RWEHeadline-RegularCondensed",
-                        "size": "14"
+                        "size": "16"
                     }
                 }
             },
@@ -798,7 +838,14 @@
       "type_api": "angebote",
       "url": "/events"
       },
-      {
+                  {
+                  "caption": "Süwag-Services",
+                  "icon_name": "suwag_services",
+                  "type": "menu_toggle",
+                  "type_api": "angebote",
+                  "url": "/events"
+                  },
+                  {
       "caption":"Ortsinformationen",
       "icon_name":"stadtinfos_icon",
       "type":"stadt",

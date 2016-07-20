@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GarbageDateHeaderView : UITableViewHeaderFooterView
+@interface GarbageDateHeaderView : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UIView *cView;
-
 @end

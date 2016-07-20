@@ -18,10 +18,10 @@
 #import "STTableSecondaryKeyObject.h"
 #import "STNewsBaseExpandedTableViewCell.h"
 #import "STWebViewDetailViewController.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
 #import "STLokalNewsHeaderView.h"
-#import "Utils.h"
+
 #import "STExpandedTableTopObject.h"
 #import "STExpandedTableBottomObject.h"
 #import "STMainModel.h"
@@ -37,6 +37,11 @@
 #import "STWerbungTableViewCell.h"
 #import "STAnnotationsMapViewController.h"
 #import "RandomImageView.h"
+#import "STWeatherService.h"
+#import "STEventsModel.h"
+//Helpers
+#import "Utils.h"
+#import "NSDate+Utils.h"
 
 @interface STLokalNewsViewController ()
 
@@ -69,11 +74,11 @@
                          queue:nil
                     usingBlock:^(NSNotification *notification)
     {
-        [self loadNews];
+        [self refreshNews];
     }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(loadNews)
+                                             selector:@selector(refreshNews)
                                                  name:kWerbungMenuNotificationKey object:nil];
 
 }
@@ -102,7 +107,7 @@
     
     
     __weak typeof(self) weakself = self;
-    [[STRequestsHandler sharedInstance] weatherForStartScreenWithCompletion:^(STWeatherCurrentObservation *currentObservation, NSError *error) {
+    [[STWeatherService sharedInstance] weatherForStartScreenWithCompletion:^(STWeatherCurrentObservation *currentObservation, NSError *error) {
         if (!error) {
             __strong typeof(weakself) strongSelf = weakself;
             strongSelf.currentWeather  = [NSString stringWithFormat:@"%i°C", currentObservation.temperature];
@@ -111,21 +116,19 @@
             [strongSelf.lokalNewsTable reloadData];
         }
     }];
+    
     if ([self isKindOfClass:[STEventsViewController class]]) {
         //get complete forecast
         __weak typeof(self) weakself = self;
-        [[STRequestsHandler sharedInstance] weatherForCurrentDayAndForecastWithCompletion:^(NSArray *hourlyWeatherArray, NSArray *nextDaysForecastArray, STWeatherCurrentObservation* observation,NSError *hourlyError, NSError *daysError) {
-            
-            if (!daysError) {
+        [[STWeatherService sharedInstance] weatherForCurrentDayAndForecastWithCompletion:^(NSArray *hourlyWeatherArray, NSArray *nextDaysForecastArray, STWeatherCurrentObservation* observation, NSError *error) {
+            if (!error) {
                 __strong typeof(weakself) strongSelf = weakself;
                 strongSelf.nextDaysForecasts = nextDaysForecastArray;
                 [strongSelf.lokalNewsTable reloadData];
             }
-            
-         
         }];
-
     }
+    
     //load the weather configuration file
     NSString* path = [[NSBundle mainBundle] pathForResource:@"weather_icons" ofType:@"json"];
     NSData* data = [NSData dataWithContentsOfFile:path];
@@ -164,7 +167,7 @@
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl setTintColor:[UIColor whiteColor]];
-    [self.refreshControl addTarget:self action:@selector(loadNews) forControlEvents:UIControlEventValueChanged];
+    [self.refreshControl addTarget:self action:@selector(refreshNews) forControlEvents:UIControlEventValueChanged];
     [self.lokalNewsTable addSubview:self.refreshControl];
     
     // create parameters dictioanry
@@ -191,7 +194,13 @@
                                                        type:@"Lokalnews"
                                               andCompletion:^(NSArray *news, NSArray *originalNews, NSUInteger pageCount, NSError *error) {
                                                   __strong typeof(weakSelf) strongSelf = weakSelf;
-                                                  [strongSelf.originalFetchedNews addObjectsFromArray:originalNews];
+                                                  
+                                                  // don't duplicate existing items
+                                                  for (id obj in originalNews) {
+                                                      if (![strongSelf.originalFetchedNews containsObject:obj]) {
+                                                          [strongSelf.originalFetchedNews addObject:obj];
+                                                      }
+                                                  }
                                                   //call method to group the data and reload the table
                                                   [strongSelf populateWithNextPageWithPageElements:self.originalFetchedNews];
                                               }];
@@ -204,18 +213,97 @@
     [self.lokalNewsTable.infiniteScrollingView stopAnimating];
 }
 
--(void)loadWerbung {
+-(void)loadWerbungWithType:(NSString*)werbungType {
     self.werbungItems = [STAppSettingsManager sharedSettingsManager].werbungItems == nil ? @[] : [STAppSettingsManager sharedSettingsManager].werbungItems;
     NSLog(@"%@", self.title);
     for (STWerbungModel * item in self.werbungItems) {
-        if ([item.type isEqualToString:[self.title lowercaseString]]) {
+        if ([item.type isEqualToString:werbungType]) {
             self.werbungItem = [[STWerbungModel alloc] init];
             self.werbungItem = item;
         }
     }
+    
+    if (self.werbungItem) {
+
+        UIButton*bannerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        bannerButton.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 102);
+        bannerButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [bannerButton addTarget:self action:@selector(bannerTapped:) forControlEvents:UIControlEventTouchUpInside];
+
+        UIImageView*bannerImageView = [[UIImageView alloc] init];
+        bannerImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        
+        NSString* webUrl = nil;
+        if ([self.werbungItem.image hasPrefix:@"/"]) {
+            webUrl = [[STAppSettingsManager sharedSettingsManager].baseUrl stringByAppendingString:self.werbungItem.image];
+        }
+        [bannerImageView sd_setImageWithURL:[NSURL URLWithString:webUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            if (image) {
+                float ratio =image.size.width/image.size.height;
+                bannerImageView.image = image;
+                bannerImageView.frame = CGRectMake(8.0, 8.0, CGRectGetWidth(self.view.frame)-16.0, (CGRectGetWidth(self.view.frame)-16.0)/ratio);
+                bannerButton.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(bannerImageView.frame)+16.0);
+                [bannerButton addSubview:bannerImageView];
+                self.lokalNewsTable.tableHeaderView = bannerButton;
+
+            }
+            else{
+                self.lokalNewsTable.tableHeaderView = nil;
+            }
+            
+        }];
+ 
+    }
+    else{
+        self.lokalNewsTable.tableHeaderView = nil;
+    }
+
+}
+
+-(void)bannerTapped:(id)sender{
+
+    STWebViewDetailViewController *webPage = [[STWebViewDetailViewController alloc] initWithNibName:@"STWebViewDetailViewController" bundle:nil andDetailUrl:self.werbungItem.url];
+    [self.navigationController pushViewController:webPage animated:YES];
+    
+}
+
+- (void)refreshNews {
+     [self loadWerbungWithType:@"lokalnews"];
+        [self.refreshControl beginRefreshing];
+        self.currentPage = 1;
+        self.parameters[@"page"] = @(self.currentPage);
+    __weak typeof(self) weakSelf = self;
+        [[STRequestsHandler sharedInstance] allLokalnewsWithUrl:@"/lokalnews-v2"
+                                                         params:self.parameters
+                                                           type:@"Lokalnews"
+                                                  andCompletion:^(NSArray *news, NSArray *originalNews, NSUInteger pageCount, NSError *error) {
+                                                      __strong typeof(weakSelf) strongSelf = weakSelf;
+                                                      [strongSelf.refreshControl endRefreshing];
+                                                      strongSelf.newsTableDataArray = news;
+                                                      strongSelf.pageCount = pageCount;
+                                                      [strongSelf.originalFetchedNews removeAllObjects];
+                                                      if (!strongSelf.originalFetchedNews.count) {
+                                                          strongSelf.originalFetchedNews = [NSMutableArray array];
+                                                      }
+                                                      
+                                                      // don't duplicate existing items
+                                                      for (id obj in originalNews) {
+                                                          if (![strongSelf.originalFetchedNews containsObject:obj]) {
+                                                              [strongSelf.originalFetchedNews addObject:obj];
+                                                          }
+                                                      }
+
+                                                      strongSelf.expandableTableDataArray = nil;
+                                                      strongSelf.expandableTableDataArray = [NSMutableArray arrayWithArray:news];
+                                                      [strongSelf.lokalNewsTable reloadData];
+                                                      [self updateHeaders];
+                                                      [self addInfititeScrolling];
+                                                  }];
 }
 
 - (void)loadNews {
+    [self loadWerbungWithType:@"lokalnews"];
     [self.refreshControl beginRefreshing];
     __weak typeof(self) weakSelf = self;
     [[STRequestsHandler sharedInstance] allLokalnewsWithUrl:@"/lokalnews-v2"
@@ -238,9 +326,6 @@
 
                                                   
                                               }];
-    
-  
-    
 }
 
 -(void)addInfititeScrolling{
@@ -265,20 +350,13 @@
         mainKeyObject.expandableSectionItems = [NSMutableArray arrayWithArray:mainKeyObject.mainKeyArray];
     }
     NSUInteger count = mainKeyObject.expandableSectionItems.count;
-    if (section == 0 && self.werbungItem) {
-        count++;
-    }
+ 
     return count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.werbungItem && indexPath.section == 0 && indexPath.row == 0) {
-        return 86.0f;
-    } else {
-        int rowIndex = indexPath.row;
-        if (self.werbungItem && indexPath.section == 0) {
-            rowIndex--;
-        }
+        NSInteger rowIndex = indexPath.row;
+    
         id currentObjectData = ((STTableMainKeyObject*)self.expandableTableDataArray[indexPath.section]).expandableSectionItems[rowIndex];
         if ([currentObjectData isKindOfClass:[STTableSecondaryKeyObject class]]) {
             return 150.f;
@@ -289,8 +367,8 @@
         } else if ([currentObjectData isKindOfClass:[STExpandedTableBottomObject class]]) {
             return 88.f;
         }
-    }
-    return 95.f;
+  
+        return 95.f;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -345,15 +423,14 @@
     }
     else {
         //make sure the date is not in the past
-        if ([todayDay day] < [otherDay day] &&
-            [todayDay month] <= [otherDay month] &&
-            [todayDay year] == [otherDay year])
-        {
+        if ([[NSDate date] compareDateOnly:date] == NSOrderedAscending ||
+            [[NSDate date] compareDateOnly:date] == NSOrderedSame) {
+            
             //check if the date is in next 10 forecasted days, otherwise don't show info
             NSInteger daysDifference = [Utils daysBetweenDate:[NSDate date] andDate:date];
             if ((int)daysDifference < 10) {
                 //show future forecast weather
-                STWeatherModel* nextForecast = self.nextDaysForecasts[daysDifference +1];
+                STWeatherModel* nextForecast = self.nextDaysForecasts[daysDifference];
                 sectionHeaderView.weatherLabel.text = [NSString stringWithFormat:@"%@°C",nextForecast.tempHigh];
                 NSString *imageUrl = nextForecast.imageForecastUrl;
                 NSString* imageName = self.weatherDictionary[[NSString stringWithFormat:@"%@",nextForecast.icon]];
@@ -363,7 +440,6 @@
                 } else {
                     sectionHeaderView.weatherIcon.image = conditionsImage;
                 }
-
             }
         }
     }
@@ -383,22 +459,9 @@
     //check if we should show expanded cell or collapsed one
     // Take the oject corresponding to current cell and check its type.
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kBaseNewsTableCellIdentifier];
-    if (self.werbungItem && indexPath.section == 0 && indexPath.row == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:kSTWerbungTableViewCell];
-        [cell setNeedsLayout];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        NSString* webUrl = nil;
-        if ([self.werbungItem.image hasPrefix:@"/"]) {
-            webUrl = [[STAppSettingsManager sharedSettingsManager].baseUrl stringByAppendingString:self.werbungItem.image];
-        }
-        [((STWerbungTableViewCell*)cell).adImageView sd_setImageWithURL:[NSURL URLWithString:webUrl]];
-        
-        return cell;
-    }
-    int rowIndex = indexPath.row;
-    if (self.werbungItem && indexPath.section == 0) {
-        rowIndex--;
-    }
+
+    NSInteger rowIndex = indexPath.row;
+  
     id currentObjectData = ((STTableMainKeyObject*)self.expandableTableDataArray[indexPath.section]).expandableSectionItems[rowIndex];
     
     if ([currentObjectData isKindOfClass:[STTableSecondaryKeyObject class]]) {
@@ -419,7 +482,18 @@
             imageUrlString = [[STAppSettingsManager sharedSettingsManager].baseUrl stringByAppendingString:newsModel.image];
         }
         NSURL *imageUrl = [NSURL URLWithString:imageUrlString];
-        [expandedCell.dataImgeView sd_setImageWithURL:imageUrl  placeholderImage:[UIImage imageNamed:@"image_content_article_default_thumb"]];
+        
+        [expandedCell.dataImgeView sd_setImageWithURL:imageUrl completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+           
+            if (image) {
+                expandedCell.dataImgeView.image = image;
+            }
+            else{
+                expandedCell.dataImgeView.image = [UIImage imageNamed:@"image_content_article_default_thumb"];
+            }
+            
+        }];
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     } else if ([currentObjectData isKindOfClass:[STExpandedTableTopObject class]]) {
         cell = [tableView dequeueReusableCellWithIdentifier:kBaseNewsTableExpandedHeaderID];
@@ -442,21 +516,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Take the oject corresponding to current cell and check its type.
-    int rowIndex = indexPath.row;
-    if (self.werbungItem && indexPath.section == 0) {
-        rowIndex--;
-    }
     
-    if (self.werbungItem && indexPath.section == 0 && indexPath.row == 0) {
-        NSString* url = self.werbungItem.url;
-        if (url.length > 0) {
-            STWebViewDetailViewController *webPage = [[STWebViewDetailViewController alloc] initWithNibName:@"STWebViewDetailViewController" bundle:nil andDetailUrl:url];
-            [self.navigationController pushViewController:webPage animated:YES];
-        }
-        return;
-    }
-    
-    id currentObjectData = ((STTableMainKeyObject*)self.expandableTableDataArray[indexPath.section]).expandableSectionItems[rowIndex];
+    id currentObjectData = ((STTableMainKeyObject*)self.expandableTableDataArray[indexPath.section]).expandableSectionItems[indexPath.row];
     
     if ([currentObjectData isKindOfClass:[STTableSecondaryKeyObject class]]) {
 
@@ -491,15 +552,21 @@
 -(void)onDoubleTap:(STNewsBaseTableViewCell *)sender {
     // insert the cells needed
     NSIndexPath *indexPath = [self.lokalNewsTable indexPathForCell:sender];
+    
+    NSInteger rowIndex = indexPath.row;
+    
     STTableMainKeyObject *mainKeyObject = self.expandableTableDataArray[indexPath.section];
-    STTableSecondaryKeyObject *secondaryKeyObject = mainKeyObject.expandableSectionItems[indexPath.row];
+    STTableSecondaryKeyObject *secondaryKeyObject = mainKeyObject.expandableSectionItems[rowIndex];
+    if ([secondaryKeyObject isKindOfClass:[STTableSecondaryKeyObject class]] && secondaryKeyObject.secondaryKeyArray.count < 2) {
+        return;
+    }
     if (![secondaryKeyObject isMemberOfClass:[STTableSecondaryKeyObject class]]) {
         [self colapseRowsAfterIndexPath:indexPath forMainKeyObject:mainKeyObject];
         return;
     }
     if (secondaryKeyObject.isRowExpanded) {
         if (secondaryKeyObject.secondaryKeyArray.count > 1) {
-            NSIndexPath * nextIndexPath = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+            NSIndexPath * nextIndexPath = [NSIndexPath indexPathForRow:rowIndex + 1 inSection:indexPath.section];
             [self colapseRowsAfterIndexPath:nextIndexPath forMainKeyObject:mainKeyObject];
         }
         return;
@@ -507,7 +574,7 @@
     secondaryKeyObject.isRowExpanded = YES;
     sender.expanded = YES;
     NSArray *expandedArray = secondaryKeyObject.expandedObjectsArray;
-    NSUInteger count=indexPath.row+1;
+    NSUInteger count=rowIndex+1;
     NSMutableArray *arCells=[NSMutableArray array];
     for(NSObject *object in expandedArray ) {
         [arCells addObject:[NSIndexPath indexPathForRow:count inSection:indexPath.section]];
@@ -523,7 +590,11 @@
 - (void)colapseRowsAfterIndexPath:(NSIndexPath*)indexPath forMainKeyObject:(STTableMainKeyObject*) mainKeyObject {
     // If this is no secondary object, then this means that the row is expanded.
     // To close it, find the next STExpandedTableBottomObject in the dataSource and call tableViewCell selected for that one.
-    for (int i = indexPath.row; i< mainKeyObject.expandableSectionItems.count; i++ ) {
+    
+    NSInteger rowIndex = indexPath.row;
+  
+    
+    for (int i = rowIndex; i< mainKeyObject.expandableSectionItems.count; i++ ) {
         id dataObject = mainKeyObject.expandableSectionItems[i];
         if ([dataObject isMemberOfClass:[STExpandedTableBottomObject class]]) {
             NSIndexPath * lasObjectIndexPath = [NSIndexPath indexPathForRow:i inSection:indexPath.section];
@@ -539,13 +610,13 @@
         [[STRequestsHandler sharedInstance] itemDetailsForURL:detailData.url completion:^(STDetailGenericModel *itemDetails, NSDictionary* itemResponseDict, NSError *error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSError *mtlError = nil;
-                STMainModel *dataModel = [MTLJSONAdapter modelOfClass:[STMainModel class]
-                                                              fromJSONDictionary:itemResponseDict
-                                                                           error:&mtlError];
+         
                 if (!mtlError) {
-                    STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController"
+                    STDetailViewController * detailView = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController"
                                                                                                                              bundle:nil
                                                                                                                        andDataModel:itemDetails];
+                    detailView.ignoreCalenderButton = YES;
+
                     [self.navigationController pushViewController:detailView animated:YES];
                 }
             });
@@ -555,23 +626,41 @@
             [self.navigationController pushViewController:webPage animated:YES];
     } else {
         if ([self isKindOfClass:[STAngeboteViewController class]]) {
+            
+            
+            
             [[STRequestsHandler sharedInstance] itemDetailsForURL:detailData.url completion:^(STDetailGenericModel *itemDetails, NSDictionary* itemResponseDict, NSError *error) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     NSError *mtlError = nil;
-                     STAngeboteModel *angeboteModel = [MTLJSONAdapter modelOfClass:[STAngeboteModel class]
-                                                       fromJSONDictionary:itemResponseDict
-                                                                    error:&mtlError];
-                    STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController"
+                
+                    STDetailViewController * detailView = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController"
                                                                                                                              bundle:nil
                                                                                                                        andDataModel:detailData];
-                    detailView.ignoreCalenderButton = YES;
                     [self.navigationController pushViewController:detailView animated:YES];
                 });
             }];
         }
         else {
-                    STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andDataModel:detailData];
+            
+            [[STRequestsHandler sharedInstance] itemDetailsForURL:detailData.url completion:^(STDetailGenericModel *itemDetails, NSDictionary* itemResponseDict, NSError *error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSError *mtlError = nil;
+          
+                    STDetailViewController * detailView = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController"
+                                                                                                   bundle:nil
+                                                                                             andDataModel:detailData];
+                    
+                    if (![detailData isKindOfClass:[STEventsModel class]]) {
+                        detailView.ignoreCalenderButton = YES;
+ 
+                    }
+                    
                     [self.navigationController pushViewController:detailView animated:YES];
+                });
+            }];
+
+            
+            
         }
 
     }

@@ -17,9 +17,11 @@
 #import "STWeatherCurrentObservation.h"
 #import "STWeatherHeader.h"
 #import "STAppSettingsManager.h"
+#import "STRegionManager.h"
 
 //helpers
 #import "NSString+Utils.h"
+#import "STWeatherService.h"
 
 @interface STWeatherViewController ()
 
@@ -46,11 +48,11 @@
     {
         [self.sidebarButton setTarget: self.revealViewController];
         [self.sidebarButton setAction: @selector(revealToggle:)];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-        
+
         [self.rightBarButton setTarget: self.revealViewController];
         [self.rightBarButton setAction: @selector(rightRevealToggle:)];
     }
+    
     //load the weather configuration file
     NSString* path = [[NSBundle mainBundle] pathForResource:@"weather_icons" ofType:@"json"];
     NSData* data = [NSData dataWithContentsOfFile:path];
@@ -60,7 +62,7 @@
     //request here the weather information so we know which background image to load
     //request the data to show the forecast
     __weak typeof(self) weakself = self;
-    [[STRequestsHandler sharedInstance] weatherForCurrentDayAndForecastWithCompletion:^(NSArray *hourlyWeatherArray, NSArray *nextDaysForecastArray, STWeatherCurrentObservation* observation,NSError *hourlyError, NSError *daysError) {
+    [[STWeatherService sharedInstance] weatherForCurrentDayAndForecastForRegion:self.region withCompletion:^(NSArray *hourlyWeatherArray, NSArray *nextDaysForecastArray, STWeatherCurrentObservation* observation, NSError *error) {
         __strong typeof(weakself) strongSelf = weakself;
         strongSelf.hourlyForecasts = hourlyWeatherArray;
         strongSelf.nextDaysForecasts = nextDaysForecastArray;
@@ -84,13 +86,15 @@
     [formatter setDateFormat:@"EE dd.MM | HH.mm"];
         
     NSString *stringFromDate = [formatter stringFromDate:[NSDate date]];
-    
-    //get city name from the bundle identifier
-    NSString* cityName = [[STAppSettingsManager sharedSettingsManager] homeScreenTitle];
-    if (cityName.length == 0) {
+    NSString* cityName;
+    if ([STRegionManager sharedInstance].selectedAndCurrentRegions.count == 1) {
+        //if there is one region set the bundle name in order to allow special characters
         cityName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
     }
-    self.dateContainerLabel.text = [NSString stringWithFormat:@"%@, %@ Uhr",[cityName splitString:cityName],stringFromDate];
+    else {
+        cityName = _region;
+    }
+    self.dateContainerLabel.text = [NSString stringWithFormat:@"%@, %@ Uhr", cityName,stringFromDate];
     
     STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
     
@@ -164,5 +168,7 @@
         self.startView.weatherTable.scrollEnabled = NO;
     }
 }
+
+- (NSString *)region { if (_region == nil) _region = [[STRegionManager sharedInstance] currentRegion]; return _region; }
 
 @end

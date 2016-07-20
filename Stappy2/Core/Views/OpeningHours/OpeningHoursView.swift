@@ -38,7 +38,7 @@ class OpeningHoursView: UITableViewCell, UITableViewDataSource, UITableViewDeleg
     }
     
     class func heightForData(data: OpeningClosingTimesModel) -> CGFloat {
-        var adapter = OpeningHoursViewAdapter()
+        let adapter = OpeningHoursViewAdapter()
         adapter.data = data
         return CGFloat(adapter.maxNumberOfOpeningHours()) * 55 + 95
     }
@@ -88,7 +88,8 @@ class OpeningHoursView: UITableViewCell, UITableViewDataSource, UITableViewDeleg
         
         headerView.openingHoursViewTitle = openingHoursData.key
         
-        let cellColor = openingHoursViewAdapter.cellTextColorForIndex(0)
+        let cellColor = openingHoursViewAdapter.headerTextColorForIndex(section)
+        
         headerView.mondayLabel.textColor = cellColor[0]
         headerView.tuesdayLabel.textColor = cellColor[1]
         headerView.wednesdayLabel.textColor = cellColor[2]

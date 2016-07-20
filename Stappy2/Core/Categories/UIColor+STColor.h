@@ -12,7 +12,9 @@
 
 +(UIColor*) partnerColor;
 +(UIColor*) textsColor;
++(UIColor*) startScreenIconColor;
 +(UIColor*) secondaryColor;
 +(UIColor*) transparencyColor;
++(UIColor*) loadingColor;
 
 @end

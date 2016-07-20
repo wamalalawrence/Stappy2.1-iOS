@@ -41,6 +41,15 @@ static NSString* kCollectionViewCellId = @"customScroll";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     STStartScrollCustomCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCellId forIndexPath:indexPath];
     NSString* imageName = [self.sourceArray allKeys][indexPath.row];
+    // get custom icons if there are needed
+    NSDictionary * otherIcons= [STAppSettingsManager sharedSettingsManager].startScreenOtherIcons;
+    if (otherIcons.count) {
+        NSString *name =[otherIcons valueForKey:imageName];
+        if (name) {
+            imageName = name;
+        }
+    }
+
     cell.actionImage.image = [UIImage imageNamed:imageName];
     if (!cell.actionImage.image) {
         cell.actionImage.image = [UIImage imageNamed:[imageName capitalizedString]];
@@ -58,7 +67,6 @@ static NSString* kCollectionViewCellId = @"customScroll";
     inset = MAX(inset, 0.0);
     return UIEdgeInsetsMake(0.0, inset, 0.0, 0.0);
 }
-
 
 
 #pragma mark - collection view delegate

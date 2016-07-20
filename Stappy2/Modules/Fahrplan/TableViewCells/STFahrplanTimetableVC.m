@@ -137,6 +137,11 @@ static NSString *timetableCellIdentifier = @"STFahrplanTimetableJourneyStopCellT
 {
     NSLog(@"didSelectRowAtIndexPath row:%lu", indexPath.row);
     
+    if (!self.tableData || self.tableData.count<(indexPath.row-1)) {
+        return;
+
+    }
+    
     id object = [self.tableData objectAtIndex:indexPath.row];
     
     if ([object isKindOfClass:[STFahrplanDeparture class]]) {

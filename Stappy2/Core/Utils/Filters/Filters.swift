@@ -30,7 +30,7 @@ enum FilterError: ErrorType {
         let ft = filterType as String
         if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["ticker", "news", "nachrichten", "national-ticker"]) {
             return .Ticker
-        } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["lokalnews", "regional-ticker"]) {
+        } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["lokalnews", "regional-ticker", "lokales"]) {
             return .Lokalnews
         } else if Utils.string(ft, equalsToAnyOfTheStringsInArrayOfString: ["events", "veranstaltungen"]) {
             return .Events
@@ -91,6 +91,7 @@ enum FilterError: ErrorType {
         if (isFirstLaunch == nil) {
             loadDefaultFilters()
             defaults.setBool(true, forKey: "isFirstAppLaunch")
+            defaults.synchronize();
         } else {
             // load the filters from NSUserDefaults
             if let savedFilters = defaults.objectForKey("filters") as? [[Int]] {
@@ -106,13 +107,13 @@ enum FilterError: ErrorType {
         }
     }
 
-    private func loadDefaultFilters() {
+    func loadDefaultFilters() {
         // load default filters
         let defaultFilters = STAppSettingsManager.sharedSettingsManager().defaultFilters
         if defaultFilters != nil {
             for (filterStringType, defaultFiltersFromConfig) in defaultFilters {
                 let index = try! FilterType.filterTypeFromString(filterStringType as? NSString)
-                filters[index.rawValue] = defaultFiltersFromConfig as! [Int]
+                saveFilter(filterIds: defaultFiltersFromConfig as! [Int], forEnumFilterType: index, notification: false)
             }
         }
     }
@@ -151,11 +152,18 @@ enum FilterError: ErrorType {
         } catch {}
     }
     
+    func resetFilterTypesLoadedFromServer() {
+        for i in 0..<loadedFiltersFromServer.count {
+            loadedFiltersFromServer[i] = false
+        }
+    }
+    
 //MARK: - save methods
     
     func saveFilters() {
         NSUserDefaults.standardUserDefaults().setObject(filters, forKey: "filters")
         NSUserDefaults.standardUserDefaults().setObject(loadedFiltersFromServer, forKey: "loadedFiltersFromServer")
+        NSUserDefaults.standardUserDefaults().synchronize();
     }
     
     func saveFilter(filterIds filterIds: [Int], forEnumFilterType filterType: FilterType, notification: Bool = true) {
@@ -164,11 +172,31 @@ enum FilterError: ErrorType {
                 filters[filterType.rawValue].append(filterId)
             }
         }
-        
+        saveFilters()
         if (notification) {
             postNotification(filterType)
         }
     }
+    
+    func saveRegionFilter(filterIds filterIds: [Int], forEnumFilterType filterType: FilterType, notification: Bool = true) {
+        for filterId in filterIds {
+            if (!filters[filterType.rawValue].contains(filterId)) {
+                filters[filterType.rawValue].append(filterId)
+            }
+        }
+        
+        for filterId in filters[filterType.rawValue] {
+            if (!filterIds.contains(filterId)) {
+                filters[filterType.rawValue].removeAtIndex(filters[filterType.rawValue].indexOf(filterId)!)
+            }
+        }
+
+        saveFilters()
+        if (notification) {
+            postNotification(filterType)
+        }
+    }
+    
     
     @available (*, deprecated=1.0, message="use the safe method with filter types instead")
     func saveFilter(filterIds filterIds: [Int], forStringFilterType filterType: NSString) throws {
@@ -184,7 +212,7 @@ enum FilterError: ErrorType {
     
 //MARK: - delete methods
     
-    func deleteFilter(filterIds filterIds: [Int], forEnumFilterType filterType: FilterType) throws {
+    func deleteFilter(filterIds filterIds: [Int], forEnumFilterType filterType: FilterType, notification: Bool = true) throws {
         for filterId in filterIds {
             let filtersOfSpecificType = filters[filterType.rawValue]
             let index = filtersOfSpecificType.indexOf(filterId)
@@ -195,13 +223,16 @@ enum FilterError: ErrorType {
 
             filters[filterType.rawValue].removeAtIndex(index!)
         }
-        postNotification(filterType)
+        
+        if notification {
+            postNotification(filterType)
+        }
     }
     
     @available (*, deprecated=1.0, message="use the safe method with filter types instead")
-    func deleteFilter(filterIds filterIds: [Int], forStringFilterType filterType: NSString) throws {
+    func deleteFilter(filterIds filterIds: [Int], forStringFilterType filterType: NSString, notification: Bool = true) throws {
         let type = try FilterType.filterTypeFromString(filterType)
-        try deleteFilter(filterIds: filterIds, forEnumFilterType: type)
+        try deleteFilter(filterIds: filterIds, forEnumFilterType: type, notification: notification)
     }
     
 //MARK: - notification methods

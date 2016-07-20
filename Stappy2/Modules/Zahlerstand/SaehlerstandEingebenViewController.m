@@ -35,6 +35,15 @@
         self.ortTextField.hidden = true;
         self.zaehlerNummerTopConstraint.constant = 8;
     }
+    if ([[STAppSettingsManager sharedSettingsManager] shouldShowKundennumer]) {
+        self.zahlernulmTextFieldVue.hidden = false;
+        self.zahlernulmTextField.hidden = true;
+        self.zahlernulmTextField = self.zahlernulmTextFieldVue;
+    } else {
+        self.zahlernulmTextFieldVue.hidden = true;
+        self.kundennumerTextField.hidden = true;
+        self.vornameTopConstraint.constant = 8;
+    }
     [self setFontsAndColors];
 }
 

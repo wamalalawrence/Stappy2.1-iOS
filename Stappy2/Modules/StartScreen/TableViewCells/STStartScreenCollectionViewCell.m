@@ -77,9 +77,34 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     //go to items detail screen
-    if ([self.startCellCollectionDelegate respondsToSelector:@selector(showDetailScreenForItem:)]) {
-        [self.startCellCollectionDelegate showDetailScreenForItem:(STStartModel*)self.dataForItemsTable[indexPath.row]];
+    
+    
+    if ([self.categoryLabel.text isEqualToString:@"GUTSCHEINE"] &&[[STAppSettingsManager sharedSettingsManager] showCoupons]) {
+        if ([[STAppSettingsManager sharedSettingsManager] activeCoupon].length > 0) {
+        
+            
+            if ([self.startCellCollectionDelegate respondsToSelector:@selector(showDetailScreenForItem:)]) {
+                STStartModel *model = (STStartModel*)self.dataForItemsTable[indexPath.row];
+                model.isOffer = self.isOffer;
+                [self.startCellCollectionDelegate showDetailScreenForItem:model];
+            }
+            
+        } else {
+            // Show alert
+            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:nil message:@"Bitte geben Sie Ihre Kundennummer ein, um die Gutscheine in Anspruch zu nehmen" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil] ;
+            [alert show];
+        }
+    } else {
+    
+    
+        if ([self.startCellCollectionDelegate respondsToSelector:@selector(showDetailScreenForItem:)]) {
+            [self.startCellCollectionDelegate showDetailScreenForItem:(STStartModel*)self.dataForItemsTable[indexPath.row]];
+        }
+    
     }
+    
+    
+  
 }
 
 -(void)showOverview:(id)sender {

@@ -77,14 +77,29 @@ static NSString* kSectionFooterViewID = @"sectionCollectionFooterItemId";
     
     self.collectionDataSourceNewsArray = secondaryKeyObject.secondaryKeyArray;
     STNewsModel *newsModel = self.collectionDataSourceNewsArray.firstObject;
-    self.categoryNameLabel.text = [newsModel.secondaryKey uppercaseString];
+    
+    if (![STAppSettingsManager sharedSettingsManager].shouldNotUseUppercase) {
+        self.categoryNameLabel.text = [newsModel.secondaryKey uppercaseString];
+
+    }
+    else{
+        self.categoryNameLabel.text = newsModel.secondaryKey;
+
+    }
+    
     self.pageControl.hidden = self.collectionDataSourceNewsArray.count == 1;
 
     if (![newsModel isKindOfClass:[STEventsModel class]]) {
         self.eventCategoryWidthConstraint.constant = 0;
     }
     else {
-        self.eventCategoryImage.image = [UIImage imageNamed: [[Utils replaceSpecialCharactersFrom: newsModel.secondaryKey] lowercaseString]];
+        UIImage* categoryImage;
+        NSString* eventImageName = [NSString stringWithFormat:@"event_%@",[[Utils replaceSpecialCharactersFrom: newsModel.secondaryKey] lowercaseString]];
+        categoryImage = [UIImage imageNamed: eventImageName];
+        if (!categoryImage) {
+            categoryImage = [UIImage imageNamed: [Utils replaceSpecialCharactersFrom: newsModel.secondaryKey]];
+        }
+        self.eventCategoryImage.image = categoryImage;
     }
     
     [self.newsCellCollectionView reloadData];
@@ -124,6 +139,7 @@ static NSString* kSectionFooterViewID = @"sectionCollectionFooterItemId";
         imageStringUrl = newsModel.image;
     }
     NSURL *imageUrl = [NSURL URLWithString:imageStringUrl];
+    cell.dataImgeView.contentMode = UIViewContentModeScaleAspectFit;
     [cell.dataImgeView sd_setImageWithURL:imageUrl  placeholderImage:[UIImage imageNamed:@"image_content_article_default_thumb"]];
     
     return cell;

@@ -1,5 +1,5 @@
 //
-//  TankUndLadesaulenViewController.m
+//  STGeneralParkhausViewControlle.m
 //  Stappy2
 //
 //  Created by Pavel Nemecek on 04/05/16.
@@ -13,10 +13,11 @@
 #import "STGeneralParkhausModel.h"
 #import "NSObject+AssociatedObject.h"
 #import "SWRevealViewController.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "STParkhausAnnotation.h"
 #import "STRoundedButton.h"
 #import "STParkhausAnnotationView.h"
+#import "STAppSettingsManager.h"
 @interface STGeneralParkhausViewController ()<CLLocationManagerDelegate, UIGestureRecognizerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *leftBarButton;
@@ -36,6 +37,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if ([STAppSettingsManager sharedSettingsManager].startScreenNamingsScrollItems[@"parking"]) {
+        self.navigationItem.title = [STAppSettingsManager sharedSettingsManager].startScreenNamingsScrollItems[@"parking"];
+    }
     
     self.shouldCenterOnUserLocation = NO;
     self.locationButton.hidden = YES;
@@ -64,10 +68,10 @@
     [self.mapView setRegion:adjustedRegion animated:NO];
     self.mapView.showsUserLocation = YES;
 
-    [self fetchTankStationsFromServer];
+    [self fetchParkahusesFromServer];
 }
 
--(void)fetchTankStationsFromServer{
+-(void)fetchParkahusesFromServer{
     
     __weak typeof(self) weakSelf = self;
     
@@ -131,7 +135,7 @@
 
 -(void)presentParkHausDetailScreenWithModel:(STGeneralParkhausModel*)parkHausModel {
     
-    STNewsAndEventsDetailViewController *detailViewController = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andGeneralParkHausModel:parkHausModel];
+    STDetailViewController *detailViewController = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController" bundle:nil andGeneralParkHausModel:parkHausModel];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

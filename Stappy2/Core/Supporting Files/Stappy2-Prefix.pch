@@ -1,0 +1,13 @@
+//
+//  Stappy2-Prefix.pch
+//  Stappy2
+//
+//  Created by Pavel Nemecek on 10/06/16.
+//  Copyright © 2016 endios GmbH. All rights reserved.
+//
+
+#ifndef Stappy2_Prefix_pch
+#define Stappy2_Prefix_pch
+
+
+#endif /* Stappy2_Prefix_pch */

@@ -13,4 +13,6 @@
 @property(nonatomic,copy)NSString *subtitle;
 @property(nonatomic,assign)NSInteger angebotItemID;
 @property (nonatomic, assign, getter=isFavorite) BOOL favorite;
+@property(nonatomic,copy)NSString *body2;
+
 @end

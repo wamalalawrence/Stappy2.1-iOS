@@ -7,7 +7,9 @@
 //
 
 #import "STMainModel.h"
+#import "OpeningClosingTimesModel.h"
 
 @interface STDetailGenericModel : STMainModel <MTLJSONSerializing>
-
+@property (nonatomic, strong) NSArray<OpeningClosingTimesModel *> *openinghours2;
+@property (nonatomic, assign) BOOL isOffer;
 @end

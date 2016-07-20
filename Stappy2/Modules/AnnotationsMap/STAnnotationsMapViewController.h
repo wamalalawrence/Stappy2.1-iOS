@@ -14,6 +14,6 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property(nonatomic, assign)BOOL ignoreFavoritesButton;
 
-- (instancetype)initWithData:(NSArray<STMainModel *> *)data;
+- (instancetype)initWithData:(NSArray<id> *)data;
 
 @end

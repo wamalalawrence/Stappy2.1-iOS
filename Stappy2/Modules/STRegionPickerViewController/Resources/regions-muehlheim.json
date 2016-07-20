@@ -1,0 +1,9 @@
+{
+    "regions": {
+            "120391":{
+                "id": 120391,
+                "name": "Muhlheim",
+                "weatherStation": "pws:IMHLHEIM27"
+                }
+    }
+}

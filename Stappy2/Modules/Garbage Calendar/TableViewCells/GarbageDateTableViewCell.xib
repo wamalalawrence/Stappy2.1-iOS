@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,27 +16,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-LL-NH9">
-                        <rect key="frame" x="10" y="0.0" width="300" height="43.5"/>
+                        <rect key="frame" x="10" y="0.0" width="300" height="44"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garbage_icon" translatesAutoresizingMaskIntoConstraints="NO" id="t4x-44-ila">
-                                <rect key="frame" x="14" y="8" width="27.5" height="27.5"/>
+                                <rect key="frame" x="14" y="8" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="t4x-44-ila" secondAttribute="height" multiplier="1:1" id="5Qf-OT-1N4"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bld-Qp-9pI">
-                                <rect key="frame" x="67" y="11" width="42" height="21"/>
+                                <rect key="frame" x="68" y="11" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action_options_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-OB-038">
-                                <rect key="frame" x="256" y="0.0" width="44" height="43.5"/>
+                                <rect key="frame" x="256" y="0.0" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="XSr-Hk-Yge"/>
                                     <constraint firstAttribute="width" constant="44" id="zQX-pc-S0v"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-9J-bv0">
+                                <rect key="frame" x="0.0" y="44" width="300" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="oLh-Ld-L4C"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -47,7 +54,10 @@
                             <constraint firstItem="Ckt-OB-038" firstAttribute="top" secondItem="v2Z-LL-NH9" secondAttribute="top" id="SQm-OB-drp"/>
                             <constraint firstItem="Bld-Qp-9pI" firstAttribute="centerY" secondItem="v2Z-LL-NH9" secondAttribute="centerY" id="WYo-G7-FTe"/>
                             <constraint firstAttribute="trailing" secondItem="Ckt-OB-038" secondAttribute="trailing" id="cPT-Bz-EFX"/>
+                            <constraint firstAttribute="trailing" secondItem="ecI-9J-bv0" secondAttribute="trailing" id="d8z-x1-ffC"/>
                             <constraint firstItem="Bld-Qp-9pI" firstAttribute="top" secondItem="v2Z-LL-NH9" secondAttribute="top" constant="11" id="dMs-55-2Ya"/>
+                            <constraint firstAttribute="bottom" secondItem="ecI-9J-bv0" secondAttribute="bottom" constant="-1" id="lqF-42-8qL"/>
+                            <constraint firstItem="ecI-9J-bv0" firstAttribute="leading" secondItem="v2Z-LL-NH9" secondAttribute="leading" id="orH-BG-oOK"/>
                             <constraint firstItem="t4x-44-ila" firstAttribute="top" secondItem="v2Z-LL-NH9" secondAttribute="top" constant="8" id="pUb-xL-Jf2"/>
                             <constraint firstItem="t4x-44-ila" firstAttribute="centerY" secondItem="v2Z-LL-NH9" secondAttribute="centerY" id="w8v-v9-HCM"/>
                         </constraints>
@@ -64,6 +74,7 @@
                 <outlet property="dataView" destination="v2Z-LL-NH9" id="Qdd-3r-TjY"/>
                 <outlet property="garbageImageView" destination="t4x-44-ila" id="bb8-vB-4I6"/>
                 <outlet property="garbageLabel" destination="Bld-Qp-9pI" id="TIa-o8-24G"/>
+                <outlet property="separator" destination="ecI-9J-bv0" id="TnQ-gR-vyw"/>
             </connections>
         </tableViewCell>
     </objects>

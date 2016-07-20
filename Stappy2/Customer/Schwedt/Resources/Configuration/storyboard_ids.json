@@ -147,18 +147,18 @@
                "barStyle": 1
             }
         },
-        {
-            "key": "QR code",
-            "storyboard_id": "qrcodescanner",
-            "nibname":"",
-            "navigationbar":{
-                "barTintColor": "#86bc25",
-               "barTintColor_alpha": 1.0,
-               "tintColor": "#ffffff",
-               "tintColor_alpha": 1.0,
-                "translucent": false,
-                "barStyle": 1
-            } 
-           }
+           {
+        "key": "QR code",
+        "storyboard_id": "qrcodescanner",
+        "nibname":"",
+        "navigationbar":{
+            "barTintColor": "#86bc25",
+           "barTintColor_alpha": 1.0,
+           "tintColor": "#ffffff",
+           "tintColor_alpha": 1.0,
+            "translucent": false,
+            "barStyle": 1
+        } 
+       }
     ]
 }

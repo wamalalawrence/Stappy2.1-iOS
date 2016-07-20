@@ -1,0 +1,204 @@
+{
+    "content":[
+               {
+               "key": "Startseite",
+               "storyboard_id": "",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#ffffff",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": true,
+               "barStyle": 1
+               }
+               },
+               
+               {
+               "key": "Appmold hilft helfen",
+               "storyboard_id": "",
+               "nibname":"STWebViewDetailViewController",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               
+              
+               {
+               "key": "Lokalnews",
+               "storyboard_id": "lokalnews",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Events",
+               "storyboard_id": "events",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Fahrplan",
+               "storyboard_id": "",
+               "nibname":"STFahrplanSearchVC",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               },
+               "__comment_Default-Fahrplan_nibname":"STFahrplanSearchVC",
+               "__comment_Premium-Fahrplan_nibname":"STFahrplanPremiumSearchVC"
+               },
+               {
+               "key": "Stadtinfos",
+               "storyboard_id": "STStadtInfoOverviewViewController",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Mittags in Detmold",
+               "storyboard_id": "mittagsangebote",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Aqualip",
+               "storyboard_id": "STAquaFunViewController",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Besondere Angebote",
+               "storyboard_id": "angebote",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Vereinsnews",
+               "storyboard_id": "vereine",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Ticker",
+               "storyboard_id": "news",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Apotheken",
+               "storyboard_id": "STApothekenViewController",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Wetter",
+               "storyboard_id": "STWeatherViewController",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Zählerstand",
+               "storyboard_id": "zaehler",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "QR-Scanner",
+               "storyboard_id": "qrcodescanner",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#377DB7",
+               "barTintColor_alpha": 1.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               } 
+               }
+               ]
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -28,7 +28,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="jhe-cC-9g7"/>
                                         </constraints>
-                                        <color key="barTintColor" red="0.086274509803921567" green="0.29411764705882354" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="barTintColor" red="0.53333333333333333" green="0.72941176470588232" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                         <textAttributes key="titleTextAttributes">
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </textAttributes>
@@ -74,66 +74,78 @@
                                         <rect key="frame" x="0.0" y="104" width="600" height="476"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zy3-PB-hJZ">
-                                                <rect key="frame" x="10" y="411" width="580" height="60"/>
+                                                <rect key="frame" x="10" y="424" width="580" height="44"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="CIB-IV-h1F"/>
+                                                    <constraint firstAttribute="height" constant="44" id="CIB-IV-h1F"/>
                                                 </constraints>
                                                 <state key="normal" title="Am GutscheinSpezial teilnehmen">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="validateCouponCodeButtonPressed:" destination="SQ7-q0-rK9" eventType="touchUpInside" id="1et-Si-njk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR4-Lm-0Iz">
-                                                <rect key="frame" x="50" y="190" width="500" height="44"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="kSp-GM-BpH">
+                                                <rect key="frame" x="8" y="132" width="584" height="88"/>
+                                                <string key="text">Hinterlegen Sie einmalig Ihre Süwag-Kundennummer und nutzen Sie so alle Gutscheine in der App! Mit dem Süwag-Gutscheinprogramm profitieren Sie von attraktiven Preisrabatten und Einkaufsvorteilen unserer regionalen Partner und in zahlreichen Online-Shops.  Rabattcode in der App aufrufen + vor Ort einlösen/im Online-Shop eingeben = Sparen</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupon_start" translatesAutoresizingMaskIntoConstraints="NO" id="6ML-t0-oDD">
+                                                <rect key="frame" x="250" y="16" width="100" height="100"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="w2j-mf-l2G"/>
+                                                    <constraint firstAttribute="height" constant="100" id="wPi-qA-ffw"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR4-Lm-0Iz">
+                                                <rect key="frame" x="234" y="236" width="133" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="133" id="XlN-qG-6Sw"/>
                                                     <constraint firstAttribute="height" constant="44" id="seg-9x-sh3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Überspringen">
-                                                    <color key="titleColor" red="0.53333333333333333" green="0.72941176470588232" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="skipButtonPressed:" destination="SQ7-q0-rK9" eventType="touchUpInside" id="y8p-Hn-CQ2"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="kSp-GM-BpH">
-                                                <rect key="frame" x="20" y="100" width="560" height="70"/>
-                                                <string key="text">Mit unseren Gutscheine sind Ihnen und Ihrer ganzen Familie attraktive Preis- und Einkaufsvorteile garantiert. Profitieren Sie von interessanten Angeboten der Gutschein-Partner. Tragen Sie für den Registrierungspropozess lediglich Ihre Kundennummer ein - Viel Spaß!</string>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupons" translatesAutoresizingMaskIntoConstraints="NO" id="6ML-t0-oDD">
-                                                <rect key="frame" x="245" y="0.0" width="110" height="110"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="110" id="w2j-mf-l2G"/>
-                                                    <constraint firstAttribute="height" constant="110" id="wPi-qA-ffw"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Zy3-PB-hJZ" secondAttribute="bottom" constant="5" id="DHj-VL-JNU"/>
-                                            <constraint firstItem="yR4-Lm-0Iz" firstAttribute="top" secondItem="kSp-GM-BpH" secondAttribute="bottom" constant="20" id="Esf-r6-Qoh"/>
-                                            <constraint firstItem="yR4-Lm-0Iz" firstAttribute="leading" secondItem="T1P-k2-iQX" secondAttribute="leading" constant="50" id="JNK-TR-jv5"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zy3-PB-hJZ" secondAttribute="bottom" constant="8" id="DHj-VL-JNU"/>
+                                            <constraint firstItem="yR4-Lm-0Iz" firstAttribute="top" secondItem="kSp-GM-BpH" secondAttribute="bottom" constant="16" id="Esf-r6-Qoh"/>
+                                            <constraint firstItem="yR4-Lm-0Iz" firstAttribute="leading" secondItem="T1P-k2-iQX" secondAttribute="leading" constant="234" id="JNK-TR-jv5"/>
                                             <constraint firstItem="Zy3-PB-hJZ" firstAttribute="leading" secondItem="T1P-k2-iQX" secondAttribute="leading" constant="10" id="V5Q-T0-FTG"/>
-                                            <constraint firstAttribute="trailing" secondItem="kSp-GM-BpH" secondAttribute="trailing" constant="20" id="VP5-UQ-SeN"/>
-                                            <constraint firstAttribute="trailing" secondItem="yR4-Lm-0Iz" secondAttribute="trailing" constant="50" id="aQS-Uk-Xnq"/>
+                                            <constraint firstAttribute="trailing" secondItem="kSp-GM-BpH" secondAttribute="trailing" constant="8" id="VP5-UQ-SeN"/>
+                                            <constraint firstAttribute="trailing" secondItem="yR4-Lm-0Iz" secondAttribute="trailing" constant="233" id="aQS-Uk-Xnq"/>
+                                            <constraint firstItem="yR4-Lm-0Iz" firstAttribute="centerX" secondItem="T1P-k2-iQX" secondAttribute="centerX" id="b9x-Zo-Sxd"/>
                                             <constraint firstAttribute="trailing" secondItem="Zy3-PB-hJZ" secondAttribute="trailing" constant="10" id="btp-80-v7z"/>
-                                            <constraint firstItem="kSp-GM-BpH" firstAttribute="top" secondItem="6ML-t0-oDD" secondAttribute="bottom" constant="-10" id="c6H-Fx-Tnp"/>
-                                            <constraint firstItem="6ML-t0-oDD" firstAttribute="top" secondItem="T1P-k2-iQX" secondAttribute="top" id="gMt-L0-5Lw"/>
-                                            <constraint firstItem="kSp-GM-BpH" firstAttribute="leading" secondItem="T1P-k2-iQX" secondAttribute="leading" constant="20" id="i9z-Xv-yeK"/>
+                                            <constraint firstItem="kSp-GM-BpH" firstAttribute="top" secondItem="6ML-t0-oDD" secondAttribute="bottom" constant="16" id="c6H-Fx-Tnp"/>
+                                            <constraint firstItem="6ML-t0-oDD" firstAttribute="top" secondItem="T1P-k2-iQX" secondAttribute="top" constant="16" id="gMt-L0-5Lw"/>
+                                            <constraint firstItem="kSp-GM-BpH" firstAttribute="leading" secondItem="T1P-k2-iQX" secondAttribute="leading" constant="8" id="i9z-Xv-yeK"/>
                                             <constraint firstItem="6ML-t0-oDD" firstAttribute="centerX" secondItem="T1P-k2-iQX" secondAttribute="centerX" id="jXP-Am-bve"/>
                                             <constraint firstItem="Zy3-PB-hJZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yR4-Lm-0Iz" secondAttribute="bottom" id="jo3-BD-Hyo"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="JNK-TR-jv5"/>
+                                                <exclude reference="aQS-Uk-Xnq"/>
+                                                <exclude reference="jo3-BD-Hyo"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,8 +181,11 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="IzY-Q9-xCx" id="oTo-2e-txk"/>
+                        <outlet property="cancelButton" destination="yR4-Lm-0Iz" id="brX-Pt-vfk"/>
                         <outlet property="couponNumberTextField" destination="idX-4v-ylT" id="cpJ-hZ-j8R"/>
+                        <outlet property="couponsBodyLabel" destination="kSp-GM-BpH" id="Wkz-WQ-YBa"/>
                         <outlet property="couponsButton" destination="Zy3-PB-hJZ" id="jqF-Nr-nw8"/>
+                        <outlet property="navBar" destination="anI-1c-MRR" id="UEc-X3-j76"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3o8-jc-F2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,6 +199,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cupons" width="48" height="48"/>
+        <image name="cupon_start" width="80" height="80"/>
     </resources>
 </document>

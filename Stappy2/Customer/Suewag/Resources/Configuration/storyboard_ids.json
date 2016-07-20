@@ -5,10 +5,10 @@
             "storyboard_id": "",
             "nibname":"",
             "navigationbar":{
-                "barTintColor": "#ffffff",
+                "barTintColor": "#00ffffff",
                 "barTintColor_alpha": 0.0,
-                "tintColor": "#ffffff",
-                "tintColor_alpha": 0.0,
+                "tintColor": "#00ffffff",
+                "tintColor_alpha": 1.0,
                 "translucent": true,
                 "barStyle": 0
             } 
@@ -41,7 +41,7 @@
        },
                
                {
-               "key": "Störungsmeldung",
+               "key": "Strassenlaterne defekt?",
                "storyboard_id": "Reporter",
                "nibname":"",
                "navigationbar":{
@@ -108,8 +108,8 @@
                },
                {
             "key": "Wetter",
-            "storyboard_id": "STWeatherViewController",
-            "nibname":"",
+            "storyboard_id": "",
+            "nibname":"STWeatherPageViewController",
             "navigationbar":{
                "barTintColor": "#88BA14",
                "barTintColor_alpha": 0.0,

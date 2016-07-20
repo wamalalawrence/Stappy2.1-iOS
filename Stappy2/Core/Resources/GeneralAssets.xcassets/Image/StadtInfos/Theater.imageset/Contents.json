@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icon_content_events_theater.png",
+      "filename" : "icon_menu_left_stadtinfos_kultur_kino_theater.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon_content_events_theater@2x.png",
+      "filename" : "icon_menu_left_stadtinfos_kultur_kino_theater@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon_content_events_theater@3x.png",
+      "filename" : "icon_menu_left_stadtinfos_kultur_kino_theater@3x.png",
       "scale" : "3x"
     }
   ],

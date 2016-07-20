@@ -23,8 +23,12 @@
 @property (weak, nonatomic) IBOutlet StappyTextField *zahlernulmTextField;
 @property (weak, nonatomic) IBOutlet StappyTextField *indexTextField;
 @property (weak, nonatomic) IBOutlet StappyTextField *lastPositionIndexTextField;
+@property (weak, nonatomic) IBOutlet StappyTextField *zahlernulmTextFieldVue;
+@property (weak, nonatomic) IBOutlet StappyTextField *kundennumerTextField;
+
 @property (weak, nonatomic) IBOutlet UIButton *sendEmailButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *zaehlerNummerTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *vornameTopConstraint;
 
 @property (weak, nonatomic) IBOutlet UILabel *persnalDataLabel;
 @property (retain, nonatomic) NSString * previousSelectedUtiliityTitle;

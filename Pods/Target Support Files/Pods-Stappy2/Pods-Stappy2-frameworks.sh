@@ -85,8 +85,10 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Stappy2/AFNetworking.framework"
+  install_framework "Pods-Stappy2/Bolts.framework"
   install_framework "Pods-Stappy2/DKDBManager.framework"
   install_framework "Pods-Stappy2/DKHelper.framework"
+  install_framework "Pods-Stappy2/FBSDKCoreKit.framework"
   install_framework "Pods-Stappy2/MCDateExtensions.framework"
   install_framework "Pods-Stappy2/MLPAutoCompleteTextField.framework"
   install_framework "Pods-Stappy2/MagicalRecord.framework"
@@ -98,8 +100,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Stappy2/AFNetworking.framework"
+  install_framework "Pods-Stappy2/Bolts.framework"
   install_framework "Pods-Stappy2/DKDBManager.framework"
   install_framework "Pods-Stappy2/DKHelper.framework"
+  install_framework "Pods-Stappy2/FBSDKCoreKit.framework"
   install_framework "Pods-Stappy2/MCDateExtensions.framework"
   install_framework "Pods-Stappy2/MLPAutoCompleteTextField.framework"
   install_framework "Pods-Stappy2/MagicalRecord.framework"

@@ -11,7 +11,7 @@
 #import "STAppSettingsManager.h"
 #import "STRequestsHandler.h"
 #import "NSObject+AssociatedObject.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "UIImage+tintImage.h"
 #import "UIColor+STColor.h"
 #import "STParkingDetailsViewController.h"
@@ -169,7 +169,7 @@
 
 -(void)presentDetailScreenWithData:(STParkHausModel*)detailData {
     
-    UIViewController *vc = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andParkHausModel:detailData];
+    UIViewController *vc = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController" bundle:nil andParkHausModel:detailData];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

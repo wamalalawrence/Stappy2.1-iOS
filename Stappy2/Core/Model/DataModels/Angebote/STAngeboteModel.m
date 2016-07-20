@@ -32,7 +32,8 @@
              @"body":@"body",
              @"type":@"type",
              @"images":@"images",
-             @"background":@"background"
+             @"background":@"background",
+             @"body2":@"body2"
              };
 }
 

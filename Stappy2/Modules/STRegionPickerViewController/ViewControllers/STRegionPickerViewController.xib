@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -12,8 +12,6 @@
                 <outlet property="messageIconImageView" destination="l4R-0i-J9Z" id="xwS-3s-7X5"/>
                 <outlet property="messageLabel" destination="h0P-bm-nhm" id="dbz-Xg-nR8"/>
                 <outlet property="messageView" destination="Bw4-Ne-Oid" id="cAt-6Z-QfC"/>
-                <outlet property="searchButton" destination="oxv-nJ-d6A" id="Ll7-qI-gmN"/>
-                <outlet property="searchButtonBackgroundView" destination="gTI-4S-JsY" id="iC5-LP-XUr"/>
                 <outlet property="selectionScrollView" destination="Bcn-cS-yDA" id="NZS-2C-qno"/>
                 <outlet property="startImageView" destination="Zfg-7p-1mI" id="ri3-b9-3hp"/>
                 <outlet property="startLabel" destination="OfU-Q0-nFw" id="cJ8-dO-qQS"/>
@@ -26,35 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTI-4S-JsY">
-                    <rect key="frame" x="0.0" y="64" width="600" height="60"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxv-nJ-d6A">
-                            <rect key="frame" x="8" y="6" width="584" height="48"/>
-                            <color key="backgroundColor" red="0.25882352939999997" green="0.31372549020000001" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="48" id="87T-qs-nvg"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <state key="normal" title="Landkreis / KFZ Kennzeichen suchen" image="icon_menu_left_suche.png">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="VSm-5w-Jev"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.17254901959999999" green="0.23529411759999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstItem="oxv-nJ-d6A" firstAttribute="top" secondItem="gTI-4S-JsY" secondAttribute="top" constant="6" id="H2h-C7-vm8"/>
-                        <constraint firstAttribute="trailing" secondItem="oxv-nJ-d6A" secondAttribute="trailing" constant="8" id="K0J-cc-tVC"/>
-                        <constraint firstAttribute="height" constant="60" id="NQ7-Qd-R50"/>
-                        <constraint firstItem="oxv-nJ-d6A" firstAttribute="leading" secondItem="gTI-4S-JsY" secondAttribute="leading" constant="8" id="TfL-eb-lEV"/>
-                        <constraint firstAttribute="bottom" secondItem="oxv-nJ-d6A" secondAttribute="bottom" constant="6" id="ehV-yJ-u2e"/>
-                    </constraints>
-                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_content_bg_national_blur.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FoR-eh-OoZ" customClass="RandomImageView">
-                    <rect key="frame" x="0.0" y="124" width="600" height="476"/>
+                    <rect key="frame" x="0.0" y="65" width="600" height="535"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAw-aM-AW3">
@@ -71,9 +42,9 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bw4-Ne-Oid">
-                    <rect key="frame" x="8" y="132" width="584" height="36"/>
+                    <rect key="frame" x="8" y="75" width="584" height="36"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tick_active.png" translatesAutoresizingMaskIntoConstraints="NO" id="l4R-0i-J9Z">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tick_active1.png" translatesAutoresizingMaskIntoConstraints="NO" id="l4R-0i-J9Z">
                             <rect key="frame" x="8" y="0.0" width="36" height="36"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="hOd-O2-rcr"/>
@@ -99,22 +70,22 @@
                     </constraints>
                 </view>
                 <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcn-cS-yDA">
-                    <rect key="frame" x="8" y="176" width="584" height="364"/>
+                    <rect key="frame" x="8" y="119" width="584" height="421"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKe-Xu-JZ0">
-                    <rect key="frame" x="8" y="176" width="584" height="364"/>
+                    <rect key="frame" x="8" y="119" width="584" height="421"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfU-Q0-nFw">
-                            <rect key="frame" x="38" y="128" width="508" height="228"/>
-                            <string key="text">Bestimmen Sie Ihre Region durch Ihren Landkreis oder KFZ-Kennzeichen. Sie erhalten damit bspw. Nachrichten, Informationen oder Gutscheine aus Ihrer Umgebung.</string>
+                            <rect key="frame" x="38" y="185" width="508" height="228"/>
+                            <string key="text">Bestimmen Sie Ihre Region durch Ihren Landkreis. Sie erhalten damit bspw. Nachrichten, Informationen oder Gutscheine aus Ihrer Umgebung.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_content_orten_germany.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-7p-1mI">
-                            <rect key="frame" x="252" y="40" width="80" height="80"/>
+                            <rect key="frame" x="252" y="97" width="80" height="80"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="Kjt-L6-djl"/>
@@ -129,7 +100,7 @@
                         <constraint firstAttribute="bottom" secondItem="OfU-Q0-nFw" secondAttribute="bottom" constant="8" id="W2v-ER-MzR"/>
                         <constraint firstAttribute="trailing" secondItem="OfU-Q0-nFw" secondAttribute="trailing" constant="38" id="adK-uM-ags"/>
                         <constraint firstItem="OfU-Q0-nFw" firstAttribute="top" secondItem="Zfg-7p-1mI" secondAttribute="bottom" constant="8" id="bJC-FE-3HG"/>
-                        <constraint firstItem="Zfg-7p-1mI" firstAttribute="top" secondItem="WKe-Xu-JZ0" secondAttribute="top" constant="40" id="bWh-HJ-U53"/>
+                        <constraint firstItem="Zfg-7p-1mI" firstAttribute="top" secondItem="WKe-Xu-JZ0" secondAttribute="top" constant="97" id="bWh-HJ-U53"/>
                         <constraint firstItem="OfU-Q0-nFw" firstAttribute="top" secondItem="Zfg-7p-1mI" secondAttribute="bottom" constant="8" id="h9x-gN-F3O"/>
                     </constraints>
                 </view>
@@ -138,15 +109,13 @@
             <constraints>
                 <constraint firstItem="FoR-eh-OoZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="07g-6b-3z7"/>
                 <constraint firstItem="Bcn-cS-yDA" firstAttribute="top" secondItem="Bw4-Ne-Oid" secondAttribute="bottom" constant="8" id="1Li-9S-E71"/>
+                <constraint firstItem="Bw4-Ne-Oid" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="21a-Zb-6i8"/>
                 <constraint firstAttribute="trailing" secondItem="GAw-aM-AW3" secondAttribute="trailing" constant="8" id="7hq-oQ-1zh"/>
-                <constraint firstItem="gTI-4S-JsY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="B7q-RH-Jbx"/>
-                <constraint firstItem="gTI-4S-JsY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H3P-Df-ner"/>
+                <constraint firstItem="FoR-eh-OoZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="Eoq-BB-FBA"/>
                 <constraint firstAttribute="bottom" secondItem="FoR-eh-OoZ" secondAttribute="bottom" id="LYF-FQ-SDs"/>
-                <constraint firstAttribute="trailing" secondItem="gTI-4S-JsY" secondAttribute="trailing" id="QQq-ow-BNR"/>
                 <constraint firstItem="GAw-aM-AW3" firstAttribute="top" secondItem="Bcn-cS-yDA" secondAttribute="bottom" constant="8" id="Ugd-Qc-G3u"/>
                 <constraint firstItem="WKe-Xu-JZ0" firstAttribute="top" secondItem="Bw4-Ne-Oid" secondAttribute="bottom" constant="8" id="XEc-IQ-XPc"/>
                 <constraint firstItem="WKe-Xu-JZ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Z43-Xv-WMD"/>
-                <constraint firstItem="FoR-eh-OoZ" firstAttribute="top" secondItem="gTI-4S-JsY" secondAttribute="bottom" id="Z5g-nd-kOQ"/>
                 <constraint firstItem="GAw-aM-AW3" firstAttribute="top" secondItem="WKe-Xu-JZ0" secondAttribute="bottom" constant="8" id="eyr-yW-aeG"/>
                 <constraint firstItem="Bcn-cS-yDA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="hBE-XE-alp"/>
                 <constraint firstItem="GAw-aM-AW3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="i8N-PA-vZF"/>
@@ -155,8 +124,6 @@
                 <constraint firstAttribute="trailing" secondItem="Bw4-Ne-Oid" secondAttribute="trailing" constant="8" id="nJI-Fh-eQo"/>
                 <constraint firstAttribute="trailing" secondItem="WKe-Xu-JZ0" secondAttribute="trailing" constant="8" id="tLM-bV-QTa"/>
                 <constraint firstAttribute="trailing" secondItem="FoR-eh-OoZ" secondAttribute="trailing" id="tgI-oC-7G3"/>
-                <constraint firstItem="Bw4-Ne-Oid" firstAttribute="top" secondItem="gTI-4S-JsY" secondAttribute="bottom" constant="8" id="v1Q-VX-6Dw"/>
-                <constraint firstItem="FoR-eh-OoZ" firstAttribute="top" secondItem="gTI-4S-JsY" secondAttribute="bottom" id="vCX-Hr-qC4"/>
                 <constraint firstAttribute="bottom" secondItem="GAw-aM-AW3" secondAttribute="bottom" constant="8" id="voB-dD-9LF"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -166,8 +133,7 @@
     </objects>
     <resources>
         <image name="icon_content_orten_germany.png" width="80" height="80"/>
-        <image name="icon_menu_left_suche.png" width="48" height="48"/>
-        <image name="icon_tick_active.png" width="36" height="36"/>
+        <image name="icon_tick_active1.png" width="36" height="36"/>
         <image name="image_content_bg_national_blur.jpg" width="320" height="480"/>
     </resources>
 </document>

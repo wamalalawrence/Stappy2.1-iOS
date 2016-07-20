@@ -16,6 +16,9 @@
 #import "RandomImageView.h"
 #import "Stappy2-Swift.h"
 
+#import "STRegionManager.h"
+#import "STRequestsHandler.h"
+
 #define kNavBarTintColor [UIColor colorWithRed:26.0/255.0 green:96.0/255.0 blue:166.0/255.0 alpha:1.0]
 //
 #define kRegPickerJSONIdentifierRegions @"regions"
@@ -30,8 +33,8 @@
 //
 #define kRegPickerMapImage @"map.png"
 #define kRegPickerBackgroundImage @"image_content_bg_national_blur.jpg"
-#define kRegPickerMessageIconSelect @"icon_tick_active.png"
-#define kRegPickerMessageIconDeselect @"icon_tick.png"
+#define kRegPickerMessageIconSelect @"icon_tick_active1.png"
+#define kRegPickerMessageIconDeselect @"icon_tick1.png"
 #define kRegPickerNavBarIconLeft @"back"
 #define kRegPickerNavBarIcon @"icon_content_badge_map_germany.png"
 #define kRegPickerNavBarIconWithBadge @"icon_content_badge_map_germany_cutted.png"
@@ -75,21 +78,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.badgeCounter = 0;
+    
+    if (self.currentState == PickerStateStart) {
+        
+        self.title = @"REGIONEN FESTLEGEN";
+
+    }
+    else{
+        self.title = @"REGIONENFILTER";
+
+    }
+    
     self.haveLocation = NO;
     self.returnedFromSearch = NO;
     self.allRegions = [self loadRegions];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:kRegPickerNavBarIconLeft] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemTapped:)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:kRegPickerNavBarIconLeft] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemTapped:)];
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.hidesBackButton = YES;
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
  }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    
     if (!self.returnedFromSearch) {
         [self adjustInterface];
         [self initializeScrollView];
-    }
+           }
     self.backgroundImageView.needsBlur = YES;
+    
+}
+
+-(void)adjustRegion{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"regionAdjusted" object:nil];
+    
+    NSString *region = [[STRegionManager sharedInstance] currentRegion];
+    
+    NSDictionary*curRegion = nil;
+    
+    for (NSDictionary*dict in self.allRegions) {
+        if ([[dict valueForKey:@"name"] isEqualToString:region]) {
+            curRegion = dict;
+        }
+    }
+    
+    if (curRegion) {
+        NSInteger index = [self.allRegions indexOfObject:curRegion];
+        UIButton*button = [self.selectionScrollView viewWithTag:index];
+        [self regionButtonTapped:button];
+    }
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -97,6 +137,7 @@
     if (!self.returnedFromSearch) {
         self.returnedFromSearch = NO;
         [self addRegionButtonsToMap];
+      
     }
 }
 
@@ -229,7 +270,6 @@
 }
 
 - (void)selectRegionsDone {
-    self.view.userInteractionEnabled = NO;
     NSMutableArray *selectedRegions = [[NSMutableArray alloc] init];
     for (NSDictionary *buttonDict in self.allRegions) {
         UIButton *thisButton = (UIButton*)[buttonDict objectForKey:kRegPickerJSONIdentifierButton];
@@ -239,28 +279,41 @@
         }
     }
 
-    NSError *error;
-    [[Filters sharedInstance] saveFilterWithFilterIds:selectedRegions
-                                  forStringFilterType:@"regionen"
-                                                error:&error];
+    if (selectedRegions.count>0) {
+        self.view.userInteractionEnabled = NO;
 
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    [defaults setObject:[NSArray arrayWithArray:selectedRegions] forKey:@"filter_regionen"];
-    [defaults setBool:YES forKey:@"regionPickerShowed"];
-    
-    //set also the array of background images
-    NSMutableArray *selectedRegionsBackgrounds = [[NSMutableArray alloc] init];
-    for (int i=0; i<selectedRegions.count; i++) {
-        NSString* jsonKey = [NSString stringWithFormat:@"%@",selectedRegions[i]];
-        [selectedRegionsBackgrounds addObject:[[self.regionsDict objectForKey:jsonKey] objectForKey:@"image"]];
+        [[Filters sharedInstance] saveRegionFilterWithFilterIds:selectedRegions forEnumFilterType:FilterTypeRegionen notification:YES];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//         [defaults setObject:[NSArray arrayWithArray:selectedRegions] forKey:@"filter_regionen"];
+        [defaults setBool:YES forKey:@"regionPickerShowed"];
+        
+        //set also the array of background images
+        NSMutableArray *selectedRegionsBackgrounds = [[NSMutableArray alloc] init];
+        for (int i=0; i<selectedRegions.count; i++) {
+            NSString* jsonKey = [NSString stringWithFormat:@"%@",selectedRegions[i]];
+            [selectedRegionsBackgrounds addObject:[[self.regionsDict objectForKey:jsonKey] objectForKey:@"image"]];
+        }
+        
+        [defaults setObject:[NSArray arrayWithArray:selectedRegionsBackgrounds] forKey:kSessionImagesArray];
+        [defaults removeObjectForKey:kSessionImage];
+        [defaults synchronize];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kRegionChagedNotification object:nil];
+        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+            //NOTE: I'm forced to make a request, because I don't know which filters I have to delete/add for the new regions
+
+            [[Filters sharedInstance] resetFilterTypesLoadedFromServer];
+        [[Filters sharedInstance] loadDefaultFilters];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kRegionChagedNotification object:nil];
+            [[[UIAlertView alloc] initWithTitle:nil message:@"Ihre Regionen wurden gespeichert." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+        }];
+
+    }
+    else{
+        [[[UIAlertView alloc] initWithTitle:nil message:@"Bitte wählen Sie mind. eine Region aus." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
     }
     
-    [defaults setObject:[NSArray arrayWithArray:selectedRegionsBackgrounds] forKey:kSessionImagesArray];
-    [defaults removeObjectForKey:kSessionImage];
-    [defaults synchronize];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kRegionChagedNotification object:nil];
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-}
+   }
 
 - (void)regionButtonTapped:(id)sender {
 
@@ -362,15 +415,25 @@
     self.selectionScrollView.maximumZoomScale = 1.0f;
     self.selectionScrollView.zoomScale = kRegPickerDefaultZoomLevel;
     
-    CGRect posRect = CGRectMake((self.selectionScrollView.contentSize.width/2)-(self.selectionScrollView.frame.size.width/2)+200,
-                                (self.selectionScrollView.contentSize.height/2)-(self.selectionScrollView.frame.size.height/2),
+    NSString* defaultRegion = [STRegionManager sharedInstance].currentRegion;
+    NSDictionary* positionRegion = [[STRegionManager sharedInstance] positionForRegion:defaultRegion];
+    
+    
+    CGRect posRect = CGRectMake(([[positionRegion valueForKey:@"xPos"] floatValue] * kRegPickerDefaultZoomLevel) - self.selectionScrollView.frame.size.width /3 ,
+                                ([[positionRegion valueForKey:@"yPos"] floatValue] * kRegPickerDefaultZoomLevel) - self.selectionScrollView.frame.size.height /2,
                                 self.selectionScrollView.frame.size.width,
                                 self.selectionScrollView.frame.size.height);
+    
+//    CGRect posRect = CGRectMake((self.selectionScrollView.contentSize.width/2)-(self.selectionScrollView.frame.size.width/2)+200,
+//                                (self.selectionScrollView.contentSize.height/2)-(self.selectionScrollView.frame.size.height/2),
+//                                self.selectionScrollView.frame.size.width,
+//                                self.selectionScrollView.frame.size.height);
     [self.selectionScrollView scrollRectToVisible:posRect animated:NO];
     
 }
 
 - (void)centerScrollViewContents {
+    
     CGSize boundsSize = self.selectionScrollView.bounds.size;
     CGRect contentsFrame = self.mapImageView.frame;
     
@@ -487,7 +550,15 @@
 
 - (IBAction)actionButtonTapped:(id)sender {
     if (self.currentState == PickerStateStart) {
-        [self initializeLocationManager];
+         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(adjustRegion) name:@"regionAdjusted" object:nil];
+        [[STRegionManager sharedInstance] getRegionFromCurrentUserLocation];
+       
+
+        
+        self.title = @"REGIONENFILTER";
+
+        
+//        [self initializeLocationManager];
         self.currentState = PickerStateSelect;
         self.selectionScrollView.hidden = NO;
         self.startView.hidden = YES;
@@ -497,6 +568,12 @@
     } else if (self.currentState == PickerStateSelect) {
         [self selectRegionsDone];
     }
+    //save in user defaults the state of all regions selected or not
+    BOOL areAllRegionsSelected = NO;
+    if ([self selectedRegionsCount] == self.allRegions.count) {
+        areAllRegionsSelected = YES;
+    }
+    [[NSUserDefaults standardUserDefaults] setBool:areAllRegionsSelected forKey:@"allRegionsSelected"];
 }
 
 #pragma mark - interface
@@ -537,7 +614,6 @@
 }
 
 - (void)adjustInterface {
-    self.title = @"KARTE";
     
     self.navBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.navBarButton.frame = CGRectMake(0, 0, 35, 35);
@@ -604,8 +680,32 @@
 }
 
 -(void)leftBarButtonItemTapped:(id)sender{
+
+    if ([self selectedRegionsCount]>0) {
     [self dismissViewControllerAnimated:YES completion:nil];
+          }
+    else{
+        [[[UIAlertView alloc] initWithTitle:nil message:@"Bitte wählen Sie mind. eine Region aus." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    }
 }
+
+-(NSInteger)selectedRegionsCount{
+
+    NSMutableArray *selectedRegions = [[NSMutableArray alloc] init];
+    for (NSDictionary *buttonDict in self.allRegions) {
+        UIButton *thisButton = (UIButton*)[buttonDict objectForKey:kRegPickerJSONIdentifierButton];
+        if (thisButton.selected) {
+            [selectedRegions addObject:[buttonDict objectForKey:kRegPickerJSONIdentifierID]];
+            NSLog(@"Region %@, ID %i", [buttonDict objectForKey:kRegPickerJSONIdentifierName], [[buttonDict objectForKey:kRegPickerJSONIdentifierID] intValue]);
+        }
+    }
+    
+    return selectedRegions.count;
+
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; }
+
 
 @end
 

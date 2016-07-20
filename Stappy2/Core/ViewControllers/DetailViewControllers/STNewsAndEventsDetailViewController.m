@@ -1,5 +1,5 @@
 //
-//  STNewsAndEventsDetailViewController.m
+//  STDetailViewController.m
 //  Stappy2
 //
 //  Created by Cynthia Codrea on 12/11/2015.
@@ -13,18 +13,19 @@
 #import <DKHelper/UIView+DKHelper.h>
 #import "NSObject+AssociatedObject.h"
 #import "ActionOptionsCollectionViewCell.h"
-#import "STWebViewDetailViewController.h"
 #import "STDetailGenericModel.h"
 #import "STRequestsHandler.h"
 #import "Defines.h"
-#import "STAnnotationsMapViewController.h"
 #import "StLocalDataArchiever.h"
 #import "Utils.h"
 #import "UIImage+tintImage.h"
 #import "UIColor+STColor.h"
-#import "PDFPreviewCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "STAnnotationsMapViewController.h"
 #import "STDetailImageGalleryViewController.h"
+#import "PDFPreviewCollectionViewCell.h"
+#import "STWebViewDetailViewController.h"
+
 #import "RandomImageView.h"
 
 //models
@@ -68,7 +69,7 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
 @implementation STNewsAndEventsDetailViewController
 
 - (instancetype)initWithDataModel:(STMainModel *)dataModel
-{ return [self initWithNibName:@"STNewsAndEventsDetailViewController" bundle:nil andDataModel:dataModel]; }
+{ return [self initWithNibName:@"STDetailViewController" bundle:nil andDataModel:dataModel]; }
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andDataModel:(STMainModel *)dataModel {
     if (self = [super initWithNibName:nibNameOrNil bundle:nil]) {
@@ -694,11 +695,7 @@ typedef NS_ENUM(NSInteger, CollectionViewAnimationDirection) {
     NSString *appName = cityName;
     
     NSString *subject;
-    if ([appName containsString:@"App"]) {
-        subject = [NSString stringWithFormat:@"Gefunden in der %@", appName];
-    } else {
-        subject = [NSString stringWithFormat:@"Gefunden in der App %@", appName];
-    }
+    subject = @"Ein Gutschein für Dich - gefunden in der Süwag-App!";
     
     [activityController setValue:subject forKey:@"subject"];
     [self presentViewController:activityController animated:YES completion:nil];

@@ -171,6 +171,47 @@
                }
                },
                {
+               "key": "Verkehrsmeldungen",
+               "storyboard_id": "XMLFeed",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#009ee0",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
+               "key": "Baustellenmeldungen",
+               "storyboard_id": "XMLFeed",
+               "nibname":"",
+               "navigationbar":{
+               "barTintColor": "#009ee0",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               
+             
+               {
+               "key": "Carsharing",
+               "storyboard_id": "",
+               "nibname":"STWebViewDetailViewController",
+               "navigationbar":{
+               "barTintColor": "#009ee0",
+               "barTintColor_alpha": 0.0,
+               "tintColor": "#ffffff",
+               "tintColor_alpha": 1.0,
+               "translucent": false,
+               "barStyle": 1
+               }
+               },
+               {
                "key": "Apotheken",
                "storyboard_id": "STApothekenViewController",
                "nibname":"",

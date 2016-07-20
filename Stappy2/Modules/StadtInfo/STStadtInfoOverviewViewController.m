@@ -10,13 +10,13 @@
 #import "STStadtInfoTableViewCell.h"
 #import "STRequestsHandler.h"
 #import "STItemDetailsModel.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <CoreLocation/CoreLocation.h>
 #import "STStadtInfoHeader.h"
 #import "STAnnotationsMapViewController.h"
 #import "OpeningClosingTimeModel.h"
-
+#import "Defines.h"
 //helpers
 #import "NSDate+DKHelper.h"
 #import "NSDate+Utils.h"
@@ -24,7 +24,12 @@
 #import "UIColor+STColor.h"
 #import "STAppSettingsManager.h"
 
+#import "STWerbungModel.h"
+#import "STWerbungTableViewCell.h"
+#import "STWebViewDetailViewController.h"
+
 static NSString* kStadtInfoCellIdentifier = @"stadtInfoCell";
+static NSString* kWerbungCellIdentifier = @"werbungCell";
 static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
 
 @interface STStadtInfoOverviewViewController ()
@@ -32,6 +37,9 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
 @property(nonatomic,strong)NSMutableArray* mapLocations;
 @property(nonatomic,assign)BOOL isSortingEnabled;
 @property(nonatomic,assign)BOOL isOpeningTimesEnabled;
+
+@property(nonatomic, strong)NSArray* werbungItems;
+@property(nonatomic, strong)STWerbungModel* werbungItem;
 
 @end
 
@@ -43,6 +51,22 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
         self.title = title;
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(requestData)
+                                                 name:kWerbungMenuNotificationKey object:nil];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kWerbungMenuNotificationKey object:nil];
+    
 }
 
 - (void)viewDidLoad {
@@ -71,6 +95,9 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
     UINib *sectionHeaderNib = [UINib nibWithNibName:@"STStadtInfoHeader" bundle:nil];
     [self.overviewTable registerNib:sectionHeaderNib forHeaderFooterViewReuseIdentifier:kStadtInfoHeaderIdentifier];
     
+    UINib *nibWerbungTableCell = [UINib nibWithNibName:@"STWerbungTableViewCell" bundle:nil];
+    [self.overviewTable registerNib:nibWerbungTableCell forCellReuseIdentifier:kWerbungCellIdentifier];
+    
     [self requestData];
     
     self.overviewTable.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -79,10 +106,15 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
     self.geoffneteButton.layer.borderColor = [UIColor clearColor].CGColor;
     self.leftHeaderButton.layer.borderColor = [UIColor clearColor].CGColor;
 //    [self venAbiZButtonPressed:self.leftHeaderButton];
+    
+    //same hack as on startscreen
+    if (!settings.showCityName || !settings.showStadtInfoFilter) {
+        self.geoffneteButton.hidden = YES;
+    }
 }
 
 -(void)requestData {
-    
+    [self loadWerbungWithType:@"sinfo"];
     //request the data for the overview table
     __weak typeof(self) weakself = self;
     [[STRequestsHandler sharedInstance] allStadtInfoOverviewItemsWithUrl:self.url andCompletion:^(NSArray *overviewItems, NSError *error) {
@@ -91,37 +123,116 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
         strongSelf.backupOverviewItems = overviewItems;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.overviewTable reloadData];
+            if (!((STItemDetailsModel*)(self.overViewItems[0])).latitude) {
+                self.headerMapButton.hidden = YES;
+            }
         });
     }];
 }
 
+-(void)loadWerbungWithType:(NSString*)werbungType {
+    self.werbungItems = [STAppSettingsManager sharedSettingsManager].werbungItems == nil ? @[] : [STAppSettingsManager sharedSettingsManager].werbungItems;
+    NSLog(@"%@", self.title);
+    for (STWerbungModel * item in self.werbungItems) {
+        if ([item.type isEqualToString:werbungType]) {
+            self.werbungItem = [[STWerbungModel alloc] init];
+            self.werbungItem = item;
+        }
+    }
+    
+    if (self.werbungItem) {
+        
+        UIButton*bannerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        bannerButton.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 102);
+        bannerButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [bannerButton addTarget:self action:@selector(bannerTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIImageView*bannerImageView = [[UIImageView alloc] init];
+        bannerImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        
+        NSString* webUrl = nil;
+        if ([self.werbungItem.image hasPrefix:@"/"]) {
+            webUrl = [[STAppSettingsManager sharedSettingsManager].baseUrl stringByAppendingString:self.werbungItem.image];
+        }
+        [bannerImageView sd_setImageWithURL:[NSURL URLWithString:webUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            if (image) {
+                float ratio =image.size.width/image.size.height;
+                bannerImageView.image = image;
+                bannerImageView.frame = CGRectMake(8.0, 8.0, CGRectGetWidth(self.view.frame)-16.0, (CGRectGetWidth(self.view.frame)-16.0)/ratio);
+                bannerButton.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(bannerImageView.frame)+16.0);
+                [bannerButton addSubview:bannerImageView];
+                self.overviewTable.tableHeaderView = bannerButton;
+                
+            }
+            else{
+                self.overviewTable.tableHeaderView = nil;
+            }
+            
+        }];
+        
+    }
+    else{
+        self.overviewTable.tableHeaderView = nil;
+    }
+    
+}
+
+-(void)bannerTapped:(id)sender{
+    STWebViewDetailViewController *webPage = [[STWebViewDetailViewController alloc] initWithNibName:@"STWebViewDetailViewController" bundle:nil andDetailUrl:self.werbungItem.url];
+    [self.navigationController pushViewController:webPage animated:YES];
+}
+
 #pragma mark - Table View data source
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+     
+    return 115.f;
+}
+
+
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.overViewItems count];
+   
+    NSInteger count = [self.overViewItems count];
+    
+    return count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  
+     NSInteger rowIndex = indexPath.row;
+ 
+    
     STStadtInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kStadtInfoCellIdentifier];
-    STItemDetailsModel *model = ((STItemDetailsModel*)(self.overViewItems[indexPath.row]));
+    STItemDetailsModel *model = ((STItemDetailsModel*)(self.overViewItems[rowIndex]));
     
     //calculate distance from location
     CLLocation *current = [[CLLocation alloc] initWithLatitude:self.locationManager.location.coordinate.latitude longitude:self.locationManager.location.coordinate.longitude];
 
     CLLocation *itemLoc = [[CLLocation alloc] initWithLatitude:[model.latitude doubleValue] longitude:[model.longitude doubleValue]];
 
-    //get distance from current position in km
-    CLLocationDistance itemDist = [itemLoc distanceFromLocation:current] / 1000.0;
-    NSString *distanceString = [[NSString alloc] initWithFormat: @"%.01f km", itemDist];
-    cell.distance.text = [distanceString stringByReplacingOccurrencesOfString:@"." withString:@","];
+    //get distance from current position in km if data is provided
+    if (model.latitude && model.longitude) {
+        CLLocationDistance itemDist = [itemLoc distanceFromLocation:current] / 1000.0;
+        NSString *distanceString = [[NSString alloc] initWithFormat: @"%.01f km", itemDist];
+        cell.distance.text = [distanceString stringByReplacingOccurrencesOfString:@"." withString:@","];
+    }
+    else {
+        
+        ((STStadtInfoHeader*)[tableView headerViewForSection:indexPath.section]).mapButton.hidden = YES;
+        cell.distancePinImage.hidden = YES;
+    }
+    
+    cell.closingOpeningIcon.image = nil;
+
     
     //calculate remaining opening time
-    if (model.openinghours2 != nil) {
+    if (model.openinghours2 != nil && ![OpeningClosingTimesModel isEmpty:model.openinghours2]) {
         //get day of the week
         NSInteger day = [[NSDate date] dayOfTheWeek];
         OpeningClosingTimesModel* closingTimes = (OpeningClosingTimesModel*)(model.openinghours2[0]);
@@ -142,9 +253,12 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
         model.isOpen = isOpened;
         
         if (isOpened) {
-            UIImage* openingImage = [[UIImage imageNamed:@"OpeningIcon"] imageTintedWithColor:[UIColor partnerColor]];
+            STAppSettingsManager *settings = [STAppSettingsManager sharedSettingsManager];
+            UIColor *datetimeColor = [settings customColorForKey:@"news.collection_view_cell.datetime.color"];
+
+            UIImage* openingImage = [[UIImage imageNamed:@"OpeningIcon"] imageTintedWithColor:datetimeColor];
             cell.closingOpeningIcon.image = openingImage;
-            cell.openingTime.textColor = [UIColor partnerColor];
+            cell.openingTime.textColor = datetimeColor;
         } else {
             cell.closingOpeningIcon.image = [UIImage imageNamed:@"ClosingIcon"];
             cell.openingTime.text = @"Geschlossen";
@@ -156,8 +270,10 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
          * we reload the tableView after reordering, but the data in the cell won't be reseted
          * so the cell will contain the data, from the previous model, what is no good
          */
-        cell.closingOpeningIcon = nil;
+        cell.closingOpeningIcon.image = nil;
         cell.openingTime.text = @"";
+        model.isOpen = NO;
+
     }
     
     cell.title.text = model.title;
@@ -180,9 +296,11 @@ static NSString* kStadtInfoHeaderIdentifier = @"stadtInfoHeader";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSInteger rowIndex = indexPath.row;
+     
     //show details of the selected item
-    STMainModel* mainModel = (STMainModel*)(self.overViewItems[indexPath.row]);
-    STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController"
+    STMainModel* mainModel = (STMainModel*)(self.overViewItems[rowIndex]);
+    STDetailViewController * detailView = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController"
                                                                                                              bundle:nil
                                                                                                        andDataModel:mainModel];
     detailView.ignoreFavoritesButton = self.ignoreFavoritesButton;

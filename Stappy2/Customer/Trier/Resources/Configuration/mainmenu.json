@@ -3,14 +3,19 @@
     "shouldShowAddressAndNameFields":"NO",
     "shouldDisplayRegionPicker":"NO",
         "backend": {
-        "parkingMap":{"85595":"Vieh","84331":"City","84332":"Hauptm","84333":"Basi","84335" :"Kons","84334" :"Euro","84325":"Osta"},
+        "parkingMap":{"85595":"Vieh","84331":"City","84332":"Hauptm","84333":"Basi","84335" :"Kons","84334" :"Euro","84325":"Osta","86014":"Kauf"},
         "settingsUrlString" : "https://data3.stappy.de/data/de.endios.stappy.trier/options-v2",
         "baseUrl": "https://data3.stappy.de",
         "basePartnerUrl": "https://data3.stappy.de",
         "zahlerstandEmail":"info@stadtwerke-soest.de",
         "rightMenuItemsUrl": "/sinfo?id=77799",
         "rightMenuTitle": "Meine Stadtwerke",
+        "googleApiKey": "AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
         "rightMenuItemsId":77799,
+             "shouldUseFacebook":"YES",
+            "googleMapsAPI": {
+                "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+        },
         "leftMenuUrl": "side-menu.",
         "rightMenuHeaderImage": "rightHeader",
         "rightMenuBackgroundColor":"",
@@ -90,12 +95,17 @@
             }
         },
         "weather": {
-            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/trier.json",
-            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/trier.json",
+            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/",
+            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/",
         },
         "parkHaus": {
             "url":"http://parkinghq.com/services/v2/pois?access_key=WZBG_CITY&locale=de"
         }
+    },
+    "favoriteOtherNamings": {
+        "events":"Events",
+        "stadtinfos":"Meine Stadt",
+        "angebote":"Angebote"
     },
     "startScreenBottomActions": {
         "STWeatherViewController":"Wetter",
@@ -108,9 +118,6 @@
          "karte":"ParkMap",
          "qrscanner_icon":"QR-Scanner"
     },
-    
-   
-    
     "startScreenIgnoredItems": [
                                  "parkhaeuser"
                                 ],
@@ -119,16 +126,20 @@
         "news":"Ticker",
         "lokalnews":"Lokales",
         "vereine":"Vereinsticker"
-        
+    },
+    "startScreenOtherIcons":{
+        "vereine":"Vereine"
     },
     "cityLocation": {
         "latitude": 49.7720,
         "longitude": 6.6180
     },
+    "defaultRegion": "Trier",
     "default_ids": {
-        "news": [79363]
+        "news": [79363],
+        "lokalnews":[102227,108445]
     },
-    "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events", "lokalnews"],
+    "allIdsAreOnPerDefaultInViewControllers": ["angebote", "vereinsnews", "events", "lokalnews", "regionen"],
     "overlayScreens": {
         "stackOpticTutorial": {
             "viewControllers": ["STTickerViewController", "STLokalNewsViewController", "STAngeboteViewController", "STEventsViewController"],
@@ -149,31 +160,31 @@
     },
     "detail_sharing_options": {
         "email": {
-            "SEL": "didClickEmail",
+            "SEL": "emailButtonTapped:",
             "icon": "action_options_mail"
         },
         "phone": {
-            "SEL": "didClickPhone",
+            "SEL": "phoneButtonTapped:",
             "icon": "action_options_phone"
         },
         "contactUrl": {
-            "SEL": "didClickWebsite",
+            "SEL": "websiteButtonTapped:",
             "icon": "action_options_web"
         },
         "latitude": {
-            "SEL": "didClickShowOnMap",
+            "SEL": "mapButtonTapped:",
             "icon": "action_options_map"
         },
         "share": {
-            "SEL": "didClickShare",
+            "SEL": "shareButtonTapped:",
             "icon": "action_options_share"
         },
         "endDate": {
-            "SEL": "didClickCalendar",
+            "SEL": "calendarButtonTapped:",
             "icon": "action_options_calendar"
         },
         "favorite":{
-            "SEL":"didClickFavorites:",
+            "SEL":"favoriteButtonTapped:",
             "icon": {
                 "on": "action_options_favoriten",
                 "off": "action_options_favoriten_inactive"
@@ -184,7 +195,8 @@
         "partner_color": "#009ee0",
         "texts_color": "#ffffff",
         "secondary_color":"#009ee0",
-      
+        "startScreenIconColor": "#009ee0",
+
         "overlayScreen": {
             "button": {
                 "font": {
@@ -426,6 +438,28 @@
         
         "annotationsmap": {
             
+        },
+        
+        "xmlfeed":{
+            "datetime": {
+                "font": {
+                    "name": "PTSans-Regular",
+                    "size": "15"
+                }
+              
+            },
+            "title":{
+                "font": {
+                    "name": "Bitter-Italic",
+                    "size": "18"
+                }
+            },
+            "description":{
+                "font": {
+                    "name": "PTSans-Regular",
+                    "size": "15"
+                }
+            }
         },
         
         "news": {
@@ -704,6 +738,7 @@
         }
     },
     "menu_left": [
+                
       {
       "caption": "Startseite",
       "icon_name": "Startseite",
@@ -711,6 +746,7 @@
       "type_api": "start",
       "url": "/start",
       },
+                 
                   {
                   "caption": "Ticker",
                   "icon_name": "ticker",
@@ -758,6 +794,8 @@
                                "caption": "Carsharing",
                                "icon_name": "carsharing",
                                "type": "website",
+                               "item_type": "website",
+                               
                                "type_api": "carsharing",
                                "url": "https://mobil.stadtmobil.de/",
                                "sub_items":[]
@@ -771,8 +809,28 @@
                                "url": "",
                                "sub_items":[]
                                
+                               },
+                               {
+                               "id":"verkehr",
+                               "caption": "Verkehrsmeldungen",
+                               "icon_name": "verkehr",
+                               "type": "xmlfeed",
+                               "type_api": "verkehr",
+                               "url": "http://www.swt.de/swt_verkehrsmeldungen.rss",
+                               "sub_items":[]
+                               
                                }
-                              
+                               ,
+                               {
+                               "id":"baumassnahmen",
+                               "caption": "Baustellenmeldungen",
+                               "icon_name": "baumassnahmen",
+                               "type": "xmlfeed",
+                               "type_api": "baumassnahmen",
+                               "url": "http://www.swt.de/baumassnahmen.rss",
+                               "sub_items":[]
+                               
+                               }
                                ]
                   
                   },
@@ -815,8 +873,8 @@
                   },
                   {
                   "caption": "Vereinsticker",
-                  "icon_name": "vereine",
-                  "type": "vereine",
+                  "icon_name": "Vereine",
+                  "type": "vereinsnews",
                   "type_api": "sports",
                   "url": "/vereinsnews",
                   },
@@ -828,20 +886,20 @@
       "type_api": "sports",
       "url": "/angebote",
       },
-                  {
-                  "caption": "Apotheken",
-                  "icon_name": "Apotheken",
-                  "type": "apotheken_overview",
-                  "type_api": "apotheken_notdienst",
-                  "url": "/apotheken",
-                  "backend": {
-                  "apoUrl": "https://apo.stappy.de/Data/apo_open"
-                  },
-                  "defaultLocation": {
-                  "latitude": 49.7720,
-                  "longitude": 6.6180
-                  }
-                  },
+      {
+      "caption": "Apotheken",
+      "icon_name": "Apotheken",
+      "type": "apotheken_overview",
+      "type_api": "apotheken_notdienst",
+      "url": "/apotheken",
+      "backend": {
+      "apoUrl": "https://apo.stappy.de/Data/apo_open"
+      },
+      "defaultLocation": {
+      "latitude": 49.7720,
+      "longitude": 6.6180
+      }
+      },
     
                 
            
@@ -851,6 +909,13 @@
     "type": "wetter_overview",
     "type_api": "",
     },
+                  {
+                  "caption": "Meine Stadtwerke",
+                  "icon_name": "icon_menu_right_ihr_stadtwerk",
+                  "type": "menu_toggle",
+                  "type_api": "angebote",
+                  "url": "/events"
+                  },
                   
     {
     "caption": "QR-Scanner",

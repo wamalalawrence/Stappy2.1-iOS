@@ -59,7 +59,7 @@
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
     [style setLineBreakMode:NSLineBreakByWordWrapping];
     [style setLineSpacing:spacing];
-    
+     style.hyphenationFactor = 1.0f;
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
     [attributedString addAttribute:NSParagraphStyleAttributeName
                              value:style
@@ -73,7 +73,8 @@
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
     [style setLineBreakMode:linebreakMode];
     [style setLineSpacing:spacing];
-    
+    style.hyphenationFactor = 1.0f;
+
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
     [attributedString addAttribute:NSParagraphStyleAttributeName
                              value:style
@@ -83,7 +84,8 @@
 }
 
 + (NSString *)replaceSpecialCharactersFrom:(NSString*)text {
-    return [[[[[[[[[[[[text stringByReplacingOccurrencesOfString:@"ö" withString:@"oe"]
+    return [[[[[[[[[[[[[[text stringByReplacingOccurrencesOfString:@"ö" withString:@"oe"]
+                      stringByReplacingOccurrencesOfString:@"Ö" withString:@"Oe"]
                    stringByReplacingOccurrencesOfString:@"ü" withString:@"ue"]
                    stringByReplacingOccurrencesOfString:@"Ü" withString:@"Ue"]
                   stringByReplacingOccurrencesOfString:@"ä" withString:@"ae"]
@@ -94,6 +96,7 @@
                stringByReplacingOccurrencesOfString:@" " withString:@""]
               stringByReplacingOccurrencesOfString:@"é" withString:@"e"]
              stringByReplacingOccurrencesOfString:@"," withString:@""]
+            stringByReplacingOccurrencesOfString:@"/" withString:@""]
             stringByReplacingOccurrencesOfString:@"-" withString:@""];
     
 }
@@ -167,7 +170,9 @@
         }
     }
     if (viewControllerItem) {
-        newViewController.title = title;
+        if (![title isEqualToString:@"Strassenlaterne defekt?"]) {
+            newViewController.title = title;
+        }
     }
     return newViewController;
 }

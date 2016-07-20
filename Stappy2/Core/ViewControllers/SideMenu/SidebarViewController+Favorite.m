@@ -16,7 +16,7 @@
 #import "STMainModel.h"
 #import "STLeftSideSubSettingsModel.h"
 #import "SettingsSelectionsTableViewCell.h"
-#import "STNewsAndEventsDetailViewController.h"
+#import "STDetailViewController.h"
 #import "STEventsModel.h"
 #import "STAngeboteModel.h"
 #import "STAppSettingsManager.h"
@@ -44,6 +44,19 @@
     // Set the events menu array
     NSMutableArray *mutableFavMenu = [NSMutableArray array];
 
+    NSDictionary*namingsDictionary = [STAppSettingsManager sharedSettingsManager].favoriteNamingsDictionary;
+    
+    NSString*events = @"Events";
+    NSString*stadtinfos = @"Stadtinfos";
+    NSString*angebote = @"Angebote";
+
+    if (namingsDictionary) {
+        events = [namingsDictionary valueForKey:@"events"];
+        stadtinfos = [namingsDictionary valueForKey:@"stadtinfos"];
+        angebote = [namingsDictionary valueForKey:@"angebote"];
+
+    }
+    
     // Add the close button for the first cell.
     STLeftMenuSettingsModel *closeFavorites = [[STLeftMenuSettingsModel alloc] init];
     closeFavorites.title = @"Close";
@@ -56,17 +69,17 @@
     [mutableFavMenu addObject:favorites];
     
     STLeftMenuSettingsModel *favoriteAngebote = [[STLeftMenuSettingsModel alloc] init];
-    favoriteAngebote.title = @"Angebote";
+    favoriteAngebote.title = angebote;
     favoriteAngebote.iconName = @"angebote";
     [mutableFavMenu addObject:favoriteAngebote];
     
     STLeftMenuSettingsModel *favoriteEvents = [[STLeftMenuSettingsModel alloc] init];
-    favoriteEvents.title = @"Events";
+    favoriteEvents.title = events;
     favoriteEvents.iconName = @"events";
     [mutableFavMenu addObject:favoriteEvents];
     
     STLeftMenuSettingsModel *favoriteStadtInfos = [[STLeftMenuSettingsModel alloc] init];
-    favoriteStadtInfos.title = @"StadtInfos";
+    favoriteStadtInfos.title = stadtinfos;
     favoriteStadtInfos.iconName = @"stadt";
     [mutableFavMenu addObject:favoriteStadtInfos];
     
@@ -96,7 +109,7 @@
             if (![mainModel isKindOfClass:[STMainModel class]]) {
                 return;
             }
-            STNewsAndEventsDetailViewController * detailView = [[STNewsAndEventsDetailViewController alloc] initWithNibName:@"STNewsAndEventsDetailViewController"
+            STDetailViewController * detailView = [[STDetailViewController alloc] initWithNibName:@"STDetailViewController"
                                                                                                                      bundle:nil
                                                                                                                andDataModel:mainModel];
             NSDictionary *viewControllerItems = [[STAppSettingsManager sharedSettingsManager] viewControllerItems];

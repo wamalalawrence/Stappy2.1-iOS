@@ -21,6 +21,7 @@
 @property(nonatomic, assign)float defaultLongitude;
 @property(nonatomic,assign, getter=areAllSubitemsSeleted)BOOL allSubitemsSelected;
 @property(nonatomic, strong)NSString *modelId;
+@property (nonatomic, strong) NSArray * children;
 
 -(id)initWithDictionary:(NSDictionary*)dict;
 

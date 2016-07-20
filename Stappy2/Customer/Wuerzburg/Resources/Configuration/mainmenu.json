@@ -1,15 +1,24 @@
 {
     "__comment": "Schwedt configuration file",
+    "showStadtInfoFilter":"NO",
+    "shouldShowBlur":"NO",
+    "shouldShowKundennumer": 1,
     "backend": {
         "first_page_title": "Würzburg",
         "settingsUrlString" : "https://data2.stappy.de/data/de.endios.meinfrankenapp.wuerzburg/options-v2",
         "baseUrl": "https://data2.stappy.de",
         "basePartnerUrl": "https://data2.stappy.de",
         "zahlerstandEmail":"kontakt@wvv.de",
+          "googleApiKey": "AIzaSyAI2Rkwie3_YUhjl7jA3LJXevoC7jTGHRI",
         "userName":"wzbg_city",
         "password":"wzbg01",
         "rightMenuItemsId":4939,
+        "rightMenuTitle":"Meine WVV",
         "leftMenuUrl": "side-menu.",
+        "googleMapsAPI": {
+            "api_url":"https://maps.googleapis.com/maps/api/geocode/json"
+        },
+       
         "fahrplan": {
             "api_url":"http://endios.hafas.de/openapi",
             "access_id":"2e0394f3-573e-4f03-86e3-f2fb8dcc23ad",
@@ -87,8 +96,8 @@
             }
         },
         "weather": {
-            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/Wurzburg.json",
-            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/Wurzburg.json",
+            "conditionsData": "https://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/lang:DL/q/IA/",
+            "conditionsAndForecastData": "http://api.wunderground.com/api/a6f60e2e9f8bfe73/conditions/forecast/forecast10day/hourly/lang:DL/q/IA/",
         },
         "parkHaus": {
             "url":"http://parkinghq.com/services/v2/pois?access_key=WZBG_CITY&locale=de"
@@ -100,15 +109,16 @@
         "StadtInfo":"Stadtinfos"
     },
     "startScreenScrollActions": {
-         "angebote":"angebote",
-         "events":"events",
-         "ticker":"news",
-         "Apotheken":"STApothekenViewController"
+        "Apotheken":"Apotheken",
+         "abfallkalender":"Abfallkalender",
+        "baeder":"Bäder",
+        "parkhaeuser":"STParkhausWViewController",
     },
     "startScreenIgnoredItems": [
     "vereine",
     "parkhaeuser",
-    "baeder"
+    "baeder",
+    "stadt"
     ],
     "startScreenOtherNamings": {
         "oepnv":"Fahrplan",
@@ -118,10 +128,12 @@
         "latitude": 49.794,
         "longitude": 9.929
     },
+    "defaultRegion": "Wurzburg",
+
     "default_ids": {
         "news": [957]
     },
-    "allIdsAreOnPerDefaultInViewControllers": ["angebote", "events", "lokalnews"],
+    "allIdsAreOnPerDefaultInViewControllers": ["angebote", "events", "lokalnews","regionen"],
     "overlayScreens": {
         "stackOpticTutorial": {
             "viewControllers": ["STTickerViewController", "STLokalNewsViewController", "STAngeboteViewController", "STEventsViewController"],
@@ -138,31 +150,31 @@
     },
     "detail_sharing_options": {
         "email": {
-            "SEL": "didClickEmail",
+            "SEL": "emailButtonTapped:",
             "icon": "action_options_mail"
         },
         "phone": {
-            "SEL": "didClickPhone",
+            "SEL": "phoneButtonTapped:",
             "icon": "action_options_phone"
         },
         "contactUrl": {
-            "SEL": "didClickWebsite",
+            "SEL": "websiteButtonTapped:",
             "icon": "action_options_web"
         },
         "latitude": {
-            "SEL": "didClickShowOnMap",
+            "SEL": "mapButtonTapped:",
             "icon": "action_options_map"
         },
         "share": {
-            "SEL": "didClickShare",
+            "SEL": "shareButtonTapped:",
             "icon": "action_options_share"
         },
         "endDate": {
-            "SEL": "didClickCalendar",
+            "SEL": "calendarButtonTapped:",
             "icon": "action_options_calendar"
         },
         "favorite":{
-            "SEL":"didClickFavorites:",
+            "SEL":"favoriteButtonTapped:",
             "icon": {
                 "on": "action_options_favoriten",
                 "off": "action_options_favoriten_inactive"
@@ -173,12 +185,33 @@
         "partner_color": "#d50041",
         "texts_color": "#FFFFFF",
         "secondary_color":"#d50041",
-        
+        "startScreenIconColor": "#d50041",
+
         "overlayScreen": {
             "button": {
                 "font": {
                     "name": "KievitOffc",
                     "size": "20"
+                }
+            }
+        },
+        "openingHours": {
+            "cellLabelTop": {
+                "font": {
+                    "name": "KievitOffc",
+                    "size": "12"
+                }
+            },
+            "cellLabel": {
+                "font": {
+                    "name": "KievitOffc",
+                    "size": "12"
+                }
+            },
+            "titleLabel": {
+                "font": {
+                    "name": "KievitSlabOffc",
+                    "size": "16"
                 }
             }
         },
@@ -396,6 +429,33 @@
         
         "annotationsmap": {
             
+        },
+        
+        "xmlfeed":{
+            "datetime": {
+                "font": {
+                    "name": "KievitOffc",
+                    "size": "12"
+                }
+                ,
+                "color":{
+                    "value":"#e3001b",
+                    "alpha":1.0
+                }
+                
+            },
+            "title":{
+                "font": {
+                    "name": "KievitSlabOffc",
+                    "size": "18"
+                }
+            },
+            "description":{
+                "font": {
+                    "name": "KievitSlabOffc",
+                    "size": "16"
+                }
+            }
         },
         
         "news": {
@@ -731,9 +791,14 @@
                 "font": {
                     "name": "KievitOffc",
                     "size": "18"
-                },
+                }
             }
         }
+    },
+    "favoriteOtherNamings": {
+        "events":"Events",
+        "stadtinfos":"Stadtinfos",
+        "angebote":"Angebote"
     },
     "menu_left": [
       {
@@ -744,6 +809,13 @@
       "url": "/start",
       },
       {
+      "caption": "Meine WVV",
+      "icon_name": "right_menu_open",
+      "type": "menu_toggle",
+      "type_api": "angebote",
+      "url": "/events"
+      },
+                  {
       "caption": "Lokalnews",
       "icon_name": "lokalnews",
       "type": "lokalnews",
@@ -757,22 +829,39 @@
       "type_api": "event",
       "url": "/events",
       },
-      {
+                  {
       "caption": "Fahrplan",
       "icon_name": "fahrplan_icon",
       "type": "oepnv_overview",
       "type_api": "sinfo_kat",
       "url": "/xinfo/fahrplan",
-      "api": {
-      "bahnauskunftBaseUrl": "http://1-dot-bahn-api-backend.appspot.com/rest",
-      "busRealTimeDepartureTimeUrl": "https://www.svg-busreisen.de/_inc/rest.php",
-      "authorizationHttpHeaderForRealTimeBussesDepartureTime": {
-      "SVG-REST-KEY": "41vTj8ZvSIY1gpCys5gQWPahDWmb57yi"
-      }
-      }
-      },
-      {
-      "caption": "Mittags in Würzburg",
+      
+                  "sub_items":[
+                               {
+                               "caption": "Auskunft",
+                               "icon_name": "fahrplan_icon",
+                               "type": "oepnv_overview",
+                               "type_api": "sinfo_kat",
+                               "url": "/xinfo/fahrplan",
+                               "api": {
+                               "bahnauskunftBaseUrl": "http://1-dot-bahn-api-backend.appspot.com/rest",
+                               "busRealTimeDepartureTimeUrl": "https://www.svg-busreisen.de/_inc/rest.php",
+                               "authorizationHttpHeaderForRealTimeBussesDepartureTime": {
+                               "SVG-REST-KEY": "41vTj8ZvSIY1gpCys5gQWPahDWmb57yi"
+                               }                               }
+                               },
+                               {
+                               "id":"tank",
+                               "caption": "Störungsmeldungen",
+                               "icon_name": "fahrplan_icon",
+                               "type": "tank",
+                               "type_api": "tank",
+                               "url": ""
+                               }]
+                               },
+                               
+            {
+                               "caption": "Mittags in Würzburg",
       "icon_name": "mittagsangebote",
       "type": "mittagsangebote",
       "type_api": "angebote",
@@ -808,22 +897,21 @@
       "type": "GarbageCalendarSettingsViewController",
       "type_api": "",
       },
-                  {
+      {
       "caption": "Bäder",
       "icon_name": "baeder",
       "type": "baeder",
       "type_api": "baeder",
       "url": "/sinfo?id=5153",
-                  
       },
-                  {
+      {
       "caption": "Angebote",
       "icon_name": "angebote",
       "type": "angebote",
       "type_api": "sports",
       "url": "/angebote",
       },
-    {
+      {
       "caption": "Apotheken",
       "icon_name": "Apotheken",
       "type": "apotheken_overview",

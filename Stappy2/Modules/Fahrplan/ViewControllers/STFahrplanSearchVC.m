@@ -192,7 +192,7 @@
     
     if (!self.journeyService.originAddress || [self.journeyService.originAddress.locationName  isEqualToString:@""]) {
         UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"Info"
-                                                         message:@"Bitte Start-Addresse eintragen."
+                                                         message:@"Bitte Startadresse eingeben."
                                                         delegate:self
                                                cancelButtonTitle:nil
                                                otherButtonTitles: nil];
