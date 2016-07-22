@@ -6,26 +6,16 @@ sudo gem install fastlane
 ```
 # Available Actions
 ## iOS
-### ios alpha_test
+### ios default_changelog
 ```
-fastlane ios alpha_test
+fastlane ios default_changelog
 ```
-Responsible for building and signing the app
-### ios beta_hockeyapp
+Returns a default changelog.
+### ios dev
 ```
-fastlane ios beta_hockeyapp
+fastlane ios dev
 ```
-
-### ios release_hockeyapp
-```
-fastlane ios release_hockeyapp
-```
-
-### ios release_appstore
-```
-fastlane ios release_appstore
-```
-
+compiles, code signs, and buildsthe app, this option is the developer's defualt choice to build normally
 
 ----
 

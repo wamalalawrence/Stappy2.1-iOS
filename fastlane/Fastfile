@@ -11,7 +11,7 @@ platform :ios do
 	before_all do
 
 	  # If the GIT status is not clean, abort. We won't want to include junk in the build
-	  # ensure_git_status_clean
+	  ensure_git_status_clean
 
 	end
 
@@ -40,7 +40,7 @@ platform :ios do
 
 	  # Remove all build artifacts, but keep mobileprovisioning profiles since they are stored in GIT
 	  #clean_build_artifacts(
-	  # exclude_pattern: ".*\.mobileprovision"
+	   # exclude_pattern: ".*\.mobileprovision"
 	  #)
 
 	  # Reset all changes to the git checkout
@@ -64,18 +64,23 @@ platform :ios do
 	  end
 
 	  # Update the app name
-	  app_name(
-	    #plist_path: "#{options[:project_name]}/Info.plist",
-	     plist_path: "Stappy2UITests/Info.plist",
-	    app_name: options[:app_name]
-	  )
+	  #app_name(
+	  #	app_name: options[:app_name],
+	  # plist_path: "#{options[:project_name]}/Customer/#{options[:app_name]}/Supporting Files/#{options[:app_name]}.plist"
+	  #)
 
 	  # Update the app identifier
 	  #update_app_identifier(
-	   # xcodeproj: "#{options[:project_name]}.xcodeproj",
-	    #plist_path: "#{options[:project_name]}/Info.plist",
+	    # xcodeproj: "#{options[:project_name]}.xcodeproj",
+	   # plist_path: "#{options[:project_name]}/Customer/#{options[:app_name]}/Supporting Files/#{options[:app_name]}.plist",
 	    #app_identifier: options[:app_identifier]
 	  #)
+
+	  # Version bump
+	  increment_build_number(
+	    build_number: options[:build_number]
+	    # set_info_plist_value(path: "#{options[:project_name]}/Customer/#{options[:app_name]}/Supporting Files/#{options[:app_name]}.plist", key: "CFBundleVersion", value: "#{build_version}")
+	  )
 
 	  # Install the certificate
 	  import_certificate(
@@ -86,18 +91,13 @@ platform :ios do
 
 	  # Install the provisioning profile
 	  update_project_provisioning(
-	    xcodeproj: "#{options[:project_name]}.xcodeproj",
+	    # xcodeproj: "#{options[:project_name]}.xcworkspace",
 	    profile: options[:profile]
-	  )
-
-	  # Version bump
-	  increment_build_number(
-	    build_number: options[:build_number]
 	  )
 
 	  # Build the app
 	  gym(
-	  	use_legacy_build_api: true,
+	  	use_legacy_build_api: options[:use_legacy_build_api],
 	    scheme: "#{options[:scheme]}",
 	    configuration: options[:configuration],
 	    provisioning_profile_path: options[:profile],
@@ -145,145 +145,50 @@ platform :ios do
 	  frameit
 	end
 
+	desc "Returns a default changelog."
+	  lane :default_changelog do
+	    changelog = changelog_from_git_commits(
+	        between: [ENV['GIT_PREVIOUS_SUCCESSFUL_COMMIT'] || "HEAD^^^^^", "HEAD"],
+	        pretty: "- %s"
+	    )
+	    # HAX: strip emoji from changelog
+	    changelog = changelog.sub(/[\u{1F300}-\u{1F6FF}]/, '')
+	    Actions.lane_context[SharedValues::FL_CHANGELOG] = changelog
+	    puts changelog
+	    changelog
+  	end
 
-	 desc "Responsible for building and signing the app"
-	 lane :alpha_test do
-	  # Build
-	  build_app(
-	    # Not a production release, so add build number
-	    release:false,
-	    # Change the app name
-	    app_name:"Entenhousen",
-	    # Set the app id
-	    app_identifier:"de.endios.stappy.entenhausen",
-	    # Set the path to the certificate to use in building
-	    certificate_path:"./fastlane/certs/Certificate_enten_develop.p12",
-	    # Set the password of the p12 certificate file
-	    certificate_password:"",
-	    # Set the path to the provisioning profile to use (change this!)
-	    profile:"./fastlane/certs/Entenhousen_development_push_test.mobileprovision",
-	    # What configuration to use, usefull for keeping different API keys etc between environments
-	    configuration:"Alpha",
-	    # the scheme to build
-	    scheme:"Entenhausen",
-	    # Use this codesigning identity (this is the name of the certificate in your keychain)
-	    #codesigning_identity:"iPhone Distribution: Entenhousen_distribution_push_test",
-	    # Export an enterprise app
-	    export_method:"enterprise",
-	    silent: false,
-      	clean: true,
-      	output_directory: "build",
-      	#output_name: "IPA_NAME.ipa",      
-      	#sdk: "iphoneos9.0",
-	    # the projectname, this is the name of the .xcodeproj file and the folder containing your code in the project
-	    project_name:"Stappy2",
-	    # the build number to use, we use the build number from Jenkins
-	    build_number: ENV["BUILD_NUMBER"]
-	  )
-	  # Push to Hockeyapp as Alpha release
-	  #publish_hockey(release_type: "2")
-	end
+	 desc "compiles, code signs, and buildsthe app, this option is the developer's defualt choice to build normally"
+	 lane :dev do |options|
+	 	puts "------------- Alpha build for App: #{options[:app_name]} Schema: #{options[:target]}-------------"
 
+	 	# force iTunes file sharing to be enabled (normally disabled for release builds)
+	    ENV['WMF_FORCE_ITUNES_FILE_SHARING'] = '1'
+	    # force debug menu to be shown
+	    ENV['WMF_FORCE_DEBUG_MENU'] = '1'
 
-	# Build and publish the Beta version to Hockeyapp
-	lane :beta_hockeyapp do
-	  # Build
-	  build_app(
-	    # Not a production release, so add build number
-	    release:false,
-	    # Change the app name
-	    app_name:"FastlaneDemo β",
-	    # Set the app id
-	    app_identifier:"be.kunstmaan.labs.fastlanedemo.beta",
-	    # Set the path to the certificate to use in building
-	    certificate_path:"./fastlane/certs/<your key>.p12",
-	    # Set the password of the p12 certificate file
-	    certificate_password:"<your p12 password>",
-	    # Set the path to the provisioning profile to use (change this!)
-	    profile:"./fastlane/certs/KunstmaanLabsFastlaneDemoApp_Beta.mobileprovision",
-	    # What configuration to use, usefull for keeping different API keys etc between environments
-	    configuration:"Beta",
-	    # Use this codesigning identity (this is the name of the certificate in your keychain)
-	    codesigning_identity:"iPhone Distribution: Kunstmaan NV",
-	    # Export an enterprise app
-	    export_method:"enterprise",
-	    # the projectname, this is the name of the .xcodeproj file and the folder containing your code in the project
-	    project_name:"KunstmaanLabsFastlaneDemoApp",
-	    # the scheme to build
-	    scheme:"KunstmaanLabsFastlaneDemoApp",
-	    # the build number to use, we use the build number from Jenkins
-	    build_number: ENV["BUILD_NUMBER"]
-	  )
-	  # Push to Hockeyapp as Beta release
-	  publish_hockey(release_type: "0")
-	end
-
-
-	# Build and publish the Release version to Hockeyapp
-	lane :release_hockeyapp do
-	  # Build
-	  build_app(
-	    # A production release, so add build number
-	    release:true,
-	    # Change the app name
-	    app_name:"FastlaneDemo",
-	    # Set the app id
-	    app_identifier:"be.kunstmaan.labs.fastlanedemo",
-	    # Set the path to the certificate to use in building
-	    certificate_path:"./fastlane/certs/<your key>.p12",
-	    # Set the password of the p12 certificate file
-	    certificate_password:"<your p12 password>",
-	    # Set the path to the provisioning profile to use (change this!)
-	    profile:"./fastlane/certs/KunstmaanLabsFastlaneDemoApp_Release.mobileprovision",
-	    # What configuration to use, usefull for keeping different API keys etc between environments
-	    configuration:"Release",
-	    # Use this codesigning identity (this is the name of the certificate in your keychain)
-	    codesigning_identity:"iPhone Distribution: Kunstmaan NV",
-	    # Export an enterprise app
-	    export_method:"enterprise",
-	    # the projectname, this is the name of the .xcodeproj file and the folder containing your code in the project
-	    project_name:"KunstmaanLabsFastlaneDemoApp",
-	    # the scheme to build
-	    scheme:"KunstmaanLabsFastlaneDemoApp",
-	    # the build number to use, we use the build number from Jenkins
-	    build_number: ENV["BUILD_NUMBER"]
-	  )
-	  # Push to Hockeyapp as Enterprise release
-	  publish_hockey(release_type: "3")
-	end
-
-
-	# Build and publish the Release version to the AppStore
-	lane :release_appstore do
-	  # Build
-	  build_app(
-	    # A production release, so add build number
-	    release:true,
-	    # Change the app name
-	    app_name:"FastlaneDemo",
-	    # Set the app id
-	    app_identifier:"be.kunstmaan.labs.fastlanedemo",
-	    # Set the path to the certificate to use in building
-	    certificate_path:"./fastlane/certs/<your key>.p12",
-	    # Set the password of the p12 certificate file
-	    certificate_password:"<your p12 password>",
-	    # Set the path to the provisioning profile to use (change this!)
-	    profile:"./fastlane/certs/KunstmaanLabsFastlaneDemoApp_Release.mobileprovision",
-	    # What configuration to use, usefull for keeping different API keys etc between environments
-	    configuration:"Release",
-	    # Use this codesigning identity (this is the name of the certificate in your keychain)
-	    codesigning_identity:"iPhone Distribution: Kunstmaan NV",
-	    # Export an enterprise app
-	    export_method:"app-store",
-	    # the projectname, this is the name of the .xcodeproj file and the folder containing your code in the project
-	    project_name:"KunstmaanLabsFastlaneDemoApp",
-	    # the scheme to build
-	    scheme:"KunstmaanLabsFastlaneDemoApp",
-	    # the build number to use, we use the build number from Jenkins
-	    build_number: ENV["BUILD_NUMBER"]
-	  )
-	  # Push to the appstore
-	  publish_appstore
-	end
-
-end
+	  	build_app(
+		    release:false,
+		    configuration: "AdHoc", #alpha
+		    use_legacy_build_api: true,
+		    adhoc: true,
+		    # Fastlane has issues forcing AdHoc profiles
+		    force: false,
+		    sdk: "iphoneos",
+		    project_name:"Stappy2",
+		    # app_name: "#{options[:app_name]}",
+		    app_identifier:"#{ENV['APP_IDENTIFIER']}",
+		    certificate_path:"./fastlane/meta-data/targets/#{options[:target]}/certs/Certificate_enten_develop.p12",
+		    certificate_password:"",
+		    profile:"./fastlane/meta-data/targets/#{options[:target]}/certs/Entenhousen_development_push_test.mobileprovision",
+		    scheme:"#{options[:target]}",
+		    export_method: 'ad-hoc',
+		    silent: false,
+		  	clean: true,
+		    output_directory: "build/targets/#{options[:target]}",
+		  	output_name: "#{options[:target]}-alpha.ipa"
+	    )
+	  	changelog = default_changelog
+		
+  	end
+  end
