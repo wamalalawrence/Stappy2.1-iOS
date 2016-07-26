@@ -1,0 +1,6 @@
+git_url "https://github.com/wamalalawrence/certs.git"
+type "development" # The default type, can be: appstore, adhoc or development
+app_identifier "#{ENV['APP_IDENTIFIER']}" # The bundle identifier of your app
+username "dev@endios.de"  #Your Apple Developer Portal username
+
+# For all available options run `match --help`

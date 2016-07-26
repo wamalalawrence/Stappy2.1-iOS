@@ -11,97 +11,28 @@ platform :ios do
 	before_all do
 
 	  # If the GIT status is not clean, abort. We won't want to include junk in the build
-	  ensure_git_status_clean
-
 	end
 
 	# After all the steps have completed succesfully, run this.
 	after_all do |lane|
-
-	  # Remove all build artifacts, but keep mobileprovisioning profiles since they are stored in GIT
-	  #clean_build_artifacts(
-	  #  exclude_pattern: ".*\.mobileprovision"
-	  #)
-
-	  # Reset all changes to the git checkout
-	  #reset_git_repo(
-	  #  force: true
-	  #)
-
-	  #slack(
-	  #	   message: "App was successfully released!",
-	  #   success: true
-	  # )
 
 	end
 
 	# If there was an error, run this
 	error do |lane, exception|
 
-	  # Remove all build artifacts, but keep mobileprovisioning profiles since they are stored in GIT
-	  #clean_build_artifacts(
-	   # exclude_pattern: ".*\.mobileprovision"
-	  #)
-
-	  # Reset all changes to the git checkout
-	  #reset_git_repo(
-	  #  force: true
-	  #)
-
-	   #slack(
-		#   message: "An error occured while deploying the app",
-		 #  success: false
-	   #)
-
 	end
 
 	private_lane :build_app do |options|
 
-	  # This part is done only when the app is not for the "production" environment
-	  if not options[:release]
-	    # Add the build number to the icon
-	    build_number_icon
-	  end
-
-	  # Update the app name
-	  #app_name(
-	  #	app_name: options[:app_name],
-	  # plist_path: "#{options[:project_name]}/Customer/#{options[:app_name]}/Supporting Files/#{options[:app_name]}.plist"
-	  #)
-
-	  # Update the app identifier
-	  #update_app_identifier(
-	    # xcodeproj: "#{options[:project_name]}.xcodeproj",
-	   # plist_path: "#{options[:project_name]}/Customer/#{options[:app_name]}/Supporting Files/#{options[:app_name]}.plist",
-	    #app_identifier: options[:app_identifier]
-	  #)
-
-	  # Version bump
-	  increment_build_number(
-	    build_number: options[:build_number]
-	    # set_info_plist_value(path: "#{options[:project_name]}/Customer/#{options[:app_name]}/Supporting Files/#{options[:app_name]}.plist", key: "CFBundleVersion", value: "#{build_version}")
-	  )
-
-	  # Install the certificate
-	  import_certificate(
-	    certificate_path: options[:certificate_path],
-	    certificate_password: options[:certificate_password],
-	    keychain_name: "login.keychain"
-	  )
-
-	  # Install the provisioning profile
-	  update_project_provisioning(
-	    # xcodeproj: "#{options[:project_name]}.xcworkspace",
-	    profile: options[:profile]
-	  )
-
 	  # Build the app
 	  gym(
 	  	use_legacy_build_api: options[:use_legacy_build_api],
-	    scheme: "#{options[:scheme]}",
-	    configuration: options[:configuration],
-	    provisioning_profile_path: options[:profile],
-	    codesigning_identity: options[:codesigning_identity],
+	  	workspace: "#{ENV['WORKSPACE']}",
+	  	configuration: options[:configuration],
+	    scheme: "#{ENV['SCHEME']}",
+	    #provisioning_profile_path: options[:profile],
+	    #codesigning_identity: options[:codesigning_identity],
 	    export_method: options[:export_method],
 	    silent: options[:silent],
 	    clean: options[:clean],
@@ -159,14 +90,15 @@ platform :ios do
   	end
 
 	 desc "compiles, code signs, and buildsthe app, this option is the developer's defualt choice to build normally"
-	 lane :dev do |options|
-	 	puts "------------- Alpha build for App: #{options[:app_name]} Schema: #{options[:target]}-------------"
+	 lane :build do |options|
+	 	puts "------------- Alpha build for App: #{ENV['APP_NAME']} -------------"
 
 	 	# force iTunes file sharing to be enabled (normally disabled for release builds)
 	    ENV['WMF_FORCE_ITUNES_FILE_SHARING'] = '1'
 	    # force debug menu to be shown
 	    ENV['WMF_FORCE_DEBUG_MENU'] = '1'
 
+		# Build App
 	  	build_app(
 		    release:false,
 		    configuration: "AdHoc", #alpha
@@ -175,20 +107,104 @@ platform :ios do
 		    # Fastlane has issues forcing AdHoc profiles
 		    force: false,
 		    sdk: "iphoneos",
-		    project_name:"Stappy2",
-		    # app_name: "#{options[:app_name]}",
+		    project_name:"#{ENV['PROJECT_NAME']}",
+		    app_name: "#{ENV['APP_NAME']}",
 		    app_identifier:"#{ENV['APP_IDENTIFIER']}",
-		    certificate_path:"./fastlane/meta-data/targets/#{options[:target]}/certs/Certificate_enten_develop.p12",
-		    certificate_password:"",
-		    profile:"./fastlane/meta-data/targets/#{options[:target]}/certs/Entenhousen_development_push_test.mobileprovision",
-		    scheme:"#{options[:target]}",
 		    export_method: 'ad-hoc',
 		    silent: false,
 		  	clean: true,
-		    output_directory: "build/targets/#{options[:target]}",
-		  	output_name: "#{options[:target]}-alpha.ipa"
+		    output_directory: "build/targets/#{ENV['APP_NAME']}",
+		  	output_name: "#{ENV['PRODUCT_NAME']}-alpha.ipa"
 	    )
 	  	changelog = default_changelog
+	  	# Make sure our directory is clean, except for changes Fastlane has made
+	  	# clean_build_artifacts
 		
   	end
+
+
+  	desc "Submit a new Beta Build to Apple TestFlight"
+	lane :beta do |options|
+	  	puts "------------- Alpha build for App: #{ENV['APP_NAME']} -------------"
+	  	# You'll probably want to commit this change before running a beta build
+	  	ensure_git_status_clean
+
+	 	# force iTunes file sharing to be enabled (normally disabled for release builds)
+	    ENV['WMF_FORCE_ITUNES_FILE_SHARING'] = '1'
+	    # force debug menu to be shown
+	    ENV['WMF_FORCE_DEBUG_MENU'] = '1'
+
+	    match(type: "development") #You can now run `match development`, `match adhoc` and `match appstore`
+
+		# Bump build number
+		increment_build_number  
+		build_number = Actions.lane_context[Actions::SharedValues::BUILD_NUMBER]
+
+		# Set version number to the one at the top of the CHANGELOG
+		changelog = default_changelog
+  		readme = changelog
+  		latest_version = readme.split("\n## ").first
+  		first_line = latest_version.split("\n").first
+  		version_number = first_line.split(" ")[1]
+
+  		increment_version_number version_number: version_number
+  		puts "The Version after increment  is #{version_number} Build: #{build_number}"
+		# Generate release notes from CHANGELOG
+  		release_notes = latest_version.split("\n")[1..-1].join("\n")
+
+		# Get date and format
+		date_version = Time.new
+        date_version = date_version.strftime("%Y.%m.%d")
+
+        set_info_plist_value(
+        	path: "Stappy2/Customer/#{ENV['APP_NAME']}/Supporting Files/#{ENV['APP_NAME']}.plist", 
+        	key: "CFBundleVersion", 
+        	value: "#{date_version} (#{build_number})"
+        )
+        #set_info_plist_value(path: "#{options[:project_name]}/Customer/#{options[:app_name]}/Supporting Files/#{options[:app_name]}.plist", key: "CFBundleVersion", value: "#{date_version} (#{build_number})")
+  		# Build App
+	  	# Build App
+	  	build_app(
+		    release:false,
+		    configuration: "Beta",
+		    use_legacy_build_api: true,
+		    sdk: "iphoneos",
+		    project_name:"#{ENV['PROJECT_NAME']}",
+		    app_name: "#{ENV['APP_NAME']}",
+		    app_identifier:"#{ENV['APP_IDENTIFIER']}",
+		    export_method: 'enterprise',
+		    silent: true,
+		  	clean: true,
+		    output_directory: "build/targets/#{ENV['APP_NAME']}",
+		  	output_name: "#{ENV['PRODUCT_NAME']}-alpha.ipa"
+	    )
+
+	    commit_version_bump({
+			xcodeproj: "Stappy2.xcodeproj", 
+			message: "Deploying version #{version_number}.",
+			force: true
+		})
+
+		puts "The NEW Version is #{version_number} Build: #{build_number}"
+	    # version_number = Actions.lane_context[Actions::SharedValues::VERSION_NUMBER]
+	    version_number = "#{get_version_number}.#{get_build_number}"
+    	badge(shield: "Version-#{version_number}-blue")	
+
+		add_git_tag(
+		   tag: "build/#{version_number}"
+		)
+
+		push_to_git_remote(
+		    remote: 'origin_new'         # optional, default: 'origin'
+		    #local_branch: 'develop',  # optional, aliased by 'branch', default: 'master'
+		    #remote_branch: 'develop'  # optional, default is set to local_branch
+		)
+
+	   # Reset git repo for fastlane xml files
+	   #reset_git_repo(
+		# force: true
+	   #)
+	end
+
+
   end

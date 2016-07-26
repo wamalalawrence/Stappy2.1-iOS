@@ -11,11 +11,16 @@ sudo gem install fastlane
 fastlane ios default_changelog
 ```
 Returns a default changelog.
-### ios dev
+### ios build
 ```
-fastlane ios dev
+fastlane ios build
 ```
 compiles, code signs, and buildsthe app, this option is the developer's defualt choice to build normally
+### ios beta
+```
+fastlane ios beta
+```
+Submit a new Beta Build to Apple TestFlight
 
 ----
 
